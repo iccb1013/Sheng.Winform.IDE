@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExceptionConfigurationObjectIsNotCustomProviderData" xml:space="preserve">
+    <value>The configuration object for type '{0}' with name '{1}' has type '{2}' which is does not implement ICustomProviderData.</value>
+  </data>
+  <data name="ExceptionCanNotConvertType" xml:space="preserve">
+    <value>The AssemblyQualifiedTypeNameConverter can only convert values of type '{0}'.</value>
+  </data>
+  <data name="ExceptionConfigurationObjectWithTypeDoesNotHaveTypeSet" xml:space="preserve">
+    <value>The concrete type for polymorphic object named '{1}' in hierarchy {2} is not defined in configuration object {0}.</value>
+  </data>
+  <data name="ExceptionEventRaisingFailed" xml:space="preserve">
+    <value>There was an error raising an event in </value>
+  </data>
+  <data name="ExceptionFactoryMethodHasInvalidReturnType" xml:space="preserve">
+    <value>The method with signature {0} is not a valid factory method to build type {1}.</value>
+  </data>
+  <data name="ExceptionInvalidType" xml:space="preserve">
+    <value>The type '{0}' cannot be resolved. Please verify the spelling is correct or that the full type name is provided.</value>
+  </data>
+  <data name="ExceptionNamedConfigurationNotFound" xml:space="preserve">
+    <value>The configuration could not be found for name '{0}' in factory {1}.</value>
+  </data>
+  <data name="ExceptionNoMethodAnnotatedForInjectionFound" xml:space="preserve">
+    <value>The type {0} does not have a public method annotated as an injection target as required by the use of injection.</value>
+  </data>
+  <data name="ExceptionNoConfigurationElementAttribute" xml:space="preserve">
+    <value>The type {0} does not contain the ConfigurationElementTypeAttribute.</value>
+  </data>
+  <data name="ExceptionNoSuitableFactoryMethodFound" xml:space="preserve">
+    <value>The type {0} does not have a static method with a TargetConstructorAttribuite suitable to create an object of type {1}.</value>
+  </data>
+  <data name="ExceptionNoTypeAttribute" xml:space="preserve">
+    <value>The type attribute does not exist on the element {0}.</value>
+  </data>
+  <data name="ExceptionParameterNotAnnotatedForInjection" xml:space="preserve">
+    <value>The parameter '{0}' for injection target '{1}' in type '{2}' is missing the injection interpretation attribute.</value>
+  </data>
+  <data name="ExceptionPropertyNotFound" xml:space="preserve">
+    <value>e {2}.</value>
+  </data>
+  <data name="ExceptionRetrievalAttributeNotFound" xml:space="preserve">
+    <value>The type {0} does not contain the ConfigurationDataRetrievalAttribute required to resolve named references.</value>
+  </data>
+  <data name="ExceptionSourcePropertyDoesNotExist" xml:space="preserve">
+    <value>Could not retrieve parameter value. The property {0} does not exist for type {1}.</value>
+  </data>
+  <data name="ExceptionStringNullOrEmpty" xml:space="preserve">
+    <value>The value can not be null or string or empty.</value>
+  </data>
+  <data name="ExceptionTypeCouldNotBeCreated" xml:space="preserve">
+    <value>The type {0} from configuration could not be created.</value>
+  </data>
+  <data name="ExceptionTypeNotNameMapper" xml:space="preserve">
+    <value>Type {0} is not an implementation of IConfigurationNameMapper for ConfigurationNameMapperAttribute.</value>
+  </data>
+  <data name="ExceptionTypeNotRetriever" xml:space="preserve">
+    <value>Type {0} is not an implementation of IConfigurationDataRetriever for ConfigurationDataRetrievalAttribute.</value>
+  </data>
+  <data name="ExceptionConfigurationFileNotFound" xml:space="preserve">
+    <value>The section {0} could not be saved because the file does not exist.</value>
+  </data>
+  <data name="ExceptionPerformanceCounterRedefined" xml:space="preserve">
+    <value>The performance counter '{0}' in category '{1}' is redefined in type {2} with a different configuration.</value>
+  </data>
+  <data name="ExceptionConfigurationLoadFileNotFound" xml:space="preserve">
+    <value>The configuration file {0} could not be found.</value>
+  </data>
+  <data name="ExceptionUnexpectedType" xml:space="preserve">
+    <value>The expected type '{0}' was not provided.</value>
+  </data>
+  <data name="ExceptionArgumentShouldDeriveFromIList" xml:space="preserve">
+    <value>The type '{0}' does not derive from IList.</value>
+  </data>
+  <data name="ExceptionArgumentShouldDeriveFromIDictionary" xml:space="preserve">
+    <value>The type '{0}' does not derive from IDictionary.</value>
+  </data>
+  <data name="ExceptionAssemblerAttributeNotSet" xml:space="preserve">
+    <value>The [Assembler] attribute is not set in the configuration object type {0}.</value>
+  </data>
+  <data name="ExceptionBaseConfigurationSourceElementIsInvalid" xml:space="preserve">
+    <value>The base ConfigurationSourceElement configuration type can not be used as a concrete configuration element.</value>
+  </data>
+  <data name="ExceptionSystemSourceNotDefined" xml:space="preserve">
+    <value>The system configuration source is not defined in the configuration file.</value>
+  </data>
+  <data name="ExceptionAssemblerTypeNotCompatible" xml:space="preserve">
+    <value>The assembler configured for type {0} has type {2} which is not compatible with type {1}.</value>
+  </data>
+  <data name="ExceptionCustomFactoryAttributeNotFound" xml:space="preserve">
+    <value>The [CustomFactory] attribute was not found on type {0} while processing request for id '{1}'.</value>
+  </data>
+  <data name="FileConfigurationSourceName" xml:space="preserve">
+    <value>File Configuration Source</value>
+  </data>
+  <data name="SystemConfigurationSourceName" xml:space="preserve">
+    <value>System Configuration Source</value>
+  </data>
+  <data name="ExceptionTypeNotCustomFactory" xml:space="preserve">
+    <value>Type {0} is not an implementation of ICustomFactory for CustomFactoryAttribute.</value>
+  </data>
+  <data name="EventLogEntryHeaderTemplate" xml:space="preserve">
+    <value>An error occurred in application {0} in the {1}.</value>
+  </data>
+  <data name="EventLogEntryExceptionTemplate" xml:space="preserve">
+    <value>The exception that occured was: {0}</value>
+  </data>
+  <data name="ExceptionConfigurationSourceSectionNotFound" xml:space="preserve">
+    <value>The configuration source section is not found in the application configuration file.</value>
+  </data>
+  <data name="ExceptionContainerPolicyCreatorAttributeNotPresent" xml:space="preserve">
+    <value>The required "ContainerPolicyCreatorAttribute" is not present in the supplied type "{0}".</value>
+  </data>
+  <data name="ExceptionMustHaveNoArgsConstructor" xml:space="preserve">
+    <value>The required zero argument constructor is not available for the supplied type "{0}".</value>
+  </data>
+  <data name="ExceptionMustImplementIContainerPolicyCreator" xml:space="preserve">
+    <value>The required interface "IContainerPolicyCreator" is not implemented by the supplied type "{0}".</value>
+  </data>
+  <data name="ExceptionNoMatchingConstructorFound" xml:space="preserve">
+    <value>No public constructor with {1} arguments was found for type "{0}".</value>
+  </data>
+  <data name="ExceptionCannotAddParametersAfterDispose" xml:space="preserve">
+    <value>Cannot add new paramters after Finish() or Dispose().</value>
+  </data>
+  <data name="ExceptionCannotFinish" xml:space="preserve">
+    <value>Builder has already added policies.</value>
+  </data>
+  <data name="ExceptionMustBeNameTypeConfigurationElement" xml:space="preserve">
+    <value>The supplied configuration object has type '{0}', which is not a descendant of 'NameTypeConfigurationElement' as required.</value>
+  </data>
+  <data name="ExceptionUnableToMatchConstructorToConfigurationObject" xml:space="preserve">
+    <value>Default policy creation failed: The properties in the supplied configuration object of type {0} cannot be matched to any constructor on type {1}.</value>
+  </data>
+  <data name="ExceptionNoConfigurationObjectPolicySet" xml:space="preserve">
+    <value>No policy specifying the configuration source for the container has been set. The EnterpriseLibraryCoreExtension is probably missing.</value>
+  </data>
+  <data name="ExceptionCustomProviderTypeDoesNotHaveTheRequiredConstructor" xml:space="preserve">
+    <value>Type '{0}' specified as a custom provider does not have the required public constructor with a single NameValueCollection parameter.</value>
+  </data>
+  <data name="ExceptionPolicyBuilderFinished" xml:space="preserve">
+    <value>Attempt to continue working with a PolicyBuilder after the policies have been added to a policy list for type '{1}' with key '{0}'.</value>
+  </data>
+  <data name="ExceptionPolicyBuilderStillWaitingForPropertyPolicy" xml:space="preserve">
+    <value>The specified policies cannot be added: a property policy mapping is still taking place.</value>
+  </data>
+  <data name="ExceptionPropertyAccessExpressionNotPropertyAccess" xml:space="preserve">
+    <value>The supplied expression is not a valid property access expression: '{0}'.</value>
+  </data>
+  <data name="ExceptionSuppliedCreationExpressionIsNotNewExpression" xml:space="preserve">
+    <value>A creation expression must be a constructor call, but the supplied expression was '{0}'.</value>
+  </data>
+  <data name="ExceptionTheSpecifiedDefaultProviderDoesNotExistInConfiguration" xml:space="preserve">
+    <value>The configuration object for default provider named '{0}' for type '{1}' was not found in the supplied list.</value>
+  </data>
+  <data name="ExceptionUnknownResolveMethod" xml:space="preserve">
+    <value>An call to an unknown method named '{0}' in the Resolve class was found in the supplied argument expression: '{1}'. Cannot create policies for this expression.</value>
+  </data>
+</root>

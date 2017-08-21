@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F27008BE-EC74-4DDB-840B-F223520DC690}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Components.DataEntityComponent</RootNamespace>
+    <AssemblyName>Components.DataEntity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompositeExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdPartyLib\CAL\CompositeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="CompositeExtensions.Unity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdPartyLib\CAL\CompositeExtensions.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.UnityExtensions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ThirdPartyLib\EntLib41\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant.cs" />
+    <Compile Include="DataEntityArchive.cs" />
+    <Compile Include="DataEntityComponent.cs" />
+    <Compile Include="DataEntityComponentService.cs" />
+    <Compile Include="Entity\DataEntityDev.cs" />
+    <Compile Include="Entity\DataItemEntityDev.cs" />
+    <Compile Include="Entity\DataItemEntityDevFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unity.cs" />
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateOption.cs" />
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard.cs" />
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Account.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Confirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Confirm.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Create.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Create.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Done.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Done.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_Done.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_DataBaseName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_DataBaseName.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_DataBaseName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Option.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Option.designer.cs">
+      <DependentUpon>DataBaseCreateWizard_Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\Commands.cs" />
+    <Compile Include="View\Explorer\ExplorerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerView.Designer.cs">
+      <DependentUpon>ExplorerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataEntityEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataEntityEditView.Designer.cs">
+      <DependentUpon>DataEntityEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataEntityScriptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataEntityScriptView.Designer.cs">
+      <DependentUpon>DataEntityScriptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataItemEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataItemEditView.Designer.cs">
+      <DependentUpon>DataItemEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\GridColumns.cs" />
+    <Compile Include="View\Explorer\ExplorerPropertyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerPropertyView.Designer.cs">
+      <DependentUpon>ExplorerPropertyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerGridView.Designer.cs">
+      <DependentUpon>ExplorerGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerGridContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerGridContainer.Designer.cs">
+      <DependentUpon>ExplorerGridContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\GridViewMenuDataEntity.cs" />
+    <Compile Include="View\Explorer\GridViewMenuDataItemEntity.cs" />
+    <Compile Include="View\Explorer\ToolStripGeneral.cs" />
+    <Compile Include="View\Explorer\TreeMenuDataEntity.cs" />
+    <Compile Include="View\Explorer\TreeMenuDataEntityFolder.cs" />
+    <Compile Include="View\Explorer\TreeMenuDataItemEntity.cs" />
+    <Compile Include="View\Explorer\DataEntityFolder.cs" />
+    <Compile Include="View\Explorer\ExplorerTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerTreeView.Designer.cs">
+      <DependentUpon>ExplorerTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\INavigationNode.cs" />
+    <Compile Include="View\DataEntitySqlScriptView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataEntitySqlScriptView.Designer.cs">
+      <DependentUpon>DataEntitySqlScriptView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Development\Core.Development.csproj">
+      <Project>{A21A3B19-5EC9-4D2C-9EB3-61EA48CFBD27}</Project>
+      <Name>Core.Development</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataBaseProvide\Sheng.SailingEase.IDataBaseProvide\Sheng.SailingEase.IDataBaseProvide.csproj">
+      <Project>{960F2D9C-8DFB-4F9C-9501-B5F3E7C8E3F5}</Project>
+      <Name>Sheng.SailingEase.IDataBaseProvide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.csproj">
+      <Project>{C1022F65-6B85-475E-AFBA-C6EFC9A4ED0C}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localisation\Sheng.SailingEase.Localisation\Localisation.csproj">
+      <Project>{97F69338-465B-480F-87FB-A369EECA8D6E}</Project>
+      <Name>Localisation %28Localisation\Localisation%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ComponentModel.Design\ComponentModel.Design.csproj">
+      <Project>{13E156EC-1138-40A4-8A94-1533B4E78FE4}</Project>
+      <Name>ComponentModel.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ComponentModel\ComponentModel.csproj">
+      <Project>{7CE78E82-D242-425C-BB96-6C27B193A9FF}</Project>
+      <Name>ComponentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Controls.Extensions\Controls.Extensions.csproj">
+      <Project>{9E383816-DC7E-46ED-A62F-D7C39665D00F}</Project>
+      <Name>Controls.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.csproj">
+      <Project>{84A60294-EF59-43C1-B7E5-4C12C164801D}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Drawing\Drawing.csproj">
+      <Project>{BCD80096-7B6F-4273-A031-186A610C84E5}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj">
+      <Project>{405E51B5-BEAC-4538-B176-30490B26873D}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Components.DataEntity.Localisation\Components.DataEntity.Localisation.csproj">
+      <Project>{9BA47CC6-5632-46FF-9945-FBA66AE8B449}</Project>
+      <Name>Components.DataEntity.Localisation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Account.resx">
+      <DependentUpon>DataBaseCreateWizard_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Confirm.resx">
+      <DependentUpon>DataBaseCreateWizard_Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Create.resx">
+      <DependentUpon>DataBaseCreateWizard_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Done.resx">
+      <DependentUpon>DataBaseCreateWizard_Done.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_DataBaseName.resx">
+      <DependentUpon>DataBaseCreateWizard_DataBaseName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataBaseCreateWizard\DataBaseCreateWizard_Option.resx">
+      <DependentUpon>DataBaseCreateWizard_Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Explorer\ExplorerView.resx">
+      <DependentUpon>ExplorerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataEntityEditView.resx">
+      <DependentUpon>DataEntityEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataItemEditView.resx">
+      <DependentUpon>DataItemEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Explorer\ExplorerPropertyView.resx">
+      <DependentUpon>ExplorerPropertyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Explorer\ExplorerGridView.resx">
+      <DependentUpon>ExplorerGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Explorer\ExplorerGridContainer.resx">
+      <DependentUpon>ExplorerGridContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Explorer\ExplorerTreeView.resx">
+      <DependentUpon>ExplorerTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataEntitySqlScriptView.resx">
+      <DependentUpon>DataEntitySqlScriptView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity\!无此命名空间.txt" />
+    <Content Include="IndexXml.txt" />
+    <Content Include="View\Explorer\!无此命名空间.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

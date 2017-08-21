@@ -1,0 +1,1159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.AddPolicyCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.AddPolicyCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.AddPolicyCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.AddPolicyCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Creates an instance of the child node class and adds it as a child of the parent node.
+            </summary>
+            <param name="node">
+            The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode">
+            <summary>
+            Base class for nodes representing concrete <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode"/> class representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/>.
+            </summary>
+            <param name="callHandlerData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode.CreateCallHandlerData">
+            <summary>
+            Returns a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/> configuration object from the nodes data.
+            </summary>
+            <returns>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/> configuration object from the nodes data.
+            </returns>
+            <remarks>
+            Subclasses implement this method to return an instance of a concrete <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CallHandlerData"/> subclass.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode.ResolveNodeReferences(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Resolves references to nodes in the hierarchy, if necessary.
+            </summary>
+            <param name="hierarchy">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> representing the configuration nodes.</param>
+            <remarks>
+            Subclasses with actual references to other nodes must implement this method to look for the
+            nodes corresponding to the represented configuration and set the property holding the node reference.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode.Order">
+            <summary>
+            Order in which the handler will be executed.
+            </summary>
+            <value>Sets or get the expiration order.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlersCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlerNode"/> instances in a hierarchy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlersCollectionNode.Name">
+            <summary>
+            Gets or sets the name for the configuration node.
+            </summary>
+            <remarks>
+            The name for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlersCollectionNode"/> is fixed.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlersCollectionNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted.
+            </summary>
+            <value><see langword="false"/> as nodes in the collection should not be sorted.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRuleCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchingRuleNode"/> instances in a hierarchy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRuleCollectionNode.Name">
+            <summary>
+            Gets or sets the name for the configuration node.
+            </summary>
+            <remarks>
+            The name for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.CallHandlersCollectionNode"/> is fixed.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchingRuleNode">
+            <summary>
+            Base class for nodes representing concrete <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchingRuleNode"/> class representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/>.
+            </summary>
+            <param name="matchingRuleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returns a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> configuration object from the nodes data.
+            </summary>
+            <returns>
+            A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> configuration object from the nodes data.
+            </returns>
+            <remarks>
+            Subclasses implement this method to return an instance of a concrete <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> subclass.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData"/> instance.
+            </summary>
+            <param name="assemblyMatchingRuleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.AssemblyMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.AssemblyMatchingRuleNode.AssemblyName">
+            <summary>
+            Gets or sets the name of the assembly for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomAttributeMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode.SearchInheritanceChain">
+            <summary>
+            Gets or sets the indication of inheritance chain search for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomAttributeMatchingRuleNode.AttributeType">
+            <summary>
+            Gets or sets the attribute type for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.CustomMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode.Type">
+            <summary>
+            Gets or sets the name of the type of the custom rule for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.CustomMatchingRuleNode.Attributes">
+            <summary>
+            Gets the list of custom attributes for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match">
+            <summary>
+            Represents an individual textual match.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match"/> class with the provided settings.
+            </summary>
+            <param name="match">The text to match.</param>
+            <param name="ignoreCase">The indication of whether matching should be case-insensitive.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match.ToString">
+            <summary>
+            Returns a string representation of the object.
+            </summary>
+            <returns>The match value.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match.Value">
+            <summary>
+            Gets or sets the value to match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match.IgnoreCase">
+            <summary>
+            Gets or sets the indication of whether matching should be case-insensitive.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchDataAttribute">
+            <summary>
+            Performs validation on a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MatchDataAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/>.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>
+            <remarks>
+            The value of property <paramref name="propertyInfo"/> on <paramref name="instance"/> must be an <see cref="T:System.Collections.Generic.IEnumerable`1"/> 
+            of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.Match"/>, it must contain at least one element, each element must contain a value and 
+            the values cannot be repeated among elements.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MemberNameMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MemberNameMatchingRuleNode.Matches">
+            <summary>
+            Gets the list of matches for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.MethodSignatureMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.IgnoreCase">
+            <summary>
+            Gets or sets the indication of whether case should be ignored when matching for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.Match">
+            <summary>
+            Gets or sets the match for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.MethodSignatureMatchingRuleNode.ParameterTypes">
+            <summary>
+            Gets the list of parameter types for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.NamespaceMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.NamespaceMatchingRuleNode.Matches">
+            <summary>
+            Gets the list of matches for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType">
+            <summary>
+            Represents a parameter type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType"/> class with the supplied type.
+            </summary>
+            <param name="name">A unique name that identifies this parameter in case there are repeated types.</param>
+            <param name="parameterType">The parameter <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.Type"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.ToString">
+            <summary>
+            Returns a string representation of the object.
+            </summary>
+            <returns>The name of the represented type.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.Name">
+            <summary>
+            Gets or sets the name of the parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType.Type">
+            <summary>
+            Gets or sets the name of the represented type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch">
+            <summary>
+            This class encapsulates the information about a single
+            entry in the list for the ParameterTypeMatchingRule.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch.#ctor">
+            <summary>
+            Construct a new ParameterTypeMatch object with empty settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchData)">
+            <summary>
+            Construct a new ParameterTypeMatch object from configuration data.
+            </summary>
+            <param name="matchData"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch.#ctor(System.String,System.Boolean,Microsoft.Practices.Unity.InterceptionExtension.ParameterKind)">
+            <summary>
+            Construct a new ParameterTypeMatch object.
+            </summary>
+            <param name="match">String the defines the type to match.</param>
+            <param name="ignoreCase">If true, use case insensitive comparison for the type. If false, case sensitive.</param>
+            <param name="kind">Wether this parameter is an input, output, input or output, or return type.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch.ToMatchData">
+            <summary>
+            Construct the configuration node from this design time node.
+            </summary>
+            <returns>Configuration data.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatch.Kind">
+            <summary>
+            Gets or sets the kind of parameter to match: inputs, outputs, inputs or outputs, or return values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatchingRuleNode">
+            <summary>
+            Configuration node class to handle the ParameterTypeMatchingRule
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatchingRuleNode.#ctor">
+            <summary>
+            Create a new ParameterTypeMatchingRuleNode with no configured matching information.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ParameterTypeMatchingRuleData)">
+            <summary>
+            Construct a new ParameterTypeMatchingRuleNode, given data from the configuration
+            file.
+            </summary>
+            <param name="ruleData">Data configuring this matching rule.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Get the configuration node data from the design time node.
+            </summary>
+            <returns>Configuration data that this node represents.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypeMatchingRuleNode.Matches">
+            <summary>
+            Get the list of matches for this matching rule
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypesValidationAttribute">
+            <summary>
+            Performs validation on a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterTypesValidationAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/>.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>
+            <remarks>
+            The value of property <paramref name="propertyInfo"/> on <paramref name="instance"/> must be an <see cref="T:System.Collections.Generic.IEnumerable`1"/> 
+            of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ParameterType"/>. It may have no elements, each element must contain a value and 
+            the names of the values cannot be repeated among elements.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch">
+            <summary>
+            Represents a match on a property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch.#ctor(System.String,System.Boolean,Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingOption)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch"/> class with the supplied values.
+            </summary>
+            <param name="match">The string to match the property name.</param>
+            <param name="ignoreCase">The indication of whether matching should be case-insensitive.</param>
+            <param name="matchOption">The <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingOption"/> indicating how matching should be performed.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch.MatchOption">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.PropertyMatchingOption"/> indicating how matching should be performed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchDataAttribute">
+            <summary>
+            Performs validation on a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchDataAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/>.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>
+            <remarks>
+            The value of property <paramref name="propertyInfo"/> on <paramref name="instance"/> must be an <see cref="T:System.Collections.Generic.IEnumerable`1"/> 
+            of <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatch"/>, it must contain at least one element, each element must contain a value and 
+            the values cannot be repeated among elements.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PropertyMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.PropertyMatchingRuleNode.Matches">
+            <summary>
+            Gets the collection of property matches for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.ReturnTypeMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode.IgnoreCase">
+            <summary>
+            Gets or sets the indication of whether case should be ignored when matching for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.ReturnTypeMatchingRuleNode.Match">
+            <summary>
+            Gets or sets the match for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TagAttributeMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode.IgnoreCase">
+            <summary>
+            Gets or sets the indication of whether case should be ignored when matching for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TagAttributeMatchingRuleNode.Match">
+            <summary>
+            Gets or sets the match for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode"/> class for representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData"/> instance.
+            </summary>
+            <param name="ruleData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode.GetConfigurationData">
+            <summary>
+            Returs the represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData"/> instance.
+            </summary>
+            <returns>A newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.TypeMatchingRuleData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.MatchingRules.TypeMatchingRuleNode.Matches">
+            <summary>
+            Gets the list of matches for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyCollectionNode">
+            <summary>
+            Represents a configuration node for a policy collection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyCollectionNode.Name">
+            <summary>
+            Gets or sets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionConfigurationDesignManager">
+            <summary>
+            Represents the design manager that will register the design time information for the Policy Injection Application Block.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Registers the policy injection design manager into the environment.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the policy injection configuration from an application configuration file.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode"/> of the hierarchy.</param>
+            <param name="section">The policy injection configuration section or <see langword="null"/> if no section was found.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Policy Injection Block's configuration information.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Policy Injection Block's configuration information.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionSettingsNode">
+            <summary>
+            Represents the configuration section for the policy injection block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionSettingsNode.Name">
+            <summary>
+            Gets the name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionSettingsNode"/> instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyInjectionSettingsNode.SortChildren">
+            <summary>
+            Gets the indication of whether child nodes should be sorted.
+            </summary>
+            <value>Always <see langword="false"/> as order is relevant for policies.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData"/> configuration object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode"/> class representing a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData"/> instance.
+            </summary>
+            <param name="policy">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.PolicyData"/> to represent.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode"/> class with default data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.PolicyNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted.
+            </summary>
+            <value><see langword="false"/> as nodes in the policy should not be sorted.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddAssemblyMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Assembly Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddAssemblyMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Assembly Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomAttributeMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Custom Attribute Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomAttributeMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Custom Attribute Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomInjectorCommandText">
+            <summary>
+              Looks up a localized string similar to Custom Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomInjectorCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Custom Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Custom Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddCustomMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Custom Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddMemberNameMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Member Name Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddMemberNameMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Member Name Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddMethodSignatureMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Method Signature Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddMethodSignatureMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Method Signature Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddNamespaceMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Namespace Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddNamespaceMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Namespace Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddParameterTypeMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Parameter Type Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddParameterTypeMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Parameter Type Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPolicyCommandText">
+            <summary>
+              Looks up a localized string similar to Policy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPolicyCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Policy..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPolicyInjectionSettingsCommandText">
+            <summary>
+              Looks up a localized string similar to Policy Injection Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPolicyInjectionSettingsCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add the Policy Injection Application Block..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPropertyMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Property Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddPropertyMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Property Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddRemotingInjectorCommandText">
+            <summary>
+              Looks up a localized string similar to Remoting Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddRemotingInjectorCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Remoting Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddReturnTypeMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Return Type Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddReturnTypeMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Return Type Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddTypeMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Type Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AddTypeMatchingRuleTextLong">
+            <summary>
+              Looks up a localized string similar to Add Type Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AssemblyMatchingRule">
+            <summary>
+              Looks up a localized string similar to Assembly Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AssemblyNameDescription">
+            <summary>
+              Looks up a localized string similar to The assembly name to match in &apos;Name (Version=?) (Culture=?) (PublicKeyToken=?) &apos; -format..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.AttributeTypeDescription">
+            <summary>
+              Looks up a localized string similar to The type of the attribute that should be used to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.CallHandlersCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Handlers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.CustomAttributeMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Attribute Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.CustomInjectorNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.CustomMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.DefaultInjectorDescription">
+            <summary>
+              Looks up a localized string similar to The injector used to create policy-enabled objects.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.DefaultMatchingRuleAssemblyName">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.DefaultMethodSignatureMatchValue">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.DefaultReturnTypeMatchValue">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.DefaultTagValue">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.InjectorCollectionNodeDescription">
+            <summary>
+              Looks up a localized string similar to The collection of injection methods available to use. This determines the default injector to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.InjectorCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Injectors.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.InjectorExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the custom configuration attributes for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.InjectorTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of a class that derives from PolicyInjector..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MatchDataCollectionEmpty">
+            <summary>
+              Looks up a localized string similar to The list of matches is empty..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MatchDataContainsDuplicateMatch">
+            <summary>
+              Looks up a localized string similar to The list of matches contains a duplicate value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MatchDataContainsEmptyMatch">
+            <summary>
+              Looks up a localized string similar to The list of matches contains a match with empty value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MatchingRuleCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Matching Rules.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MemberNameMatchesDescription">
+            <summary>
+              Looks up a localized string similar to The collection of method names that are used to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MemberNameMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Member Name Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MethodSignatureIgnoreCaseDescription">
+            <summary>
+              Looks up a localized string similar to True if matching the methods name should be done in a case-insensitive manner, otherwise false..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MethodSignatureMatchDescription">
+            <summary>
+              Looks up a localized string similar to The name of the method that is used to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MethodSignatureMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Method Signature Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.MustHaveDefaultInjectorIfInjectorsAreDefined">
+            <summary>
+              Looks up a localized string similar to You must specify the default injector if any injectors are configured..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.NamespaceMatchesDescription">
+            <summary>
+              Looks up a localized string similar to The collection of namespace names that are used to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.NamespaceMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Namespace Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypeCollectionContainsDuplicateName">
+            <summary>
+              Looks up a localized string similar to The collection of parameter types contains a duplicate entry..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypeCollectionContainsEmptyName">
+            <summary>
+              Looks up a localized string similar to The collection of parameter types contains an entry with an empty name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypeCollectionContainsEmptyType">
+            <summary>
+              Looks up a localized string similar to The collection of parameter types contains an empty entry..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypeMatchDescription">
+            <summary>
+              Looks up a localized string similar to The type of parameters for the method to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypeMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Parameter Type Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ParameterTypesDescription">
+            <summary>
+              Looks up a localized string similar to The collection of parameter types that should match the methods signature..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PolicyCollectionNodeDescription">
+            <summary>
+              Looks up a localized string similar to The collection of  policies.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PolicyCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Policies.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PolicyInjectionSettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Policy Injection Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PolicyNodeName">
+            <summary>
+              Looks up a localized string similar to Policy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PropertyMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Property Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.PropertyRuleMatchesDescription">
+            <summary>
+              Looks up a localized string similar to The collection of property names to match the name of a property..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.RemotingInjectorNodeName">
+            <summary>
+              Looks up a localized string similar to Remoting Policy Injector.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ReturnTypeIgnoreCaseDescription">
+            <summary>
+              Looks up a localized string similar to True if matching the return value should be done in a case-insensitive manner, otherwise false..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ReturnTypeMatchDescription">
+            <summary>
+              Looks up a localized string similar to The type name that should match a methods return type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.ReturnTypeMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Return Type Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.RuleProviderExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the custom configuration attributes for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.RuleProviderTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of a class that implements the IMatchingRule interface..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.SearchInheritanceChainDescription">
+            <summary>
+              Looks up a localized string similar to True if the inheritance chain of a method should be searched for the attribute to match, otherwise false..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TagAttributeIgnoreCaseDescription">
+            <summary>
+              Looks up a localized string similar to True if matching the tagvalue should be done in a case-insensitive manner, otherwise false..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TagAttributeMatchDescription">
+            <summary>
+              Looks up a localized string similar to The tag attribute value to match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TagAttributeMatchingRuleCommandText">
+            <summary>
+              Looks up a localized string similar to Tag Attribute Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TagAttributeMatchingRuleCommandTextLong">
+            <summary>
+              Looks up a localized string similar to Add Tag Attribute Matching Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TagAttributeMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Tag Attribute Matching Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TypeMatchesDescription">
+            <summary>
+              Looks up a localized string similar to The collection of type names to match with the methods declaring type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.Configuration.Design.Properties.Resources.TypeMatchingRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Type Matching Rule.
+            </summary>
+        </member>
+    </members>
+</doc>

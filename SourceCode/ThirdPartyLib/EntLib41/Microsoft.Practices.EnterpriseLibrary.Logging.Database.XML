@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData">
+            <summary>
+            Configuration object for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.#ctor">
+            <summary>
+            Initializes a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a named instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> with 
+            name, stored procedure name, databse instance name, and formatter name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="databaseInstanceName">The database instance name.</param>
+            <param name="formatterName">The formatter name.</param>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.#ctor(System.String,System.String,System.String,System.String,System.String,System.Diagnostics.TraceOptions,System.Diagnostics.SourceLevels)">
+            <summary>
+            Initializes a named instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> with 
+            name, stored procedure name, databse instance name, and formatter name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="databaseInstanceName">The database instance name.</param>
+            <param name="formatterName">The formatter name.</param>
+            <param name="traceOutputOptions">The trace options.</param>
+            <param name="filter">The filter to be applied</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.DatabaseInstanceName">
+            <summary>
+            Gets and sets the database instance name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.WriteLogStoredProcName">
+            <summary>
+            Gets and sets the stored procedure name for writing the log.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.AddCategoryStoredProcName">
+            <summary>
+            Gets and sets the stored procedure name for adding a category for this log.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData.Formatter">
+            <summary>
+            Gets and sets the formatter name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerAssembler">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to build a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/> described by a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> configuration object.
+            </summary>
+            <remarks>This type is linked to the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> type and it is used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.TraceListenerCustomFactory"/> 
+            to build the specific <see cref="T:System.Diagnostics.TraceListener"/> object represented by the configuration object.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerAssembler.Assemble(Microsoft.Practices.ObjectBuilder2.IBuilderContext,Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceListenerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ObjectBuilder.ConfigurationReflectionCache)">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Builds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/> based on an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/>.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.TraceListenerCustomFactory"/>
+            <param name="context">The <see cref="T:Microsoft.Practices.ObjectBuilder2.IBuilderContext"/> that represents the current building process.</param>
+            <param name="objectConfiguration">The configuration object that describes the object to build. Must be an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/>.</param>
+            <param name="configurationSource">The source for configuration objects.</param>
+            <param name="reflectionCache">The cache to use retrieving reflection information.</param>
+            <returns>A fully initialized instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider">
+            <summary>
+            Represents the behavior required to provide Group Policy updates and to publish the 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting"/> instances associated to a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.NamedConfigurationElement"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.AddCategoryStoredProcNamePropertyName">
+            <summary>
+            The name of the add category stored procedure property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.DatabaseInstanceNamePropertyName">
+            <summary>
+            The name of the databse instance property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.WriteLogStoredProcNamePropertyName">
+            <summary>
+            The name of the write log stored procedure property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.FormatterPropertyName">
+            <summary>
+            The name of the formatter property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.TraceOutputOptionsPropertyName">
+            <summary>
+            The name of the trace output options property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.AddElementAdministrativeTemplateParts(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)">
+            <summary>
+            Adds the ADM parts that represent the properties of
+            a specific instance of the configuration element type managed by the receiver.
+            </summary>
+            <param name="contentBuilder">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder"/> to which the Adm instructions are to be appended.</param>
+            <param name="configurationObject">The configuration object instance.</param>
+            <param name="configurationSource">The configuration source from where to get additional configuration
+            information, if necessary.</param>
+            <param name="elementPolicyKeyName">The key for the element's policies.</param>
+            <remarks>
+            Subclasses managing objects that must not create a policy will likely need to include the elements' keys when creating the parts.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.OverrideWithGroupPolicies(Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey)">
+            <summary>
+            Overrides the <paramref name="configurationObject"/>'s properties with the Group Policy values from the 
+            registry.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="policyKey">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey"/> which holds the Group Policy overrides for the 
+            configuration element.</param>
+            <remarks>Subclasses implementing this method must retrieve all the override values from the registry
+            before making modifications to the <paramref name="configurationObject"/> so any error retrieving
+            the override values will cancel policy processing.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataManageabilityProvider.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting"/> instances that describe the 
+            configurationObject.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="wmiSettings">A collection to where the generated WMI objects are to be added.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataWmiMapper">
+            <summary>
+            Represents a mapper for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> configuration to Wmi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerDataWmiMapper.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting"/> instances that describe the 
+            configurationObject.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="wmiSettings">A collection to where the generated WMI objects are to be added.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting">
+            <summary>
+            Represents an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/>
+            as an instrumentation class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> class.
+            </summary>
+            <param name="sourceElement">The configuration source element.</param>
+            <param name="name">The name of the trace listener.</param>
+            <param name="databaseInstanceName">The database instance name.</param>
+            <param name="writeLogStoredProcName">The write log stored procedure.</param>
+            <param name="addCategoryStoredProcName">The stored procedure to add categories.</param>
+            <param name="formatter">The formatter to use.</param>
+            <param name="traceOutputOptions">The trace output options.</param>
+            <param name="filter">The filter value.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.GetInstances">
+            <summary>
+            Returns an enumeration of the published <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.BindInstance(System.String,System.String,System.String)">
+            <summary>
+            Returns the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting"/> instance corresponding to the provided values for the key properties.
+            </summary>
+            <param name="ApplicationName">The value for the ApplicationName key property.</param>
+            <param name="SectionName">The value for the SectionName key property.</param>
+            <param name="Name">The value for the Name key property.</param>
+            <returns>The published <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting"/> instance specified by the values for the key properties,
+            or <see langword="null"/> if no such an instance is currently published.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.SaveChanges(System.Configuration.ConfigurationElement)">
+            <summary>
+            Pushes the current property values to the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting.SourceElement"/>
+            </summary>
+            <remarks>Must be overridden by subclasses to perform the actual save.</remarks>
+            <param name="sourceElement">The configuration object on which the changes must be saved.</param>
+            <returns><see langword="true"/> if changes have been saved, <see langword="false"/> otherwise.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.AddCategoryStoredProcName">
+            <summary>
+            Gets the name of the stored procedure to add a logging category for the represented configuration element.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.DatabaseInstanceName">
+            <summary>
+            Gets the name of the database instance for the represented configuration element.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.Formatter">
+            <summary>
+            Gets the name of the formatter for the represented configuration element.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.FormattedDatabaseTraceListenerSetting.WriteLogStoredProcName">
+            <summary>
+            Gets the name of the stored procedure to write a log entry for the represented configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Installer">
+            <summary>
+            Installer for the WMI objects defined in the assembly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.DatabaseTraceListenerAddCategoryStoreProcPartName">
+            <summary>
+              Looks up a localized string similar to Add category store proc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.DatabaseTraceListenerDatabasePartName">
+            <summary>
+              Looks up a localized string similar to Database.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.DatabaseTraceListenerWriteStoreProcPartName">
+            <summary>
+              Looks up a localized string similar to Write store proc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Manageability.Properties.Resources.TraceListenerPolicyNameTemplate">
+            <summary>
+              Looks up a localized string similar to Specify settings for listener &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Unity.FormattedDatabaseTraceListenerPolicyCreator">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to create the container policies required to create a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener">
+            <summary>
+            A <see cref="T:System.Diagnostics.TraceListener"/> that writes to a database, formatting the output with an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.#ctor(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>.
+            </summary>
+            <param name="database">The database for writing the log.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="formatter">The formatter.</param>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.Write(System.String)">
+            <summary>
+            The Write method 
+            </summary>
+            <param name="message">The message to log</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.WriteLine(System.String)">
+            <summary>
+            The WriteLine method.
+            </summary>
+            <param name="message">The message to log</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)">
+            <summary>
+            Delivers the trace data to the underlying database.
+            </summary>
+            <param name="eventCache">The context information provided by <see cref="N:System.Diagnostics"/>.</param>
+            <param name="source">The name of the trace source that delivered the trace data.</param>
+            <param name="eventType">The type of event.</param>
+            <param name="id">The id of the event.</param>
+            <param name="data">The data to trace.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.GetSupportedAttributes">
+            <summary>
+            Declare the supported attributes for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.ValidateParameters(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Validates that enough information exists to attempt executing the stored procedures
+            </summary>
+            <param name="logEntry">The LogEntry to validate.</param>
+            <returns>A boolean indicating whether the parameters for the LogEntry configuration are valid.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.ExecuteStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Executes the stored procedures
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.ExecuteWriteLogStoredProcedure(System.Int32,System.Int32,System.Diagnostics.TraceEventType,System.String,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Data.Database)">
+            <summary>
+            Executes the WriteLog stored procedure
+            </summary>
+            <param name="eventId">The event id for this LogEntry.</param>
+            <param name="priority">The priority for this LogEntry.</param>
+            <param name="severity">The severity for this LogEntry.</param>
+            <param name="title">The title for this LogEntry.</param>
+            <param name="timeStamp">The timestamp for this LogEntry.</param>
+            <param name="machineName">The machine name for this LogEntry.</param>
+            <param name="appDomainName">The appDomainName for this LogEntry.</param>
+            <param name="processId">The process id for this LogEntry.</param>
+            <param name="processName">The processName for this LogEntry.</param>
+            <param name="managedThreadName">The managedthreadName for this LogEntry.</param>
+            <param name="win32ThreadId">The win32threadID for this LogEntry.</param>
+            <param name="message">The message for this LogEntry.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <returns>An integer for the LogEntry Id</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.ExecuteWriteLogStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,Microsoft.Practices.EnterpriseLibrary.Data.Database,System.Data.Common.DbTransaction)">
+            <summary>
+            Executes the WriteLog stored procedure
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <param name="transaction">The transaction that wraps around the execution calls for storing the LogEntry</param>
+            <returns>An integer for the LogEntry Id</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener.ExecuteAddCategoryStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Int32,Microsoft.Practices.EnterpriseLibrary.Data.Database,System.Data.Common.DbTransaction)">
+            <summary>
+            Executes the AddCategory stored procedure
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database.</param>
+            <param name="logID">The unique identifer for the LogEntry as obtained from the WriteLog Stored procedure.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <param name="transaction">The transaction that wraps around the execution calls for storing the LogEntry</param>
+        </member>
+    </members>
+</doc>

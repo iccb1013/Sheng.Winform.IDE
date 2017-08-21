@@ -1,0 +1,23 @@
+﻿用于显示的单元格和用于编码的单元格之间的关系
+
+如 BooleanCell 和 BooleanCellEditingControl
+
+BooleanCell 中，ValueType和FormatedValueType是分开的，可以不同
+一个用来表示值的类型，一个用来表示用于格式化显示的类型，对于从DataGridViewTextBoxCell继承的BooleanCell，
+FormatedValueType为String,并且不能更改，ValueType通过override设置为Boolean
+
+BooleanCellEditingControl中有一个属性EditingControlFormattedValue，这个属性的返回的值的类型必须和BooleanCell的FormatedValueType相同
+
+ BooleanCell 可以通过 override object GetFormattedValue 来显示更加格式化的文本
+
+从ComboBox继承的EditingControl，在构造里设置DataSource不灵，原因不明
+体现在单元格的InitializeEditingControl方法设置SelectedValue时不起作用，设置SelectedIndex也报错，超出范围
+查DataSouce，能查到，但Items.Count为0，但第2次激活这个编辑控件后就可以了
+
+除非进入单元格的编辑状态，否则  DataGridView.EditingControl 是为 null 的，也就是说不能企图在单元格的Paint，GetFormatedValue之类的方法中拿 DataGridView.EditingControl
+
+在单元格的 InitializeEditingControl 方法中，要注意EditingControl在datagridview的不同行上是共享的，设置属性时需要注意，如comboBoxcell，必须每次都设置datasouce属性
+
+PropertyInfo对象是和获取它的类型相关联的，不能把在对象A上取的PropertyInfo，对对象B赋值，及时它们Property的Name相同。
+所以必须用 Type.InvokeMember 方法。
+

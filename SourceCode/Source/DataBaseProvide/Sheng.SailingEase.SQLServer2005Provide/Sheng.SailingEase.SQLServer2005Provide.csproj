@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A0A4993-F075-4FB7-A62A-09F8D9BE6CBF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.SQLServer2005Provide</RootNamespace>
+    <AssemblyName>Sheng.SailingEase.SQLServer2005Provide</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FieldFactory.cs" />
+    <Compile Include="Fields\FieldBinary.cs" />
+    <Compile Include="Fields\FieldBit.cs" />
+    <Compile Include="Fields\FieldChar.cs" />
+    <Compile Include="Fields\FieldDecimal.cs" />
+    <Compile Include="Fields\FieldFloat.cs" />
+    <Compile Include="Fields\FieldInt.cs" />
+    <Compile Include="Fields\FieldSmallDatetime.cs" />
+    <Compile Include="Fields\FieldUniqueidentifier.cs" />
+    <Compile Include="Fields\FieldVarbinary.cs" />
+    <Compile Include="Fields\FieldVarchar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLServer2005.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sheng.SailingEase.IDataBaseProvide\Sheng.SailingEase.IDataBaseProvide.csproj">
+      <Project>{960F2D9C-8DFB-4F9C-9501-B5F3E7C8E3F5}</Project>
+      <Name>Sheng.SailingEase.IDataBaseProvide</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fields\!无此命名空间.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

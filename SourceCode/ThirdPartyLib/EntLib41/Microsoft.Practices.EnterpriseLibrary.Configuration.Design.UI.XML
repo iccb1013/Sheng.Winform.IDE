@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter,System.IServiceProvider)">
+            <summary>
+            
+            </summary>
+            <param name="serviceProvider"></param>
+            <param name="adaptor"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.BeginUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.EndUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowSaveDialog(System.Windows.Forms.SaveFileDialog)">
+            <summary>
+            
+            </summary>
+            <param name="dialog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowOpenDialog(System.Windows.Forms.OpenFileDialog)">
+            <summary>
+            
+            </summary>
+            <param name="dialog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.DisplayErrorLog(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IErrorLogService)">
+            <summary>
+            
+            </summary>
+            <param name="errorLogService"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.SetUIDirty(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            
+            </summary>
+            <param name="hierarchy"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.IsDirty(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            
+            </summary>
+            <param name="hierarchy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.SetStatus(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ClearErrorDisplay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowError(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowError(System.Exception,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowError(System.Exception,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+            <param name="message"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowError(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowError(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowMessage(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.ShowMessage(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="caption"></param>
+            <param name="buttons"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.RefreshPropertyGrid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.GetTasksFromErrorService(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IErrorLogService)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationEditor.OwnerWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem">
+            <summary>
+            Represents a menu item for configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationUICommand)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem"/> class.
+            </summary>
+            <param name="node">The node for the menu.</param>
+            <param name="command">Te command for the menu.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.CloneMenu">
+            <summary>
+            Creates a copy of the current <see cref="T:System.Windows.Forms.MenuItem"></see>.
+            </summary>
+            <returns>
+            A <see cref="T:System.Windows.Forms.MenuItem"></see> that represents the duplicated menu item.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the resources (other than memory) used by the <see cref="T:System.Windows.Forms.MenuItem"></see>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.OnClick(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.MenuItem.Click"></see> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"></see> that contains the event data. </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.InsertionPoint">
+            <summary>
+            Gets the insertion point for the menu.
+            </summary>
+            <value>
+            The insertion point for the menu.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationMenuItem.LongText">
+            <summary>
+            Gets the long text for the menu.
+            </summary>
+            <value>
+            The long text for the menu.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer">
+            <summary>
+            Maintains the binding between an ConfigurationNode and its icon.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer.#ctor(System.Windows.Forms.ImageList)">
+            <summary>
+            Initialize a new instance of th e<see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer"/> with an <see cref="T:System.Windows.Forms.ImageList"/>.
+            </summary>
+            <param name="imageList">The image list to use.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer.GetImageIndex(System.Type)">
+            <devdoc>
+            Gets the index of the image to display when a ConfigurationNodeof the specified type is displayed in the ConfigurationTreeView.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer.GetSelectedImageIndex(System.Type)">
+            <summary>
+            Gets the index of the image to display when a ConfigurationNode of the specified type is selected in the ConfigurationTreeView.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode">
+            <devdoc>
+            The graphical representation of a ConfigurationNode.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory)">
+            <summary>
+            
+            </summary>
+            <param name="configNode"></param>
+            <param name="childNodeFactory"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode.Clone">
+            <devdoc>
+            Copies the tree node and the  entire subtree rooted at this tree node.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode.CreateChildNode(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <devdoc>
+            Creates a ConfigurationTreeNode using the TreeNodeFactory of the current ConfigurationTreeView.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode.ConfigurationNode">
+            <devdoc>
+            Gets the ConfigurationNode associated with this tree node
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.CustomTreeView">
+            <summary>
+            A custom tree view that lets me popup the context menu in the appropriate place when the Application
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.CustomTreeView.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.CustomTreeView"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.CustomTreeView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.CustomTreeView.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Overrides <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)"></see>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.DefaultSolutionNodeName">
+            <summary>
+              Looks up a localized string similar to Enterprise Library Configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.MenuItemNew">
+            <summary>
+              Looks up a localized string similar to &amp;New.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.MenuItemRename">
+            <summary>
+              Looks up a localized string similar to &amp;Rename.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.NodeLabelEditCaption">
+            <summary>
+              Looks up a localized string similar to Node Label Edit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.NodeLabelEditFailedText">
+            <summary>
+              Looks up a localized string similar to Unable to rename the TreeNode -&gt; .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.Properties.Resources.NodeLabelEditText">
+             <summary>
+               Looks up a localized string similar to Invalid tree node label.
+            The label cannot be blank..
+             </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SolutionConfigurationNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SolutionConfigurationNode.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SolutionConfigurationNode.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeContainer">
+            <summary>
+            Represents a lookup table of ConfigurationTreeNode objects indexed by their contained configuration node's ID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeContainer.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeContainer.AddTreeNode(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode)">
+            <summary>
+            Adds the specified ConfigurationTreeNode to the container.
+            </summary>
+            <param name="treeNode">
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationTreeNode"/> to add.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeContainer.GetTreeNode(System.Guid)">
+            <summary>
+            Looks up the ConfigurationTreeNode indexed by the specified ID.
+            </summary>
+            <param name="id">
+            The id to lookup.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory">
+            <summary>
+            Represents a factory for creating ConfigurationTreeNode objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory.Create(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Creates a new intance of a ConfigurationTreeNode class and sets its ImageIndex and SelectedImageIndex property values.
+            </summary>
+            <param name="node">
+            The parent node.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory.GetTreeNode(System.Guid)">
+            <summary>
+            Looks up the ConfigurationTreeNode indexed by the specified ID.
+            </summary>
+            <param name="id">
+            The id to look up.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.TreeNodeFactory.SetImageContainer(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeImageContainer)">
+            <summary>
+            Sets the image container for the node.
+            </summary>
+            <param name="imageContainer"></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.HostAdapterConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.GetService(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configurationFile"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.NavigateTask(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapter.Task)">
+            <summary>
+            
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configurationFile"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.Validate">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.EditorControl">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.IsDirty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.DocumentClosed">
+            <summary>
+            Event fired when a document is closed.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.SelectionChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.StatusTextChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.SingleHierarchyConfigurationUIHostAdapter.TasksChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeTask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeTask.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="configurationNode"></param>
+            <param name="message"></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.UI.ConfigurationNodeTask.ConfigurationNode">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

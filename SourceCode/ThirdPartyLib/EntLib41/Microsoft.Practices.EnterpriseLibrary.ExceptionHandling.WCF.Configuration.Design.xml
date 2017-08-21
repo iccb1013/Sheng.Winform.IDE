@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.ConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the WCF exception handler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.ConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.ConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the WCF.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> configuration element. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> instance.
+            </summary>
+            <param name="data">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.ExceptionHandlerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.ExceptionMessage">
+            <summary>
+            Gets or sets the Exception Message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.FaultContractType">
+            <summary>
+            Gets or sets the Fault Contract Type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractExceptionHandlerNode.PropertyMappings">
+            <summary>
+            Gets the fault contract property mappings for the handler.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractPropertyMapping">
+            <summary>
+            Design time representation of a 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractPropertyMapping.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.FaultContractPropertyMapping.Source">
+            <summary>
+            Gets or sets the source.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.AddWCF">
+            <summary>
+              Looks up a localized string similar to Add WCF.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.ExceptionMessageDescription">
+            <summary>
+              Looks up a localized string similar to Exception Message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractExceptionHandlerNodeName">
+            <summary>
+              Looks up a localized string similar to Fault Contract Exception Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractExceptionHandlerNodeUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add Fault Contract Exception Handler..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractExceptionHandlerNodeUICommandText">
+            <summary>
+              Looks up a localized string similar to Fault Contract Exception Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractMappingNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of the fault contract property..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractMappingSourceDescription">
+            <summary>
+              Looks up a localized string similar to The name of the source exception property, or a GUID..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.FaultContractTypeDescription">
+            <summary>
+              Looks up a localized string similar to Fault Contract.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.PropertyMappingDuplicateNameError">
+            <summary>
+              Looks up a localized string similar to The property mappings collection has multiple entries for name {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.PropertyMappingEditorFormat">
+            <summary>
+              Looks up a localized string similar to {0} -&gt; {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.PropertyMappingNameNullError">
+            <summary>
+              Looks up a localized string similar to The property mapping at position {0} has a null or empty name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.PropertyMappingsMessageDescription">
+            <summary>
+              Looks up a localized string similar to Property mappings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Design.Properties.Resources.WCF">
+            <summary>
+              Looks up a localized string similar to WCF.
+            </summary>
+        </member>
+    </members>
+</doc>

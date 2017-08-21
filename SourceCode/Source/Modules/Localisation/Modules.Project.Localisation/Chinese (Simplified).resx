@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Navigation_Menu_NewProject" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="Navigation_Menu_OpenProject" xml:space="preserve">
+    <value>打开项目</value>
+  </data>
+  <data name="Navigation_Menu_CloseProject" xml:space="preserve">
+    <value>关闭项目</value>
+  </data>
+  <data name="Navigation_Menu_ProjectProperty" xml:space="preserve">
+    <value>项目属性</value>
+  </data>
+  <data name="Navigation_Menu_ProjectStartPage" xml:space="preserve">
+    <value>项目首页</value>
+  </data>
+  <data name="Navigation_Menu_BuildProject" xml:space="preserve">
+    <value>生成项目</value>
+  </data>
+  <data name="CreateProjectView_FolderBrowserDialog_Description" xml:space="preserve">
+    <value>选择项目文件存放目录</value>
+  </data>
+  <data name="CreateProjectView_ProjectTypeTreeNode_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="CreateProjectView_ProjectType_Empty" xml:space="preserve">
+    <value>空项目</value>
+  </data>
+  <data name="CreateProjectView_ProjectType_Empty_Description" xml:space="preserve">
+    <value>空白项目</value>
+  </data>
+  <data name="CreateProjectView_MessageFolderNotExist" xml:space="preserve">
+    <value>指定的路径不存在，是否创建该目录？</value>
+  </data>
+  <data name="CreateProjectView" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="CreateProjectView_ButtonBrowse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="CreateProjectView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CreateProjectView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="CreateProjectView_LabelFileName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="CreateProjectView_LabelFolder" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="CreateProjectView_LabelProjectType" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+  <data name="CreateProjectView_LabelTemplate" xml:space="preserve">
+    <value>模版</value>
+  </data>
+  <data name="ProjectPropertyView" xml:space="preserve">
+    <value>项目属性</value>
+  </data>
+  <data name="ProjectPropertyView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ProjectPropertyView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ProjectPropertyView_CheckBoxUserModel" xml:space="preserve">
+    <value>用户模块</value>
+  </data>
+  <data name="ProjectPropertyView_CheckBoxUserPopedomModel" xml:space="preserve">
+    <value>权限模块</value>
+  </data>
+  <data name="ProjectPropertyView_CheckBoxUserSubsequent" xml:space="preserve">
+    <value>多用户并发保护</value>
+  </data>
+  <data name="ProjectPropertyView_LabelAboutImg" xml:space="preserve">
+    <value>关于图片</value>
+  </data>
+  <data name="ProjectPropertyView_LabelBackImg" xml:space="preserve">
+    <value>背景图片</value>
+  </data>
+  <data name="ProjectPropertyView_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="ProjectPropertyView_LabelCompany" xml:space="preserve">
+    <value>公司</value>
+  </data>
+  <data name="ProjectPropertyView_LabelCopyright" xml:space="preserve">
+    <value>版权</value>
+  </data>
+  <data name="ProjectPropertyView_LabelSummary" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ProjectPropertyView_LabelUseDataBase" xml:space="preserve">
+    <value>使用数据库</value>
+  </data>
+  <data name="ProjectPropertyView_LabelVersion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="ProjectPropertyView_MessageResourcesExistConfirmOverWrite" xml:space="preserve">
+    <value>当前资源文件目录下已有同名文件，是否覆盖？</value>
+  </data>
+  <data name="ProjectPropertyView_ProjectName" xml:space="preserve">
+    <value>项目名</value>
+  </data>
+  <data name="ProjectPropertyView_SplashImg" xml:space="preserve">
+    <value>启动画面</value>
+  </data>
+  <data name="ProjectPropertyView_TabPageAbout" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="ProjectPropertyView_TabPageGeneral" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ProjectPropertyView_TabPageRemark" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="ProjectStartPage_Title" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="Navigation_ToolStrip_NewProject" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="Navigation_ToolStrip_OpenProject" xml:space="preserve">
+    <value>打开项目</value>
+  </data>
+</root>

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CategoryGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="CategoryLocalization" xml:space="preserve">
+    <value>Localization</value>
+  </data>
+  <data name="DefaultCustomHandlerNodeName" xml:space="preserve">
+    <value>Custom Handler</value>
+  </data>
+  <data name="DefaultExceptionHandlingSettingsNodeName" xml:space="preserve">
+    <value>Exception Handling Application Block</value>
+  </data>
+  <data name="DefaultExceptionPolicyNodeName" xml:space="preserve">
+    <value>Exception Policy</value>
+  </data>
+  <data name="DefaultExceptionTypeNodeName" xml:space="preserve">
+    <value>Exception Type</value>
+  </data>
+  <data name="DefaultReplaceHandlerNodeName" xml:space="preserve">
+    <value>Replace Handler</value>
+  </data>
+  <data name="DefaultWrapHandlerNodeName" xml:space="preserve">
+    <value>Wrap Handler</value>
+  </data>
+  <data name="DuplicateExceptionTypeErrorMessage" xml:space="preserve">
+    <value>An exception of type {0} is already configured for this policy.</value>
+  </data>
+  <data name="ErrorNoExceptionHandlers" xml:space="preserve">
+    <value>There must be at least 1 or more Exception Handler(s) for the type.</value>
+  </data>
+  <data name="ExceptionHandlerAdditionalPropertiesDescription" xml:space="preserve">
+    <value>Defines any number of custom properties that can be passed to a handler.</value>
+  </data>
+  <data name="ExceptionHandlerNameDescription" xml:space="preserve">
+    <value>The friendly name of the exception handler.</value>
+  </data>
+  <data name="ExceptionHandlerTypeDescription" xml:space="preserve">
+    <value>The fully qualified name of the type of exception handler.</value>
+  </data>
+  <data name="ExceptionHandlingSettingsNodeMenuText" xml:space="preserve">
+    <value>Exception Handling Application Block</value>
+  </data>
+  <data name="ExceptionHandlingSettingsNodeStatusText" xml:space="preserve">
+    <value>Add the Exception Handling Application Block to the configuration</value>
+  </data>
+  <data name="ExceptionHandlingUICommandLongText" xml:space="preserve">
+    <value>Exception Handling Application Block</value>
+  </data>
+  <data name="ExceptionHandlingUICommandText" xml:space="preserve">
+    <value>Exception Handling Application Block</value>
+  </data>
+  <data name="ExceptionPolicyNodeMenuText" xml:space="preserve">
+    <value>Exception Policy</value>
+  </data>
+  <data name="ExceptionPolicyNodeStatusText" xml:space="preserve">
+    <value>Create a new Exception Type</value>
+  </data>
+  <data name="ExceptionReplaceMessageDescription" xml:space="preserve">
+    <value>The optional message for the replace exception.</value>
+  </data>
+  <data name="ExceptionReplaceTypeNameDescription" xml:space="preserve">
+    <value>The fully qualified name of the type of exception to use for replacing.</value>
+  </data>
+  <data name="ExceptionTypeNodeMenuText" xml:space="preserve">
+    <value>Exception Type</value>
+  </data>
+  <data name="ExceptionTypeNodeNameDescription" xml:space="preserve">
+    <value>The fully qualified name of the type of Exception to get handled.  Must inherit from System.Exception.</value>
+  </data>
+  <data name="ExceptionTypeNodeStatusText" xml:space="preserve">
+    <value>Create a new Exception Type</value>
+  </data>
+  <data name="ExceptionTypePostHandlingActionDescription" xml:space="preserve">
+    <value>Determines what action should occur after an exception is handled by the configured exception handling chain.
+None: Indicates that no post handling action should occur.
+NotifyRethrow: Notifies the caller that a Rethrow of the original exception is recommended.
+ThrowNewException: Throws the resulting exception from the completed exception handling chain.</value>
+  </data>
+  <data name="ExceptionWrapTypeNameDescription" xml:space="preserve">
+    <value>The fully qualified name of the type of exception to use for wrapping.</value>
+  </data>
+  <data name="GenericCreateStatusText" xml:space="preserve">
+    <value>Create a new {0}</value>
+  </data>
+  <data name="SelectTypeDialogCaption" xml:space="preserve">
+    <value>Select Exception Type.</value>
+  </data>
+  <data name="WrapHandlerNodeMessageDescription" xml:space="preserve">
+    <value>The optional message for the wrap exception.</value>
+  </data>
+</root>

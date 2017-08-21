@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Controls</RootNamespace>
+    <AssemblyName>Controls</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/SEControl/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserDisplayBinding\BrowserPane.cs" />
+    <Compile Include="BrowserDisplayBinding\DefaultHtmlViewSchemeExtension.cs" />
+    <Compile Include="BrowserDisplayBinding\ExtendedWebBrowser.cs" />
+    <Compile Include="BrowserDisplayBinding\HtmlViewPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserDisplayBinding\HtmlViewPaneEvents.cs" />
+    <Compile Include="BrowserDisplayBinding\IHtmlViewSchemeExtension.cs" />
+    <Compile Include="DataGridView\DataGridViewImageBinderCell.cs" />
+    <Compile Include="DataGridView\DataGridViewImageBinderColumn.cs" />
+    <Compile Include="DataGridView\Renderer\DataGridViewCheckBoxCellRenderer.cs" />
+    <Compile Include="DataGridView\Renderer\DataGridViewImageCellRenderer.cs" />
+    <Compile Include="DataGridView\Renderer\DataGridViewRenderer.cs" />
+    <Compile Include="DataGridView\Renderer\DataGridViewRendererTheme.cs" />
+    <Compile Include="DataGridView\Renderer\IDataGridViewCellRenderer.cs" />
+    <Compile Include="DragHelper.cs" />
+    <Compile Include="IconResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IconResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageListView\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\Events.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewHitInfo.cs" />
+    <Compile Include="ImageListView\ImageListViewItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewItemThumbnailsCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewLayoutManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewStandardRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageListView\ImageListViewTheme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocalizedDescription.cs" />
+    <Compile Include="Renderer\Office2010Renderer.cs" />
+    <Compile Include="Renderer\ToolStripRenders.cs" />
+    <Compile Include="SEAreoMainMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEComboSelector2\SEComboSelector2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEComboSelector2\Enums.cs" />
+    <Compile Include="SEComboSelector2\SEComboSelectorTheme.cs" />
+    <Compile Include="SECommandLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SECommandLink.Designer.cs">
+      <DependentUpon>SECommandLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docking\AutoHideStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockAreasEditor.cs" />
+    <Compile Include="Docking\DockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\DockContentCollection.cs" />
+    <Compile Include="Docking\DockContentEventArgs.cs" />
+    <Compile Include="Docking\DockContentHandler.cs" />
+    <Compile Include="Docking\DockOutlineBase.cs" />
+    <Compile Include="Docking\DockPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPane.SplitterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCaptionBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPaneCollection.cs" />
+    <Compile Include="Docking\DockPanel.AutoHideWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.cs" />
+    <Compile Include="Docking\DockPanel.DockDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.DragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.FocusManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.MdiClientController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.Persistor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanel.SplitterDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockPanelExtender.cs" />
+    <Compile Include="Docking\DockPanelSkin.cs" />
+    <Compile Include="Docking\DockPaneStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockWindow.SplitterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\DockWindowCollection.cs" />
+    <Compile Include="Docking\DragForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\DummyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\Enums.cs" />
+    <Compile Include="Docking\FloatWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\FloatWindowCollection.cs" />
+    <Compile Include="Docking\Helpers\DockHelper.cs" />
+    <Compile Include="Docking\Helpers\DrawHelper.cs" />
+    <Compile Include="Docking\Helpers\ResourceHelper.cs" />
+    <Compile Include="Docking\Helpers\Win32Helper.cs" />
+    <Compile Include="Docking\InertButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\Interfaces.cs" />
+    <Compile Include="Docking\Localization.cs" />
+    <Compile Include="Docking\Measures.cs" />
+    <Compile Include="Docking\NestedDockingStatus.cs" />
+    <Compile Include="Docking\NestedPaneCollection.cs" />
+    <Compile Include="Docking\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Docking\SplitterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Docking\VisibleNestedPaneCollection.cs" />
+    <Compile Include="Docking\VS2005AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\VS2005DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\VS2005DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\Win32\Enums.cs" />
+    <Compile Include="Docking\Win32\NativeMethods.cs" />
+    <Compile Include="ObjectListView\Adornments.cs" />
+    <Compile Include="ObjectListView\Attributes.cs" />
+    <Compile Include="ObjectListView\CellEditors.cs" />
+    <Compile Include="ObjectListView\Comparers.cs" />
+    <Compile Include="ObjectListView\DataListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Decorations.cs" />
+    <Compile Include="ObjectListView\DragSource.cs" />
+    <Compile Include="ObjectListView\DropSink.cs" />
+    <Compile Include="ObjectListView\Events.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\FastObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Generator.cs" />
+    <Compile Include="ObjectListView\GlassPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Groups.cs" />
+    <Compile Include="ObjectListView\HeaderControl.cs" />
+    <Compile Include="ObjectListView\Munger.cs" />
+    <Compile Include="ObjectListView\NativeMethods.cs" />
+    <Compile Include="ObjectListView\ObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\ObjectListView.DesignTime.cs" />
+    <Compile Include="ObjectListView\Overlays.cs" />
+    <Compile Include="ObjectListView\Renderers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Styles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\ToolTipControl.cs" />
+    <Compile Include="ObjectListView\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\TypedObjectListView.cs" />
+    <Compile Include="ObjectListView\VirtualGroups.cs" />
+    <Compile Include="ObjectListView\VirtualListDataSource.cs" />
+    <Compile Include="ObjectListView\VirtualObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\FileSystemNode.cs" />
+    <Compile Include="SEAdressBar\IAddressNode.cs" />
+    <Compile Include="SEAdressBar\SEAddressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBar.Designer.cs">
+      <DependentUpon>SEAddressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBarStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBarButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBarDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBarDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdressBar\SEAddressBarDropDownItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEComboSelector\SEComboSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEComboSelector\SEComboSelector.Designer.cs">
+      <DependentUpon>SEComboSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEComboSelector\SEComboSelectorItem.cs" />
+    <Compile Include="SEComboSelector\SEComboSelectorItemCollection.cs" />
+    <Compile Include="SEComboSelector\SEComboSelectorItemContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEComboSelector\SEComboSelectorItemContainer.Designer.cs">
+      <DependentUpon>SEComboSelectorItemContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISEValidate.cs" />
+    <Compile Include="NavigationTreeView\SENavigationTreeNode.cs" />
+    <Compile Include="NavigationTreeView\SENavigationTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupControl\PopupControlComboBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupControl\PopupControlComboBoxBase.Designer.cs">
+      <DependentUpon>PopupControlComboBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupControl\GripBounds.cs" />
+    <Compile Include="PopupControl\NativeMethods.cs" />
+    <Compile Include="PopupControl\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupControl\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupControl\PopupAnimation.cs" />
+    <Compile Include="PopupControl\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupControl\PopupComboBox.Designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SECheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEGlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEGlassButton.Designer.cs">
+      <DependentUpon>SEGlassButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEiBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEiBar.Designer.cs">
+      <DependentUpon>SEiBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISEForm.cs" />
+    <Compile Include="MozBar\ImageListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MozBar\ImageMapEditor.cs" />
+    <Compile Include="MozBar\MozItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MozBar\MozPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MozBar\ScrollableControlWithScrollEvents.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MozBar\ThemeManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\SEToolStripRender.cs" />
+    <Compile Include="SEAdvComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEAdvComboBoxDropdownBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEAdvComboBoxDropdownBase.Designer.cs">
+      <DependentUpon>SEAdvComboBoxDropdownBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEAdvLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEColorChooseComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEColorChooseComboBox.Designer.cs">
+      <DependentUpon>SEColorChooseComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEColorChooseComboBoxDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEColorChooseComboBoxDropDown.Designer.cs">
+      <DependentUpon>SEColorChooseComboBoxDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\SEControlLicense.cs" />
+    <Compile Include="License\SEControlLicenseProvider.cs" />
+    <Compile Include="SEDataGridViewCheckBoxColumn.cs" />
+    <Compile Include="SEFlatButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEFlatButton.Designer.cs">
+      <DependentUpon>SEFlatButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEListView\Enums.cs" />
+    <Compile Include="SEListView\Events.cs" />
+    <Compile Include="SEListView\Layout\ISEListViewExtendMember.cs" />
+    <Compile Include="SEListView\Layout\SEListViewDescriptiveLayoutManager.cs" />
+    <Compile Include="SEListView\Layout\SEListViewDescriptiveMembers.cs" />
+    <Compile Include="SEListView\Layout\SEListViewDescriptiveRenderer.cs" />
+    <Compile Include="SEListView\Layout\SEListViewLayoutManager.cs" />
+    <Compile Include="SEListView\Layout\SEListViewRenderer.cs" />
+    <Compile Include="SEListView\Layout\SEListViewStandardLayoutManager.cs" />
+    <Compile Include="SEListView\Layout\SEListViewStandardRenderer.cs" />
+    <Compile Include="SEListView\Layout\SEListViewTheme.cs" />
+    <Compile Include="SEListView\SEListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEListView\SEListViewColor.cs" />
+    <Compile Include="SEListView\SEListViewHitInfo.cs" />
+    <Compile Include="SEListView\SEListViewItem.cs" />
+    <Compile Include="SEListView\SEListViewItemCollection.cs" />
+    <Compile Include="SELoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEMessageBox\ISEMessageBoxForm.cs" />
+    <Compile Include="SEMessageBox\SEMessageBox.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxBase.Designer.cs">
+      <DependentUpon>SEMessageBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxButton.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxButtons.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxCmdLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxCmdLink.Designer.cs">
+      <DependentUpon>SEMessageBoxCmdLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxIcon.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxManager.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxResult.cs" />
+    <Compile Include="SEMessageBox\SEMessageBoxStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxStandard.Designer.cs">
+      <DependentUpon>SEMessageBoxStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEMessageBox\SEMessageBoxTimeoutResult.cs" />
+    <Compile Include="SEPad.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEPaginationDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEPaginationDataGridView.Designer.cs">
+      <DependentUpon>SEPaginationDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SESimpleCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEForm.Designer.cs">
+      <DependentUpon>SEForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEDatetimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEFormDock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEFormDock.Designer.cs">
+      <DependentUpon>SEFormDock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SELine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SENumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEStackView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEStackView.Designer.cs">
+      <DependentUpon>SEStackView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SETabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SETextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SETitleLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEToolStrip.cs" />
+    <Compile Include="SEToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEToolStripLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Renderer\SEToolStripProfessionalRenderer_Gary.cs" />
+    <Compile Include="SEToolStripSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SETreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SEUserControl.Designer.cs">
+      <DependentUpon>SEUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEValidateHelper.cs" />
+    <Compile Include="SEWaterEffectPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StackView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StackView.Designer.cs">
+      <DependentUpon>StackView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextEditor\Actions\BookmarkActions.cs" />
+    <Compile Include="TextEditor\Actions\CaretActions.cs" />
+    <Compile Include="TextEditor\Actions\ClipBoardActions.cs" />
+    <Compile Include="TextEditor\Actions\FoldActions.cs" />
+    <Compile Include="TextEditor\Actions\FormatActions.cs" />
+    <Compile Include="TextEditor\Actions\HomeEndActions.cs" />
+    <Compile Include="TextEditor\Actions\IEditAction.cs" />
+    <Compile Include="TextEditor\Actions\MiscActions.cs" />
+    <Compile Include="TextEditor\Actions\SelectionActions.cs" />
+    <Compile Include="TextEditor\Document\AbstractSegment.cs" />
+    <Compile Include="TextEditor\Document\BookmarkManager\Bookmark.cs" />
+    <Compile Include="TextEditor\Document\BookmarkManager\BookmarkEventHandler.cs" />
+    <Compile Include="TextEditor\Document\BookmarkManager\BookmarkManager.cs" />
+    <Compile Include="TextEditor\Document\BookmarkManager\BookmarkManagerMemento.cs" />
+    <Compile Include="TextEditor\Document\DefaultDocument.cs" />
+    <Compile Include="TextEditor\Document\DefaultTextEditorProperties.cs" />
+    <Compile Include="TextEditor\Document\DocumentEventArgs.cs" />
+    <Compile Include="TextEditor\Document\DocumentFactory.cs" />
+    <Compile Include="TextEditor\Document\FoldingStrategy\FoldingManager.cs" />
+    <Compile Include="TextEditor\Document\FoldingStrategy\FoldMarker.cs" />
+    <Compile Include="TextEditor\Document\FoldingStrategy\IFoldingStrategy.cs" />
+    <Compile Include="TextEditor\Document\FoldingStrategy\IndentFoldingStrategy.cs" />
+    <Compile Include="TextEditor\Document\FormattingStrategy\DefaultFormattingStrategy.cs" />
+    <Compile Include="TextEditor\Document\FormattingStrategy\IFormattingStrategy.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\DefaultHighlightingStrategy.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\FontContainer.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightBackground.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightColor.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightInfo.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightingColorNotFoundException.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightingDefinitionInvalidException.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightingDefinitionParser.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightingManager.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightingStrategyFactory.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\HighlightRuleSet.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\IHighlightingStrategy.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\NextMarker.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\PrevMarker.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\Span.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\SpanStack.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\SyntaxModes\FileSyntaxModeProvider.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\SyntaxModes\ISyntaxModeFileProvider.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\SyntaxModes\ResourceSyntaxModeProvider.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\SyntaxModes\SyntaxMode.cs" />
+    <Compile Include="TextEditor\Document\HighlightingStrategy\TextWord.cs" />
+    <Compile Include="TextEditor\Document\IDocument.cs" />
+    <Compile Include="TextEditor\Document\ISegment.cs" />
+    <Compile Include="TextEditor\Document\ITextEditorProperties.cs" />
+    <Compile Include="TextEditor\Document\LineManager\DeferredEventList.cs" />
+    <Compile Include="TextEditor\Document\LineManager\LineManager.cs" />
+    <Compile Include="TextEditor\Document\LineManager\LineManagerEventArgs.cs" />
+    <Compile Include="TextEditor\Document\LineManager\LineSegment.cs" />
+    <Compile Include="TextEditor\Document\LineManager\LineSegmentTree.cs" />
+    <Compile Include="TextEditor\Document\MarkerStrategy\MarkerStrategy.cs" />
+    <Compile Include="TextEditor\Document\MarkerStrategy\TextMarker.cs" />
+    <Compile Include="TextEditor\Document\Selection\ColumnRange.cs" />
+    <Compile Include="TextEditor\Document\Selection\DefaultSelection.cs" />
+    <Compile Include="TextEditor\Document\Selection\ISelection.cs" />
+    <Compile Include="TextEditor\Document\Selection\SelectionManager.cs" />
+    <Compile Include="TextEditor\Document\TextAnchor.cs" />
+    <Compile Include="TextEditor\Document\TextBufferStrategy\GapTextBufferStrategy.cs" />
+    <Compile Include="TextEditor\Document\TextBufferStrategy\ITextBufferStrategy.cs" />
+    <Compile Include="TextEditor\Document\TextBufferStrategy\StringTextBufferStrategy.cs" />
+    <Compile Include="TextEditor\Document\TextLocation.cs" />
+    <Compile Include="TextEditor\Document\TextUtilities.cs" />
+    <Compile Include="TextEditor\Gui\AbstractMargin.cs" />
+    <Compile Include="TextEditor\Gui\BracketHighlighter.cs" />
+    <Compile Include="TextEditor\Gui\BrushRegistry.cs" />
+    <Compile Include="TextEditor\Gui\Caret.cs" />
+    <Compile Include="TextEditor\Gui\CompletionWindow\AbstractCompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\CompletionWindow\CodeCompletionListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\CompletionWindow\CodeCompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\CompletionWindow\DeclarationViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\CompletionWindow\ICompletionData.cs" />
+    <Compile Include="TextEditor\Gui\CompletionWindow\ICompletionDataProvider.cs" />
+    <Compile Include="TextEditor\Gui\DrawableLine.cs" />
+    <Compile Include="TextEditor\Gui\FoldMargin.cs" />
+    <Compile Include="TextEditor\Gui\GutterMargin.cs" />
+    <Compile Include="TextEditor\Gui\HRuler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\IconBarMargin.cs" />
+    <Compile Include="TextEditor\Gui\Ime.cs" />
+    <Compile Include="TextEditor\Gui\InsightWindow\IInsightDataProvider.cs" />
+    <Compile Include="TextEditor\Gui\InsightWindow\InsightWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\TextArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\TextAreaClipboardHandler.cs" />
+    <Compile Include="TextEditor\Gui\TextAreaControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\TextAreaDragDropHandler.cs" />
+    <Compile Include="TextEditor\Gui\TextAreaMouseHandler.cs" />
+    <Compile Include="TextEditor\Gui\TextAreaUpdate.cs" />
+    <Compile Include="TextEditor\Gui\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\TextEditorControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextEditor\Gui\TextView.cs" />
+    <Compile Include="TextEditor\Gui\ToolTipRequestEventArgs.cs" />
+    <Compile Include="TextEditor\Undo\IUndoableOperation.cs" />
+    <Compile Include="TextEditor\Undo\UndoableDelete.cs" />
+    <Compile Include="TextEditor\Undo\UndoableInsert.cs" />
+    <Compile Include="TextEditor\Undo\UndoableReplace.cs" />
+    <Compile Include="TextEditor\Undo\UndoQueue.cs" />
+    <Compile Include="TextEditor\Undo\UndoStack.cs" />
+    <Compile Include="TextEditor\Util\AugmentableRedBlackTree.cs" />
+    <Compile Include="TextEditor\Util\CheckedList.cs" />
+    <Compile Include="TextEditor\Util\FileReader.cs" />
+    <Compile Include="TextEditor\Util\LoggingService.cs" />
+    <Compile Include="TextEditor\Util\LookupTable.cs" />
+    <Compile Include="TextEditor\Util\MouseWheelHandler.cs" />
+    <Compile Include="TextEditor\Util\RedBlackTreeIterator.cs" />
+    <Compile Include="TextEditor\Util\RtfWriter.cs" />
+    <Compile Include="TextEditor\Util\TextUtility.cs" />
+    <Compile Include="TextEditor\Util\TipPainter.cs" />
+    <Compile Include="TextEditor\Util\TipPainterTools.cs" />
+    <Compile Include="TextEditor\Util\TipSection.cs" />
+    <Compile Include="TextEditor\Util\TipSpacer.cs" />
+    <Compile Include="TextEditor\Util\TipSplitter.cs" />
+    <Compile Include="TextEditor\Util\TipText.cs" />
+    <Compile Include="TextEditor\Util\WeakCollection.cs" />
+    <Compile Include="SEThumbnailImageListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\Column.cs" />
+    <Compile Include="TreeViewGrid\ColumnCollection.cs" />
+    <Compile Include="TreeViewGrid\DrawContext.cs" />
+    <Compile Include="TreeViewGrid\DropPosition.cs" />
+    <Compile Include="TreeViewGrid\EditorContext.cs" />
+    <Compile Include="TreeViewGrid\enums.cs" />
+    <Compile Include="TreeViewGrid\InputState.cs" />
+    <Compile Include="TreeViewGrid\InputWithControl.cs" />
+    <Compile Include="TreeViewGrid\InputWithShift.cs" />
+    <Compile Include="TreeViewGrid\IToolTipProvider.cs" />
+    <Compile Include="TreeViewGrid\ITreeModel.cs" />
+    <Compile Include="TreeViewGrid\MouseArgs.cs" />
+    <Compile Include="TreeViewGrid\Node.cs" />
+    <Compile Include="TreeViewGrid\NodeControls\BaseTextControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\BindableControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\EditableControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeControlsCollection.cs" />
+    <Compile Include="TreeViewGrid\NodeControls\NodeIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodePlusMinus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeStateIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NodeControls\NodeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\NormalInputState.cs" />
+    <Compile Include="TreeViewGrid\ResizeColumnState.cs" />
+    <Compile Include="TreeViewGrid\TextHelper.cs" />
+    <Compile Include="TreeViewGrid\TreeColumn.cs" />
+    <Compile Include="TreeViewGrid\TreeColumnCollection.cs" />
+    <Compile Include="TreeViewGrid\TreeColumnEventArgs.cs" />
+    <Compile Include="TreeViewGrid\TreeModel.cs" />
+    <Compile Include="TreeViewGrid\TreeModelEventArgs.cs" />
+    <Compile Include="TreeViewGrid\TreeNodeAdv.cs" />
+    <Compile Include="TreeViewGrid\TreeNodeAdvMouseEventArgs.cs" />
+    <Compile Include="TreeViewGrid\TreePath.cs" />
+    <Compile Include="TreeViewGrid\TreePathEventArgs.cs" />
+    <Compile Include="TreeViewGrid\SETreeViewGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewGrid\SETreeViewGrid.Designer.cs">
+      <DependentUpon>SETreeViewGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewGrid\TreeViewAdvCancelEventArgs.cs" />
+    <Compile Include="TreeViewGrid\TreeViewAdvEventArgs.cs" />
+    <Compile Include="Wizard\IWizardView.cs" />
+    <Compile Include="Wizard\WizardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizard\WizardView.Designer.cs">
+      <DependentUpon>WizardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizard\WizardPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizard\WizardPanelBase.Designer.cs">
+      <DependentUpon>WizardPanelBase.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drawing\Drawing.csproj">
+      <Project>{BCD80096-7B6F-4273-A031-186A610C84E5}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Sheng.SailingEase.Controls.Localisation\Controls.Localisation.csproj">
+      <Project>{E0B8AD36-CC90-41F5-BD00-EC614569C9F9}</Project>
+      <Name>Controls.Localisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Win32\Win32.csproj">
+      <Project>{946FFB43-4864-4967-8D69-8716CDA83F7A}</Project>
+      <Name>Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEAdvComboBoxDropdownBase.resx">
+      <DependentUpon>SEAdvComboBoxDropdownBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEColorChooseComboBoxDropDown.resx">
+      <DependentUpon>SEColorChooseComboBoxDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEForm.resx">
+      <DependentUpon>SEForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizard\WizardView.resx">
+      <DependentUpon>WizardView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BrowserDisplayBinding\!无此命名空间.txt" />
+    <Content Include="Docking\DockPanel.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="Docking\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="Docking\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="Docking\Resources\DockPane_AutoHide.bmp" />
+    <Content Include="Docking\Resources\DockPane_Close.bmp" />
+    <Content Include="Docking\Resources\DockPane_Dock.bmp" />
+    <Content Include="Docking\Resources\DockPane_Option.bmp" />
+    <Content Include="Docking\Resources\DockPane_OptionOverflow.bmp" />
+    <Content Include="ImageListView\TextFile1.txt" />
+    <Content Include="License\TextFile1.txt" />
+    <Content Include="MozBar\MozItem.bmp" />
+    <Content Include="MozBar\MozPane.bmp" />
+    <Content Include="ObjectListView\CustomDictionary.xml" />
+    <None Include="Resources\Arrow_right_green.png" />
+    <None Include="Resources\Browser.png" />
+    <None Include="Resources\Browser_Back.png" />
+    <None Include="Resources\Browser_Forward.png" />
+    <None Include="Resources\Browser_Home.png" />
+    <None Include="Resources\Browser_Refresh.png" />
+    <None Include="Resources\Browser_Stop.png" />
+    <Content Include="SEMessageBox\Notes.txt" />
+    <None Include="Resources\FolderClosed.bmp" />
+    <None Include="Resources\Folder.bmp" />
+    <None Include="Resources\Check.bmp" />
+    <None Include="Resources\Unknown.bmp" />
+    <None Include="Resources\Uncheck.bmp" />
+    <None Include="Resources\Leaf.bmp" />
+    <None Include="Resources\Minus2.png" />
+    <None Include="Resources\Plus2.png" />
+    <EmbeddedResource Include="TextEditor\Resources\RightArrow.cur" />
+    <EmbeddedResource Include="TextEditor\Resources\SyntaxModes.xml" />
+    <EmbeddedResource Include="TextEditor\Resources\TextEditorControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IconResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IconResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SECommandLink.resx">
+      <DependentUpon>SECommandLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docking\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docking\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEAdressBar\SEAddressBar.resx">
+      <DependentUpon>SEAddressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEComboSelector\SEComboSelector.resx">
+      <DependentUpon>SEComboSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEComboSelector\SEComboSelectorItemContainer.resx">
+      <DependentUpon>SEComboSelectorItemContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEiBar.resx">
+      <DependentUpon>SEiBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MozBar\ImageListPanel.resx">
+      <DependentUpon>ImageListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MozBar\MozItem.resx">
+      <DependentUpon>MozItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MozBar\MozPane.resx">
+      <DependentUpon>MozPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MozBar\ScrollableControlWithScrollEvents.resx">
+      <DependentUpon>ScrollableControlWithScrollEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEFlatButton.resx">
+      <DependentUpon>SEFlatButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEMessageBox\SEMessageBoxCmdLink.resx">
+      <DependentUpon>SEMessageBoxCmdLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEMessageBox\SEMessageBoxStandard.resx">
+      <DependentUpon>SEMessageBoxStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEPaginationDataGridView.resx">
+      <DependentUpon>SEPaginationDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEStackView.resx">
+      <DependentUpon>SEStackView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEUserControl.resx">
+      <DependentUpon>SEUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StackView.resx">
+      <DependentUpon>StackView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextEditor\Resources\ASPX.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\BAT-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\Boo.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\Coco-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\CPP-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\CSharp-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\HTML-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\Java-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\JavaScript-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\Mode.xsd" />
+    <EmbeddedResource Include="TextEditor\Resources\Patch-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\PHP-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\SQL-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\Tex-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\VBNET-Mode.xshd" />
+    <EmbeddedResource Include="TextEditor\Resources\XML-Mode.xshd" />
+    <EmbeddedResource Include="Wizard\WizardPanelBase.resx">
+      <DependentUpon>WizardPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Docking\Resources\Thumbs.db" />
+    <None Include="TreeViewGrid\ClassDiagram.cd" />
+    <None Include="TreeViewGrid\NodeControls\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

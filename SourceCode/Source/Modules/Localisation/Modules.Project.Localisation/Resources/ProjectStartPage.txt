@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>${Title}</title>
+<!--
+<link href="style.css" rel="stylesheet" type="text/css">
+-->
+<link href="${CssFile}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="100%"  border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td width="30">&nbsp;</td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  <td class="title">项目:${ProjectName} (${ProjectCode})</td>
+  </tr>
+</table>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#999999">
+  <tr>
+    <td><img name="" src="" width="1" height="1" alt=""></td>
+  </tr>
+</table>
+<table width="100%"  border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td width="40">&nbsp;</td>
+    <td> 版本:${Version} </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>公司:${Company}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>描述:${Summary}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>版权:${Copyright}</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.AddSymmetricStorageEncryptionCommand">
+            <summary>
+            Represents a command for adding a symmetric cache storage encryption provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.AddSymmetricStorageEncryptionCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.AddSymmetricStorageEncryptionCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.AddSymmetricStorageEncryptionCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            <para>Adds the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode"/> to the current <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode"/>. 
+            If the Cryptography Application Block configuration is not added to the current application, it is also added.</para>
+            </summary>
+            <param name="e"><para>An <see cref="T:System.EventArgs"/> containing the event data.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the symmetric cache store encryption provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.CachingCryptographyConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the symmetric cache store encryption designtime and adds it to the caching settings.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.SymmetricInstanceDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the symmetric cryptography instance..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.SymmetricStorageEncryptionProvider">
+            <summary>
+              Looks up a localized string similar to Symmetric Storage Encryption.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.SymmetricStorageEncryptionProviderCommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a Symmetric Storage Encryption.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.Properties.Resources.SymmetricStorageEncryptionProviderCommandText">
+            <summary>
+              Looks up a localized string similar to Symmetric Storage Encryption.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode">
+            <summary>
+            Represents a symmetric cache storage encryption provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData"/> configuration object.
+            </summary>
+            <param name="symmetricStorageEncryptionProvider">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.SymmetricStorageEncryptionProviderData"/> configuration object</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.Dispose(System.Boolean)">
+            <summary>
+            <para>Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode"/> and optionally releases the managed resources.</para>
+            </summary>
+            <param name="disposing">
+            <para><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.SymmetricInstance">
+            <summary>
+            Gets or sets the symmetric cryptography provider instance to use for the cache store encryption.
+            </summary>
+            <value>
+            The symmetric cryptography provider instance to use for the cache store encryption.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.StorageEncryptionProviderData">
+            <summary>
+            Gets a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.StorageEncryptionProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.SymmetricStorageEncryptionProviderNode.StorageEncryptionProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+    </members>
+</doc>

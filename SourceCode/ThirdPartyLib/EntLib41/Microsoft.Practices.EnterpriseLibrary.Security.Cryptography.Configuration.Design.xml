@@ -1,0 +1,1563 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddCryptographySettingsNodeCommand">
+            <summary>
+            Represents a command for adding the Cryptography Application Block to the current application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddCryptographySettingsNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddCryptographySettingsNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddCryptographySettingsNodeCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            <para>Adds the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode"/> to the current application, with its default childnodes.</para>
+            </summary>
+            <param name="e"><para>An <see cref="T:System.EventArgs"/> containing the event data.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand">
+            <summary>
+            Represents a command for adding a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The service provider to get service objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddHashAlgorithmProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand">
+            <summary>
+            Represents a command for adding a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            <para>Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The service provider to get service objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.AddSymmetricAlgorithmProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl">
+            <summary>
+            Visual control that allows an user to select the <see cref="T:System.Security.Cryptography.DataProtectionScope"/> wich is used to store an cryptographic key.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseDataProtectionScopeControl.Scope">
+            <summary>
+            Gets or sets the <see cref="T:System.Security.Cryptography.DataProtectionScope"/> which should be used to encrypt a key file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl">
+            <summary>
+            Visual control that allows an user to select the file wich is used to store an cryptographic key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IWizardValidationTarget">
+            <summary>
+            Represents the validation logic for a control within the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IWizardValidationTarget.ValidateControl">
+            <summary>
+            Validates the control
+            </summary>
+            <returns><see langword="true"/> if controls state is valid; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl"/>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl.Filepath">
+            <summary>
+            Gets or sets the filepath which is used to store the cryptographic key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl">
+            <summary>
+            Visual control that allows an user to specify a key for an cryptography algorithm.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl"/> class.</para>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.KeyCreator">
+            <summary>
+            Sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> that should be used to generate a new random key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.Key">
+            <summary>
+            <para>Gets or sets the key for the algorithm.</para>
+            </summary>
+            <value>
+            <para>The key for the algorithm</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CreateNewKeyControl.KeyLength">
+            <summary>
+            <para>Gets the length of the current key.</para>
+            </summary>
+            <value>
+            <para>The length of the current key.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard">
+            <summary>
+            UI wizard that allows an user to manipulate a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings"/> class, from within the configuration console.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/>.
+            </summary>
+            <param name="keyCreator">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> that should be used to generate and validate an input key.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep,Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> and 
+            for a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep"/>.
+            </summary>
+            <param name="keyCreator">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> that should be used to generate and validate an input key.</param>
+            <param name="step">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep"/> which should be shown within the wizard.</param>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.KeySettings">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings"/> for this wizard.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.Key">
+            <summary>
+            Sets an unencrypted key to be used within the wizard.    
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard.KeyCreator">
+            <summary>
+            Sets an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> instance, that should be used to validate and generate keys.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep">
+            <summary>
+            Enumeration to represent the steps within the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizard"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.SupplyKey">
+            <summary>
+            Wizard step in which the user decides how to provide a key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.CreateNewKey">
+            <summary>
+            Wizard step in which the user specifies a new cryptographic key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.ChooseKeyFile">
+            <summary>
+            Wizard step in which the user specifies a file, the cryptoghrapic key should be stored in.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.ChooseProtectionScope">
+            <summary>
+            Wizard step in which the user specifies the <see cref="T:System.Security.Cryptography.DataProtectionScope"/> 
+            which should be used to protect the key file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.OpenExistingKeyFile">
+            <summary>
+            Wizard step in which the user chooses a existing keyfile that should be used as key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.ImportArchivedKey">
+            <summary>
+            Wizard step in which the user imports an archived keyfile as key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographicKeyWizardStep.Finished">
+            <summary>
+            Wizard step that indicates the wizard is completed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CryptographySettings"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.Dispose(System.Boolean)">
+            <summary>
+            <para>Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode"/> and optionally releases the managed resources.</para>
+            </summary>
+            <param name="disposing">
+            <para><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted. Nodes are not sorted added to this node.
+            </summary>
+            <value>
+            <see langword="true"/> if nodes add are sorted; otherwise <see langword="false"/>. The default is <see langword="true"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.DefaultHashProvider">
+            <summary>
+            Gets or sets the default hash provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CryptographySettingsNode.DefaultSymmetricCryptoProvider">
+            <summary>
+            Gets or sets the default symmetric cryptography provider.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode">
+            <summary>
+            Abstract class for nodes which provide designtime configuration for classes which derive from
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.HashProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashProviderData)">
+            <summary>
+            Initializes with a defined display name and with defined configuration.
+            </summary>
+            <param name="hashProviderData"></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode.HashProviderData">
+            <summary>
+            Returns runtime configuration data.
+            </summary>
+            <returns>Runtime configuration data.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="customHashProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.Type">
+            <summary>
+            Gets or sets fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.IHashProvider"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.Attributes">
+            <summary>
+            Gets or sets the attributes for the custom cache storage.
+            </summary>
+            <value>
+            The attributes for the custom cache storage.
+            </value>	
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomHashProviderNode.HashProviderData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomHashProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.SymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData)">
+            <summary>
+            Constructs a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode"/> class
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="symmetricCryptoProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="customSymmetricCryptoProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.Type">
+            <summary>
+            Gets or sets fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ISymmetricCryptoProvider"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.Attributes">
+            <summary>
+            Gets or sets the attributes for the custom cache storage.
+            </summary>
+            <value>
+            The attributes for the custom cache storage.
+            </value>	
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.CustomSymmetricCryptoProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.CustomSymmetricCryptoProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.DpapiSymmetricCryptoProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="data">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.DpapiSymmetricCryptoProviderNode.ProtectionScope">
+             <summary>
+            Gets or sets the <see cref="T:System.Security.Cryptography.DataProtectionScope"/> for this <see cref="T:System.Security.Cryptography.DataProtectionScope"/>.
+             </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyCommand">
+            <summary>
+            Represents a command that will export a cryptographic key.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ChooseKeyFileControl"/>, with a <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Shows an dialog that allows the user to export an cryptographic key.
+            </summary>
+            <param name="node">
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> of which an cryptographic key should be exported.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl">
+            <summary>
+            Visual control that allows an user to export an protected key to an archived key file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.ValidateControl">
+            <summary>
+            Validates the fields on this form
+            </summary>
+            <returns>True if all fields on form are valid.</returns>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.Filename">
+            <summary>
+            Gets or sets the file path to which the key should be exported.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyControl.Password">
+            <summary>
+            Gets the password which should be used to export the key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI">
+            <summary>
+            UI to support exporting a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ProtectedKey"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.ProtectedKey)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ExportKeyUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.HashAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="hashAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.AlgorithmType">
+            <summary>
+            Gets or sets the assembly qualified name of the <see cref="T:System.Security.Cryptography.HashAlgorithm"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.SaltEnabled">
+            <summary>
+            Gets or sets the salt enabled flag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData">
+            <summary>
+            Gets a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashAlgorithmProviderNode.HashProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode">
+            <summary>
+            Represents the designtime logic for a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.HashProviderCollectionNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ICryptographicKeyConfigurationNode">
+            <summary>
+            Represents a configuration node that contains cryptographic key infromation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ICryptographicKeyConfigurationNode.KeySettings">
+            <summary>
+            Gets the cryptographic key infromation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ICryptographicKeyConfigurationNode.KeyCreator">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator"/> that should be used to generate and validate the cryptographic key information.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator">
+            <summary>
+            <para>Represents the creator of keys for security algorithms.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator.GenerateKey">
+            <summary>
+            <para>When implemented by a class, generates a random key.</para>
+            </summary>
+            <returns><para>A random key.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator.KeyIsValid(System.Byte[])">
+            <summary>
+            <para>When implemented by a class, determines if the <paramref name="key"/> is valid.</para>
+            </summary>
+            <param name="key">The key to test.</param>
+            <returns><para><see langword="true"/> if the key is valid; otherwise <see langword="false"/>.</para></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.IKeyCreator.KeyLength">
+            <summary>
+            <para>When implemented by a class, gets the length of the key.</para>
+            </summary>
+            <value>The length of the key.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl">
+            <summary>
+            Visual control that allows an user to import an protected key from an archived key file, from within the cryptographic key wizard.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.Filename">
+            <summary>
+            Gets the file path to archived key file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ImportArchivedKeyControl.Passphrase">
+            <summary>
+            Gets the password that should be used reading information from the archived key file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator">
+            <summary>
+            <para>Creates keys for a <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm"/>.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator.#ctor(System.Type)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator"/> class.
+            </summary>
+            <param name="algorithmType">The <see cref="T:System.Security.Cryptography.HashAlgorithm"/> type that should be used.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator.GenerateKey">
+            <summary>
+            <para>Generates a random key.</para>
+            </summary>
+            <returns><para>A random key.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator.KeyIsValid(System.Byte[])">
+            <summary>
+            <para>Determines if the <paramref name="key"/> is valid.</para>
+            </summary>
+            <param name="key">The key to test.</param>
+            <returns><para><see langword="true"/> if the key is valid; otherwise <see langword="false"/>.</para></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmKeyCreator.KeyLength">
+            <summary>
+            <para>Gets the length of the key.</para>
+            </summary>
+            <value>The length of the key.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.KeyedHashAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="hashAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.Key">
+            <summary>
+            Gets or sets the hash key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.HashProviderData">
+            <summary>
+            Gets a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.HashProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyedHashAlgorithmProviderNode.HashProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor">
+            <summary>
+            Provides a user interface for managing cryptogrpahic key information.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Edits the specified object using the editor style provided by the GetEditStyle method.
+            </summary>
+            <param name="context">
+            An ITypeDescriptorContext that can be used to gain additional context information.
+            </param>
+            <param name="provider">
+            A service provider object through which editing services may be obtained.
+            </param>
+            <param name="value">
+            An instance of the value being edited.
+            </param>
+            <returns>
+            The new value of the object. If the value of the object hasn't changed, this should return the same object it was passed.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.KeyManagerEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl">
+            <summary>
+            Visual control that allows an user to select an existing key file within the cryptographic key wizard.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.OpenExistingKeyFileControl.Filepath">
+            <summary>
+            The file path to the existing key file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.Bit">
+            <summary>
+              Looks up a localized string similar to bit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ChooseDpapiScopeMessage">
+             <summary>
+               Looks up a localized string similar to The key for this algorithm is stored in a file. To further protect the key, it is encrypted using the Data Protection API (DPAPI).
+            
+            Please select the data protection mode. “User” mode will encrypt your data using the credentials of the currently logged-in user. “Machine” mode will allow any user on this computer to encrypt or decrypt the key..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ChooseExistingKeyFileMessage">
+            <summary>
+              Looks up a localized string similar to Please choose the location of the existing DPAPI-encrypted algorithm key file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ChooseKeyFileMessage">
+            <summary>
+              Looks up a localized string similar to The key for this algorithm will be encrypted and stored in a file. Please choose where you would like to store this file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CreateKeyMessage">
+            <summary>
+              Looks up a localized string similar to Please enter or generate the key you would like to use for this algorithm (in hexadecimal):.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CreateNewKeyLabel">
+            <summary>
+              Looks up a localized string similar to Create a new key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographicKeyWizardCancelButton">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographicKeyWizardFinishButton">
+            <summary>
+              Looks up a localized string similar to Finish.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographicKeyWizardNextButton">
+            <summary>
+              Looks up a localized string similar to Next  &gt;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographicKeyWizardPreviousButton">
+            <summary>
+              Looks up a localized string similar to &lt;  Previous.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographicKeyWizardTitle">
+            <summary>
+              Looks up a localized string similar to Cryptographic Key Wizard.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographyNodeName">
+            <summary>
+              Looks up a localized string similar to Cryptography Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptographySectionCommandName">
+            <summary>
+              Looks up a localized string similar to Cryptography Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CryptoKeyWizardErrorTitle">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CustomHashProviderNodeExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Custom configuration extensions if applicable for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CustomHashProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Hash Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CustomSymmetricCryptoProviderExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Custom configuration extensions if applicable for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CustomSymmetricCryptoProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Symmetric Cryptography Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.CustomSymmetricCryptoProviderTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to Any symmetric cryptography provider that implements ISymmetricCryptoProvider..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DataProtectionScopeCurrentUser">
+            <summary>
+              Looks up a localized string similar to User mode.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DataProtectionScopeLocalMachine">
+            <summary>
+              Looks up a localized string similar to Machine mode.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DecryptPasswordCheckFailure">
+            <summary>
+              Looks up a localized string similar to Password is not correct..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DefaultHashProviderDescription">
+            <summary>
+              Looks up a localized string similar to The default instance for Hash Providers..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DefaultSymmetricCryptoProviderDescription">
+            <summary>
+              Looks up a localized string similar to The default instance for Symmetric Cryptography Providers..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DPAPIModeRequiredErrorMessage">
+            <summary>
+              Looks up a localized string similar to DPAPI mode is required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DpapiSymmetricCryptoProviderNodeModeDescription">
+            <summary>
+              Looks up a localized string similar to The storage mode for DPAPI.  See the DpapiStorageMode enum for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.DpapiSymmetricCryptoProviderNodeName">
+            <summary>
+              Looks up a localized string similar to DPAPI Symmetric Cryptography Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ErrorExportingKey">
+            <summary>
+              Looks up a localized string similar to An error ocurred exporting the key..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ErrorImportingKey">
+            <summary>
+              Looks up a localized string similar to An error ocurred importing the key. Please make sure the filepath and ProtectionScope are corrent..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExistingKeyLabel">
+            <summary>
+              Looks up a localized string similar to Use an existing DPAPI-protected key file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportDialogErrorTitle">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportDialogTitle">
+            <summary>
+              Looks up a localized string similar to Export Key As.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportDirectoryInvalid">
+            <summary>
+              Looks up a localized string similar to Directory is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyCommandText">
+            <summary>
+              Looks up a localized string similar to Export key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyDialogTitle">
+            <summary>
+              Looks up a localized string similar to Export Key Wizard.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyFileMessage">
+            <summary>
+              Looks up a localized string similar to The key for this algorithm will be encrypted with a password and stored in a file. Please choose where you would like to store this file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyLongCommandText">
+            <summary>
+              Looks up a localized string similar to Export cryptography key to archive..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyPasswordConfirmLabel">
+            <summary>
+              Looks up a localized string similar to Confirm password:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyPasswordLabel">
+            <summary>
+              Looks up a localized string similar to Please enter the password with which to encrypt this key file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyUICancelButton">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportKeyUIOkButton">
+            <summary>
+              Looks up a localized string similar to Ok.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportPasswordMinLength">
+            <summary>
+              Looks up a localized string similar to Password must be at least {0} characters..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportPasswordsDoNotMatch">
+            <summary>
+              Looks up a localized string similar to Passwords do not match..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportSuccessful">
+            <summary>
+              Looks up a localized string similar to Key has been exported successfully..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ExportSuccessfulTitle">
+            <summary>
+              Looks up a localized string similar to Export.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.FileDoesNotExists">
+            <summary>
+              Looks up a localized string similar to Could not find the specified file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.FileShouldNotBeEmpty">
+            <summary>
+              Looks up a localized string similar to The filename should not be empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.GenerateKeyButtonText">
+            <summary>
+              Looks up a localized string similar to &amp;Generate.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashAlgorithmProviderKeyDescription">
+            <summary>
+              Looks up a localized string similar to The key information that should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashAlgorithmProviderNodeName">
+            <summary>
+              Looks up a localized string similar to HashAlgorithm Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashAlgorithmTypeDescription">
+            <summary>
+              Looks up a localized string similar to The Type of algorithm that should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashProviderCollectionCommandName">
+            <summary>
+              Looks up a localized string similar to Hash Providers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Hash Providers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Hash Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HashProviderTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to Any hash provider that implements IHashProvider..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.HMACSHA1HashProviderNodeName">
+            <summary>
+              Looks up a localized string similar to HMACSHA1 Hash Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportArchivedKeyMessage">
+            <summary>
+              Looks up a localized string similar to Please choose the location of the existing password-encrypted algorithm key file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportArchivedKeyPasswordLabel">
+            <summary>
+              Looks up a localized string similar to Please enter the password that was used to encrypt this key file:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportDecryptError">
+            <summary>
+              Looks up a localized string similar to Unable to decrypt key.  Password may be incorrect..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportDecryptFormatError">
+            <summary>
+              Looks up a localized string similar to Unable to read key file. File format may be invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportDialogErrorTitle">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportDialogTitle">
+            <summary>
+              Looks up a localized string similar to Open key archive.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportKeyLabel">
+            <summary>
+              Looks up a localized string similar to Import a password-protected key file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportPasswordInvalid">
+            <summary>
+              Looks up a localized string similar to Password is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportPasswordInvalidTitle">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportSourceFileInvalid">
+            <summary>
+              Looks up a localized string similar to File does not exist..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportSuccessful">
+            <summary>
+              Looks up a localized string similar to Key has been imported successfully..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ImportSuccessfulTitle">
+            <summary>
+              Looks up a localized string similar to Import.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.InvalidExportDestination">
+            <summary>
+              Looks up a localized string similar to Invalid export destination..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.InvalidImportSource">
+            <summary>
+              Looks up a localized string similar to Invalid source file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.InvalidKeyWhenSavingError">
+            <summary>
+              Looks up a localized string similar to Key is not set and node is invalid. Please delete this node and recreate it with a valid key..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyArchiveFileFilter">
+            <summary>
+              Looks up a localized string similar to Key export files (*.txt)|*.txt|All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyCouldNotBeRead">
+            <summary>
+              Looks up a localized string similar to Could not read key from archive. Password might be incorrect..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyedHashProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Keyed Hash Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyFileBadNameError">
+            <summary>
+              Looks up a localized string similar to {0} is not a valid key file name. Please re-enter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyFileFilter">
+            <summary>
+              Looks up a localized string similar to Key files (*.key)|*.key|All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyFileLoadingError">
+            <summary>
+              Looks up a localized string similar to Unable to load cryptographic configuration -- Cannot open key file {0}. Configuration will be removed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerEditorRequiresKeyInfoProperty">
+            <summary>
+              Looks up a localized string similar to Invalid property type.  You may only use the KeyManagerEditor on properties of the type KeyInfo..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerUICurrentKeySizeCaption">
+            <summary>
+              Looks up a localized string similar to Key Size:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerUIInvalidKey">
+            <summary>
+              Looks up a localized string similar to Invalid key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerUIInvalidKeyCharactersErrorMessage">
+            <summary>
+              Looks up a localized string similar to Key must be in hexadecimal form (for example, 49FFC7).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerUIInvalidKeyLengthErrorMessage">
+            <summary>
+              Looks up a localized string similar to Invalid key length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyManagerUIKeyBoxEncrypted">
+            <summary>
+              Looks up a localized string similar to The key is hidden for security purposes.  If you would like a new key you must create a new cryptography instance.  If you must replace the key for this instance, delete this instance and create a new instance with the same name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyPropertyName">
+            <summary>
+              Looks up a localized string similar to Key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.KeyShouldNotBeEmpty">
+            <summary>
+              Looks up a localized string similar to Please enter a key..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.MissingPassword">
+            <summary>
+              Looks up a localized string similar to Key file is password protected and no password was provided..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.OpenExistingKeyFileFailureErrorMessage">
+            <summary>
+              Looks up a localized string similar to Unable to open Key because the key file, {0}, cannot be found. If your configuration has not been saved, save it now. If it has been saved and the key file still cannot be found, you can either put the correct key file in that location, or you can delete and recreate this node with a new key file. Exception message is: &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.OpenExistingKeyFileFailureTitle">
+            <summary>
+              Looks up a localized string similar to Unable to open key file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.OpenExistingKeyFileTitle">
+            <summary>
+              Looks up a localized string similar to Open existing key file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.OverwriteExportFileCaption">
+            <summary>
+              Looks up a localized string similar to Export Key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.OverwriteExportFileMessage">
+            <summary>
+              Looks up a localized string similar to The file {0} is read-only.  Would you like to overwrite the file?.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ProtectedKeySettingsToString">
+            <summary>
+              Looks up a localized string similar to &lt;Hidden&gt;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.ProtectionScopeDescription">
+            <summary>
+              Looks up a localized string similar to The DataProtectionScope that should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SaltEnabledDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets salt should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SaveExistingKeyFileTitle">
+            <summary>
+              Looks up a localized string similar to Choose keyfile.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SupplyKeyMessage">
+            <summary>
+              Looks up a localized string similar to In order to use this algorithm, you must supply a key. You can either create a new key, or use an existing key..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricAlgorithmKeyDescription">
+            <summary>
+              Looks up a localized string similar to The key information that should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricAlgorithmProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Symmetric Algorithm Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricAlgorithmTypeDescription">
+            <summary>
+              Looks up a localized string similar to The Type of algorithm that should be used..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricCryptoProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Symmetric Cryptography Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricProviderCollectionCommandName">
+            <summary>
+              Looks up a localized string similar to Symmetric Providers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.SymmetricProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Symmetric Providers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.TypeShouldDeriveFromHashAlgorithm">
+            <summary>
+              Looks up a localized string similar to Type should derive from System.Security.Cryptography.HashAlgorithm..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.Properties.Resources.TypeShouldDeriveFromSymmetricAlgorithm">
+            <summary>
+              Looks up a localized string similar to Type should derive from System.Security.Cryptography.SymmetricAlgorithm..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings">
+            <summary>
+            <para>Represents the settings to store and open a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.ProtectedKey"/>.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings"/> class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.#ctor(System.String,System.Security.Cryptography.DataProtectionScope)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings"/> class, given a <paramref name="filename"/> and <see cref="T:System.Security.Cryptography.DataProtectionScope"/>.
+            </summary>
+            <param name="filename">The file path to the protected keyfile.</param>
+            <param name="scope">The <see cref="T:System.Security.Cryptography.DataProtectionScope"/> used to protect the keyfile.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.ToString">
+            <summary>
+            Returns a string representation of this class.
+            </summary>
+            <returns>A string representation of this class.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.Filename">
+            <summary>
+            Gets or sets the file path to the protected keyfile.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.Scope">
+            <summary>
+            Gets or sets the <see cref="T:System.Security.Cryptography.DataProtectionScope"/> used to protect the keyfile.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.ProtectedKey">
+            <summary>
+            Gets or sets the actual <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.ProtectedKeySettings.ProtectedKey"/> represented by this class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager">
+            <summary>
+            Represents the block manager for the Authentication 
+            configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.Save(System.IServiceProvider)">
+            <summary>
+            Saves the cryptogrpahy configuration to an configuration source and stores protected keys.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Registers the caching design manager into the environment.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the caching configuration from an application configuration file.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode"/> of the hierarchy.</param>
+            <param name="section">The caching configuration section or null if no section was found.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SecurityCryptographyConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Caching Block's configuration information.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Caching Block's configuration information.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl">
+            <summary>
+            Visual control that allows an user to select an to select a method of proving a key.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyControl.Method">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyMethod"/> which should be used inside the cryptographic key wizard.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyMethod">
+            <summary>
+            Enumeration to represent the ways a user can provide a cryptographic key.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyMethod.CreateNew">
+            <summary>
+            A new key should be created.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyMethod.OpenExisting">
+            <summary>
+            An existing protected key file should be used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SupplyKeyMethod.ImportKey">
+            <summary>
+            An archived keyfile should be used.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator">
+            <summary>
+            <para>Creates keys for a <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/>.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator.#ctor(System.Type)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator"/> class.
+            </summary>
+            <param name="algorithmType">The <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/> type that should be used.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator.GenerateKey">
+            <summary>
+            <para>Generates a random key.</para>
+            </summary>
+            <returns><para>A random key.</para></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator.KeyIsValid(System.Byte[])">
+            <summary>
+            <para>Determines if the <paramref name="key"/> is valid.</para>
+            </summary>
+            <param name="key">The key to test.</param>
+            <returns><para><see langword="true"/> if the key is valid; otherwise <see langword="false"/>.</para></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmKeyCreator.KeyLength">
+            <summary>
+            <para>Gets the length of the key.</para>
+            </summary>
+            <value>The length of the key.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode">
+            <summary>
+            Provides designtime configuration for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricAlgorithmProviderData)">
+            <summary>
+            Constructs a new instance 
+            with the corresponding runtime configuration data.
+            </summary>
+            <param name="symmetricAlgorithmProviderData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.AlgorithmType">
+            <summary>
+            Gets or sets the <see cref="T:System.Security.Cryptography.SymmetricAlgorithm"/> type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricAlgorithmProviderNode.SymmetricCryptoProviderData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.SymmetricProviderData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode">
+            <summary>
+            Represents the designtime logic for a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderNode"/>s.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.#ctor">
+            <summary>
+            Initializes with default configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.SymmetricCryptoProviderCollectionNode.Name">
+            <summary>
+            <para>Gets or sets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+    </members>
+</doc>

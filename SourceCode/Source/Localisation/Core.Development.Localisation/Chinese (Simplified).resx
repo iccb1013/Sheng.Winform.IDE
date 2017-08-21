@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EventEditorAdapterAbstract_EventEditorTreeNodeRoot" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="EditorHelper_MessageEventCodeExist" xml:space="preserve">
+    <value>指定的代码已存在于此事件序列中</value>
+  </data>
+  <data name="FormEventEditor" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="FormEventEditor_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventEditor_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventEditor_LabelEvent" xml:space="preserve">
+    <value>可用事件</value>
+  </data>
+  <data name="FormEventEditor_LabelEventTime" xml:space="preserve">
+    <value>触发时机</value>
+  </data>
+  <data name="FormEventEditor_WarningNode" xml:space="preserve">
+    <value>({0}) 警告</value>
+    <comment>多语言片注意复数</comment>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name" xml:space="preserve">
+    <value>编辑事件</value>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name_Add" xml:space="preserve">
+    <value>添加事件: {0}</value>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name_Delete" xml:space="preserve">
+    <value>删除事件: {0}</value>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name_Edit" xml:space="preserve">
+    <value>编辑事件: {0}</value>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name_Move" xml:space="preserve">
+    <value>移动事件: {0}</value>
+  </data>
+  <data name="SEUndoUnitEventEdit_Name_MultiDelete" xml:space="preserve">
+    <value>删除 {0} 事件</value>
+  </data>
+  <data name="UserControlEvent_ColumnEventCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEvent_ColumnEventEventName" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="UserControlEvent_ColumnEventName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEvent_ColumnEventTimeName" xml:space="preserve">
+    <value>触发时机</value>
+  </data>
+  <data name="UserControlEvent_EventNotSupport" xml:space="preserve">
+    <value>当前对象不支持或无可用事件</value>
+  </data>
+  <data name="UserControlEvent_MessageConfirmDelete" xml:space="preserve">
+    <value>是否确认删除</value>
+  </data>
+  <data name="UserControlEvent_ToolStripButtonAddEvent" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="UserControlEvent_ToolStripButtonDeleteEvent" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UserControlEvent_ToolStripButtonDownEvent" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="UserControlEvent_ToolStripButtonEditEvent" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="UserControlEvent_ToolStripButtonUpEvent" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="UserControlEvent_ToolStripMenuItemAdd" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="UserControlEvent_ToolStripMenuItemDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UserControlEvent_ToolStripMenuItemDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="UserControlEvent_ToolStripMenuItemEdit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="UserControlEvent_ToolStripMenuItemUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="UserControlEventEditorPanel_Exit_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_Exit_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ExitDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ExitDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="DataSource_FormElement" xml:space="preserve">
+    <value>窗体元素</value>
+    <comment>表示动作设置中的数据源(窗体元素和系统中的一种)</comment>
+  </data>
+  <data name="DataSource_System" xml:space="preserve">
+    <value>系统</value>
+    <comment>表示动作设置中的数据源(窗体元素和系统中的一种)</comment>
+  </data>
+  <data name="UserControlEventEditorPanel_NewGuid_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_NewGuid_General_LabelFormElement" xml:space="preserve">
+    <value>设置到</value>
+  </data>
+  <data name="UserControlEventEditorPanel_NewGuid_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NewGuidDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="NewGuidDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="EventDev_NewGuidDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LockProgram_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LockProgram_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="LockProgramDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="LockProgramDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReLogin_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReLogin_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ReLoginDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ReLoginDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="EventDev_OpenFormDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="EventDev_OpenFormDev_FormNotExist" xml:space="preserve">
+    <value>指定的窗体不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_General_CheckBoxIsDiablog" xml:space="preserve">
+    <value>以对话框模式打开</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_General_IfOpend" xml:space="preserve">
+    <value>若已打开</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_General_LabelFormName" xml:space="preserve">
+    <value>窗体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_SendData_ColumnCode" xml:space="preserve">
+    <value>数据代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_SendData_ColumnDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenForm_SendData_ColumnName" xml:space="preserve">
+    <value>数据名</value>
+  </data>
+  <data name="OpenFormDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="OpenFormDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="OpenFormDev_EditorPanel_SendData" xml:space="preserve">
+    <value>传入数据</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet" xml:space="preserve">
+    <value>传入数据</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_ComboBoxFormElement" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_LabelDataCode" xml:space="preserve">
+    <value>数据代码</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_LabelDataName" xml:space="preserve">
+    <value>数据名</value>
+  </data>
+  <data name="FormEventOpenFormSendDataSet_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="EventDev_ReceiveDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReceiveData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReceiveData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReceiveData_ReceiveData_ColumnDataCode" xml:space="preserve">
+    <value>数据代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReceiveData_ReceiveData_ColumnReceiveToName" xml:space="preserve">
+    <value>设置到</value>
+  </data>
+  <data name="ReceiveDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ReceiveDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="ReceiveDataDev_EditorPanel_ReceiveData" xml:space="preserve">
+    <value>接收数据</value>
+  </data>
+  <data name="FormEventReceiveDataSet" xml:space="preserve">
+    <value>接收数据</value>
+  </data>
+  <data name="FormEventReceiveDataSet_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventReceiveDataSet_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventReceiveDataSet_LabelDataCode" xml:space="preserve">
+    <value>数据代码</value>
+  </data>
+  <data name="FormEventReceiveDataSet_LabelReceiveTo" xml:space="preserve">
+    <value>设置到</value>
+  </data>
+  <data name="EventDev_ClearFormDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="ClearFormDataDev_EditorPanel_FormElement" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="ClearFormDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ClearFormDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="FormFormElementChoose" xml:space="preserve">
+    <value>选择窗体元素</value>
+  </data>
+  <data name="FormFormElementChoose_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormFormElementChoose_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormFormElementChoose_LabelFormElement" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ClearFormData_FormElement_ColumnFormElementName" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ClearFormData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ClearFormData_General_LabelMode" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ClearFormData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="FormGlobalFormElementChoose" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_AllowFormElementControlType_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_CurrentAllowFormElementControlType" xml:space="preserve">
+    <value>当前允许选择的元素类型</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_LabelDescription" xml:space="preserve">
+    <value>一些窗体元素可能未被列出,因为它们在当前所要使用的地方不受支持.$NewLine$相关信息请参考帮助文档.</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_LabelTitle" xml:space="preserve">
+    <value>全局窗体元素选择</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_MessageChooseFormElement" xml:space="preserve">
+    <value>请选择窗体元素</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_MessageChooseFormElementNotSupport" xml:space="preserve">
+    <value>选择的窗体元素类型不支持</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_ToolStripMenuItemSelect" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="FormGlobalFormElementChoose_ToolStripMenuItemShowAll" xml:space="preserve">
+    <value>显示全部</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_ButtonBrowse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_LabelFormElement" xml:space="preserve">
+    <value>对象</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_LabelMethod" xml:space="preserve">
+    <value>可用方法</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallEntityMethod_General_LabelTargetForm" xml:space="preserve">
+    <value>目标窗体</value>
+  </data>
+  <data name="CallEntityMethodDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="EventDev_RefreshListDev_DataEntityNotExist" xml:space="preserve">
+    <value>数据列表所关联的数据实体不存在</value>
+  </data>
+  <data name="EventDev_RefreshListDev_DataItemEntityNotExist" xml:space="preserve">
+    <value>指定的数据项不存在</value>
+  </data>
+  <data name="EventDev_RefreshListDev_DataListNotExist" xml:space="preserve">
+    <value>指定的数据列表不存在</value>
+  </data>
+  <data name="EventDev_RefreshListDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="DataListRefreshDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="DataListRefreshDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>方法参数</value>
+  </data>
+  <data name="DataListRefreshDev_EditorPanel_Sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="DataListRefreshDev_EditorPanel_Where" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="FormEventDataItemDataSet" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="FormEventDataItemDataSet_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventDataItemDataSet_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventDataItemDataSet_LabelDataItem" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="FormEventDataItemDataSet_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="FormEventDataItemDataSet_LabelDataSource_LoadTo" xml:space="preserve">
+    <value>载入至</value>
+  </data>
+  <data name="EventDev_DataListOperatorDev_DataColumnNotExist" xml:space="preserve">
+    <value>指定的数据列不存在</value>
+  </data>
+  <data name="EventDev_DataListOperatorDev_DataListNotExist" xml:space="preserve">
+    <value>指定的数据列表不存在</value>
+  </data>
+  <data name="EventDev_DataListOperatorDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="DataListAddRowDev_EditorPanel_Data" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="DataListAddRowDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>方法参数</value>
+  </data>
+  <data name="FormEventDataListDataSet" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="FormEventDataListDataSet_ButtonBrowse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="FormEventDataListDataSet_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventDataListDataSet_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventDataListDataSet_LabelDataColumn" xml:space="preserve">
+    <value>数据列</value>
+  </data>
+  <data name="FormEventDataListDataSet_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="FormEventDataListDataSet_LabelFormElement" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="DataListDeleteRowDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>方法参数</value>
+  </data>
+  <data name="DataListDeleteRowDev_EditorPanel_Where" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallAddIn_General_LabelAddInFullName" xml:space="preserve">
+    <value>插件全名(命名空间和类型名)</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallAddIn_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CallAddIn_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="CallAddInDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CloseForm_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_CloseForm_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="DataListUpdateRowDev_EditorPanel_Data" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="DataListUpdateRowDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>方法参数</value>
+  </data>
+  <data name="TrueFalseTable_False" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="TrueFalseTable_True" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="EventDev_DeleteDataDev_DataEntityNotExist" xml:space="preserve">
+    <value>指定的数据实体不存在</value>
+  </data>
+  <data name="EventDev_DeleteDataDev_DataItemEntityNotExist" xml:space="preserve">
+    <value>指定的数据项不存在</value>
+  </data>
+  <data name="EventDev_DeleteDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_DataEntity_ColumnWhereDataItemName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_DataEntity_ColumnWhereDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_DataEntity_ColumnWhereMatchType" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_DataEntity_LabelDataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_DataEntity_LabelWhere" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_General_GroupBoxDeleteMode" xml:space="preserve">
+    <value>删除方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_General_RadioButtonDataEntity" xml:space="preserve">
+    <value>关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_General_RadioButtonSql" xml:space="preserve">
+    <value>执行 SQL 方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_SqlRegex_ButtonGetSqlRegex" xml:space="preserve">
+    <value>获取 SQL</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DeleteData_SqlRegex_LabelNotice" xml:space="preserve">
+    <value>若非特殊需求,请选择关联数据实体方式</value>
+  </data>
+  <data name="DeleteDataDev_EditorPanel_DataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="DeleteDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="DeleteDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="DeleteDataDev_EditorPanel_Sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="DataEntityTreeChooseView" xml:space="preserve">
+    <value>数据实体/数据项</value>
+  </data>
+  <data name="DataEntityTreeChooseView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="DataEntityTreeChooseView_ButtonClear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="DataEntityTreeChooseView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="DataEntityTreeChooseView_NoDataItemSelected" xml:space="preserve">
+    <value>请在树节点中选择数据实体下的数据项</value>
+  </data>
+  <data name="DataEntityTreeChooseView_NoItemSelected" xml:space="preserve">
+    <value>请在树节点中选择项目</value>
+  </data>
+  <data name="EventDev_LoadDataToFormDev_DataEntityNotExist" xml:space="preserve">
+    <value>指定的数据实体不存在</value>
+  </data>
+  <data name="EventDev_LoadDataToFormDev_DataItemEntityNotExist" xml:space="preserve">
+    <value>指定的数据项不存在</value>
+  </data>
+  <data name="EventDev_LoadDataToFormDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_DataEntity_ColumnWhereDataItemName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_DataEntity_ColumnWhereDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_DataEntity_ColumnWhereMatchType" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_DataEntity_LabelDataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_DataEntity_LabelWhere" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_GroupBoxLoadMode" xml:space="preserve">
+    <value>加载方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_LabelNotice" xml:space="preserve">
+    <value>注意:切换加载方式将清除当前的载入设置</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_RadioButtonDataEntity" xml:space="preserve">
+    <value>关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_General_RadioButtonSql" xml:space="preserve">
+    <value>执行 SQL 方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_Load_ButtonLoadAll" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_Load_ColumnLoadDataDataItemEntityName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_Load_ColumnLoadDataLoadToName" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_Load_LabelLoadData" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_Load_MessageChooseDataEntityFirst" xml:space="preserve">
+    <value>使用关联数据实体方式时,请先选择数据实体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_SqlRegex_ButtonGetSqlRegex" xml:space="preserve">
+    <value>获取 SQL</value>
+  </data>
+  <data name="UserControlEventEditorPanel_LoadDataToForm_SqlRegex_LabelNotice" xml:space="preserve">
+    <value>若非特殊需求,请选择关联数据实体方式</value>
+  </data>
+  <data name="LoadDataToFormDev_EditorPanel_DataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="LoadDataToFormDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="LoadDataToFormDev_EditorPanel_Load" xml:space="preserve">
+    <value>载入</value>
+  </data>
+  <data name="LoadDataToFormDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="LoadDataToFormDev_EditorPanel_Sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenSystemForm_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenSystemForm_General_LabelForm" xml:space="preserve">
+    <value>窗体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_OpenSystemForm_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="OpenSystemFormDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="OpenSystemFormDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="ImageResourceChooseView" xml:space="preserve">
+    <value>选择资源</value>
+  </data>
+  <data name="ImageResourceChooseView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ImageResourceChooseView_ButtonImport" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="ImageResourceChooseView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ImageResourceChooseView_GroupBoxResource" xml:space="preserve">
+    <value>资源</value>
+  </data>
+  <data name="ImageResourceChooseView_LabelProjectResource" xml:space="preserve">
+    <value>项目资源</value>
+  </data>
+  <data name="ImageResourceChooseView_MessageResourceOverrideConfirm" xml:space="preserve">
+    <value>当前资源目录下已有同名文件,是否覆盖?</value>
+  </data>
+  <data name="EventDev_SaveFormDataDev_DataEntityNotExist" xml:space="preserve">
+    <value>指定的数据实体不存在</value>
+  </data>
+  <data name="EventDev_SaveFormDataDev_DataItemEntityNotExist" xml:space="preserve">
+    <value>指定的数据项不存在</value>
+  </data>
+  <data name="EventDev_SaveFormDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="SaveFormDataDev_EditorPanel_DataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="SaveFormDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="SaveFormDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="SaveFormDataDev_EditorPanel_Sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_DataEntity_ButtonAll" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_DataEntity_ColumnDataItemName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_DataEntity_ColumnDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_DataEntity_LabelDataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_DataEntity_LabelSaveData" xml:space="preserve">
+    <value>保存数据</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_SqlRegex_ButtonGetSqlRegex" xml:space="preserve">
+    <value>获取 SQL</value>
+  </data>
+  <data name="UserControlEventEditorPanel_SaveFormData_SqlRegex_LabelNotice" xml:space="preserve">
+    <value>若非特殊需求,请选择关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_StartProcess_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_StartProcess_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_StartProcess_General_LabelProcess" xml:space="preserve">
+    <value>程序</value>
+  </data>
+  <data name="StartProcessDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="StartProcessDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="EventDev_UpdateFormDataDev_DataEntityNotExist" xml:space="preserve">
+    <value>指定的数据实体不存在</value>
+  </data>
+  <data name="EventDev_UpdateFormDataDev_DataItemEntityNotExist" xml:space="preserve">
+    <value>指定的数据项不存在</value>
+  </data>
+  <data name="EventDev_UpdateFormDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="EventDev_ValidateFormDataDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UpdateFormDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="UpdateFormDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="UpdateFormDataDev_EditorPanel_Sql" xml:space="preserve">
+    <value>Sql</value>
+  </data>
+  <data name="UpdateFormDataDev_EditorPanel_Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UpdateFormDataDev_EditorPanel_Where" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_General_GroupBoxUpdateMode" xml:space="preserve">
+    <value>更新方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_General_RadioButtonDataEntity" xml:space="preserve">
+    <value>关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_General_RadioButtonSql" xml:space="preserve">
+    <value>执行 SQL 方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_SqlRegex_ButtonGetSqlRegex" xml:space="preserve">
+    <value>获取 SQL</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_SqlRegex_LabelNotice" xml:space="preserve">
+    <value>若非特殊需求,请选择关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Update_ButtonUpdateAll" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Update_ColumnUpdateDataDataItemEntityName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Update_ColumnUpdateDataSourceName" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Update_LabelDataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Update_LabelUpdateData" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Where_ColumnWhereDataItemName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Where_ColumnWhereDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_UpdateFormData_Where_ColumnWhereMatchType" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="ValidateFormDataDev_EditorPanel_FormElement" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="ValidateFormDataDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ValidateFormDataDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ValidateFormData_FormElement_ColumnFormElementName" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ValidateFormData_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ValidateFormData_General_LabelMode" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ValidateFormData_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="EventDev_ReturnDataToCallerFormDev_FormElementNotExist" xml:space="preserve">
+    <value>指定的窗体元素不存在</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReturnDataToCallerForm_General_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReturnDataToCallerForm_General_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData_ColumnFormElementCode" xml:space="preserve">
+    <value>窗体元素代码</value>
+  </data>
+  <data name="UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData_ColumnSourceName" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="ReturnDataToCallerFormDev_EditorPanel_General" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="ReturnDataToCallerFormDev_EditorPanel_Parameter" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="ReturnDataToCallerFormDev_EditorPanel_ReturnData" xml:space="preserve">
+    <value>返回数据</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet" xml:space="preserve">
+    <value>返回数据</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet_ButtonBrowse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="FormEventReturnDataToCallerFormSet_LabelFormElementCode" xml:space="preserve">
+    <value>窗体元素代码</value>
+  </data>
+  <data name="FormFormChoose" xml:space="preserve">
+    <value>窗体选择</value>
+  </data>
+  <data name="FormFormChoose_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormFormChoose_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormFormChoose_ColumnCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="FormFormChoose_ColumnName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="FormWarning" xml:space="preserve">
+    <value>警告树</value>
+  </data>
+  <data name="FormWarning_ToolStripButtonWarning" xml:space="preserve">
+    <value>{0} 警告</value>
+    <comment>复数</comment>
+  </data>
+  <data name="FormEnumChoose" xml:space="preserve">
+    <value>枚举选择</value>
+  </data>
+  <data name="FormEnumChoose_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormEnumChoose_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormEnumChoose_ColumnCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="FormEnumChoose_ColumnName" xml:space="preserve">
+    <value>枚举名</value>
+  </data>
+  <data name="FormCollectionEditor" xml:space="preserve">
+    <value>集合</value>
+  </data>
+  <data name="FormCollectionEditor_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FormCollectionEditor_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="FormCollectionEditor_ToolStripButtonAdd" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="FormCollectionEditor_ToolStripButtonDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="FormCollectionEditor_ToolStripButtonDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="FormCollectionEditor_ToolStripButtonEdit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="FormCollectionEditor_ToolStripButtonUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListAddRow_Data_ColumnDataColumnName" xml:space="preserve">
+    <value>数据列</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListAddRow_Data_ColumnSourceName" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListDeleteRow_Where_ColumnDataColumnName" xml:space="preserve">
+    <value>数据列</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListDeleteRow_Where_ColumnSourceName" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_General_GroupBoxRefreshMode" xml:space="preserve">
+    <value>刷新方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_General_RadioButtonDataEntity" xml:space="preserve">
+    <value>关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_General_RadioButtonSql" xml:space="preserve">
+    <value>执行 SQL 方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_SqlRegex_ButtonGetSqlRegex" xml:space="preserve">
+    <value>获取 SQL</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_SqlRegex_LabelNotice" xml:space="preserve">
+    <value>若非特殊需求,请选择关联数据实体方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_Where_ColumnDataItemName" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_Where_ColumnDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListRefresh_Where_ColumnMatchType" xml:space="preserve">
+    <value>匹配方式</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListUpdateRow_Data_ColumnDataColumnName" xml:space="preserve">
+    <value>数据列</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListUpdateRow_Data_ColumnSourceName" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="UserControlEventEditorPanel_DataListUpdateRow_Data_ColumnWhere" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="DataSourceEditView" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="DataSourceEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="DataSourceEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="DataSourceEditView_LabelProvide" xml:space="preserve">
+    <value>数据源提供程序</value>
+  </data>
+  <data name="DataSourceEditView_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="DataListDataItemEditView" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="DataListDataItemEditView_LabelDataColumn" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="DataListDataItemEditView_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="DataSourceSelector_linkLabelDataSource" xml:space="preserve">
+    <value>点击设置数据源</value>
+  </data>
+  <data name="DataListDataItemEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="DataListDataItemEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="DataEntityItemDataSourceEditView" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="DataEntityItemDataSourceEditView_LabelDataItem" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="DataEntityItemDataSourceEditView_LabelDataSource" xml:space="preserve">
+    <value>数据源</value>
+  </data>
+  <data name="DataEntityItemDataSourceEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="DataEntityItemDataSourceEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+</root>

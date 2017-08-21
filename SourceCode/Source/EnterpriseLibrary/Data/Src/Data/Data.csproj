@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D349B6D8-992F-443F-BB57-57E50DD98794}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Data</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Data</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;WMINET10</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <FxCopRules>-Microsoft.Design#CA2210</FxCopRules>
+    <RunFxCop>false</RunFxCop>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Migrated rules for Data.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;WMINET10</DefineConstants>
+    <DocumentationFile>bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CachingMechanism.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\DatabaseAssemblerAttribute.cs" />
+    <Compile Include="Configuration\DatabaseSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\DbProviderMapping.cs" />
+    <Compile Include="Configuration\IDatabaseAssembler.cs" />
+    <Compile Include="Configuration\Manageability\ConnectionStringSetting.cs" />
+    <Compile Include="Configuration\Manageability\ConnectionStringsManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\ConnectionStringsWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\DatabaseBlockSetting.cs" />
+    <Compile Include="Configuration\Manageability\DatabaseSettingsManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\DatabaseSettingsWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\OracleConnectionSetting.cs" />
+    <Compile Include="Configuration\Manageability\OracleConnectionSettingsManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\OracleConnectionSettingsWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\Properties\AssemblyInfo.cs" />
+    <Compile Include="Configuration\Manageability\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Manageability\ProviderMappingSetting.cs" />
+    <Compile Include="Configuration\Unity\DataAccessBlockExtension.cs" />
+    <Compile Include="Configuration\Unity\GenericDatabasePolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\OracleDatabasePolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\SqlDatabasePolicyCreator.cs" />
+    <Compile Include="DatabaseProviderFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDatabaseAssembler.cs" />
+    <Compile Include="Instrumentation\CommandFailedEvent.cs" />
+    <Compile Include="Instrumentation\ConnectionFailedEvent.cs" />
+    <Compile Include="Instrumentation\DataConfigurationFailureEvent.cs" />
+    <Compile Include="Instrumentation\DataInstrumentationListenerBuilder.cs" />
+    <Compile Include="Instrumentation\DataInstrumentationProvider.cs" />
+    <Compile Include="Instrumentation\DataEvent.cs" />
+    <Compile Include="Instrumentation\DefaultDataEventLogger.cs" />
+    <Compile Include="Instrumentation\DefaultDataEventLoggerCustomFactory.cs" />
+    <Compile Include="Oracle\Configuration\OracleConnectionData.cs" />
+    <Compile Include="DatabaseCustomFactory.cs" />
+    <Compile Include="Oracle\Configuration\OracleConnectionSettings.cs" />
+    <Compile Include="Oracle\Configuration\OraclePackageData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Database.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseConfigurationView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseMapper.cs" />
+    <Compile Include="GenericDatabase.cs" />
+    <Compile Include="Instrumentation\CommandExecutedEventArgs.cs" />
+    <Compile Include="Instrumentation\CommandFailedEventArgs.cs" />
+    <Compile Include="Instrumentation\ConnectionFailedEventArgs.cs" />
+    <Compile Include="Instrumentation\DataInstrumentationInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Instrumentation\DataInstrumentationInstaller.Designer.cs">
+      <DependentUpon>DataInstrumentationInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumentation\DataInstrumentationListener.cs" />
+    <Compile Include="Oracle\IOraclePackage.cs" />
+    <Compile Include="Oracle\OracleDatabase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Oracle\OracleDatabaseAssembler.cs" />
+    <Compile Include="Oracle\OracleDataReaderWrapper.cs" />
+    <Compile Include="ParameterCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\SqlDatabase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sql\SqlDatabaseAssembler.cs" />
+    <Compile Include="TransactionScopeConnections.cs" />
+    <Compile Include="UpdateBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Configuration\Manageability\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for Data.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

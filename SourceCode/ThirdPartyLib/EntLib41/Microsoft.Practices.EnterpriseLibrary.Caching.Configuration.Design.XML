@@ -1,0 +1,541 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerBaseNode">
+            <summary>
+            Represents a cache manager implementation. The class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerBaseNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerBaseNode"/> class.
+            </summary>        
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerBaseNode.CacheManagerData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> configuration object from the nodes data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> configuration object from the nodes data.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerBaseNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerCollectionNode">
+            <summary>
+            Represents a node that contains a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerCollectionNode.Name">
+            <summary>
+            Gets or sets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+            <remarks>
+            This is overridden so it can be marked read-only in the designer.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.AddCacheManagerSettingsNodeCommand">
+            <summary>
+            Represents a command for adding the Caching Application Block to the current application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.AddCacheManagerSettingsNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.AddCacheManagerSettingsNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.AddCacheManagerSettingsNodeCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            <para>Adds the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode"/> to the current application with a default <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/>.</para>
+            </summary>
+            <param name="e"><para>An <see cref="T:System.EventArgs"/> containing the event data.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode">
+            <summary>
+            Represents a custom cache storage that consists of key value pairs. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheManagerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> object.
+            </summary>
+            <param name="customCacheManagerData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> to display.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.Attributes">
+            <summary>
+            Gets or sets the attributes for the custom cache storage.
+            </summary>
+            <value>
+            The attributes for the custom cache storage.
+            </value>		
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.Type"/> that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.IBackingStore"/>.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.Type"/> that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.IBackingStore"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheManagerNode.CacheManagerData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode">
+            <summary>
+            Represents a Cache Manager defined in the application's configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/> class with a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.CacheManagerData"/> object.
+            </summary>
+            <param name="cacheManagerData">A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.CacheManagerData"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.OnChildAdded(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ChildAdded"/> event and sets the name of the cache storage based on the child <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode"/>.
+            </summary>
+            <param name="e">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ConfigurationChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.ExpirationPollFrequencyInSeconds">
+            <summary>
+            Gets or sets the expiration poll frequency in seconds.
+            </summary>
+            <value>
+            The expiration poll frequency in seconds.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.MaximumElementsInCacheBeforeScavenging">
+            <summary>
+            Gets or sets the maximum elements in the cache before it is scavenged.
+            </summary>
+            <value>
+            The maximum elements in the cache before it is scavenged.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.NumberToRemoveWhenScavenging">
+            <summary>
+            Gets or set the number of items to remove from the cache when scavenging.
+            </summary>
+            <value>
+            The number of items to remove from the cache when scavenging.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode.CacheManagerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> object to store in the application's configuration file.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CacheManagerDataBase"/> object to store in the application's configuration file.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode">
+            <summary>
+            Represents the root configuration for the Caching Application Block.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode"/> class.
+            </summary>		
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode.Dispose(System.Boolean)">
+            <summary>
+            <para>Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode"/> and optionally releases the managed resources.</para>
+            </summary>
+            <param name="disposing">
+            <para><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode.OnChildAdded(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ChildAdded"/> event and confirms that only one <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerCollectionNode"/> has been added.
+            </summary>
+            <param name="e">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ConfigurationChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode.Name">
+            <summary>
+            <para>Gets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>		
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerSettingsNode.DefaultCacheManager">
+            <summary>
+            Gets or sets the default cache manager
+            </summary>
+            <value>
+            The default cache manager.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode">
+            <summary>
+            Represents a cache storage provider. The class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode"/> class.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.OnChildAdded(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode.ChildAdded"/> event and sets the storage encryption provider name based on the child node added that must be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode"/>.
+            </summary>
+            <param name="e">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ConfigurationChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.CacheStorageData">
+            <summary>
+            Gets a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.CacheStorageData"/> configuration object from the nodes data.
+            </summary>
+            <value>
+            A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.CacheStorageData"/> configuration object from the nodes data.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageNode.StorageEncryptionName">
+            <summary>
+            Gets the name of the storage encryption provider to use for this storage.
+            </summary>		
+            <value>
+            The name of the storage encryption provider to use for this storage.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager">
+            <summary>
+            Represents the design manager that will register the design time information for the Caching Application Block.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Registers the caching design manager into the environment.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the caching configuration from an application configuration file.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode"/> of the hierarchy.</param>
+            <param name="section">The caching configuration section or null if no section was found.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CachingConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Caching Block's configuration information.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> object containing the Caching Block's configuration information.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode">
+            <summary>
+            Represents a custom cache storage that consists of key value pairs. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> object.
+            </summary>
+            <param name="customCacheStorageData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> to display.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.Attributes">
+            <summary>
+            Gets or sets the attributes for the custom cache storage.
+            </summary>
+            <value>
+            The attributes for the custom cache storage.
+            </value>		
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.Type"/> that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.IBackingStore"/>.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.Type"/> that implements <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.IBackingStore"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CustomCacheStorageNode.CacheStorageData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.CustomCacheStorageData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode">
+            <summary>
+            Represents a cache storage using Isolated Storage.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.IsolatedStorageCacheStorageData)">
+            <summary>
+            Initialize a new instance of the<see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.IsolatedStorageCacheStorageData"/> configuration object.
+            </summary>
+            <param name="isolatedStorageCacheStorageData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.IsolatedStorageCacheStorageData"/> configuration object.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode.PartitionName">
+            <summary>
+            Gets or sets the partition name for the storage.
+            </summary>
+            <value>
+            The partition name for the storage.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.IsolatedStorageCacheStorageNode.CacheStorageData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.IsolatedStorageCacheStorageData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.IsolatedStorageCacheStorageData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode">
+            <summary>
+            Represents the encryption for the cache storage. The class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode.StorageEncryptionProviderData">
+            <summary>
+            Gets a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode.StorageEncryptionProviderData"/> configuration object based on the node data.
+            </summary>
+            <value>
+            A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode.StorageEncryptionProviderData"/> configuration object based on the node data.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheStorageEncryptionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CacheManagerMenuText">
+            <summary>
+              Looks up a localized string similar to Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CacheManagerStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CachingSettingsUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Caching Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CachingSettingsUICommandText">
+            <summary>
+              Looks up a localized string similar to Caching Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheManagerMenuText">
+            <summary>
+              Looks up a localized string similar to Custom Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheManagerNodeTypeDescription1">
+            <summary>
+              Looks up a localized string similar to Gets or sets the type of CacheManager which implements ICacheManager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheManagerStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new Custom Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheManagerUICommandText">
+            <summary>
+              Looks up a localized string similar to Custom Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheStorageExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the custom configuration attributes for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomCacheStorageNodeTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the type of Storage Provider which implements IBackingStore..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomStorageUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a custom cache storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.CustomStorageUICommandText">
+            <summary>
+              Looks up a localized string similar to Custom Cache Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheManagerCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Cache Managers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheManagerDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the cache manager that is used if the user does not specify which cache manager to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheManagerName">
+            <summary>
+              Looks up a localized string similar to Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheManagerNodeName">
+            <summary>
+              Looks up a localized string similar to Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheManagerSettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Caching Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultCacheStorageNodeName">
+            <summary>
+              Looks up a localized string similar to Cache Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.DefaultIsolatedStorageNodeName">
+            <summary>
+              Looks up a localized string similar to Isolated Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.ExceptionNoEncrypitonProviderDefined">
+            <summary>
+              Looks up a localized string similar to The caching encryption provider {0} does not exist in the current configuration source..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.ExceptionNoStorageProviderDefined">
+            <summary>
+              Looks up a localized string similar to The caching storage provider {0} does not exist in the current configuration source..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.ExceptionOnlyOneCacheManagerCollectionNode">
+            <summary>
+              Looks up a localized string similar to Only one Cache Manager Collection is allowed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.ExpirationPollFrequencyInSecondsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the frequency, in seconds, at which expirations are checked..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.IsolatedStorageAreaNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the name of the Isolated Storage area to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.IsolatedStorageUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add isolated storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.IsolatedStorageUICommandText">
+            <summary>
+              Looks up a localized string similar to Isolated Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.MaximumElementsInCacheBeforeScavengingDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the maximum number of cache items stored before scavenging occurs..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.NullStorageName">
+            <summary>
+              Looks up a localized string similar to Null Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.Properties.Resources.NumberToRemoveWhenScavengingDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the number of cache items to remove during scavenging..
+            </summary>
+        </member>
+    </members>
+</doc>

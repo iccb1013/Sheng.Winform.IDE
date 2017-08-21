@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SailingEase">
+</Property><Property Name="解决方案文件" Value="D:\Project\Security\workfolder\SIMBE2\Solution\Project\SailingEase.sln">
+</Property><Property Name="Date" Value="2011年8月2日">
+</Property><Property Name="Time" Value="23:06:11">
+</Property></Properties><Event ErrorLevel="0" Project="Caching" Source="..\Source\EnterpriseLibrary\Caching\Caching.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Caching" Source="..\Source\EnterpriseLibrary\Caching\Caching.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Caching" Source="..\Source\EnterpriseLibrary\Caching\Caching.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="Caching" Source="..\Source\EnterpriseLibrary\Caching\Caching.csproj" Description="已从项目中移除下列代码分析规则: Microsoft.Rules.Managed.CA1807, Microsoft.Rules.Managed.CA1817, Microsoft.Rules.Managed.CA1818, Microsoft.Rules.Managed.CA1805, Microsoft.Rules.Managed.CA2209。这些代码分析规则在当前版本的 Visual Studio 中已过时。">
+</Event><Event ErrorLevel="0" Project="Caching" Source="..\Source\EnterpriseLibrary\Caching\Caching.csproj" Description="已为“Debug (Any CPU)”配置创建规则集文件“D:\Project\Security\workfolder\SIMBE2\Solution\Source\EnterpriseLibrary\Caching\Migrated rules for Caching.ruleset”。">
+</Event></UpgradeLog>

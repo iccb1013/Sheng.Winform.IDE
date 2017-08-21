@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData)">
+            <summary>
+            
+            </summary>
+            <param name="azManAuthorizationProviderData"></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.Application">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.Scope">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.StoreLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.AuditIdentifierPrefix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode.AuthorizationProviderData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.ApplicationDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the Authorization Manager application name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.AuditIdentiferPrefixDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the prefix to append to each audit identifier.  Audit identifier will be the &quot;&lt;prefix&gt; &lt;username&gt;:&lt;operation&gt;&quot;.  Optional..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.AuditIdentifierPrefixDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the audit identifier prefix to append to the generated audit identifer.The audit identifier is generated to be &quot;prefix username:operation&quot;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.AzManProvider">
+            <summary>
+              Looks up a localized string similar to AzMan Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.ScopeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the Application scope name.  Optional..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.Properties.Resources.StoreLocationDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the authorization store location Active Directory or xml file.  For xml file storage - msxml://c:/temp/authstore.xml.  For Active Directory storage - msldap://myserver/CN=MyStore,OU=AzMan,DC=MyDomain,DC=Com.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager">
+            <summary>
+            Configuration Design Manager for AzMan. <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationDesignManager"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.SecurityAzManConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Design.AzManAuthorizationProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+    </members>
+</doc>

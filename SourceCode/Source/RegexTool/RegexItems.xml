@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RegexItems>
+  <Item Type="数字" Name="数字" RegexString="^[0-9]+$" Remark=""></Item>
+  <Item Type="数字" Name="n位的数字" RegexString="^\d{n}$" Remark=""></Item>
+  <Item Type="数字" Name="至少n位数字" RegexString="^\d{n,}$" Remark=""></Item>
+  <Item Type="数字" Name="n至m位的数字" RegexString="^\d{n,m}$" Remark=""></Item>
+  <Item Type="数字" Name="数字和小数点" RegexString="^[0-9]+([.]{0}|[.]{1}[0-9]+)$" Remark=""></Item>
+  <Item Type="数字" Name="零或非零开头的数字" RegexString="^(0|[1-9][0-9]*)$" Remark=""></Item>
+
+  <Item Type="字符" Name="汉字" RegexString="[\u4E00-\uFA29]" Remark=""></Item>
+  <Item Type="字符" Name="双字节字符" RegexString="[^x00-xff]" Remark=""></Item>
+
+  <Item Type="字符" Name="英文字母" RegexString="^[A-Za-z]+$" Remark=""></Item>
+  <Item Type="字符" Name="数字英文字母组合" RegexString="^[A-Za-z0-9]+$" Remark=""></Item>
+
+</RegexItems>

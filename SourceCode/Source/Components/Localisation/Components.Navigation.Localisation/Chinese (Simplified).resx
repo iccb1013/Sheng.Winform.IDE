@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Navigation_Menu_MainMenu" xml:space="preserve">
+    <value>主菜单</value>
+  </data>
+  <data name="Navigation_ToolStrip_MainMenu" xml:space="preserve">
+    <value>主菜单</value>
+  </data>
+  <data name="MenuStripExplorerView" xml:space="preserve">
+    <value>主菜单</value>
+  </data>
+  <data name="MenuEditView" xml:space="preserve">
+    <value>主菜单</value>
+  </data>
+  <data name="MenuEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="MenuEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="MenuEditView_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="MenuEditView_LabelName" xml:space="preserve">
+    <value>主菜单名</value>
+  </data>
+  <data name="MenuEditView_LabelText" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="MenuEditView_MessageMainMenuCodeExist" xml:space="preserve">
+    <value>指定代码的主菜单项已存在</value>
+  </data>
+  <data name="MenuEditView_MessageUseKeywords" xml:space="preserve">
+    <value>指定的代码无效,系统保留字.</value>
+  </data>
+  <data name="MenuEditView_TabPageEvent" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="MenuEditView_TabPageGeneral" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="MenuEditView_TabPageRemark" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Explorer_GridColumns_MenuColumns_Code" xml:space="preserve">
+    <value>代码</value>
+    <comment>这里的取名是为了以后主菜单和工具栏整合在一个Explorer里</comment>
+  </data>
+  <data name="Explorer_GridColumns_MenuColumns_Name" xml:space="preserve">
+    <value>菜单名</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Down" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_Up" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_GridViewMenuMenuEntity_UpLayer" xml:space="preserve">
+    <value>返回上级</value>
+  </data>
+  <data name="ExplorerView_TabText" xml:space="preserve">
+    <value>导航</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntityFolder_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntity_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntity_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntity_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntity_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_TreeMenuMenuEntity_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_MenuEntityFolder" xml:space="preserve">
+    <value>主菜单</value>
+  </data>
+  <data name="Explorer_PropertyView_TabText" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="Explorer_PropertyView_MessageCodeExist" xml:space="preserve">
+    <value>指定代码的项已存在。</value>
+  </data>
+  <data name="Explorer_ExplorerTreeView_TabText" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Explorer_GridColumns_ToolStripColumns_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Explorer_GridColumns_ToolStripColumns_Code" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="FormFormElementAdd_LabelDisable" xml:space="preserve">
+    <value>不可用</value>
+  </data>
+  <data name="ToolStripItemEditView" xml:space="preserve">
+    <value>工具栏项目</value>
+  </data>
+  <data name="ToolStripItemEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ToolStripItemEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ToolStripItemEditView_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="ToolStripItemEditView_LabelControlType" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="ToolStripItemEditView_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ToolStripItemEditView_TabPageDetail" xml:space="preserve">
+    <value>细节</value>
+  </data>
+  <data name="ToolStripItemEditView_TabPageEvent" xml:space="preserve">
+    <value>事件</value>
+  </data>
+  <data name="ToolStripItemEditView_TabPageGeneral" xml:space="preserve">
+    <value>首要</value>
+  </data>
+  <data name="FormFormElementAdd_MessageElementCodeExist" xml:space="preserve">
+    <value>指定代码的主工具栏项已存在</value>
+  </data>
+  <data name="FormFormElementAdd_MessageUseKeywords" xml:space="preserve">
+    <value>指定的代码无效,系统保留字.</value>
+  </data>
+  <data name="Explorer_ToolStripItemFolder" xml:space="preserve">
+    <value>工具栏项目</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripItem_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripItem_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripItem_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripItem_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripItem_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItem_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItem_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItem_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItem_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItem_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripItemFolder_Add" xml:space="preserve">
+    <value>添加页</value>
+  </data>
+  <data name="Explorer_ExplorerTreeView_Tab_Menu" xml:space="preserve">
+    <value>菜单</value>
+  </data>
+  <data name="Explorer_ExplorerTreeView_Tab_ToolStrip" xml:space="preserve">
+    <value>工具栏</value>
+  </data>
+  <data name="Explorer_Commands_AddToolStripItemCommand_NotSupportSubItem" xml:space="preserve">
+    <value>工具栏项暂不支持多级。</value>
+  </data>
+  <data name="Explorer_ToolStripGeneral_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_ToolStripGeneral_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_ToolStripGeneral_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_ToolStripGeneral_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_ToolStripGeneral_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="ToolStripPageEditView" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="ToolStripPageEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ToolStripPageEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ToolStripPageEditView_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ToolStripPageEditView_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="ToolStripPageEditView_MessageElementCodeExist" xml:space="preserve">
+    <value>指定代码的主工具栏页已存在</value>
+  </data>
+  <data name="ToolStripPageEditView_MessageUseKeywords" xml:space="preserve">
+    <value>指定的代码无效,系统保留字.</value>
+  </data>
+  <data name="ToolStripGroupEditView" xml:space="preserve">
+    <value>分组</value>
+  </data>
+  <data name="ToolStripGroupEditView_ButtonCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ToolStripGroupEditView_ButtonOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ToolStripGroupEditView_LabelName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ToolStripGroupEditView_LabelCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="ToolStripGroupEditView_MessageElementCodeExist" xml:space="preserve">
+    <value>指定代码的主工具栏分组已存在</value>
+  </data>
+  <data name="ToolStripGroupEditView_MessageUseKeywords" xml:space="preserve">
+    <value>指定的代码无效,系统保留字.</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripPage_Add" xml:space="preserve">
+    <value>添加分组</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripPage_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripPage_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripPage_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripPage_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripGroup_Add" xml:space="preserve">
+    <value>添加项</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripGroup_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripGroup_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripGroup_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_TreeMenuToolStripGroup_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripPage_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripPage_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripPage_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripPage_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripPage_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripGroup_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripGroup_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripGroup_MoveAfter" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripGroup_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Explorer_GridMenuToolStripGroup_MoveBefore" xml:space="preserve">
+    <value>上移</value>
+  </data>
+</root>

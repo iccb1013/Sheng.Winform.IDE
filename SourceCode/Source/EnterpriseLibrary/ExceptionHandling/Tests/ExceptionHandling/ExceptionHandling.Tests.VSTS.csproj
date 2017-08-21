@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{708C6E4C-1380-44A6-ABE9-0C25E633AD85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Tests</RootNamespace>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=0.0.31208.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="APTCAFixture.cs" />
+    <Compile Include="Configuration\ConfigurationSerializationFixture.cs" />
+    <Compile Include="Configuration\Unity\WrapHandlerPolicyCreatorFixture.cs" />
+    <Compile Include="Configuration\Unity\CustomHandlerPolicyCreationFixture.cs" />
+    <Compile Include="Configuration\Unity\ExceptionHandlingBlockExtensionFixture.cs" />
+    <Compile Include="Configuration\Unity\ReplaceHandlerPolicyCreatorFixture.cs" />
+    <Compile Include="DefaultExceptionHandlingInstrumentationProviderFixture.cs" />
+    <Compile Include="ExceptionManagerFixture.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionHandlerInstrumentationListenerFixture.cs" />
+    <Compile Include="ExceptionHandlingConfigurationViewFixture.cs" />
+    <Compile Include="ExceptionHandlingSettingsFixture.cs" />
+    <Compile Include="ExceptionPolicyEntryErrorLoggingFixture.cs" />
+    <Compile Include="ExceptionPolicyEntryInstrumentationFixture.cs" />
+    <Compile Include="ExceptionPolicyImplFixture.cs" />
+    <Compile Include="ReadWriteConfigurationChangingFixture.cs" />
+    <Compile Include="ReplaceHandlerFixture.cs" />
+    <Compile Include="ExceptionFormatterFixture.cs" />
+    <Compile Include="ExceptionPolicyEntryFixture.cs" />
+    <Compile Include="ExceptionPolicyFixture.cs" />
+    <Compile Include="ExceptionUtilityFixture.cs" />
+    <Compile Include="MockThrowingExceptionHandler.cs" />
+    <Compile Include="MockException.cs" />
+    <Compile Include="MockExceptionHandler.cs" />
+    <Compile Include="MockNullReplaceExceptionHandler.cs" />
+    <Compile Include="MockTextExceptionFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextExceptionFormatterFixture.cs" />
+    <Compile Include="WrapHandlerFixture.cs" />
+    <Compile Include="XmlExceptionFormatterFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Tests\Common\Common.Tests.VSTS.csproj">
+      <Project>{02FC8CE2-2CB3-41B6-8516-0A27B99708A9}</Project>
+      <Name>Common.Tests.VSTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\ExceptionHandling\ExceptionHandling.csproj">
+      <Project>{2DB0AD6D-BF59-4EBB-9F99-49ABD8539FD2}</Project>
+      <Name>ExceptionHandling</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExternalConfiguration.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Tests.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="test.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

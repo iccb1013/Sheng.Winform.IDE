@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.AddLoggingExceptionHandlerCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.AddLoggingExceptionHandlerCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.AddLoggingExceptionHandlerCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.AddLoggingExceptionHandlerCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeCommand.Executed"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> containing the event data.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the logging exception handler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.ExceptionHandlingLoggingConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the logging handler and adds it to the exception settings.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData"/> instance.
+            </summary>
+            <param name="loggingExceptionHandlerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData"/> instance.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.EventId">
+            <summary>
+            Gets or sets the event id.
+            </summary>
+            <value>
+            The event id.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.ExceptionHandlerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.LoggingExceptionHandlerData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.FormatterType">
+            <summary>
+            Gets or sets the formatter type to use.
+            </summary>
+            <value>
+            The formatter type.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.LogCategory">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode"/> that represents the log category.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode"/> that represents the log category.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Priority">
+            <summary>
+            Gets or sets the priority.
+            </summary>
+            <value>
+            The priority.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Severity">
+            <summary>
+            Gets or sets the severity.
+            </summary>
+            <value>
+            One of the <see cref="T:System.Diagnostics.TraceEventType"/> values.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.LoggingExceptionHandlerNode.UseDefaultLogger">
+            <summary>
+            Gets or sets the use default logger.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultCategory">
+            <summary>
+              Looks up a localized string similar to Default Category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultEventIdDescription">
+            <summary>
+              Looks up a localized string similar to The Default EventID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultLogCategoryDescription">
+            <summary>
+              Looks up a localized string similar to The Default Log Category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultSeverityDescription">
+            <summary>
+              Looks up a localized string similar to Default Severity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultTitle">
+            <summary>
+              Looks up a localized string similar to Enterprise Library Exception Handling.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.DefaultTitleDescription">
+            <summary>
+              Looks up a localized string similar to The default title of the log entry.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.FormatterTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The formatter used to format the exception..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.LoggingHandlerName">
+            <summary>
+              Looks up a localized string similar to Logging Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.Properties.Resources.MinimumPriorityDescription">
+            <summary>
+              Looks up a localized string similar to The value for messages to be processed..
+            </summary>
+        </member>
+    </members>
+</doc>

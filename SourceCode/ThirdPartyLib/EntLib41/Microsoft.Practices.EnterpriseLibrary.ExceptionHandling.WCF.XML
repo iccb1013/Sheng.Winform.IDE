@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData">
+            <summary>
+            Represents a mapping for a fault contract property from either an exception property or a GUID.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData.#ctor">
+            <summary>
+            Initializes a new instance of class <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of class <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData"/> with a name and a source.
+            </summary>
+            <param name="name">The name of the configuration element.</param>
+            <param name="source">The source for the property mapping.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData.Source">
+            <summary>
+            Gets or sets the source for the fault contract property.
+            </summary>
+            <value>Either the name of the source property in the exception or a GUID.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataWmiMapper">
+            <summary>
+            Represents a mapper for fault contract exception handler configuration to Wmi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataWmiMapper.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Generate the Wmi objects for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> configuration.
+            </summary>
+            <param name="configurationObject">The configuration for the fault contract exception.</param>
+            <param name="wmiSettings">The Wmi settings.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataWmiMapper.SaveChanges(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting,System.Configuration.ConfigurationElement)">
+            <summary>
+             Save changes from the Wmi objects back to configuration.
+            </summary>
+            <param name="faultContractExceptionHandlerSetting">The settings from Wmi.</param>
+            <param name="sourceElement">The configuration element.</param>
+            <returns>true if the changes were saved; otherwise, false.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Installer">
+            <summary>
+            Installer for the WMI objects defined in the assembly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider">
+            <summary>
+            Provides an implementation for <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> that
+            splits policy overrides processing and WMI objects generation, performing approriate logging of 
+            policy processing errors.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.AttributesPropertyName">
+            <summary>
+            The name of the attributes property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.ExceptionMessagePropertyName">
+            <summary>
+            The name of the exception message property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.FaultContractTypePropertyName">
+            <summary>
+            The name of the fault contract type property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider"/> clas.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.AddAdministrativeTemplateDirectives(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)">
+            <summary>
+            Adds the ADM instructions that describe the policies that can be used to override the properties of
+            a specific instance of the configuration element type managed by the receiver.
+            </summary>
+            <param name="contentBuilder">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder"/> to which the Adm instructions are to be appended.</param>
+            <param name="configurationObject">The configuration object instance.</param>
+            <param name="configurationSource">The configuration source from where to get additional configuration
+            information, if necessary.</param>
+            <param name="elementPolicyKeyName">The key for the element's policies.</param>
+            <remarks>
+            The default implementation for this method creates a policy, using 
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationElementManageabilityProviderBase`1.ElementPolicyNameTemplate"/> to create the policy name and invoking
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationElementManageabilityProviderBase`1.AddElementAdministrativeTemplateParts(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,`0,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)"/>
+            to add the policy parts.
+            Subclasses managing objects that must not create a policy must override this method to just add the parts.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.AddElementAdministrativeTemplateParts(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)">
+            <summary>
+            Adds the ADM parts that represent the properties of
+            a specific instance of the configuration element type managed by the receiver.
+            </summary>
+            <param name="contentBuilder">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder"/> to which the Adm instructions are to be appended.</param>
+            <param name="configurationObject">The configuration object instance.</param>
+            <param name="configurationSource">The configuration source from where to get additional configuration
+            information, if necessary.</param>
+            <param name="elementPolicyKeyName">The key for the element's policies.</param>
+            <remarks>
+            Subclasses managing objects that must not create a policy will likely need to include the elements' keys when creating the parts.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.OverrideWithGroupPolicies(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey)">
+            <summary>
+            Overrides the <paramref name="configurationObject"/>'s properties with the Group Policy values from the 
+            registry.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="policyKey">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey"/> which holds the Group Policy overrides for the 
+            configuration element.</param>
+            <remarks>Subclasses implementing this method must retrieve all the override values from the registry
+            before making modifications to the <paramref name="configurationObject"/> so any error retrieving
+            the override values will cancel policy processing.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting"/> instances that describe the 
+            configurationObject.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="wmiSettings">A collection to where the generated WMI objects are to be added.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerDataManageabilityProvider.ElementPolicyNameTemplate">
+            <summary>
+            Gets the template for the name of the policy associated to the object.
+            </summary>
+            <remarks>
+            Elements that override 
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationElementManageabilityProviderBase`1.AddAdministrativeTemplateDirectives(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,`0,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)"/>
+            to avoid creating a policy must still override this property.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting">
+            <summary>
+            Represents the configuration information from a 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> instance.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.#ctor(System.Configuration.ConfigurationElement,System.String,System.String,System.String,System.String[])">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting"/> class with a source element,
+            the name of the handler, the exception message, the fault contract type and the attributes for the contract type.
+            </summary>
+            <param name="sourceElement">The configuration source element.</param>
+            <param name="name">The name of the handler.</param>
+            <param name="exceptionMessage">The exception message for the handler.</param>
+            <param name="faultContractType">The fault contract type.</param>
+            <param name="attributes">The attributes for the fault contract.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.BindInstance(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting"/> instance corresponding to the provided values for the key properties.
+            </summary>
+            <param name="applicationName">The value for the ApplicationName key property.</param>
+            <param name="sectionName">The value for the SectionName key property.</param>
+            <param name="policy"></param>
+            <param name="exceptionType"></param>
+            <param name="name">The value for the Name key property.</param>
+            <returns>The published <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting"/> instance specified by the values for the key properties,
+            or <see langword="null"/> if no such an instance is currently published.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.GetInstances">
+            <summary>
+            Returns an enumeration of the published <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting"/> instances.
+            </summary>
+            <returns>Sequence of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.SaveChanges(System.Configuration.ConfigurationElement)">
+            <summary>
+             Save changes from the Wmi objects back to configuration.
+            </summary>
+            <param name="sourceElement">The configuration element.</param>
+            <returns>true if the changes were saved; otherwise, false.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.Attributes">
+            <summary>
+            Gets the collection of attributes for the custom exception handler represented as a 
+            <see cref="T:System.String"/> array of key/value pairs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.ExceptionMessage">
+            <summary>
+            Gets the name of the exception message for the represented configuration object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.FaultContractExceptionHandlerSetting.FaultContractType">
+            <summary>
+            Gets the name of the fault contract type for the represented configuration object.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.FaultContractExceptionHandlerAttributesPartName">
+            <summary>
+              Looks up a localized string similar to Attributes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.FaultContractExceptionHandlerExceptionMessagePartName">
+            <summary>
+              Looks up a localized string similar to Exception message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.FaultContractExceptionHandlerFaultContractTypePartName">
+            <summary>
+              Looks up a localized string similar to Fault contract type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Manageability.Properties.Resources.HandlerPartNameTemplate">
+            <summary>
+              Looks up a localized string similar to Handler: &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.Unity.FaultContractExceptionHandlerPolicyCreator">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to create the container policies required to create a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShielding">
+            <summary>
+            Constants definitions for the exception shielding classes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShielding.DefaultExceptionPolicy">
+            <summary>
+            The default exception policy name.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShielding.FaultAction">
+            <summary>
+            The fault action.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShielding.HandlingInstanceIdPropertyMappingName">
+            <summary>
+            The handlingInstanceId Guid value that will be set to the specified property of the fault contract.
+            Usage: MyProperty = "{Guid}"
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute">
+            <summary>
+            Indicates that an implementation service class will use exception shielding. 
+            </summary>
+            <remarks>
+            Add this attribute to your service implementation class or your service contract interface 
+            and configure your host configuration file to use the Enterprise Library Exception Handling 
+            Application Block adding the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler"/> class to the 
+            exceptionHandlers collection and set your FaultContract type that maps to a particular exception.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingAttribute"/> class.
+            </summary>
+            <param name="exceptionPolicyName">Name of the exception policy.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Validates the specified description.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds the binding parameters.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+            <param name="endpoints">The endpoints.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Applies the dispatch behavior.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Configures any binding elements to support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract description to modify.</param>
+            <param name="endpoint">The endpoint to modify.</param>
+            <param name="bindingParameters">The objects that binding elements require to support the behavior.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description for which the extension is intended.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="clientRuntime">The client runtime.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description to be modified.</param>
+            <param name="endpoint">The endpoint that exposes the contract.</param>
+            <param name="dispatchRuntime">The dispatch runtime that controls service execution.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Implement to confirm that the contract and endpoint can support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract to validate.</param>
+            <param name="endpoint">The endpoint to validate.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.HandleError(System.Exception)">
+            <summary>
+            Enables error-related processing and returns a value that indicates whether subsequent HandleError implementations are called.
+            </summary>
+            <param name="error">The exception thrown during processing.</param>
+            <returns>
+            true if subsequent <see cref="T:System.ServiceModel.Dispatcher.IErrorHandler"></see> implementations must not be called; otherwise, false. The default is false.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.ProvideFault(System.Exception,System.ServiceModel.Channels.MessageVersion,System.ServiceModel.Channels.Message@)">
+            <summary>
+            Enables the creation of a custom <see cref="T:System.ServiceModel.FaultException`1"></see> that is returned from an exception in the course of a service method.
+            </summary>
+            <param name="error">The <see cref="T:System.Exception"></see> object thrown in the course of the service operation.</param>
+            <param name="version">The SOAP version of the message.</param>
+            <param name="fault">The <see cref="T:System.ServiceModel.Channels.Message"></see> object that is returned to the client, or service, in the duplex case.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingAttribute.ExceptionPolicyName">
+            <summary>
+            Gets or sets the name of the exception policy.
+            </summary>
+            <value>The name of the exception policy.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior">
+            <summary>
+            The behavior class that set up the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler"/> 
+            for implementing the exception shielding process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingBehavior"/> class.
+            </summary>
+            <param name="exceptionPolicyName">Name of the exception policy.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Validates the specified description.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Adds the binding parameters.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+            <param name="endpoints">The endpoints.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Applies the dispatch behavior.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="serviceHostBase">The service host base.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Configures any binding elements to support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract description to modify.</param>
+            <param name="endpoint">The endpoint to modify.</param>
+            <param name="bindingParameters">The objects that binding elements require to support the behavior.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description for which the extension is intended.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="clientRuntime">The client runtime.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description to be modified.</param>
+            <param name="endpoint">The endpoint that exposes the contract.</param>
+            <param name="dispatchRuntime">The dispatch runtime that controls service execution.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingBehavior.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Implement to confirm that the contract and endpoint can support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract to validate.</param>
+            <param name="endpoint">The endpoint to validate.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement">
+            <summary>
+            Represents a configuration element that specifies exception shielding features 
+            for a Windows Communication Foundation (WCF) service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.ExceptionPolicyNameAttributeName">
+            <summary>
+            The attribute name for the exceptionPolicyName.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingElement"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)">
+            <summary>
+            Copies the content of the specified configuration element to this configuration element.
+            </summary>
+            <param name="from">The configuration element to be copied.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.CreateBehavior">
+            <summary>
+            Creates a behavior extension based on the current configuration settings.
+            </summary>
+            <returns>The behavior extension.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.ExceptionPolicyName">
+            <summary>
+            Gets or sets the name of the exception policy.
+            </summary>
+            <value>The name of the exception policy.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingElement.BehaviorType">
+            <summary>
+            Gets the type of behavior.
+            </summary>
+            <value></value>
+            <returns>A <see cref="T:System.Type"></see>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler">
+            <summary>
+            The error handler class that implements the exception shielding logic.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingErrorHandler"/> class with
+            the <see cref="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShielding.DefaultExceptionPolicy"/> value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ExceptionShieldingErrorHandler"/> class.
+            </summary>
+            <param name="exceptionPolicyName">Name of the exception policy.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.HandleError(System.Exception)">
+            <summary>
+            Handles the error.
+            </summary>
+            <param name="error">The error.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.ProvideFault(System.Exception,System.ServiceModel.Channels.MessageVersion,System.ServiceModel.Channels.Message@)">
+            <summary>
+            Provides the fault.
+            </summary>
+            <param name="error">The error.</param>
+            <param name="version">The version.</param>
+            <param name="fault">The fault.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.BuildMessageFault(System.Exception,System.Guid)">
+            <summary>
+            Build the shielded MessageFault.
+            </summary>
+            <param name="serverException"></param>
+            <param name="handlingInstanceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.BuildMessageFault(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException)">
+            <summary>
+            Build the unshielded MessageFault.
+            </summary>
+            <param name="faultContractWrapper"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionShieldingErrorHandler.ExceptionPolicyName">
+            <summary>
+            Gets or sets the name of the exception policy.
+            </summary>
+            <value>The name of the exception policy.</value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionUtility.LogServerException(System.Exception)">
+            <summary>
+            Logs the server exception.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionUtility.GetHandlingInstanceId(System.Exception)">
+            <summary>
+            Gets the handling instance id.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionUtility.GetHandlingInstanceId(System.Exception,System.Guid)">
+            <summary>
+            Gets the handling instance id.
+            </summary>
+            <param name="exception">The exception.</param>
+            <param name="optionalHandlingInstanceId">The optional handling instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionUtility.FormatExceptionMessage(System.String,System.Guid)">
+            <summary>
+            Formats the exception message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="handlingInstanceId">The handling instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.ExceptionUtility.GetMessage(System.Exception,System.String,System.Guid)">
+            <summary>
+            Gets the message from the exception.
+            </summary>
+            <param name="exception">The exception.</param>
+            <param name="optionalMessage">The optional message.</param>
+            <param name="handlingInstanceId">The handling instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler">
+            <summary>
+            Exception handler that gets the configured fault contract type and 
+            wraps it inside a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException"/>. exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler.#ctor(System.Type,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FaultContractExceptionHandler"/> class.
+            </summary>
+            <param name="faultContractType">Type of the fault contract.</param>
+            <param name="attributes">The attributes.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler.#ctor(System.Type,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FaultContractExceptionHandler"/> class.
+            </summary>
+            <param name="faultContractType">Type of the fault contract.</param>
+            <param name="exceptionMessage">A fixed exception message that will replace the fault contract message.</param>
+            <param name="attributes">A collection of nam value paries that specify the mapping
+            between the properties of the FaultContract class and the values in the <see cref="T:System.Exception"/>
+            instance. You can specify something like: FaultPropertyName = "{Message}" where {Message}
+            points to the Message property value of the current exception. You can also specify a
+            {Guid} value that will load the current exception handlingInstanceId value.
+            See <see cref="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler.HandleException(System.Exception,System.Guid)"/>. NOTICE that names and values are case sensitive.</param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler.HandleException(System.Exception,System.Guid)">
+            <summary>
+            Handles the exception.
+            </summary>
+            <param name="exception">The exception.</param>
+            <param name="handlingInstanceId">The handling instance id. This value may be injected into the
+            current FaultContract by spefifying the attribute value "{Guid}".</param>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException"/> class.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData">
+            <summary>
+            Configuration data for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractExceptionHandler"/> class.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.ExceptionMessageAttributeName">
+            <summary>
+            The attribute name for an alternative exception message for the specified FaultContract.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.FaultContractTypeAttributeName">
+            <summary>
+            The attribute name for the faultContract type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="faultContractType">Type of the fault contract.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.Attributes">
+            <summary>
+            Get the attributes for the provider.
+            </summary>
+            <value>
+            The attributes for the provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.ExceptionMessage">
+            <summary>
+            Gets or sets the exception message.
+            </summary>
+            <value>The exception message.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.FaultContractType">
+            <summary>
+            Gets or sets the type of the fault contract.
+            </summary>
+            <value>The type of the fault contract.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerData.PropertyMappings">
+            <summary>
+            Gets the collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractExceptionHandlerMappingData"/> that represent the mappings from
+            source properties on the exception to properties in the fault contract.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractHandlerAssembler">
+            <summary>
+            FaultContractHandlerAssembler class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Configuration.FaultContractHandlerAssembler.Assemble(Microsoft.Practices.ObjectBuilder2.IBuilderContext,Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlerData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ObjectBuilder.ConfigurationReflectionCache)">
+            <summary>
+            Assembles the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="objectConfiguration">The object configuration.</param>
+            <param name="configurationSource">The configuration source.</param>
+            <param name="reflectionCache">The reflection cache.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException">
+            <summary>
+            Class that wraps a FaultContract exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FaultContractWrapperException"/> class.
+            </summary>
+            <param name="faultContract">The fault contract.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException.#ctor(System.Object,System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FaultContractWrapperException"/> class.
+            </summary>
+            <param name="faultContract">The fault contract.</param>
+            <param name="handlingInstanceId">The handling instance id.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException.#ctor(System.Object,System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FaultContractWrapperException"/> class.
+            </summary>
+            <param name="faultContract">The fault contract.</param>
+            <param name="handlingInstanceId">The handling instance id.</param>
+            <param name="exceptionMessage">The exception message.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.FaultContractWrapperException.FaultContract">
+            <summary>
+            Gets or sets the fault contract.
+            </summary>
+            <value>The fault contract.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.ClientUnhandledExceptionMessage">
+            <summary>
+              Looks up a localized string similar to An error has occurred while consuming this service. Please contact your administrator for more information. Error ID: {handlingInstanceID}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.HandlingInstanceID">
+            <summary>
+              Looks up a localized string similar to HandlingInstance ID:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.NoDefaultParameterInFaultContract">
+            <summary>
+              Looks up a localized string similar to  No parameterless constructor defined for the fault contract &apos;{0}&apos;. Define a default constructor for this contract..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.ServerUnhandledException">
+             <summary>
+               Looks up a localized string similar to Unhandled error occurred while consuming this service. Error ID: {0}
+            Exception details:
+            {1}.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.WCF.Properties.Resources.ServerUnhandledExceptionNotLogged">
+             <summary>
+               Looks up a localized string similar to Unhandled error occurred while logging the original exception. Error ID: {0}
+            Logging Exception details:
+            {1}.
+             </summary>
+        </member>
+    </members>
+</doc>

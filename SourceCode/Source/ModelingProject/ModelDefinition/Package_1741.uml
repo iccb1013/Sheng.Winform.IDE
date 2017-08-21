@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="3a5e1e1b-92e1-4de5-a100-9a6a1acf8810"
+  name="Infrastructure" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="d914cd95-0db8-49ca-a388-f6c63776a275">
+      <packageMoniker
+        Id="05a66011-ddd7-41ad-b0d3-5504b25492d5"
+        LastKnownName="ComponentModel"
+        LastKnownLocation="Package_1800.uml" />
+    </dependency>
+    <dependency
+      Id="e9652b8d-4aa7-407c-bd21-0616beb1e12a">
+      <packageMoniker
+        Id="12aa5776-b50d-4381-bf45-cbb1b266a455"
+        LastKnownName="Controls"
+        LastKnownLocation="Package_1806.uml" />
+    </dependency>
+  </suppliersInternal>
+  <importedPackagesInternal>
+    <packageImport
+      Id="d45da3cf-92ac-423c-9e4c-a773af0d009c"
+      visibility="Public">
+      <packageMoniker
+        Id="4ce0fc07-bcfc-4148-a01b-c137a041cd4f"
+        LastKnownName="Core"
+        LastKnownLocation="Package_1742.uml" />
+    </packageImport>
+    <packageImport
+      Id="df7051f3-94b2-43aa-9797-dabc51f529b0"
+      visibility="Public">
+      <packageMoniker
+        Id="c8f57bae-5333-41e5-bd02-741fc233fe48"
+        LastKnownName="Controls.Extensions"
+        LastKnownLocation="Package_1809.uml" />
+    </packageImport>
+    <packageImport
+      Id="913bbbd7-2b53-4f76-9c06-ec1c4918b53a"
+      visibility="Public">
+      <packageMoniker
+        Id="fb562980-5329-41ea-b700-91a201d5fabc"
+        LastKnownName="Kernal"
+        LastKnownLocation="Package_1744.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+</package>

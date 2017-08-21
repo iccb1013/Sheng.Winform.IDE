@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{405E51B5-BEAC-4538-B176-30490B26873D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Infrastructure</RootNamespace>
+    <AssemblyName>Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompositeExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\CompositeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="CompositeExtensions.Unity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\CompositeExtensions.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.UnityExtensions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CAL\CAL\CommonServiceLocation\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\ThirdPartyLib\EntLib41\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConstant.cs" />
+    <Compile Include="ArchiveHelper.cs" />
+    <Compile Include="Components\DataEntity\IDataEntityComponentService.cs" />
+    <Compile Include="Components\Dictionary\IDictionaryComponentService.cs" />
+    <Compile Include="Components\Navigation\MenuStripEventArgs.cs" />
+    <Compile Include="Components\Navigation\MenuStripEvents.cs" />
+    <Compile Include="Components\Navigation\ToolStripEventArgs.cs" />
+    <Compile Include="Components\Navigation\ToolStripEvents.cs" />
+    <Compile Include="Components\Navigation\ToolStripGroupEventArgs.cs" />
+    <Compile Include="Components\Navigation\ToolStripGroupEvents.cs" />
+    <Compile Include="Components\Navigation\ToolStripPageEventArgs.cs" />
+    <Compile Include="Components\Navigation\ToolStripPageEvents.cs" />
+    <Compile Include="Components\Resource\IResourceComponentService.cs" />
+    <Compile Include="Components\Resource\ResourceEventArgs.cs" />
+    <Compile Include="Components\Resource\ResourceEvents.cs" />
+    <Compile Include="Components\WindowDesign\IWindowCompontsContainer.cs" />
+    <Compile Include="Components\WindowDesign\IWindowDesignService.cs" />
+    <Compile Include="Components\Window\IWindowComponentService.cs" />
+    <Compile Include="Components\Window\WindowEventArgs.cs" />
+    <Compile Include="Components\Window\WindowEvents.cs" />
+    <Compile Include="Components\Window\WindowFolderEventArgs.cs" />
+    <Compile Include="Entity\IWindowElementContainer.cs" />
+    <Compile Include="Components\Window\WindowEntityIndex.cs" />
+    <Compile Include="IPersistence.cs" />
+    <Compile Include="Events\ActiveWorkbenchViewChangedEvent.cs" />
+    <Compile Include="Events\ApplicationRunEvent.cs" />
+    <Compile Include="Components\DataEntity\DataEntityEventArgs.cs" />
+    <Compile Include="Components\DataEntity\DataEntityEvents.cs" />
+    <Compile Include="Components\DataEntity\DataItemEntityEventArgs.cs" />
+    <Compile Include="Components\Dictionary\EnumEventArgs.cs" />
+    <Compile Include="Components\Dictionary\EnumEvents.cs" />
+    <Compile Include="Components\Dictionary\EnumItemEventArgs.cs" />
+    <Compile Include="Components\Dictionary\EnumItemMoveBackEventArgs.cs" />
+    <Compile Include="Components\Dictionary\EnumItemMovedEventArgs.cs" />
+    <Compile Include="Modules\Project\IProjectSummary.cs" />
+    <Compile Include="RuntimeControlDesignSupportAttribute.cs" />
+    <Compile Include="Service\IArchiveServiceUnity.cs" />
+    <Compile Include="Service\IArchiveService.cs" />
+    <Compile Include="Service\ICachingService.cs" />
+    <Compile Include="RuntimeControlToolboxItemAttribute.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Unity.cs" />
+    <Compile Include="View\BackgroundWorkerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BackgroundWorkerView.Designer.cs">
+      <DependentUpon>BackgroundWorkerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormMultiSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMultiSave.designer.cs">
+      <DependentUpon>FormMultiSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormViewBase.Designer.cs">
+      <DependentUpon>FormViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\NullArgs.cs" />
+    <Compile Include="ServiceUnity.cs" />
+    <Compile Include="Service\IEnvironmentService.cs" />
+    <Compile Include="View\BrowserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BrowserView.Designer.cs">
+      <DependentUpon>BrowserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ICanSaveForm.cs" />
+    <Compile Include="View\IPadView.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\PadViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PadViewBase.Designer.cs">
+      <DependentUpon>PadViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControlViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlViewBase.Designer.cs">
+      <DependentUpon>UserControlViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkbenchViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WorkbenchViewBase.Designer.cs">
+      <DependentUpon>WorkbenchViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPackage.cs" />
+    <Compile Include="View\IWorkbenchView.cs" />
+    <Compile Include="Service\IPackageService.cs" />
+    <Compile Include="Modules\Project\IProject.cs" />
+    <Compile Include="Modules\Project\ProjectEventArgs.cs" />
+    <Compile Include="Modules\Project\ProjectEvents.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\INavigationService.cs" />
+    <Compile Include="Modules\Project\IProjectService.cs" />
+    <Compile Include="Service\IWorkbenchService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentModel.Design\ComponentModel.Design.csproj">
+      <Project>{13E156EC-1138-40A4-8A94-1533B4E78FE4}</Project>
+      <Name>ComponentModel.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComponentModel\ComponentModel.csproj">
+      <Project>{7CE78E82-D242-425C-BB96-6C27B193A9FF}</Project>
+      <Name>ComponentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Sheng.SailingEase.Infrastructure.Localisation\Infrastructure.Localisation.csproj">
+      <Project>{A7308EA9-795D-44F8-9B33-A4D611F0B1E9}</Project>
+      <Name>Infrastructure.Localisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls.Extensions\Controls.Extensions.csproj">
+      <Project>{9E383816-DC7E-46ED-A62F-D7C39665D00F}</Project>
+      <Name>Controls.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{84A60294-EF59-43C1-B7E5-4C12C164801D}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Win32\Win32.csproj">
+      <Project>{946FFB43-4864-4967-8D69-8716CDA83F7A}</Project>
+      <Name>Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\BackgroundWorkerView.resx">
+      <DependentUpon>BackgroundWorkerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMultiSave.resx">
+      <DependentUpon>FormMultiSave.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

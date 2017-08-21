@@ -1,0 +1,5 @@
+﻿<Index>
+	<Resource>
+		<File Type="Image" Name="1.jpg" />
+	</Resource>
+</Index>

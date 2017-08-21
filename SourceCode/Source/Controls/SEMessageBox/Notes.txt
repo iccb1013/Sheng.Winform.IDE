@@ -1,0 +1,19 @@
+Purpose
+
+This library provides an advanced framework for message boxes. 
+Some salient features are - 
+
+1. Ability to associate text with buttons, thus you can specify a 
+text for each button that tells the user what will happen when the button
+is pressed. This is currently shown as a simple tooltip.
+
+2. Ability to specify an option that allows the user to always use the same response
+for the specified messagebox.
+
+3. Ability to save/load user preferences for various messageboxes. (Not implemented in this release)
+
+4. Ability to customize buttons, icon, sounds.
+
+5. Ability to specify a Timeout for the message box.
+
+6. Standard button texts are localized based on current culture.

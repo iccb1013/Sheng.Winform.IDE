@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.AddEnvironmentNodeCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.AddEnvironmentNodeCommand"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.AddEnvironmentNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.AddEnvironmentNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.AddEnvironmentNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Creates an instance of the child node class and adds it as a child of the parent node.
+            </summary>
+            <param name="node">
+            The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SerializationUtility">
+            <summary>
+            Represents a serialization utility.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SerializationUtility.SerializeToString(System.Object,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Serailize an object to a strings.
+            </summary>
+            <param name="objectToSerialize">The object to serialize.</param>
+            <param name="hierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+            <returns>The serailized object to string.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SerializationUtility.DeserializeFromString(System.String,System.Type,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Deserialize content from a string.
+            </summary>
+            <param name="serializedContents">The serialized content.</param>
+            <param name="targetType">The target type.</param>
+            <param name="hierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+            <returns>The deserialized content.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SerializationUtility.CreatePathRelativeToRootNode(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Create a path relative to the root node in the hierarchy.
+            </summary>
+            <param name="fullConfigurationNodePath">The full path of the node.</param>
+            <param name="configurationHierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+            <returns>The path to the node.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SerializationUtility.CreateAbsolutePath(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Creates an absolute path to node.
+            </summary>
+            <param name="configurationPathRelativeToRoot">The path relative to where the node is in configuration.</param>
+            <param name="configurationHierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+            <returns>The absolute path.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection">
+            <summary>
+            Represents a configuration section that contains the difference (or delta) between 2 deployable configuration files.
+            </summary>
+            <remarks>
+            This configuration section is used by the Environmental Overrides extension to the configuration tool at designtime.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection.EnvironmentMergeData">
+            <summary>
+            The name of the serialized <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection"/> in configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection.MergeElements">
+            <summary>
+            Gets or sets a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection.EnvironmentName">
+            <summary>
+            Gets or sets the name of the environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection.EnvironmentDeltaFile">
+            <summary>
+            Gets or sets the path to the deployable configuration that can be generated from this configuration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElementCollection">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElementCollection.CreateNewElement">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/> instance.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            Returns an unique identifier which can be used to identify this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/> instance within its collection.
+            </summary>
+            <param name="element">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/> to return an identier for.</param>
+            <returns>An <see cref="T:System.Object"/> that acts as the key for the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElementCollection.Add(Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement)">
+            <summary>
+            Adds an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/> to the collection.
+            </summary>
+            <param name="mergeNode">An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement">
+            <summary>
+            Represents the overridden configuration settings for one specific configuration node.
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentMergeSection"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement.ConfigurationNodePath">
+            <summary>
+            Gets or sets the path to the configuration node to which the overridden settings apply.
+            </summary>
+            <remarks>
+            The path should not contain the application node part of the path.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement.OverrideProperties">
+            <summary>
+            Gets or sets wether the settings in this configuration element should override the main configurations settings at designtime.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Configuration.EnvironmentNodeMergeElement.OverriddenProperties">
+            <summary>
+            Gets or sets a collection of overridden settings, indexed by the name of the setting that should apply at designtime.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentalOverridesNode">
+            <summary>
+            Represents the design time node container for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> nodes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentalOverridesNode.#ctor">
+            <summary>
+            Initialize a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentalOverridesNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentalOverridesNode.Validate(System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Performs validation on the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> instances contained by this node.
+            </summary>
+            <param name="errors">A list of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError"/> that is udpated with errors found during validation.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentalOverridesNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.IEnvironmentMergeService">
+            <summary>
+            Provides access to contextual information on the merging of environments.
+            </summary>
+            <remarks>
+            This service can usually be retrieved through an <see cref="T:System.IServiceProvider"/> instance.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.IEnvironmentMergeService.EnvironmentMergeInProgress">
+            <summary>
+            Gets a boolean value indicating wether merging of an environment currently is in progress.
+            </summary>
+            <value>
+            <see langword="true"/> if merging of an environmental configuration currently is in progress. Otherwise <see langword="false"/>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData">
+            <summary>
+            Represents information specific to a logic environment and its overridden configuration settings at designtime.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.#ctor">
+            <summary>
+            Initialize a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.UnfoldMergeData(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy,System.Boolean)">
+            <summary>
+            Returns all the instances of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> contained in this environment, indexed by the path of the configuration they apply to.
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/>
+            </summary>
+            <param name="hierarchy"></param>
+            <param name="useFullPathNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.UpdateMergeData(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData)">
+            <summary>
+            Updates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> for a specific instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/>.
+            </summary>
+            <param name="configurationNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> whose <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> should be updated.</param>
+            <param name="mergeData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> that apply on the given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.GetMergeData(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> for a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/>.
+            </summary>
+            <param name="configurationNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> for which the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> should be returned.</param>
+            <returns>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> that belongs to <paramref name="configurationNode"/>. If no <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> is found, en empty isntance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> is returned.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.EnvironmentName">
+            <summary>
+            Gets or sets the name of the logical environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.EnvironmentDeltaFile">
+            <summary>
+            Gets or sets the location of the delta configuration file (.dconfig) that can
+            be used to merge configuration and create a new deployable configuration file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData.EnvironmentConfigurationFile">
+            <summary>
+            Gets or sets the location of the configuration file that is generated as a result of merging configuration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode">
+            <summary>
+            Represents a designtime node for an environment that contains alternate configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentMergeData)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> given a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentMergeData"/> instance.
+            </summary>
+            <param name="environmentData">The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentMergeData"/> that contains the information for this environemnt.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.CanExtend(System.Object)">
+            <summary>
+            Returns a boolen on whether the given <see cref="T:System.Object"/> can contain overridden properties in its designtime.
+            </summary>
+            <param name="extendee">An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that is contained within a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/>.</param>
+            <returns><see langword="true"/> if the <paramref name="extendee"/> can be extended, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.GetOverrides(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Returns the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> for a given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/>. 
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> represents the differences for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> in a specific environment and
+            can be displayed in the property grid.
+            </summary>
+            <param name="node">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> whose <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> should be returned.</param>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> that can be displayed in the property grid.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.SetOverrides(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode)">
+            <summary>
+            Updates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> for a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> instance.
+            </summary>
+            <param name="node">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> whose properties in this environment should be updated.</param>
+            <param name="value">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> instance that contains all the differences for the <paramref name="node"/>.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentMergeData">
+            <summary>
+            Gets <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentMergeData"/> represented by this node.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentDeltaFile">
+            <summary>
+            Gets or sets the location of the environment delta configuration (.dconfig).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.EnvironmentConfigurationFile">
+            <summary>
+            Gets or sets the location of the file should be used as output for merging the environmental configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode.RequirePermission">
+            <summary>
+            Gets or sets the flag indicating the section requires permission to be retrieved.
+            </summary>
+            <remarks>
+            The section represented by this node is defined elsewhere, so the property does not need to be exposed.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNodeBuilder">
+            <summary>
+            Represents the logic to create a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> from an Environment Delta file (.dconfig).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNodeBuilder.#ctor(System.IServiceProvider)">
+            <summary>
+            Intializes a new intance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNodeBuilder"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider to get service objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNodeBuilder.Build(System.String,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Builds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> given a Environment Delta file (.dconfig) and a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationUIHierarchy"/>.
+            </summary>
+            <param name="environmentFileName">The path of the Environment Delta file (.dconfig) that should be used to construct the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/>.</param>
+            <param name="uiHierarchy">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> the created <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> belongs to.</param>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> that represents the Environment Delta file (.dconfig) passed as <paramref name="environmentFileName"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode">
+            <summary>
+            Represents the environmental overrides for a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> instance, which can be interfaces through the property grid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode,Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData)">
+            <summary>
+            Initialized a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/>, given a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> instance and 
+            an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> instance.
+            </summary>
+            <param name="masterConfigurationNode">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> instance this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> should override the properties from.</param>
+            <param name="mergedConfigurationNodeData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> instance that contains all the overridden properties for the <paramref name="masterConfigurationNode"/>.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode.MergeData">
+            <summary>
+            Gets all the overridden properties for this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter">
+            <summary>
+            Represents a TypeConverter that be used to modify a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> instance from within the property grid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert the object to the specified type, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context. </param>
+            <param name="destinationType">A <see cref="T:System.Type"/> that represents the type you want to convert to. </param>
+            <returns>Always <see langword="true"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> to the type specified in <paramref name="destinationType"/>.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/>. If <see langword="null"/> is passed, the current culture is assumed.</param>
+            <param name="value">The instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/> that should be converted.</param>
+            <param name="destinationType">The type to which the <paramref name="value"/> should be converted.</param>
+            <returns>An instance of <paramref name="destinationType"/> if converstion succeeds, otherwise <see langword="null"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type"/> that represents the type you want to convert from.</param>
+            <returns>Always <see langword="true"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts an arbitrary instance of <see cref="T:System.Object"/> to an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/>.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/>. If <see langword="null"/> is passed, the current culture is assumed.</param>
+            <param name="value">The instance of <see cref="T:System.Object"/> that should be used for conversion.</param>
+            <returns>If conversion succeeds, an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNode"/>, otherwise <see langword="null"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns whether the collection of standard values returned from <see cref="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)"/> is an exclusive list.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>Always <see langword="true"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns whether this object supports a standard set of values that can be picked from a list, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>Always <see langword="true"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>A <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection"/> that holds a standard set of valid values, or null if the data type does not support a standard set of values.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns whether this object supports properties, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>Always <see langword="true"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationNodeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Returns a collection of properties for the type of array specified by the value parameter, using the specified context and attributes.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="value">An <see cref="T:System.Object"/> that specifies the type of array for which to get properties.</param>
+            <param name="attributes">An array of type <see cref="T:System.Attribute"/> that is used as a filter.</param>
+            <returns>A <see cref="T:System.ComponentModel.PropertyDescriptorCollection"/> with the properties that are exposed for this data type, or <see langword="null"/> if there are no properties.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData">
+            <summary>
+            Represents the overridden configuration settings for a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.#ctor">
+            <summary>
+            Initialize an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.#ctor(System.Boolean,Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData)">
+            <summary>
+            Initialize an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/>, specifying whether properties should be overridden and
+            another instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> of which the overridden properties are copied.
+            </summary>
+            <param name="overrideProperties"><see langword="true"/> if the properties in the original configuration node should be overridden, otherwise <see langword="false"/>.</param>
+            <param name="mergeData">An other instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> of which the overridden properties are copied.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.GetPropertyValue(System.String,System.Type,System.Object,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Gets the overridden value for a specific property.
+            </summary>
+            <param name="propertyName">The name of the property.</param>
+            <param name="targetType">The type in which the overridden value should be returned.</param>
+            <param name="defaultValue">The value for the overriden property that should be returned if no overridden value exists.</param>
+            <param name="configurationHierarchy">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationUIHierarchy"/> that should be used for deserializing the property value.</param>
+            <returns>
+            The overridden value of the property specified, as an instance of <paramref name="targetType"/>.
+            If no overridden value is configured, the defaultValue will be returned. 
+            </returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.SetPropertyValue(System.String,System.Object)">
+            <summary>
+            Stores an overridden value for a specific property.
+            </summary>
+            <param name="propertyName">The name of the property this overridden property applies to.</param>
+            <param name="propertyValue">The value that should be stored for the overridden property.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.ResetPropertyValue(System.String)">
+            <summary>
+            Resets the overridden value for a specific property.
+            </summary>
+            <param name="propertyName">The name of the property that should be reset.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.OverrideProperties">
+            <summary>
+            Indicates wether properties are overridden with the information contained in this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData.AllPropertyNames">
+            <summary>
+            Gets the list of names of the properties that have overridden values configurated.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty">
+            <summary>
+            Represents a merged configuration <see cref="T:System.ComponentModel.PropertyDescriptor"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData,System.ComponentModel.PropertyDescriptor,System.Object,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty"/> class with the merged configuration data, A <see cref="T:System.ComponentModel.PropertyDescriptor"/>, the instance and the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/>.
+            </summary>
+            <param name="mergedConfigurationData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.ConfigurationNodeMergeData"/> object.</param>
+            <param name="innerProperyDescriptor">The <see cref="T:System.ComponentModel.PropertyDescriptor"/> for the node.</param>
+            <param name="actualInstance">The instance for the property.</param>
+            <param name="configurationHierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.CanResetValue(System.Object)">
+            <summary>
+            When overridden in a derived class, returns whether resetting an object changes its value.
+            </summary>
+            
+            <returns>
+            true if resetting the component changes its value; otherwise, false.
+            </returns>
+            
+            <param name="component">The component to test for reset capability. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.GetEditor(System.Type)">
+            <summary>
+            Gets an editor of the specified type.
+            </summary>
+            
+            <returns>
+            An instance of the requested editor type, or null if an editor cannot be found.
+            </returns>
+            
+            <param name="editorBaseType">The base type of editor, which is used to differentiate between multiple editors that a property supports. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.GetValue(System.Object)">
+            <summary>
+            Gets the current value of the property on a component.
+            </summary>
+            
+            <returns>
+            The value of a property for a given component.
+            </returns>
+            
+            <param name="component">The component with the property for which to retrieve the value. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.ResetValue(System.Object)">
+            <summary>
+            Resets the value for this property of the component to the default value.
+            </summary>
+            
+            <param name="component">The component with the property value that is to be reset to the default value. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.SetValue(System.Object,System.Object)">
+            <summary>
+            Sets the value of the component to a different value.
+            </summary>
+            
+            <param name="component">The component with the property value that is to be set. </param>
+            <param name="value">The new value. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.ShouldSerializeValue(System.Object)">
+            <summary>
+            Determines a value indicating whether the value of this property needs to be persisted.
+            </summary>
+            
+            <returns>
+            true if the property should be persisted; otherwise, false.
+            </returns>
+            
+            <param name="component">The component with the property to be examined for persistence. </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.ComponentType">
+            <summary>
+            Gets the type of the component this property is bound to.
+            </summary>
+            
+            <returns>
+            A <see cref="T:System.Type"></see> that represents the type of component this property is bound to. When the <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)"></see> or <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)"></see> methods are invoked, the object specified might be an instance of this type.
+            </returns>
+            
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.Converter">
+            <summary>
+            Gets the type converter for this property.
+            </summary>
+            
+            <returns>
+            A <see cref="T:System.ComponentModel.TypeConverter"></see> that is used to convert the <see cref="T:System.Type"></see> of this property.
+            </returns>
+            <PermissionSet><IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" /></PermissionSet>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this property is read-only.
+            </summary>
+            
+            <returns>
+            true if the property is read-only; otherwise, false.
+            </returns>
+            
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.MergedConfigurationProperty.PropertyType">
+            <summary>
+            Gets the type of the property.
+            </summary>
+            
+            <returns>
+            A <see cref="T:System.Type"></see> that represents the type of the property.
+            </returns>
+            
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.CategoryOverrides">
+            <summary>
+              Looks up a localized string similar to Overridden values per environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.ConfigurationFileDialogFilter">
+            <summary>
+              Looks up a localized string similar to Configuration Files(web.config, *.exe.config, app.config)|web.config;*.exe.config;app.config|All Files(*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.DefaultEnvironmentDeltaFile">
+            <summary>
+              Looks up a localized string similar to Environment.dconfig.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.DefaultEnvironmentDeltaFileExtension">
+            <summary>
+              Looks up a localized string similar to .dconfig.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.DefaultEnvironmentName">
+            <summary>
+              Looks up a localized string similar to Environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.DontOverrideProperties">
+            <summary>
+              Looks up a localized string similar to Don&apos;t Override Properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.DuplicateDeltaFilePath">
+            <summary>
+              Looks up a localized string similar to The Environment Delta File specified conflicts with another Environment Node..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentalOverridesNodeName">
+            <summary>
+              Looks up a localized string similar to Environments.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentalOverridesUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add Environmental Overrides..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentalOverridesUICommandText">
+            <summary>
+              Looks up a localized string similar to Environmental Overrides.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentConfigurationFileDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the location of the file should be used as output for merging the environmental configuration..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentDeltaFileDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the location of the environment delta configuration (.dconfig)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentDeltaFileDialogFilter">
+            <summary>
+              Looks up a localized string similar to Environment Delta File (*.dconfig)|*.dconfig.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add new Environment..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.EnvironmentUICommandText">
+            <summary>
+              Looks up a localized string similar to Environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.ErrorOpeningEnvironmentMergeFile">
+            <summary>
+              Looks up a localized string similar to Error opening environment merge file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.ErrorSavingMergedConfigurationCaption">
+            <summary>
+              Looks up a localized string similar to Error ocurred saving a merged configuration file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.GenericDialogCaption">
+            <summary>
+              Looks up a localized string similar to Enterprise Library Configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.OpenEnvironmentDeltaCommandLongText">
+            <summary>
+              Looks up a localized string similar to Open Environment Delta file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.OpenEnvironmentDeltaCommandText">
+            <summary>
+              Looks up a localized string similar to Open Environment Delta.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.OverrideProperties">
+            <summary>
+              Looks up a localized string similar to Override Properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.SaveConfigurationFileBeforeEnvironmentMerge">
+             <summary>
+               Looks up a localized string similar to Prior to merging environmental configuration you should save the main configuration file. 
+            
+            Do you want to save the main configuration?.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.SaveMergedEnvironmentCommandLongText">
+            <summary>
+              Looks up a localized string similar to Save the Merged Configuration for this environment..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.SaveMergedEnvironmentCommandText">
+            <summary>
+              Looks up a localized string similar to Save Merged Configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.Properties.Resources.SaveMergedEnvironmentConfiguration">
+            <summary>
+              Looks up a localized string similar to Save Merged Configuration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand">
+            <summary>
+            Represents a command for merging environmental specific configuration and generating a new deployable 
+            configuration file specific for an environment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; 
+            that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Performs the merging of configuration, given a specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/>.
+            </summary>
+            <param name="node">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.EnvironmentNode"/> this command should be executed on.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand.MergeSucceeded">
+            <summary>
+            Returns <see langword="true"/> if the command executed successfully, otherwise <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.SaveMergedEnvironmentCommand.MergedConfigurationFile">
+            <summary>
+            Gets the path to the file that was used to write the merged configuration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.UnserializedPropertyValue">
+            <summary>
+            Represents unseralized values in a property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.UnserializedPropertyValue.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.UnserializedPropertyValue"/> class.
+            </summary>
+            <param name="serializedContents">The serialized contents.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Configuration.EnvironmentalOverrides.UnserializedPropertyValue.DeserializePropertyValue(System.Type,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy)">
+            <summary>
+            Deseralize the property values.
+            </summary>
+            <param name="type">The type for the property.</param>
+            <param name="hierarchy">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IConfigurationUIHierarchy"/> object.</param>
+            <returns>The deserialzied value.</returns>
+        </member>
+    </members>
+</doc>

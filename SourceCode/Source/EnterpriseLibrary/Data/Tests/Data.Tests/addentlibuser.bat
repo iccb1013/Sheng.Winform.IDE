@@ -1,0 +1,1 @@
+OSQL -S (local)\SQLEXPRESS -E -i addentlibuser.sql

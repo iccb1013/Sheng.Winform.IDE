@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EnumSystemDataSource_UserId" xml:space="preserve">
+    <value>登录用户唯一标识</value>
+  </data>
+  <data name="EnumSystemDataSource_UserName" xml:space="preserve">
+    <value>登录用户名</value>
+  </data>
+  <data name="EnumSystemDataSource_UserLoginName" xml:space="preserve">
+    <value>登录用户登录名</value>
+  </data>
+  <data name="EnumSystemDataSource_UserGroupId" xml:space="preserve">
+    <value>登录用户所在组唯一标识</value>
+  </data>
+  <data name="EnumSystemDataSource_UserGroupName" xml:space="preserve">
+    <value>登录用户所在组名</value>
+  </data>
+  <data name="EnumSystemDataSource_Date" xml:space="preserve">
+    <value>当前日期</value>
+  </data>
+  <data name="EnumSystemDataSource_DateTime" xml:space="preserve">
+    <value>当前日期时间</value>
+  </data>
+  <data name="EnumMatchType_Equal" xml:space="preserve">
+    <value>等于</value>
+  </data>
+  <data name="EnumMatchType_Like" xml:space="preserve">
+    <value>匹配</value>
+  </data>
+  <data name="EnumMatchType_Large" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="EnumMatchType_LargeEqual" xml:space="preserve">
+    <value>大于等于</value>
+  </data>
+  <data name="EnumMatchType_Less" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="EnumMatchType_LessEqual" xml:space="preserve">
+    <value>小于等于</value>
+  </data>
+  <data name="EnumMatchType_NotEqual" xml:space="preserve">
+    <value>不等于</value>
+  </data>
+  <data name="EnumTrueFalse_True" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="EnumTrueFalse_False" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="EnumDataBase_SqlServer" xml:space="preserve">
+    <value>Microsoft SQL Server 2005 或更高版本</value>
+  </data>
+  <data name="EnumDataItemType_Char" xml:space="preserve">
+    <value>定长字符串</value>
+  </data>
+  <data name="EnumDataItemType_Decimal" xml:space="preserve">
+    <value>双精度浮点数</value>
+  </data>
+  <data name="EnumDataItemType_Float" xml:space="preserve">
+    <value>单精度浮点数</value>
+  </data>
+  <data name="EnumDataItemType_Image" xml:space="preserve">
+    <value>数据流</value>
+  </data>
+  <data name="EnumDataItemType_Int" xml:space="preserve">
+    <value>整数</value>
+  </data>
+  <data name="EnumDataItemType_SmallDatetime" xml:space="preserve">
+    <value>日期时间</value>
+  </data>
+  <data name="EnumDataItemType_Text" xml:space="preserve">
+    <value>长文本</value>
+  </data>
+  <data name="EnumDataItemType_Uniqueidentifier" xml:space="preserve">
+    <value>唯一标识</value>
+  </data>
+  <data name="EnumDataItemType_Varchar" xml:space="preserve">
+    <value>变长字符串</value>
+  </data>
+  <data name="EnumDataItemType_Bit" xml:space="preserve">
+    <value>布尔型</value>
+  </data>
+  <data name="EnumSystemForm_About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="EnumSystemForm_User" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="EnumSystemForm_UserGroup" xml:space="preserve">
+    <value>用户组管理</value>
+  </data>
+  <data name="EnumClearFormDataMode_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="EnumClearFormDataMode_Appoint" xml:space="preserve">
+    <value>指定</value>
+  </data>
+  <data name="EnumClearFormDataMode_IgnoreDataList" xml:space="preserve">
+    <value>忽略数据列表</value>
+  </data>
+  <data name="EnumValidateFormDataMode_All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="EnumValidateFormDataMode_Appoint" xml:space="preserve">
+    <value>指定</value>
+  </data>
+  <data name="EnumOpenFormIfOpend_Activate" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="EnumOpenFormIfOpend_CloseAndOpenNew" xml:space="preserve">
+    <value>关闭并打开新的</value>
+  </data>
+  <data name="EnumOpenFormIfOpend_OpenNew" xml:space="preserve">
+    <value>打开新的</value>
+  </data>
+  <data name="EnumTargetForm_Current" xml:space="preserve">
+    <value>当前窗体</value>
+  </data>
+  <data name="EnumTargetForm_Caller" xml:space="preserve">
+    <value>调用者窗体</value>
+  </data>
+  <data name="EnumCallEntityMethodTargetForm_Current" xml:space="preserve">
+    <value>当前窗体</value>
+  </data>
+  <data name="EnumCallEntityMethodTargetForm_Caller" xml:space="preserve">
+    <value>调用者窗体</value>
+  </data>
+  <data name="EnumComboBoxDataSourceMode_Enum" xml:space="preserve">
+    <value>枚举</value>
+  </data>
+  <data name="EnumComboBoxDataSourceMode_DataEntity" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="EnumComboBoxStyle_DropDown" xml:space="preserve">
+    <value>文本部分可编辑</value>
+  </data>
+  <data name="EnumComboBoxStyle_DropDownList" xml:space="preserve">
+    <value>不能编辑文本,必须单击箭头按钮显示列表</value>
+  </data>
+  <data name="EnumFormWindowState_Maximized" xml:space="preserve">
+    <value>最大化</value>
+  </data>
+  <data name="EnumFormWindowState_Minimized" xml:space="preserve">
+    <value>最小化</value>
+  </data>
+  <data name="EnumFormWindowState_Normal" xml:space="preserve">
+    <value>默认大小</value>
+  </data>
+  <data name="EnumPictureBoxSizeMode_AutoSize" xml:space="preserve">
+    <value>自动</value>
+  </data>
+  <data name="EnumPictureBoxSizeMode_Normal" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="EnumPictureBoxSizeMode_StretchImage" xml:space="preserve">
+    <value>拉伸</value>
+  </data>
+  <data name="EnumPictureBoxSizeMode_Zoom" xml:space="preserve">
+    <value>按比例缩放</value>
+  </data>
+  <data name="EnumToolStripItemAlignment_Left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="EnumToolStripItemAlignment_Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="EnumToolStripItemDisplayStyle_None" xml:space="preserve">
+    <value>既不显示图像，也不显示文本</value>
+  </data>
+  <data name="EnumToolStripItemDisplayStyle_Text" xml:space="preserve">
+    <value>只显示文本</value>
+  </data>
+  <data name="EnumToolStripItemDisplayStyle_Image" xml:space="preserve">
+    <value>只显示图像</value>
+  </data>
+  <data name="EnumToolStripItemDisplayStyle_ImageAndText" xml:space="preserve">
+    <value>同时显示图像和文本</value>
+  </data>
+  <data name="EnumContentAlignment_BottomCenter" xml:space="preserve">
+    <value>BottomCenter</value>
+  </data>
+  <data name="EnumContentAlignment_BottomLeft" xml:space="preserve">
+    <value>BottomLeft</value>
+  </data>
+  <data name="EnumContentAlignment_BottomRight" xml:space="preserve">
+    <value>BottomRight</value>
+  </data>
+  <data name="EnumContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="EnumContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="EnumContentAlignment_MiddleRight" xml:space="preserve">
+    <value>MiddleRight</value>
+  </data>
+  <data name="EnumContentAlignment_TopCenter" xml:space="preserve">
+    <value>TopCenter</value>
+  </data>
+  <data name="EnumContentAlignment_TopLeft" xml:space="preserve">
+    <value>TopLeft</value>
+  </data>
+  <data name="EnumContentAlignment_TopRight" xml:space="preserve">
+    <value>TopRight</value>
+  </data>
+  <data name="EnumTextImageRelation_ImageAboveText" xml:space="preserve">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="EnumTextImageRelation_ImageBeforeText" xml:space="preserve">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="EnumTextImageRelation_Overlay" xml:space="preserve">
+    <value>Overlay</value>
+  </data>
+  <data name="EnumTextImageRelation_TextAboveImage" xml:space="preserve">
+    <value>TextAboveImage</value>
+  </data>
+  <data name="EnumTextImageRelation_TextBeforeImage" xml:space="preserve">
+    <value>TextBeforeImage</value>
+  </data>
+  <data name="PropertyCatalog_Style" xml:space="preserve">
+    <value>样式</value>
+  </data>
+  <data name="PropertyCatalog_Normal" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="PropertyCatalog_Layout" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="PropertyCatalog_Other" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="PropertyCatalog_Pagination" xml:space="preserve">
+    <value>分页</value>
+  </data>
+  <data name="EntityBase_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="EntityBase_Code" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="EntityBase_Remark" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="EntityBase_Code_Description" xml:space="preserve">
+    <value>唯一标识</value>
+  </data>
+  <data name="EntityBase_Remark_Description" xml:space="preserve">
+    <value>输入一般说明文字</value>
+  </data>
+  <data name="EntityBase_Code_RegexMsg" xml:space="preserve">
+    <value>不能以数字开头,且只能是大小写字母,数字或下划线组合</value>
+  </data>
+  <data name="FormElement_Text" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="FormElement_Text_Description" xml:space="preserve">
+    <value>与此窗体元素关联的文本</value>
+  </data>
+  <data name="FormElement_BackColorValue" xml:space="preserve">
+    <value>背景色</value>
+  </data>
+  <data name="FormElement_BackColorValue_Description" xml:space="preserve">
+    <value>此窗体元素的背景颜色</value>
+  </data>
+  <data name="FormElement_ForeColorValue" xml:space="preserve">
+    <value>前景色</value>
+  </data>
+  <data name="FormElement_ForeColorValue_Description" xml:space="preserve">
+    <value>此窗体元素的前景颜色</value>
+  </data>
+  <data name="FormElement_Enabled" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="FormElement_Enabled_Description" xml:space="preserve">
+    <value>此窗体元素是否启用</value>
+  </data>
+  <data name="FormElement_Visible" xml:space="preserve">
+    <value>可见</value>
+  </data>
+  <data name="FormElement_Visible_Description" xml:space="preserve">
+    <value>此窗体元素是否可见</value>
+  </data>
+  <data name="FormElement_Width" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="FormElement_Width_Description" xml:space="preserve">
+    <value>此窗体元素的宽度</value>
+  </data>
+  <data name="FormElement_Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="FormElement_Height_Description" xml:space="preserve">
+    <value>此窗体元素的高度</value>
+  </data>
+  <data name="FormElement_Anchor" xml:space="preserve">
+    <value>边缘锚定</value>
+  </data>
+  <data name="FormElement_Anchor_Description" xml:space="preserve">
+    <value>定义此窗体元素绑定到的容器边缘</value>
+  </data>
+  <data name="FormElement_Top" xml:space="preserve">
+    <value>顶边距</value>
+  </data>
+  <data name="FormElement_Top_Description" xml:space="preserve">
+    <value>此窗体元素与其容器的顶部边距</value>
+  </data>
+  <data name="FormElement_Left" xml:space="preserve">
+    <value>左边距</value>
+  </data>
+  <data name="FormElement_Left_Description" xml:space="preserve">
+    <value>此窗体元素与其容器的左侧边距</value>
+  </data>
+  <data name="FormElement_Font" xml:space="preserve">
+    <value>字体</value>
+  </data>
+  <data name="FormElement_Font_Description" xml:space="preserve">
+    <value>用于显示控件中文本的字体</value>
+  </data>
+  <data name="ElementFont_FontFamily" xml:space="preserve">
+    <value>字体名</value>
+  </data>
+  <data name="ElementFont_FontFamily_Description" xml:space="preserve">
+    <value>字体名称</value>
+  </data>
+  <data name="ElementFont_Bold" xml:space="preserve">
+    <value>粗体</value>
+  </data>
+  <data name="ElementFont_Bold_Description" xml:space="preserve">
+    <value>该值指示此字体是否为粗体</value>
+  </data>
+  <data name="ElementFont_Italic" xml:space="preserve">
+    <value>斜体</value>
+  </data>
+  <data name="ElementFont_Italic_Description" xml:space="preserve">
+    <value>该值指示此字体是否为斜体</value>
+  </data>
+  <data name="ElementFont_Size" xml:space="preserve">
+    <value>尺寸</value>
+  </data>
+  <data name="ElementFont_Size_Description" xml:space="preserve">
+    <value>此字体的全身大小</value>
+  </data>
+  <data name="ElementFont_Underline" xml:space="preserve">
+    <value>下划线</value>
+  </data>
+  <data name="ElementFont_Underline_Description" xml:space="preserve">
+    <value>该值指示此字体是否有下划线</value>
+  </data>
+  <data name="FormElementComboBoxEntity_ComboBoxStyle" xml:space="preserve">
+    <value>样式</value>
+  </data>
+  <data name="FormElementComboBoxEntity_ComboBoxStyle_Description" xml:space="preserve">
+    <value>指定复合文本框的样式</value>
+  </data>
+  <data name="FormElementComboBoxEntity_WaterText" xml:space="preserve">
+    <value>水印文本</value>
+  </data>
+  <data name="FormElementComboBoxEntity_WaterText_Description" xml:space="preserve">
+    <value>在没有输入内容时,淡色显示的提示文本</value>
+  </data>
+  <data name="FormElementLabelEntity_AutoSize" xml:space="preserve">
+    <value>自动尺寸</value>
+  </data>
+  <data name="FormElementLabelEntity_AutoSize_Description" xml:space="preserve">
+    <value>指示是否自动调整控件的大小以完整显示其内容</value>
+  </data>
+  <data name="FormElementLabelEntity_TextAlign" xml:space="preserve">
+    <value>文本位置</value>
+  </data>
+  <data name="FormElementLabelEntity_TextAlign_Description" xml:space="preserve">
+    <value>文本的对齐方式</value>
+  </data>
+  <data name="FormElementPictureBoxEntity_Img" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="FormElementPictureBoxEntity_Img_Description" xml:space="preserve">
+    <value>显示的图像</value>
+  </data>
+  <data name="FormElementPictureBoxEntity_SizeMode" xml:space="preserve">
+    <value>尺寸模式</value>
+  </data>
+  <data name="FormElementPictureBoxEntity_SizeMode_Description" xml:space="preserve">
+    <value>控制如何显示图像位置和控件大小</value>
+  </data>
+  <data name="FormElementTextBoxEntity_MaxLength" xml:space="preserve">
+    <value>最大字符</value>
+  </data>
+  <data name="FormElementTextBoxEntity_MaxLength_Description" xml:space="preserve">
+    <value>文本框可输入的最大字符长度</value>
+  </data>
+  <data name="FormElementTextBoxEntity_MultiLine" xml:space="preserve">
+    <value>多行</value>
+  </data>
+  <data name="FormElementTextBoxEntity_MultiLine_Description" xml:space="preserve">
+    <value>文本是否能跨越多行</value>
+  </data>
+  <data name="FormElementTextBoxEntity_ReadOnly" xml:space="preserve">
+    <value>只读</value>
+  </data>
+  <data name="FormElementTextBoxEntity_ReadOnly_Description" xml:space="preserve">
+    <value>能否更改文本</value>
+  </data>
+  <data name="FormElementDataListEntity_DataEntityId" xml:space="preserve">
+    <value>数据实体</value>
+  </data>
+  <data name="FormElementDataListEntity_DataEntityId_Description" xml:space="preserve">
+    <value>与此数据列表关联的数据实体</value>
+  </data>
+  <data name="ToolStripButtonEntity_ImagePath" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="ToolStripButtonEntity_ImagePath_Description" xml:space="preserve">
+    <value>将显示在项上的图像</value>
+  </data>
+  <data name="ToolStripButtonEntity_DisplayStyle" xml:space="preserve">
+    <value>呈现样式</value>
+  </data>
+  <data name="ToolStripButtonEntity_DisplayStyle_Description" xml:space="preserve">
+    <value>显示何种对像</value>
+  </data>
+  <data name="ToolStripButtonEntity_TextImageRelation" xml:space="preserve">
+    <value>呈现方式</value>
+  </data>
+  <data name="ToolStripButtonEntity_TextImageRelation_Description" xml:space="preserve">
+    <value>指定控件上图像和文本彼此之间的相对位置</value>
+  </data>
+  <data name="FormEntity_Text" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="FormEntity_Text_Description" xml:space="preserve">
+    <value>与此窗体元素关联的文本</value>
+  </data>
+  <data name="FormEntity_BackColorValue" xml:space="preserve">
+    <value>背景色</value>
+  </data>
+  <data name="FormEntity_BackColorValue_Description" xml:space="preserve">
+    <value>背景颜色</value>
+  </data>
+  <data name="FormEntity_ForeColorValue" xml:space="preserve">
+    <value>前景色</value>
+  </data>
+  <data name="FormEntity_ForeColorValue_Description" xml:space="preserve">
+    <value>前景颜色</value>
+  </data>
+  <data name="FormEntity_Width" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="FormEntity_Width_Description" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="FormEntity_Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="FormEntity_Height_Description" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="FormEntity_WindowState" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="FormEntity_WindowState_Description" xml:space="preserve">
+    <value>确定窗体的初始可视状态</value>
+  </data>
+  <data name="FormEntity_Font" xml:space="preserve">
+    <value>字体</value>
+  </data>
+  <data name="FormEntity_Font_Description" xml:space="preserve">
+    <value>用于显示控件中文本的字体</value>
+  </data>
+  <data name="FormElementTextBoxEntity_AllowEmpty" xml:space="preserve">
+    <value>允许空</value>
+  </data>
+  <data name="FormElementTextBoxEntity_AllowEmpty_Description" xml:space="preserve">
+    <value>验证窗体数据时是否允许文本为空</value>
+  </data>
+  <data name="FormElementTextBoxEntity_DataItemId" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="FormElementTextBoxEntity_DataItemId_Description" xml:space="preserve">
+    <value>与此窗体元素关联的数据项</value>
+  </data>
+  <data name="FormElementComboBoxEntity_AllowEmpty" xml:space="preserve">
+    <value>允许空</value>
+  </data>
+  <data name="FormElementComboBoxEntity_AllowEmpty_Description" xml:space="preserve">
+    <value>验证窗体数据时是否允许文本为空</value>
+  </data>
+  <data name="FormElementComboBoxEntity_DataItemId" xml:space="preserve">
+    <value>数据项</value>
+  </data>
+  <data name="FormElementComboBoxEntity_DataItemId_Description" xml:space="preserve">
+    <value>与此窗体元素关联的数据项</value>
+  </data>
+  <data name="FormElementButtonEntity" xml:space="preserve">
+    <value>按钮</value>
+  </data>
+  <data name="FormElementComboBoxEntity" xml:space="preserve">
+    <value>复合文本框</value>
+  </data>
+  <data name="FormElementLabelEntity" xml:space="preserve">
+    <value>静态文本</value>
+  </data>
+  <data name="FormElementPictureBoxEntity" xml:space="preserve">
+    <value>图片框</value>
+  </data>
+  <data name="FormElementTextBoxEntity" xml:space="preserve">
+    <value>文本框</value>
+  </data>
+  <data name="FormElementDataListEntity" xml:space="preserve">
+    <value>数据列表</value>
+  </data>
+  <data name="ToolStripButtonEntity" xml:space="preserve">
+    <value>工具栏按钮</value>
+  </data>
+  <data name="ToolStripLabelEntity" xml:space="preserve">
+    <value>工具栏文本</value>
+  </data>
+  <data name="ToolStripSeparatorEntity" xml:space="preserve">
+    <value>分隔条</value>
+  </data>
+  <data name="ToolStripItemAbstract_Aligment" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="ToolStripItemAbstract_Aligment_Description" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="ToolStripItemAbstract_ToolTipText" xml:space="preserve">
+    <value>提示文本</value>
+  </data>
+  <data name="ToolStripItemAbstract_ToolTipText_Description" xml:space="preserve">
+    <value>指示显示的提示文本</value>
+  </data>
+  <data name="ToolStripItemAbstract_Text" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="ToolStripItemAbstract_Text_Description" xml:space="preserve">
+    <value>在项上显示的文本</value>
+  </data>
+  <data name="DataItemEntity_DefaultValue" xml:space="preserve">
+    <value>默认值</value>
+  </data>
+  <data name="DataItemEntity_DefaultValue_Description" xml:space="preserve">
+    <value>该数据项的默认值</value>
+  </data>
+  <data name="DataItemEntity_AllowEmpty" xml:space="preserve">
+    <value>允许空</value>
+  </data>
+  <data name="DataItemEntity_AllowEmpty_Description" xml:space="preserve">
+    <value>是否允许空值</value>
+  </data>
+  <data name="SystemDataSoureProvide" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="UIElementDataSourceProvide" xml:space="preserve">
+    <value>窗体元素</value>
+  </data>
+  <data name="UIElementDataSoureDisplayString" xml:space="preserve">
+    <value>[窗体元素]</value>
+  </data>
+  <data name="SystemDataSoureDisplayString" xml:space="preserve">
+    <value>[系统]</value>
+  </data>
+</root>

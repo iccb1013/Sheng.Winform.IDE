@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.AddDataCacheStorageCommand">
+            <summary>
+            Represents a command for adding a database cache storage provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.AddDataCacheStorageCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.AddDataCacheStorageCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.AddDataCacheStorageCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            <para>Adds the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode"/> to the current <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/>. If the Data Application Block configuration is not added to the current application, it is also added.</para>
+            </summary>
+            <param name="e"><para>An <see cref="T:System.EventArgs"/> containing the event data.</para></param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the database cache storage.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.CachingDatabaseConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the data cache storage and adds it to the caching settings.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode">
+            <summary>
+            Represents a database cache storage provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData"/> configuration object.
+            </summary>
+            <param name="dataCacheStorageData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData"/> configuration object</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.Dispose(System.Boolean)">
+            <summary>
+            <para>Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode"/> and optionally releases the managed resources.</para>
+            </summary>
+            <param name="disposing">
+            <para><see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.DatabaseInstance">
+            <summary>
+            Gets or sets the database to use for the cache storage.
+            </summary>
+            <value>
+            The database to use for the cache storage.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.PartitionName">
+            <summary>
+            Gets or sets the partition name to use for the cache storage.
+            </summary>
+            <value>
+            The partition name to use for the cache storage.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.DataCacheStorageNode.CacheStorageData">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData"/> configuration object using the node data.
+            </summary>
+            <value>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.DataCacheStorageData"/> configuration object using the node data.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.DatabaseNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the data connection..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.DatabasePartitionNameDesciption">
+            <summary>
+              Looks up a localized string similar to Gets or sets the partition name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.DataCacheStorage">
+            <summary>
+              Looks up a localized string similar to Data Cache Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.DataCacheStorageCommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a Database Cache Storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.Properties.Resources.DataCacheStorageCommandText">
+            <summary>
+              Looks up a localized string similar to Database Cache Storage.
+            </summary>
+        </member>
+    </members>
+</doc>

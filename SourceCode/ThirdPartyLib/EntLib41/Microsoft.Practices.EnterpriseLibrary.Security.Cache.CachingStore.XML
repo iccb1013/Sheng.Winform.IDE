@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider">
+            <summary>
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ISecurityCacheProvider"/> implementation that caches the athenticated session information and
+            performs token handling.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.#ctor(System.Int32,System.Int32,Microsoft.Practices.EnterpriseLibrary.Caching.ICacheManager)">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SaveIdentity(System.Security.Principal.IIdentity)">
+            <summary>
+            Caches an authenticated <see cref="T:System.Security.Principal.IIdentity"/> object.
+            </summary>
+            <param name="identity">
+            <see cref="T:System.Security.Principal.IIdentity"/> object representing an authenticated user.
+            </param>
+            <returns>Token to identify the cached Identity</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SaveIdentity(System.Security.Principal.IIdentity,Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Caches an authenticated <see cref="T:System.Security.Principal.IIdentity"/> object using an existing token
+            enabling the grouping of related items.
+            </summary>
+            <param name="identity">
+            IIdentity object representing an authenticated user.
+            </param>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SavePrincipal(System.Security.Principal.IPrincipal)">
+            <summary>
+            Caches an authenticated IPrincipal object.
+            </summary>
+            <param name="principal">
+            IPrincipal object representing an authenticated user and roles.
+            </param>
+            <returns>Token to identify the cached IPrincipal object</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SavePrincipal(System.Security.Principal.IPrincipal,Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Caches an authenticated IPrincipal object using an existing token
+            enabling the grouping of related items.
+            </summary>
+            <param name="principal">
+            IPrincipal object representing an authenticated user.
+            </param>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SaveProfile(System.Object)">
+            <summary>
+            Caches a profile for an authenticated user.
+            </summary>
+            <param name="profile">
+            Object representing the profile of authenticated user.
+            </param>
+            <returns>Token to identify the cached Profile object</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.SaveProfile(System.Object,Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Caches a profile for an authenticated user using an existing token
+            (enabling the grouping of related items).
+            </summary>
+            <param name="profile">
+            Object representing the profile of authenticated user.
+            </param>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.ExpireIdentity(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Purges an existing IIdentity object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.ExpirePrincipal(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Purges an existing IPrincipal object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.ExpireProfile(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Purges an existing Profile object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.GetIdentity(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Gets an existing IIdentity object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+            <returns>A cached IIdentity object</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.GetPrincipal(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Gets an existing IPrincipal object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+            <returns>A cached IPrincipal object</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider.GetProfile(Microsoft.Practices.EnterpriseLibrary.Security.IToken)">
+            <summary>
+            Gets an existing Profile object from the cache.
+            </summary>
+            <param name="token">
+            Token identifying an existing cached entity.
+            </param>
+            <returns>A cached Profile object</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData">
+            <summary>
+            Configuration data for the Security Cache.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.#ctor">
+            <summary>
+            <para>Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> class.</para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.#ctor(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> class with 
+            a specified name, sliding expiration, absolute expiration and cache manager instance name. 
+            </summary>
+            <param name="name">The name if the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> instance.</param>
+            <param name="slidingExpiration">The number of minutes between the time the added object was last accessed and when that object expires.</param>
+            <param name="absoluteExpiration">The number of minutes in which an added object expires and is removed from the cache.</param>
+            <param name="cacheManager">The name of the CacheManager instance that is used to store cached items.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.CacheManager">
+            <summary>
+            Gets or sets the Caching Block Cache instance name.
+            </summary>
+            <value>Caching Block Cache Instance Name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.SlidingExpiration">
+            <summary>
+            Gets or sets the Sliding Session Expiration duration (in minutes).
+            </summary>
+            <value>Sliding Session Expiration duration</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.AbsoluteExpiration">
+            <summary>
+            Gets or sets the Absolute Session Expiration duration (in minutes).
+            </summary>
+            <value>Absolute Session Expiration duration</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderAssembler">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to build a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> described by a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecurityCacheProviderData"/> configuration object.
+            </summary>
+            <remarks>This type is linked to the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecurityCacheProviderData"/> type and it is used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityCacheProviderCustomFactory"/> 
+            to build the specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.ISecurityCacheProvider"/> object represented by the configuration object.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderAssembler.Assemble(Microsoft.Practices.ObjectBuilder2.IBuilderContext,Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecurityCacheProviderData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ObjectBuilder.ConfigurationReflectionCache)">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Builds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> based on an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecurityCacheProviderData"/>.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Security.SecurityCacheProviderCustomFactory"/>
+            <param name="context">The <see cref="T:Microsoft.Practices.ObjectBuilder2.IBuilderContext"/> that represents the current building process.</param>
+            <param name="objectConfiguration">The configuration object that describes the object to build. Must be an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/>.</param>
+            <param name="configurationSource">The source for configuration objects.</param>
+            <param name="reflectionCache">The cache to use retrieving reflection information.</param>
+            <returns>A fully initialized instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider">
+            <summary>
+            Provides an implementation for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> that
+            splits policy overrides processing and WMI objects generation, performing approriate logging of 
+            policy processing errors.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.CacheManagerPropertyName">
+            <summary>
+            The name of the cache manager property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.AbsoluteExpirationPropertyName">
+            <summary>
+            The name of the absolute expiration property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.SlidingExpirationPropertyName">
+            <summary>
+            The name of the sliding expriration property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.#ctor">
+            <summary>
+            Initialize an instnace of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.AddElementAdministrativeTemplateParts(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)">
+            <summary>
+            Adds the ADM parts that represent the properties of
+            a specific instance of the configuration element type managed by the receiver.
+            </summary>
+            <param name="contentBuilder">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder"/> to which the Adm instructions are to be appended.</param>
+            <param name="configurationObject">The configuration object instance.</param>
+            <param name="configurationSource">The configuration source from where to get additional configuration
+            information, if necessary.</param>
+            <param name="elementPolicyKeyName">The key for the element's policies.</param>
+            <remarks>
+            Subclasses managing objects that must not create a policy will likely need to include the elements' keys when creating the parts.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.OverrideWithGroupPolicies(Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey)">
+            <summary>
+            Overrides the <paramref name="configurationObject"/>'s properties with the Group Policy values from the 
+            registry.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="policyKey">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.IRegistryKey"/> which holds the Group Policy overrides for the 
+            configuration element.</param>
+            <remarks>Subclasses implementing this method must retrieve all the override values from the registry
+            before making modifications to the <paramref name="configurationObject"/> so any error retrieving
+            the override values will cancel policy processing.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting"/> instances that describe the 
+            configurationObject.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="wmiSettings">A collection to where the generated WMI objects are to be added.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataManageabilityProvider.ElementPolicyNameTemplate">
+            <summary>
+            Gets the template for the name of the policy associated to the object.
+            </summary>
+            <remarks>
+            Elements that override 
+            <see cref="M:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationElementManageabilityProviderBase`1.AddAdministrativeTemplateDirectives(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.Adm.AdmContentBuilder,`0,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.String)"/>
+            to avoid creating a policy must still override this property.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataWmiMapper">
+            <summary>
+            Represents a mapper for caching store provider configuration to Wmi.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderDataWmiMapper.GenerateWmiObjects(Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData,System.Collections.Generic.ICollection{Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting})">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> instances that describe the 
+            configurationObject.
+            </summary>
+            <param name="configurationObject">The configuration object for instances that must be managed.</param>
+            <param name="wmiSettings">A collection to where the generated WMI objects are to be added.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting">
+            <summary>
+            Represents the configuration information from a 
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> instance.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.NamedConfigurationSetting"/>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Manageability.ConfigurationSetting"/>	
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.#ctor(System.Configuration.ConfigurationElement,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> class with the configuraiton source element,
+            the name of the store, the name of the cache manager, the absolute expiration and the sliding expiration.
+            </summary>
+            <param name="sourceElement">The configuration source element.</param>
+            <param name="name">The name of the source.</param>
+            <param name="cacheManager">The name of the cache manager.</param>
+            <param name="absoluteExpiration">The absolute expiration.</param>
+            <param name="slidingExpiration">The sliding expiration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.GetInstances">
+            <summary>
+            Returns an enumeration of the published <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.BindInstance(System.String,System.String,System.String)">
+            <summary>
+            Returns the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> instance corresponding to the provided values for the key properties.
+            </summary>
+            <param name="ApplicationName">The value for the ApplicationName key property.</param>
+            <param name="SectionName">The value for the SectionName key property.</param>
+            <param name="Name">The value for the Name key property.</param>
+            <returns>The published <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> instance specified by the values for the key properties,
+            or <see langword="null"/> if no such an instance is currently published.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.SaveChanges(System.Configuration.ConfigurationElement)">
+            <summary>
+            Saves the changes on the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting"/> to its corresponding configuration object.
+            </summary>
+            <param name="sourceElement">The configuration object on which the changes must be saved.</param>
+            <returns><see langword="true"/> if changes have been saved, <see langword="false"/> otherwise.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.AbsoluteExpiration">
+            <summary>
+            Gets the absolute expiration for the represented configuration object.
+            </summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.AbsoluteExpiration">
+            CachingStoreProviderData.AbsoluteExpiration</seealso>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.CacheManager">
+            <summary>
+            Gets the name of the cache manager for the represented configuration object.
+            </summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.CacheManager">
+            CachingStoreProviderData.CacheManager</seealso>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.CachingStoreProviderSetting.SlidingExpiration">
+            <summary>
+            Gets the sliding expiration for the represented configuration object.
+            </summary>
+            <seealso cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData.SlidingExpiration">
+            CachingStoreProviderData.SlidingExpiration</seealso>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Manageability.Installer">
+            <summary>
+            Installer for the WMI objects defined in the assembly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Unity.CachingStoreProviderPolicyCreator">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to create the container policies required to create a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.CachingStoreProviderAbsoluteExpirationPartName">
+            <summary>
+              Looks up a localized string similar to Absolute expiration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.CachingStoreProviderCacheManagerPartName">
+            <summary>
+              Looks up a localized string similar to Cache manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.CachingStoreProviderSlidingExpirationPartName">
+            <summary>
+              Looks up a localized string similar to Sliding expiration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Properties.Resources.SecurityCacheProviderPolicyNameTemplate">
+            <summary>
+              Looks up a localized string similar to Specify settings for security cache provider &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.SecurityCacheItem">
+            <summary>
+            Represents an item stored in SecurityCache
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.SecurityCacheItem.Identity">
+            <summary>
+            The IIdentity to cache.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.SecurityCacheItem.Profile">
+            <summary>
+            The profile to cache.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.SecurityCacheItem.Principal">
+            <summary>
+             The IPrincipal to cache.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.SecurityCacheItem.IsRemoveable">
+            <devDoc>
+            A cache item is deemed removeable if all properties are null
+            </devDoc>
+        </member>
+    </members>
+</doc>

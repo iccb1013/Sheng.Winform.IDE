@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllTraceSourceNode" xml:space="preserve">
+    <value>All Events</value>
+  </data>
+  <data name="BinaryFormatterNode" xml:space="preserve">
+    <value>Binary Formatter</value>
+  </data>
+  <data name="BinaryFormatterUICommandLongText" xml:space="preserve">
+    <value>Add a new binary formatter.</value>
+  </data>
+  <data name="BinaryFormatterUICommandText" xml:space="preserve">
+    <value>Binary Formatter</value>
+  </data>
+  <data name="CategoryFilterExpressionDescription" xml:space="preserve">
+    <value>Gets or sets the cateogory filter expression.</value>
+  </data>
+  <data name="CategoryFilterNode" xml:space="preserve">
+    <value>Category Filter</value>
+  </data>
+  <data name="CategoryFilterSummaryAllow" xml:space="preserve">
+    <value>Allow all except</value>
+  </data>
+  <data name="CategoryFilterSummaryDeny" xml:space="preserve">
+    <value>Deny all except</value>
+  </data>
+  <data name="CategoryFilterUICommandLongText" xml:space="preserve">
+    <value>Add a new Category Filter.</value>
+  </data>
+  <data name="CategoryFilterUICommandText" xml:space="preserve">
+    <value>Category Filter</value>
+  </data>
+  <data name="CategoryGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="CategoryLogFilterNode" xml:space="preserve">
+    <value>Category Filter</value>
+  </data>
+  <data name="CategorySources" xml:space="preserve">
+    <value>Category Sources</value>
+  </data>
+  <data name="CategoryTraceSourceNode" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryTraceSourceUICommandLongText" xml:space="preserve">
+    <value>Add a new category.</value>
+  </data>
+  <data name="CategoryTraceSourceUICommandText" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CustomFilterNode" xml:space="preserve">
+    <value>Custom Filter</value>
+  </data>
+  <data name="CustomFormatter" xml:space="preserve">
+    <value>Custom Formatter</value>
+  </data>
+  <data name="CustomFormatterAttributesDescription" xml:space="preserve">
+    <value>Custom configuration properties for this Formatter.</value>
+  </data>
+  <data name="CustomFormatterUICommandLongText" xml:space="preserve">
+    <value>Add a new custom formatter.</value>
+  </data>
+  <data name="CustomFormatterUICommandText" xml:space="preserve">
+    <value>Custom Formatter</value>
+  </data>
+  <data name="CustomLogFilterUICommandLongText" xml:space="preserve">
+    <value>Add a new Custom Filter.</value>
+  </data>
+  <data name="CustomLogFilterUICommandText" xml:space="preserve">
+    <value>Custom Filter</value>
+  </data>
+  <data name="CustomTraceListenerNode" xml:space="preserve">
+    <value>Custom Trace Listener</value>
+  </data>
+  <data name="CustomTraceListenerNodeTypeDescription" xml:space="preserve">
+    <value>The type of CustomTraceListener. Required.</value>
+  </data>
+  <data name="CustomTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new Custom Trace Listener.</value>
+  </data>
+  <data name="CustomTraceListenerUICommandText" xml:space="preserve">
+    <value>Custom Trace Listener</value>
+  </data>
+  <data name="DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DefaultCategoryDescription" xml:space="preserve">
+    <value>Category to use if a category is not defined or is misspelled</value>
+  </data>
+  <data name="DefaultFormatter" xml:space="preserve">
+    <value>Text Formatter</value>
+  </data>
+  <data name="DefaultLevelDescription" xml:space="preserve">
+    <value>The default SourceLevels for this TraceSource</value>
+  </data>
+  <data name="DefaultTextFormat" xml:space="preserve">
+    <value>Timestamp: {timestamp}
+Message: {message}
+Category: {category}
+Priority: {priority}
+EventId: {eventid}
+Severity: {severity}
+Title:{title}
+Machine: {machine}
+Application Domain: {appDomain}
+Process Id: {processId}
+Process Name: {processName}
+Win32 Thread Id: {win32ThreadId}
+Thread Name: {threadName}
+Extended Properties: {dictionary({key} - {value}
+)}</value>
+  </data>
+  <data name="EmailTraceListenerFromAddressDescription" xml:space="preserve">
+    <value>From email address</value>
+  </data>
+  <data name="EmailTraceListenerNode" xml:space="preserve">
+    <value>Email TraceListener</value>
+  </data>
+  <data name="EmailTraceListenerSmtpServerDescription" xml:space="preserve">
+    <value>SMTP server to send emails</value>
+  </data>
+  <data name="EmailTraceListenerSubjectLineEnderDescription" xml:space="preserve">
+    <value>Standard text to be added to the message subject after log message severity</value>
+  </data>
+  <data name="EmailTraceListenerSubjectLineStarterDescription" xml:space="preserve">
+    <value>Standard text to be added to the message subject before log message severity</value>
+  </data>
+  <data name="EmailTraceListenerToAddressDescription" xml:space="preserve">
+    <value>One or more email addresses separated by semicolons</value>
+  </data>
+  <data name="EmailTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new Email Trace Listener.</value>
+  </data>
+  <data name="EmailTraceListenerUICommandText" xml:space="preserve">
+    <value>Email Trace Listener</value>
+  </data>
+  <data name="EnabledDescription" xml:space="preserve">
+    <value>Setting this value to true lets all LogEntries to pass, false will not let any LogEntries pass.</value>
+  </data>
+  <data name="ErrorsTraceSourceNode" xml:space="preserve">
+    <value>Logging Errors &amp; Warnings</value>
+  </data>
+  <data name="EventLogTraceListenerEventLogNameDescription" xml:space="preserve">
+    <value>Event log name.  Optional - defaults to Application log.</value>
+  </data>
+  <data name="EventLogTraceListenerSourceNameDescription" xml:space="preserve">
+    <value>Event source name.</value>
+  </data>
+  <data name="FilterCollectionNodeName" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="FlatFileTraceListenerFileDialogFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="FlatFileTraceListenerFileName" xml:space="preserve">
+    <value>File name and directory.</value>
+  </data>
+  <data name="FlatFileTraceListenerFooter" xml:space="preserve">
+    <value>Footer to append after each log entry.  Optional.</value>
+  </data>
+  <data name="FlatFileTraceListenerHeader" xml:space="preserve">
+    <value>Header to append before each log entry.  Optional.</value>
+  </data>
+  <data name="FlatFileTraceListenerNode" xml:space="preserve">
+    <value>FlatFile TraceListener</value>
+  </data>
+  <data name="FlatFileTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new Flat File Trace Listener.</value>
+  </data>
+  <data name="FlatFileTraceListenerUICommandText" xml:space="preserve">
+    <value>Flat File Trace Listener</value>
+  </data>
+  <data name="FormatDescription" xml:space="preserve">
+    <value>Destination format.  Optional.</value>
+  </data>
+  <data name="FormattedEventLogTraceListenerNode" xml:space="preserve">
+    <value>Formatted EventLog TraceListener</value>
+  </data>
+  <data name="FormattedEventLogTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new Formatted Event Log Trace Listener.</value>
+  </data>
+  <data name="FormattedEventLogTraceListenerUICommandText" xml:space="preserve">
+    <value>Formatted Event Log Trace Listener</value>
+  </data>
+  <data name="Formatters" xml:space="preserve">
+    <value>Formatters</value>
+  </data>
+  <data name="GenericCreateStatusText" xml:space="preserve">
+    <value>Create a new {0}</value>
+  </data>
+  <data name="InitDataDescription" xml:space="preserve">
+    <value>The initData for this System.Diagnostics TraceListener</value>
+  </data>
+  <data name="LogEnabledFilterNode" xml:space="preserve">
+    <value>LogEnabled Filter</value>
+  </data>
+  <data name="LogEnabledFilterUICommandLongText" xml:space="preserve">
+    <value>Add a new Log Enabled Filter.</value>
+  </data>
+  <data name="LogEnabledFilterUICommandText" xml:space="preserve">
+    <value>Log Enabled Filter</value>
+  </data>
+  <data name="LogSettingsCommandLongText" xml:space="preserve">
+    <value>Add the Logging Application Block.</value>
+  </data>
+  <data name="LogSettingsCommandText" xml:space="preserve">
+    <value>Logging Application Block</value>
+  </data>
+  <data name="LogSettingsNode" xml:space="preserve">
+    <value>Logging Application Block</value>
+  </data>
+  <data name="MaximumPriorityDescription" xml:space="preserve">
+    <value>LogEntries that have a priority greater than this value do not pass the filter </value>
+  </data>
+  <data name="MaxPrioShouldBeGreaterThanMinPrioError" xml:space="preserve">
+    <value>The value for MaximumPriority should be greater than the value for MinimumPriority</value>
+  </data>
+  <data name="MessagePriorityDescription" xml:space="preserve">
+    <value>The priority of messages written to MSMQ</value>
+  </data>
+  <data name="MinimumPriority" xml:space="preserve">
+    <value>Minimum message priority to be delivered</value>
+  </data>
+  <data name="MinimumPriorityDescription" xml:space="preserve">
+    <value>LogEntries that have a priority lower than this value do not pass the filter </value>
+  </data>
+  <data name="MsmqPathDescription" xml:space="preserve">
+    <value>Private or public message queue path</value>
+  </data>
+  <data name="MsmqSinkMessagePriorityDescription" xml:space="preserve">
+    <value>A priority for the message when sent to the queue.</value>
+  </data>
+  <data name="MsmqSinkQueuePathDescription" xml:space="preserve">
+    <value>Private or public message queue</value>
+  </data>
+  <data name="MsmqTraceListener" xml:space="preserve">
+    <value>MSMQ Sink</value>
+  </data>
+  <data name="MsmqTraceListenerNode" xml:space="preserve">
+    <value>Msmq TraceListener</value>
+  </data>
+  <data name="MsmqTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new Msmq Trace Listener.</value>
+  </data>
+  <data name="MsmqTraceListenerUICommandText" xml:space="preserve">
+    <value>Msmq Trace Listener</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PriorityFilterNode" xml:space="preserve">
+    <value>Priority Filter</value>
+  </data>
+  <data name="PriorityFilterUICommandLongText" xml:space="preserve">
+    <value>Add a new priority filter.</value>
+  </data>
+  <data name="PriorityFilterUICommandText" xml:space="preserve">
+    <value>Priority Filter</value>
+  </data>
+  <data name="QueuePathDescription" xml:space="preserve">
+    <value>The MSMQ path that is used to write LogEntries</value>
+  </data>
+  <data name="QueueTimerIntervalDescription" xml:space="preserve">
+    <value>Timer interval for the distributor service to check MSMQ for new messages</value>
+  </data>
+  <data name="RecoverableDescription" xml:space="preserve">
+    <value>A boolean that indicates whether MSMQ messages written by this TraceListener are recoverable</value>
+  </data>
+  <data name="ReferenceAlreadyExists" xml:space="preserve">
+    <value>A reference to TraceListener {0} already exists for this source.</value>
+  </data>
+  <data name="SpecialTraceSourcesNodeName" xml:space="preserve">
+    <value>Special Sources</value>
+  </data>
+  <data name="SystemDiagnosticsTraceListenerNode" xml:space="preserve">
+    <value>System.Diagnostics TraceListener</value>
+  </data>
+  <data name="SystemDiagnosticsTraceListenerTypeDescription" xml:space="preserve">
+    <value>The type of TraceListener</value>
+  </data>
+  <data name="SystemDiagnosticsTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new System Diagnostics Trace Listener.</value>
+  </data>
+  <data name="SystemDiagnosticsTraceListenerUICommandText" xml:space="preserve">
+    <value>System Diagnostics Trace Listener</value>
+  </data>
+  <data name="TemplatePlaceHolder" xml:space="preserve">
+    <value>&lt;template&gt;</value>
+  </data>
+  <data name="TextFormatterNode" xml:space="preserve">
+    <value>Text Formatter</value>
+  </data>
+  <data name="TextFormatterUICommandLongText" xml:space="preserve">
+    <value>Add a new text formatter.</value>
+  </data>
+  <data name="TextFormatterUICommandText" xml:space="preserve">
+    <value>Text Formatter</value>
+  </data>
+  <data name="TimeToBeReceivedDescription" xml:space="preserve">
+    <value>The maximum time for a message to have been received by the message queue</value>
+  </data>
+  <data name="TraceListenerCollectionNode" xml:space="preserve">
+    <value>Trace Listeners</value>
+  </data>
+  <data name="TraceListenerReferenceNode" xml:space="preserve">
+    <value>TraceListener Reference</value>
+  </data>
+  <data name="TraceListenerReferenceUICommandLongText" xml:space="preserve">
+    <value>Add a new Trace Listener Reference.</value>
+  </data>
+  <data name="TraceListenerReferenceUICommandText" xml:space="preserve">
+    <value>Trace Listener Reference</value>
+  </data>
+  <data name="TraceOutputOptionsDescription" xml:space="preserve">
+    <value>Trace output options</value>
+  </data>
+  <data name="TraceSourceCategoryGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="TransactionTypeDescription" xml:space="preserve">
+    <value>The type of transaction used for writing messages to MSMQ</value>
+  </data>
+  <data name="UnprocessedTraceSourceNode" xml:space="preserve">
+    <value>Unprocessed Category</value>
+  </data>
+  <data name="UseAuthenticationDescription" xml:space="preserve">
+    <value>A boolean that indicates whether the TraceListener should authenticate against MSMQ</value>
+  </data>
+  <data name="UseDeadLetterQueueDescription" xml:space="preserve">
+    <value>A boolean that indicates whether the deadletter queue should be used</value>
+  </data>
+  <data name="UseEncryptionDescription" xml:space="preserve">
+    <value>A boolean that indicates whether messages written to the MSMQ should be encrypted</value>
+  </data>
+  <data name="WmiTraceListenerNode" xml:space="preserve">
+    <value>WMI TraceListener</value>
+  </data>
+  <data name="WmiTraceListenerUICommandLongText" xml:space="preserve">
+    <value>Add a new WMI Trace Listener.</value>
+  </data>
+  <data name="WmiTraceListenerUICommandText" xml:space="preserve">
+    <value>WMI Trace Listener</value>
+  </data>
+  <data name="XmlTraceListenerNodeUICommandText" xml:space="preserve">
+    <value>XML Trace Listener</value>
+  </data>
+  <data name="XmlTraceListenerNodeUICommandLongText" xml:space="preserve">
+    <value>XML Trace Listener</value>
+  </data>
+  <data name="FileNameDescription" xml:space="preserve">
+    <value>FileName</value>
+  </data>
+  <data name="XmlTraceListenerFileDialogFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="RollingTraceListenerNodeUICommandText" xml:space="preserve">
+    <value>Rolling Flat File Trace Listener</value>
+  </data>
+  <data name="RollingTraceListenerNodeUICommandLongText" xml:space="preserve">
+    <value>Rolling Flat File Trace Listener</value>
+  </data>
+  <data name="RollSizeKBDescription" xml:space="preserve">
+    <value>Roll Size KB</value>
+  </data>
+  <data name="TimeStampPatternDescription" xml:space="preserve">
+    <value>TimeStampt</value>
+  </data>
+  <data name="RollFileExistsBehaviorDescription" xml:space="preserve">
+    <value>Exists Behavior</value>
+  </data>
+  <data name="LockBehaviorDescription" xml:space="preserve">
+    <value>Lock Behavior</value>
+  </data>
+  <data name="RollIntervalDescription" xml:space="preserve">
+    <value>Roll Interval</value>
+  </data>
+  <data name="RevertImpersonationDescription" xml:space="preserve">
+    <value>Revert impersonation temporarily while logging.</value>
+  </data>
+</root>

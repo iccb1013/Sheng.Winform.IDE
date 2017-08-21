@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30718</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4804DAD4-EE9C-45E4-A151-DCDE6D06EB61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Logging.Tests</RootNamespace>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Logging.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.Practices.EnterpriseLibrary.Logging.Tests.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Src\Logging\NativeMethods.cs">
+      <Link>NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="APTCAFixture.cs" />
+    <Compile Include="CommonUtil.cs" />
+    <Compile Include="Configuration\Unity\FiltersPolicyCreationFixture.cs" />
+    <Compile Include="Configuration\Unity\FormattersPolicyCreationFixture.cs" />
+    <Compile Include="Configuration\Unity\LoggingBlockExtensionFixture.cs" />
+    <Compile Include="Configuration\TraceListenerDataFixture.cs" />
+    <Compile Include="Configuration\TraceSourceDataFixture.cs" />
+    <Compile Include="Configuration\Unity\TraceListenersPolicyCreationFixture.cs" />
+    <Compile Include="ContextItemsFixture.cs" />
+    <Compile Include="LogEntrySerializationFixture.cs" />
+    <Compile Include="TracerManagerFixture.cs" />
+    <Compile Include="CustomLogEntry.cs" />
+    <Compile Include="Distributor\LogDistributorFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExtraInformation\AssertUtilities.cs" />
+    <Compile Include="ExtraInformation\DebugInformationProviderFixture.cs" />
+    <Compile Include="ExtraInformation\ManagedSecurityContextInformationProviderFixture.cs" />
+    <Compile Include="ExtraInformation\MockContextUtils.cs" />
+    <Compile Include="ExtraInformation\MockDebugUtilsThrowsNonSecurityException.cs" />
+    <Compile Include="ExtraInformation\MockDebugUtilsThrowsSecurityException.cs" />
+    <Compile Include="ExtraInformation\UnmanagedSecurityContextInformationProviderFixture.cs" />
+    <Compile Include="Filters\CustomLogFilterFixture.cs" />
+    <Compile Include="Filters\ExceptionThrowingLogFilter.cs" />
+    <Compile Include="Filters\LogFilterFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\LogFilterHelperFixture.cs" />
+    <Compile Include="Filters\MockCustomLogFilter.cs" />
+    <Compile Include="Filters\MockLogFilterErrorHandler.cs" />
+    <Compile Include="Formatters\BinaryLogFormatterFixture.cs" />
+    <Compile Include="Formatters\CustomLogFormatterFixture.cs" />
+    <Compile Include="Formatters\ExceptionFormatterFixture.cs" />
+    <Compile Include="Formatters\MockCustomLogFormatter.cs" />
+    <Compile Include="Formatters\CustomTextFormatter.cs" />
+    <Compile Include="Formatters\CustomTextFormatterData.cs" />
+    <Compile Include="Formatters\CustomToken.cs" />
+    <Compile Include="Formatters\LogFormatterFixture.cs" />
+    <Compile Include="Formatters\LogFormatterFactoryFixture.cs" />
+    <Compile Include="Formatters\XmlLogFormatterFixture.cs" />
+    <Compile Include="LogEntryFixture.cs" />
+    <Compile Include="Filters\LogFilterConfigurationFixture.cs" />
+    <Compile Include="LogEntryXmlFixture.cs" />
+    <Compile Include="LoggerFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogWriterRefreshFixture.cs" />
+    <Compile Include="LogWriterCustomFactoryFixture.cs" />
+    <Compile Include="LogWriterSingletonManagementFixture.cs" />
+    <Compile Include="MockLogObjectsHelper.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraceListenerFilterFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraceListeners\BadTraceListener.cs" />
+    <Compile Include="TraceListeners\Configuration\RollingFlatFileTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\CustomTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\DelimitedListTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\FormattedEmailTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\FormatterEmailTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\MockTraceListenerClient.cs" />
+    <Compile Include="TraceListeners\Configuration\MsmqTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\FormattedFlatFileTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\TextWriterTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\EventLogTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\FormattedEventLogTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\TraceListenerDataCollectionFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\TraceListenerFactoryFixture.cs" />
+    <Compile Include="TraceListeners\Configuration\WmiTraceListenerConfigurationFixture.cs" />
+    <Compile Include="TraceListeners\EntLibLoggingProxyTraceListenerFixture.cs" />
+    <Compile Include="TraceListeners\ErrorsMockTraceListener.cs" />
+    <Compile Include="TraceListeners\ExceptionThrowingMockTraceListener.cs" />
+    <Compile Include="TraceListeners\EmailTraceListenerFixture.cs" />
+    <Compile Include="TraceListeners\MockBlockingCustomTraceListener.cs" />
+    <Compile Include="TraceListeners\MockCustomTraceListener.cs" />
+    <Compile Include="TraceListeners\MockCustomTraceListenerWithInvalidConstructor.cs" />
+    <Compile Include="TraceListeners\MsmqTraceListenerFixture.cs" />
+    <Compile Include="TraceListeners\FlatFileTraceListenerFixture.cs" />
+    <Compile Include="TraceListeners\FormattedEventLogListenerFixture.cs" />
+    <Compile Include="TraceListeners\FormattedTextWriterListenerFixture.cs" />
+    <Compile Include="LogWriterFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TraceListeners\MockTraceListener.cs" />
+    <Compile Include="TraceListeners\MockTraceListenerData.cs" />
+    <Compile Include="TraceListeners\MyCustomLogEntry.cs" />
+    <Compile Include="TraceListeners\RollingFlatFileTraceListenerFixture.cs" />
+    <Compile Include="TraceListeners\TallyKeepingFileStreamWriterFixture.cs" />
+    <Compile Include="TraceListeners\WmiListenerFixture.cs" />
+    <Compile Include="TraceListeners\XmlTraceListenerFixture.cs" />
+    <Compile Include="TracerFixture.cs" />
+    <Compile Include="TraceSourceFactoryFixture.cs" />
+    <Compile Include="TraceSourceFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Tests\Common\Common.Tests.VSTS.csproj">
+      <Project>{02FC8CE2-2CB3-41B6-8516-0A27B99708A9}</Project>
+      <Name>Common.Tests.VSTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Logging\Logging.csproj">
+      <Project>{6AC97717-899D-4F72-BC5B-2C37959CD4FF}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test-tracelistenermissingtype.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="test-tracelistenerinvalidtype.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="test.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

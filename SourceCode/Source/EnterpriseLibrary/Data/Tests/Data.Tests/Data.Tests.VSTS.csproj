@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C10AAE86-F79E-430E-A5A4-FCDB9BB54AB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Data.Tests</RootNamespace>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Data.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="APTCAFixture.cs" />
+    <Compile Include="Configuration\ConfigurationSerializationFixture.cs" />
+    <Compile Include="Configuration\DatabaseAssemblerAttributeFixture.cs" />
+    <Compile Include="Configuration\DatabaseWithObjectBuilderFixture.cs" />
+    <Compile Include="Configuration\Unity\DataAccessBlockExtensionFixture.cs" />
+    <Compile Include="ConnectionStringFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessTestsFixture.cs" />
+    <Compile Include="DatabaseConfigurationViewFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseFactoryFixture.cs" />
+    <Compile Include="DatabaseFactoryOldFixture.cs" />
+    <Compile Include="DatabaseFixture.cs" />
+    <Compile Include="ExecuteNonQueryFixture.cs" />
+    <Compile Include="ExecuteReaderFixture.cs" />
+    <Compile Include="ExecuteScalarFixture.cs" />
+    <Compile Include="GenericDatabaseFixture.cs" />
+    <Compile Include="Instrumentation\DataInstrumentationListenerFixture.cs" />
+    <Compile Include="Instrumentation\InstrumentationEventBroadcastFixture.cs" />
+    <Compile Include="Instrumentation\InstrumentationNoListenerEventBroadcastFixture.cs" />
+    <Compile Include="Oracle\OracleBugFixingRegressionFixture.cs" />
+    <Compile Include="Oracle\OracleDataAccessTestsFixture.cs" />
+    <Compile Include="Oracle\OracleDatabaseDataExtraInformationFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Oracle\OracleDatabaseFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Oracle\OracleDataSetHelper.cs" />
+    <Compile Include="Oracle\OracleExecuteNonQueryFixture.cs" />
+    <Compile Include="Oracle\OracleExecuteReaderFixture.cs" />
+    <Compile Include="Oracle\OracleExecuteScalarFixture.cs" />
+    <Compile Include="Oracle\OracleParameterDiscoveryFixture.cs" />
+    <Compile Include="Oracle\OracleParameterFixture.cs" />
+    <Compile Include="Oracle\OracleParameterizedSqlStringFixture.cs" />
+    <Compile Include="Oracle\OracleStoredProcedureCreatingFixture.cs" />
+    <Compile Include="Oracle\OracleTransactionScopeFixture.cs" />
+    <Compile Include="Oracle\OracleUpdateDataSetBehaviorsFixture.cs" />
+    <Compile Include="Oracle\OracleUpdateDataSetFixture.cs" />
+    <Compile Include="Oracle\OracleUpdateDataSetWithTransactionsAndParameterDiscovery.cs" />
+    <Compile Include="Oracle\OracleUpdateDataSetWithTransactionsFixture.cs" />
+    <Compile Include="ParameterDiscoveryFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderMappingFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RollbackTransactionWrapper.cs" />
+    <Compile Include="Sql\ExecuteXmlReaderFixture.cs" />
+    <Compile Include="Sql\SqlDataSetHelper.cs" />
+    <Compile Include="Sql\SqlDataAccessTestsFixture.cs" />
+    <Compile Include="Sql\SqlDatabaseAssemblerFixture.cs" />
+    <Compile Include="Sql\SqlDatabaseFixture.cs" />
+    <Compile Include="Sql\SqlExecuteDatasetFixture.cs" />
+    <Compile Include="Sql\SqlExecuteNonQueryFixture.cs" />
+    <Compile Include="Sql\SqlExecuteReaderFixture.cs" />
+    <Compile Include="Sql\SqlExecuteScalarFixture.cs" />
+    <Compile Include="Sql\SqlParameterDiscoveryFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sql\SqlParameterFixture.cs" />
+    <Compile Include="Sql\SqlParameterizedSqlStringFixture.cs" />
+    <Compile Include="Sql\SqlStoredProcedureCreatingFixture.cs" />
+    <Compile Include="TransactionScopConnectionsFixture.cs" />
+    <Compile Include="Sql\SqlTransactionScopeFixture.cs" />
+    <Compile Include="Sql\SqlUpdateDataSetBehaviorsFixture.cs" />
+    <Compile Include="Sql\SqlUpdateDataSetFixture.cs" />
+    <Compile Include="Sql\SqlUpdateDataSetWithTransactionsAndParameterDiscovery.cs" />
+    <Compile Include="Sql\SqlUpdateDataSetWithTransactionsFixture.cs" />
+    <Compile Include="StoredProcedureCreatingFixture.cs" />
+    <Compile Include="StoredProcedureCreationBase.cs" />
+    <Compile Include="TestConfigurationSource.cs" />
+    <Compile Include="TransactionScopeFixture.cs" />
+    <Compile Include="UpdateDataSetBehaviorsFixture.cs" />
+    <Compile Include="UpdateDataSetFixture.cs" />
+    <Compile Include="UpdateDataSetStoredProcedureBase.cs" />
+    <Compile Include="UpdateDataSetWithTransactionsAndParameterDiscovery.cs" />
+    <Compile Include="UpdateDataSetWithTransactionsFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Tests\Common\Common.Tests.VSTS.csproj">
+      <Project>{02FC8CE2-2CB3-41B6-8516-0A27B99708A9}</Project>
+      <Name>Common.Tests.VSTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Data\Data.csproj">
+      <Project>{D349B6D8-992F-443F-BB57-57E50DD98794}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.Practices.EnterpriseLibrary.Data.Tests.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Northwind.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

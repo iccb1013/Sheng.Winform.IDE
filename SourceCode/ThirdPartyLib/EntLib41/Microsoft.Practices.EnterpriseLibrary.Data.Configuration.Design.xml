@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand">
+            <summary>
+            Command to add the Data Application Block to the application's configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand.#ctor(System.IServiceProvider,System.Boolean)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/> and if the default connection string should be added.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+            <param name="addDefaultConnectionString">Determines if the default connection string should be added.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddDatabaseSectionNodeCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            Add the Data Access Block to the current configuration 
+            </summary>
+            <param name="e">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.CommandExecutingEventArgs"/> containing the event data.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode">
+            <summary>
+            Represents a <see cref="T:System.Configuration.ConnectionStringSettings"/> configuration element. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.IDatabaseProviderName">
+            <summary>
+            Represents a database provider name used for a connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.IDatabaseProviderName.DatabaseProviderName">
+            <summary>
+            When implemented by a class, gets the name of the provider.
+            </summary>
+            <value>
+            The name of the provider.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.#ctor">
+            <overloads>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode"/> class.
+            </overloads>
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode"/> class with a <see cref="T:System.Configuration.ConnectionStringSettings"/> instance.
+            </summary>
+            <param name="connectionString">A <see cref="T:System.Configuration.ConnectionStringSettings"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.ProviderName">
+            <summary>
+            Gets or sets the provider name to use for this connection.
+            </summary>
+            <value>
+            The provider name to use for this connection
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.ConnectionString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted. 
+            </summary>
+            <value>
+            Returns <c>false</c> so children are not sorted.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringSettingsNode.Microsoft#Practices#EnterpriseLibrary#Data#Configuration#Design#IDatabaseProviderName#DatabaseProviderName">
+            <summary>
+            Gets the database provider name to use with a connection.
+            </summary>
+            <value>
+            The database provider name to use with a connection.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsSectionNode">
+            <summary>
+            Represents the connection strings section in configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsSectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsSectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsSectionNode.Name">
+            <summary>
+            <para>Gets the name for the node.</para>
+            </summary>
+            <value>
+            <para>The display name for the node.</para>
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the connection strings section.
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the connection strings section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ConnectionStringsConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the connection strings section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the connection strings section.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddOracleConnectionElementNodeCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionElementNode"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddOracleConnectionElementNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddOracleConnectionElementNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.AddOracleConnectionElementNodeCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeCommand.Executed"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionCommandRegistrar.#ctor(System.IServiceProvider)">
+            <summary>
+            
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionCommandRegistrar.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> configuration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> instance.
+            </summary>
+            <param name="dbProviderMapping">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode.Name">
+            <summary>
+            Gets or sets the name of the provider for this mapping.
+            </summary>
+            <value>
+            The name of the provider for this mapping.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode.TypeName">
+            <summary>
+            Gets or sets the type of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Database"/> for this mapping.
+            </summary>
+            <value>
+            The type of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Database"/> for this mapping.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingNode.ProviderMapping">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the oracle connection configuration section.
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the oracle connection configuration section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the oracle connection configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the oracle connection configuration section.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings"/> configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+            <remarks>
+            Overridden to make readonly for the design tool. 
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DatabaseSectionNode.DefaultDatabase">
+            <summary>
+            Gets or sets the default database connection to use when none is specified.
+            </summary>
+            <value>
+            The default database connection to use when none is specified.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the database settings configuration section.
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the database settings configuration section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.DataConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the database settings configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the database settings configuration section.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionElementNode">
+            <summary>
+            Represents the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OracleConnectionSettings"/> configuration section.
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionElementNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionElementNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OracleConnectionElementNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+            <remarks>
+            Overridden to make readonly for the design tool. 
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData"/> instance.
+            </summary>
+            <param name="oraclePackageElement">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode.Prefix">
+            <summary>
+            Gets or sets the prefix for the oracle package.
+            </summary>
+            <value>
+            The prefix for the oracle package.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.OraclePackageElementNode.OraclePackageElement">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Oracle.Configuration.OraclePackageData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the connection string..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringNodeDefaultName">
+            <summary>
+              Looks up a localized string similar to Connection String.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringsNodeName">
+            <summary>
+              Looks up a localized string similar to Connection Strings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringsUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add connection strings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringsUICommandText">
+            <summary>
+              Looks up a localized string similar to Connection Strings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a connection string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ConnectionStringUICommandText">
+            <summary>
+              Looks up a localized string similar to Connection String.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DatabaseTypeFullyQualifedNameDescription">
+            <summary>
+              Looks up a localized string similar to The fully qualified type name of the database..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DataSectionNodeName">
+            <summary>
+              Looks up a localized string similar to Data Access Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DataUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add the Data Access Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DataUICommandText">
+            <summary>
+              Looks up a localized string similar to Data Access Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DefaultDatabaseDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the default database connection string..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.DefaultParameterNodeName">
+            <summary>
+              Looks up a localized string similar to Parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ExceptionConnectionStringMissing">
+            <summary>
+              Looks up a localized string similar to The package for connection string {0} will not be loaded. The connection string is missing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ExceptionMissingConnectionStrings">
+            <summary>
+              Looks up a localized string similar to The Connection Strings or not loaded or are missing from configuration..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OracleConnectionElementNodeName">
+            <summary>
+              Looks up a localized string similar to Oracle Package.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OracleConnectionUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add Oracle package information for the connection string.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OracleConnectionUICommandText">
+            <summary>
+              Looks up a localized string similar to Oracle Packages.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OraclePackagesNodeName">
+            <summary>
+              Looks up a localized string similar to Oracle Packages.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OraclePackageUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add an Oracle package definition.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.OraclePackageUICommandText">
+            <summary>
+              Looks up a localized string similar to Oracle Package.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.PrefixDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the preifix used for the oracle objects..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ProviderMappingsNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Provider Mappings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ProviderMappingUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a custom provider mapping.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ProviderMappingUICommandText">
+            <summary>
+              Looks up a localized string similar to Provider Mapping.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.Properties.Resources.ProviderNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the provider name for the connection string..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingsNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DbProviderMapping"/> configuration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingsNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderMappingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+            <remarks>
+            Overridden to make readonly for the design tool. 
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.ProviderEditorUI.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

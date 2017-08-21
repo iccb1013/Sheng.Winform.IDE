@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A21A3B19-5EC9-4D2C-9EB3-61EA48CFBD27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Core.Development</RootNamespace>
+    <AssemblyName>Core.Development</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompositeExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\CompositeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="CompositeExtensions.Unity">
+      <HintPath>..\..\ThirdPartyLib\CAL\CompositeExtensions.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation">
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.UnityExtensions">
+      <HintPath>..\..\ThirdPartyLib\CAL\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdPartyLib\EntLib41\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreDevelopment.cs" />
+    <Compile Include="Event\Events\CallAddIn\CallAddInDev.cs" />
+    <Compile Include="Event\Events\CallAddIn\CallAddInDevChecker.cs" />
+    <Compile Include="Event\Events\CallAddIn\CallAddInDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\CallAddIn\UserControlEventEditorPanel_CallAddIn_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\CallAddIn\UserControlEventEditorPanel_CallAddIn_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_CallAddIn_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\CallUIElementMethod\CallUIElementMethodDev.cs" />
+    <Compile Include="Event\Events\CallUIElementMethod\CallUIElementMethodDevChecker.cs" />
+    <Compile Include="Event\Events\CallUIElementMethod\CallUIElementMethodDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\CallUIElementMethod\UserControlEventEditorPanel_CallUIElementMethod_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\CallUIElementMethod\UserControlEventEditorPanel_CallUIElementMethod_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_CallUIElementMethod_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ClearWindowData\ClearFormDataDev.cs" />
+    <Compile Include="Event\Events\ClearWindowData\ClearFormDataDevChecker.cs" />
+    <Compile Include="Event\Events\ClearWindowData\ClearFormDataDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_FormElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_FormElement.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ClearFormData_FormElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ClearFormData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\CloseWindow\CloseFormDev.cs" />
+    <Compile Include="Event\Events\CloseWindow\CloseFormDevChecker.cs" />
+    <Compile Include="Event\Events\CloseWindow\CloseFormDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\CloseWindow\UserControlEventEditorPanel_CloseForm_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\CloseWindow\UserControlEventEditorPanel_CloseForm_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_CloseForm_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListAddRow\DataListAddRowDev.cs" />
+    <Compile Include="Event\Events\DataListAddRow\DataListAddRowDevChecker.cs" />
+    <Compile Include="Event\Events\DataListAddRow\DataListAddRowDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\DataListAddRow\UserControlEventEditorPanel_DataListAddRow_Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListAddRow\UserControlEventEditorPanel_DataListAddRow_Data.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListAddRow_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListDeleteRow\DataListDeleteRowDev.cs" />
+    <Compile Include="Event\Events\DataListDeleteRow\DataListDeleteRowDevChecker.cs" />
+    <Compile Include="Event\Events\DataListDeleteRow\DataListDeleteRowDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\DataListDeleteRow\UserControlEventEditorPanel_DataListDeleteRow_Where.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListDeleteRow\UserControlEventEditorPanel_DataListDeleteRow_Where.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListDeleteRow_Where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\DataListRefreshDev.cs" />
+    <Compile Include="Event\Events\DataListRefresh\DataListRefreshDevChecker.cs" />
+    <Compile Include="Event\Events\DataListRefresh\DataListRefreshDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_SqlRegex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_SqlRegex.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_SqlRegex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_Where.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_Where.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_Where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DataListUpdateRow\DataListUpdateRowDev.cs" />
+    <Compile Include="Event\Events\DataListUpdateRow\DataListUpdateRowDevChecker.cs" />
+    <Compile Include="Event\Events\DataListUpdateRow\DataListUpdateRowDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\DataListUpdateRow\UserControlEventEditorPanel_DataListUpdateRow_Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DataListUpdateRow\UserControlEventEditorPanel_DataListUpdateRow_Data.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DataListUpdateRow_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\DeleteDataDev.cs" />
+    <Compile Include="Event\Events\DeleteData\DeleteDataDevChecker.cs" />
+    <Compile Include="Event\Events\DeleteData\DeleteDataDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_DataEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_DataEntity.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_DataEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_SqlRegex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_SqlRegex.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_SqlRegex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\Exit\ExitDev.cs" />
+    <Compile Include="Event\Events\Exit\ExitDevChecker.cs" />
+    <Compile Include="Event\Events\Exit\ExitDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\Exit\UserControlEventEditorPanel_Exit_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\Exit\UserControlEventEditorPanel_Exit_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_Exit_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\LoadDataToFormDev.cs" />
+    <Compile Include="Event\Events\LoadDataToWindow\LoadDataToFormDevChecker.cs" />
+    <Compile Include="Event\Events\LoadDataToWindow\LoadDataToFormDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_DataEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_DataEntity.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_DataEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_Load.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_Load.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_SqlRegex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_SqlRegex.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_SqlRegex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\LockProgram\LockProgramDev.cs" />
+    <Compile Include="Event\Events\LockProgram\LockProgramDevChecker.cs" />
+    <Compile Include="Event\Events\LockProgram\LockProgramDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\LockProgram\UserControlEventEditorPanel_LockProgram_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\LockProgram\UserControlEventEditorPanel_LockProgram_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_LockProgram_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\NewGuid\NewGuidDev.cs" />
+    <Compile Include="Event\Events\NewGuid\NewGuidDevChecker.cs" />
+    <Compile Include="Event\Events\NewGuid\NewGuidDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\NewGuid\UserControlEventEditorPanel_NewGuid_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\NewGuid\UserControlEventEditorPanel_NewGuid_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_NewGuid_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\OpenSystemWindow\OpenSystemFormDev.cs" />
+    <Compile Include="Event\Events\OpenSystemWindow\OpenSystemFormDevChecker.cs" />
+    <Compile Include="Event\Events\OpenSystemWindow\OpenSystemFormDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\OpenSystemWindow\UserControlEventEditorPanel_OpenSystemForm_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\OpenSystemWindow\UserControlEventEditorPanel_OpenSystemForm_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_OpenSystemForm_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\OpenWindow\OpenFormDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\OpenWindow\OpenWindowDev.cs" />
+    <Compile Include="Event\Events\OpenWindow\OpenWindowDevChecker.cs" />
+    <Compile Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_OpenWindow_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_SendData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_SendData.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_OpenWindow_SendData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ReceiveData\ReceiveDataDev.cs" />
+    <Compile Include="Event\Events\ReceiveData\ReceiveDataDevChecker.cs" />
+    <Compile Include="Event\Events\ReceiveData\ReceiveDataDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ReceiveData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_ReceiveData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_ReceiveData.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ReceiveData_ReceiveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ReLogin\ReLoginDev.cs" />
+    <Compile Include="Event\Events\ReLogin\ReLoginDevChecker.cs" />
+    <Compile Include="Event\Events\ReLogin\ReLoginDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\ReLogin\UserControlEventEditorPanel_ReLogin_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ReLogin\UserControlEventEditorPanel_ReLogin_General.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ReLogin_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\ReturnDataToCallerFormDev.cs" />
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\ReturnDataToCallerFormDevChecker.cs" />
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\ReturnDataToCallerFormDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_General.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ReturnDataToCallerForm_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\SaveData\SaveDataDev.cs" />
+    <Compile Include="Event\Events\SaveData\SaveDataDevChecker.cs" />
+    <Compile Include="Event\Events\SaveData\SaveDataDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_DataEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_DataEntity.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_SaveFormData_DataEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_General.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_SaveFormData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\StartProcess\StartProcessDev.cs" />
+    <Compile Include="Event\Events\StartProcess\StartProcessDevChecker.cs" />
+    <Compile Include="Event\Events\StartProcess\StartProcessDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\StartProcess\UserControlEventEditorPanel_StartProcess_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\StartProcess\UserControlEventEditorPanel_StartProcess_General.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_StartProcess_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UpdateFormDataDev.cs" />
+    <Compile Include="Event\Events\UpdateWindowData\UpdateFormDataDevChecker.cs" />
+    <Compile Include="Event\Events\UpdateWindowData\UpdateFormDataDevEditorAdapter.cs" />
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_General.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_SqlRegex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_SqlRegex.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_SqlRegex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Update.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Where.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Where.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_Where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_FormElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_FormElement.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ValidateFormData_FormElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_General.designer.cs">
+      <DependentUpon>UserControlEventEditorPanel_ValidateFormData_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Events\ValidateWindowData\ValidateFormDataDev.cs" />
+    <Compile Include="Event\Events\ValidateWindowData\ValidateFormDataDevChecker.cs" />
+    <Compile Include="Event\Events\ValidateWindowData\ValidateFormDataDevEditorAdapter.cs" />
+    <Compile Include="IShellControlDev.cs" />
+    <Compile Include="Validator\FormWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validator\FormWarning.designer.cs">
+      <DependentUpon>FormWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataEntityItemDataSourceEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataEntityItemDataSourceEditView.Designer.cs">
+      <DependentUpon>DataEntityItemDataSourceEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataEntityTreeChooseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataEntityTreeChooseView.designer.cs">
+      <DependentUpon>DataEntityTreeChooseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataEntityTreeNode.cs" />
+    <Compile Include="Entity\EntityExtensions.cs" />
+    <Compile Include="Entity\ICallEntityMethodSupport.cs" />
+    <Compile Include="EventEditor\EditorTreeNodeIcons.cs" />
+    <Compile Include="EventEditor\EventEditorAdapterAbstract.cs" />
+    <Compile Include="EventEditor\EventEditorNode.cs" />
+    <Compile Include="EventEditor\EventEditorTreeNode.cs" />
+    <Compile Include="EventEditor\EventTimeTreeNode.cs" />
+    <Compile Include="EventEditor\EventTreeNode.cs" />
+    <Compile Include="EventEditor\EventTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventEditor\FormEventEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventEditor\FormEventEditor.Designer.cs">
+      <DependentUpon>FormEventEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventEditor\IEventEditorPanel.cs" />
+    <Compile Include="EventEditor\IEventEditorSupport.cs" />
+    <Compile Include="EventEditor\IntelliSense\AbstractCompletionDataProvider.cs" />
+    <Compile Include="EventEditor\IntelliSense\CodeCompletionData.cs" />
+    <Compile Include="EventEditor\IntelliSense\CodeCompletionDataProvider.cs" />
+    <Compile Include="EventEditor\IntelliSense\CommentCompletionData.cs" />
+    <Compile Include="EventEditor\IntelliSense\CommentCompletionDataProvider.cs" />
+    <Compile Include="EventEditor\IntelliSense\ICodeCompletionBinding.cs" />
+    <Compile Include="EventEditor\IntelliSense\SqlRegexCompletionBinding.cs" />
+    <Compile Include="EventEditor\IntelliSense\SqlRegexIntelliSenseTextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventEditor\SEUndoUnitEventEdit.cs" />
+    <Compile Include="EventEditor\UserControlEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventEditor\UserControlEvent.Designer.cs">
+      <DependentUpon>UserControlEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventEditor\UserControlEventEditorPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventEditor\UserControlEventEditorPanelBase.Designer.cs">
+      <DependentUpon>UserControlEventEditorPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\EditorHelper.cs" />
+    <Compile Include="Event\EventDevTypes.cs" />
+    <Compile Include="Event\EventFactory.cs" />
+    <Compile Include="Event\FormEventOpenFormSendDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\FormEventOpenFormSendDataSet.Designer.cs">
+      <DependentUpon>FormEventOpenFormSendDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\FormEventReceiveDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\FormEventReceiveDataSet.designer.cs">
+      <DependentUpon>FormEventReceiveDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\FormFormElementChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\FormFormElementChoose.designer.cs">
+      <DependentUpon>FormFormElementChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\ICallEntityMethod.cs" />
+    <Compile Include="View\DataListDataItemEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataListDataItemEditView.Designer.cs">
+      <DependentUpon>DataListDataItemEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataSourceEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DataSourceEditView.Designer.cs">
+      <DependentUpon>DataSourceEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataSourceSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DataSourceSelector.Designer.cs">
+      <DependentUpon>DataSourceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DialogUnity.cs" />
+    <Compile Include="View\FolderAddressNode.cs" />
+    <Compile Include="View\FormCollectionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCollectionEditor.designer.cs">
+      <DependentUpon>FormCollectionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormElementComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormElementEntityDevTypes.cs" />
+    <Compile Include="View\FormEnumChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEnumChoose.designer.cs">
+      <DependentUpon>FormEnumChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEventDataItemDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEventDataItemDataSet.designer.cs">
+      <DependentUpon>FormEventDataItemDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEventDataListDataSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEventDataListDataSet.designer.cs">
+      <DependentUpon>FormEventDataListDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEventReturnDataToCallerFormSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEventReturnDataToCallerFormSet.designer.cs">
+      <DependentUpon>FormEventReturnDataToCallerFormSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFormChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFormChoose.designer.cs">
+      <DependentUpon>FormFormChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormGlobalFormElementChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormGlobalFormElementChoose.designer.cs">
+      <DependentUpon>FormGlobalFormElementChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ImageResourceChooseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ImageResourceChooseView.designer.cs">
+      <DependentUpon>ImageResourceChooseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GlobalFormElementTreeItems.cs" />
+    <Compile Include="View\GlobalFormElementTreeModel.cs" />
+    <Compile Include="Entity\IFormElementEntityDev.cs" />
+    <Compile Include="Keywords.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyGrid\Cells\AnchorCell.cs" />
+    <Compile Include="PropertyGrid\Cells\AnchorCellEditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\DataItemChooseCell.cs" />
+    <Compile Include="PropertyGrid\Cells\DataItemChooseCellEditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\DataItemChooseCellEditingControl.designer.cs">
+      <DependentUpon>DataItemChooseCellEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\FontCell.cs" />
+    <Compile Include="PropertyGrid\Cells\FontCellEditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\FontCellEditingControl.designer.cs">
+      <DependentUpon>FontCellEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\ImageResourceChooseCell.cs" />
+    <Compile Include="PropertyGrid\Cells\ImageResourceChooseCellEditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\ImageResourceChooseCellEditingControl.designer.cs">
+      <DependentUpon>ImageResourceChooseCellEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\UserControlAnchorEditingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\UserControlAnchorEditingControl.designer.cs">
+      <DependentUpon>UserControlAnchorEditingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\UserControlAnchorEditingDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PropertyGrid\Cells\UserControlAnchorEditingDropDown.designer.cs">
+      <DependentUpon>UserControlAnchorEditingDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGrid\IPropertyGirdCellsContainer.cs" />
+    <Compile Include="StringParserLogic.cs" />
+    <Compile Include="Unity.cs" />
+    <Compile Include="Validator\IWarningable.cs" />
+    <Compile Include="Validator\UserControlWarningView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Validator\UserControlWarningView.designer.cs">
+      <DependentUpon>UserControlWarningView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\WarningCheckerHelper.cs" />
+    <Compile Include="Validator\WarningSign.cs" />
+    <Compile Include="Validator\WarningSignCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentModel.Design\ComponentModel.Design.csproj">
+      <Project>{13E156EC-1138-40A4-8A94-1533B4E78FE4}</Project>
+      <Name>ComponentModel.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComponentModel\ComponentModel.csproj">
+      <Project>{7CE78E82-D242-425C-BB96-6C27B193A9FF}</Project>
+      <Name>ComponentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls.Extensions\Controls.Extensions.csproj">
+      <Project>{9E383816-DC7E-46ED-A62F-D7C39665D00F}</Project>
+      <Name>Controls.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{84A60294-EF59-43C1-B7E5-4C12C164801D}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drawing\Drawing.csproj">
+      <Project>{BCD80096-7B6F-4273-A031-186A610C84E5}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{405E51B5-BEAC-4538-B176-30490B26873D}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Core.Development.Localisation\Core.Development.Localisation.csproj">
+      <Project>{F8C3809C-52E6-4E3D-963C-65BAD54E0908}</Project>
+      <Name>Core.Development.Localisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Sheng.SailingEase.Localisation\Localisation.csproj">
+      <Project>{97F69338-465B-480F-87FB-A369EECA8D6E}</Project>
+      <Name>Localisation %28Localisation\Localisation%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="EventEditor\!Readme.txt" />
+    <Content Include="Event\!Core中的Event与Dev结尾的Event的映射.txt" />
+    <Content Include="Event\!Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Event\Events\CallAddIn\UserControlEventEditorPanel_CallAddIn_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_CallAddIn_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\CallUIElementMethod\UserControlEventEditorPanel_CallUIElementMethod_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_CallUIElementMethod_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_FormElement.resx">
+      <DependentUpon>UserControlEventEditorPanel_ClearFormData_FormElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ClearWindowData\UserControlEventEditorPanel_ClearFormData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_ClearFormData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\CloseWindow\UserControlEventEditorPanel_CloseForm_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_CloseForm_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListAddRow\UserControlEventEditorPanel_DataListAddRow_Data.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListAddRow_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListDeleteRow\UserControlEventEditorPanel_DataListDeleteRow_Where.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListDeleteRow_Where.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_SqlRegex.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_SqlRegex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListRefresh\UserControlEventEditorPanel_DataListRefresh_Where.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListRefresh_Where.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DataListUpdateRow\UserControlEventEditorPanel_DataListUpdateRow_Data.resx">
+      <DependentUpon>UserControlEventEditorPanel_DataListUpdateRow_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_DataEntity.resx">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_DataEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\DeleteData\UserControlEventEditorPanel_DeleteData_SqlRegex.resx">
+      <DependentUpon>UserControlEventEditorPanel_DeleteData_SqlRegex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\Exit\UserControlEventEditorPanel_Exit_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_Exit_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_DataEntity.resx">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_DataEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_Load.resx">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\LoadDataToWindow\UserControlEventEditorPanel_LoadDataToForm_SqlRegex.resx">
+      <DependentUpon>UserControlEventEditorPanel_LoadDataToForm_SqlRegex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\LockProgram\UserControlEventEditorPanel_LockProgram_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_LockProgram_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\NewGuid\UserControlEventEditorPanel_NewGuid_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_NewGuid_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\OpenSystemWindow\UserControlEventEditorPanel_OpenSystemForm_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_OpenSystemForm_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_OpenWindow_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\OpenWindow\UserControlEventEditorPanel_OpenWindow_SendData.resx">
+      <DependentUpon>UserControlEventEditorPanel_OpenWindow_SendData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_ReceiveData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ReceiveData\UserControlEventEditorPanel_ReceiveData_ReceiveData.resx">
+      <DependentUpon>UserControlEventEditorPanel_ReceiveData_ReceiveData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ReLogin\UserControlEventEditorPanel_ReLogin_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_ReLogin_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_ReturnDataToCallerForm_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ReturnDataToCallerWindow\UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData.resx">
+      <DependentUpon>UserControlEventEditorPanel_ReturnDataToCallerForm_ReturnData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_DataEntity.resx">
+      <DependentUpon>UserControlEventEditorPanel_SaveFormData_DataEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\SaveData\UserControlEventEditorPanel_SaveFormData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_SaveFormData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\StartProcess\UserControlEventEditorPanel_StartProcess_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_StartProcess_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_SqlRegex.resx">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_SqlRegex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Update.resx">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\UpdateWindowData\UserControlEventEditorPanel_UpdateFormData_Where.resx">
+      <DependentUpon>UserControlEventEditorPanel_UpdateFormData_Where.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_FormElement.resx">
+      <DependentUpon>UserControlEventEditorPanel_ValidateFormData_FormElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Events\ValidateWindowData\UserControlEventEditorPanel_ValidateFormData_General.resx">
+      <DependentUpon>UserControlEventEditorPanel_ValidateFormData_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Validator\FormWarning.resx">
+      <DependentUpon>FormWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataEntityItemDataSourceEditView.resx">
+      <DependentUpon>DataEntityItemDataSourceEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataEntityTreeChooseView.resx">
+      <DependentUpon>DataEntityTreeChooseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventEditor\FormEventEditor.resx">
+      <DependentUpon>FormEventEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventEditor\UserControlEvent.resx">
+      <DependentUpon>UserControlEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventEditor\UserControlEventEditorPanelBase.resx">
+      <DependentUpon>UserControlEventEditorPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\FormEventOpenFormSendDataSet.resx">
+      <DependentUpon>FormEventOpenFormSendDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\FormEventReceiveDataSet.resx">
+      <DependentUpon>FormEventReceiveDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\FormFormElementChoose.resx">
+      <DependentUpon>FormFormElementChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataListDataItemEditView.resx">
+      <DependentUpon>DataListDataItemEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataSourceEditView.resx">
+      <DependentUpon>DataSourceEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DataSourceSelector.resx">
+      <DependentUpon>DataSourceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCollectionEditor.resx">
+      <DependentUpon>FormCollectionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEnumChoose.resx">
+      <DependentUpon>FormEnumChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEventDataItemDataSet.resx">
+      <DependentUpon>FormEventDataItemDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEventDataListDataSet.resx">
+      <DependentUpon>FormEventDataListDataSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEventReturnDataToCallerFormSet.resx">
+      <DependentUpon>FormEventReturnDataToCallerFormSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFormChoose.resx">
+      <DependentUpon>FormFormChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormGlobalFormElementChoose.resx">
+      <DependentUpon>FormGlobalFormElementChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\Cells\DataItemChooseCellEditingControl.resx">
+      <DependentUpon>DataItemChooseCellEditingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\Cells\FontCellEditingControl.resx">
+      <DependentUpon>FontCellEditingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\Cells\ImageResourceChooseCellEditingControl.resx">
+      <DependentUpon>ImageResourceChooseCellEditingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\Cells\UserControlAnchorEditingControl.resx">
+      <DependentUpon>UserControlAnchorEditingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyGrid\Cells\UserControlAnchorEditingDropDown.resx">
+      <DependentUpon>UserControlAnchorEditingDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validator\UserControlWarningView.resx">
+      <DependentUpon>UserControlWarningView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ImageResourceChooseView.resx">
+      <DependentUpon>ImageResourceChooseView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

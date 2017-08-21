@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1CD43DA-68D1-474F-9FDB-DB2BF0596D61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Manageability.Tests</RootNamespace>
+    <AssemblyName>EnterpriseLibrary.Logging.Configuration.Manageability.Tests</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Filters\CategoryFilterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Filters\CustomLogFilterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Filters\LogEnabledFilterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Formatters\BinaryLogFormatterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Formatters\CustomFormatterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Formatters\TextFormatterDataManageabilityProviderFixture.cs" />
+    <Compile Include="LoggingSettingsManageabilityProviderFixture.cs" />
+    <Compile Include="Filters\PriorityFilterDataManageabilityProviderFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraceListeners\XmlTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\RollingTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\SystemDiagnosticsTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\MsmqTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\CustomTraceListenerDataManageabilityProviderFixture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TraceListeners\WmiTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\FormattedEventLogTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\FlatFileTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="TraceListeners\EmailTraceListenerDataManageabilityProviderFixture.cs" />
+    <Compile Include="WMI\Filters\CategoryFilterSettingFixture.cs" />
+    <Compile Include="WMI\Filters\CustomFilterSettingFixture.cs" />
+    <Compile Include="WMI\Filters\LogEnabledFilterSettingFixture.cs" />
+    <Compile Include="WMI\Filters\PriorityFilterSettingFixture.cs" />
+    <Compile Include="WMI\Formatters\BinaryFormatterSettingFixture.cs" />
+    <Compile Include="WMI\Formatters\CustomFormatterSettingFixture.cs" />
+    <Compile Include="WMI\Formatters\TextFormatterSettingFixture.cs" />
+    <Compile Include="WMI\LoggingBlockSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\FormattedEventLogTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\CustomTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\EmailTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\FlatFileTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\MsmqTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\RollingFlatFileTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\WmiTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceListeners\XmlTraceListenerSettingFixture.cs" />
+    <Compile Include="WMI\TraceSourceSettingFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Tests\Configuration.Manageability\Common.Configuration.Manageability.Tests.VSTS.csproj">
+      <Project>{C0D9660C-5A2C-40C5-AE8E-C16C39DC8EAA}</Project>
+      <Name>Common.Configuration.Manageability.Tests.VSTS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Src\Logging\Logging.csproj">
+      <Project>{6AC97717-899D-4F72-BC5B-2C37959CD4FF}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

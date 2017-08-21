@@ -1,0 +1,357 @@
+
+C:\work\entlib\v20\Src\Logging\TraceListeners\Database\Scripts>osql -S (local)\SQLEXPRESS -E -i LoggingDatabase.sql 
+1> 2> 3> 1> 2> 3> 4> 1> 2> 3> 4> Msg 1802, Level 16, State 4, Server ENTLIB202\SQLEXPRESS, Line 2
+CREATE DATABASE failed. Some file names listed could not be created. Check
+related errors.
+Msg 5170, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Line 2
+Cannot create file 'c:\Program Files\Microsoft SQL
+Server\MSSQL.1\MSSQL\DATA\Logging.mdf' because it already exists. Change the
+file path or the file name, and retry the operation.
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 15010, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Procedure sp_dboption, Line 64
+The database 'Logging' does not exist. Use sp_helpdb to show available
+databases.
+ 
+ Available databases:                                                          
+	                                                   
+ ------------------------------------------------------------------------------
+	-------------------------------------------------- 
+ master                                                                        
+	                                                   
+ tempdb                                                                        
+	                                                   
+ model                                                                         
+	                                                   
+ msdb                                                                          
+	                                                   
+ Northwind                                                                     
+	                                                   
+
+1> 2> 3> Msg 911, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Line 2
+Could not locate entry in sysdatabases for database 'Logging'. No entry found
+with that name. Make sure that the name is entered correctly.
+1> 2> 3> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 22> 23> 24> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 22> 23> 24> 25> 26> 27> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 1> 2> 1> 2> 1> 2> 1> 2> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 22> 23> 24> 25> 26> 27> 28> 29> 30> 31> 32> 33> 34> 35> 36> 37> 38> 39> 40> 41> 42> 43> 44> 45> 46> 47> 48> 49> 50> 51> 52> 53> 54> 55> 56> 57> 58> 59> 60> 61> 62> 63> 64> 65> 1> 2> 1> 2> 1> 2> 3> 4> 1> 2> 3> 4> 1> 2> 3> 4> 5> 6> 7> 8> 9> 1> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> Msg 1913, Level 16, State 1, Server ENTLIB202\SQLEXPRESS, Line 7
+The operation failed because an index or statistics with name 'ixCategoryLog'
+already exists on table 'dbo.CategoryLog'.

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode">
+            <summary>
+            Represents the design time node for a single <see cref="T:System.Configuration.KeyValueConfigurationElement"/>, 
+            inside the <see cref="T:System.Configuration.AppSettingsSection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode"/> with a specific key and value.
+            </summary>
+            <param name="key">The key for this <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode"/>.</param>
+            <param name="value">The value for this <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode"/>.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingNode.Value">
+            <summary>
+            Gets or sets the value for this setting.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsBuilder">
+            <summary>
+            Represents a builder for an <see cref="T:System.Configuration.AppSettingsSection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsBuilder.#ctor(Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsBuilder"/>
+            </summary>
+            <param name="appSettingsNode"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsBuilder.Build">
+            <summary>
+            Builds an <see cref="T:System.Configuration.AppSettingsSection"/> object.
+            </summary>
+            <returns>An <see cref="T:System.Configuration.AppSettingsSection"/> object.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the <see cref="T:System.Configuration.AppSettingsSection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Registers the commands for the configurationnodes to be used in the designtime.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the appSettings section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the configuration for the configuration sources.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the appSettings section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.GetConfigurationParameter(System.IServiceProvider)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileConfigurationParameter"/> based on the applications configuration file.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileConfigurationParameter"/> based on the applications configuration file.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsConfigurationDesignManager.GetConfigurationSource(System.IServiceProvider)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileConfigurationSource"/> based on the applications configuration file.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileConfigurationSource"/> based on the applications configuration file.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode">
+            <summary>
+            Represents the design time node for the <see cref="T:System.Configuration.AppSettingsSection"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode.#ctor(System.Configuration.AppSettingsSection)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode"/> class with a <see cref="T:System.Configuration.AppSettingsSection"/> instance.
+            </summary>
+            <param name="appSettings">A <see cref="T:System.Configuration.AppSettingsSection"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+            <remarks>
+            Overriden so it is readonly in the designer.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode.File">
+            <summary>
+            Gets the external file for the <see cref="T:System.Configuration.AppSettingsSection"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode.RequirePermission">
+            <summary>
+            Gets or sets the flag indicating the section requires permission to be retrieved.
+            </summary>
+            <remarks>
+            The section represented by this node is defined elsewhere, so the property does not need to be exposed.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNodeBuilder">
+            <summary>
+            Represents a a builder for <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNodeBuilder.#ctor(System.IServiceProvider,System.Configuration.AppSettingsSection)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.NodeBuilder"/> class with a <see cref="T:System.IServiceProvider"/> and the <see cref="T:System.Configuration.AppSettingsSection"/> to build the node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="appSettingsSection">The <see cref="T:System.Configuration.AppSettingsSection"/> to build the node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNodeBuilder.Build">
+            <summary>
+            Builds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode"/>.
+            </summary>
+            <returns>An <see cref="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.AppSettingsNode"/> object.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingNodeDefaultKey">
+            <summary>
+              Looks up a localized string similar to Setting.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingNodeValueDescription">
+            <summary>
+              Looks up a localized string similar to The value for this Setting..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingsNodeFileDescription">
+            <summary>
+              Looks up a localized string similar to Optional external file that can be used to override the configuration&apos;s appSettings..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Application Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingsUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add Application Settings..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingsUICommandText">
+            <summary>
+              Looks up a localized string similar to Application Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a Setting..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.AppSettingUICommandText">
+            <summary>
+              Looks up a localized string similar to Setting.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.AppSettings.Configuration.Design.Properties.Resources.ReadOnlyAppSettingNodeValueDescription">
+            <summary>
+              Looks up a localized string similar to The value for this Setting..
+            </summary>
+        </member>
+    </members>
+</doc>

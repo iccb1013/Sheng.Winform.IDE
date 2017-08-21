@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{125FB802-2C83-47DC-BA57-910064355CCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Kernal</RootNamespace>
+    <AssemblyName>Kernal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\ThirdPartyLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="BindingListEx.cs" />
+    <Compile Include="DialogUnity.cs" />
+    <Compile Include="Encryption\AESEncryption.cs" />
+    <Compile Include="FastReflection\ReflectionPool.cs" />
+    <Compile Include="IO\DirectoryHelper.cs" />
+    <Compile Include="Encryption\DESEncryption.cs" />
+    <Compile Include="Encryption\Encryption.cs" />
+    <Compile Include="Encryption\MD5Encryption.cs" />
+    <Compile Include="EnumDescConverter.cs" />
+    <Compile Include="FastReflection\ConstructorInvoker.cs" />
+    <Compile Include="FastReflection\ConstructorInvokerPool.cs" />
+    <Compile Include="FastReflection\FastReflectionPool.cs" />
+    <Compile Include="FastReflection\FieldAccessor.cs" />
+    <Compile Include="FastReflection\FieldAccessorPool.cs" />
+    <Compile Include="FastReflection\IFastReflectionPool.cs" />
+    <Compile Include="FastReflection\MethodInvoker.cs" />
+    <Compile Include="FastReflection\MethodInvokerPool.cs" />
+    <Compile Include="FastReflection\PropertyAccessor.cs" />
+    <Compile Include="FastReflection\PropertyAccessorPool.cs" />
+    <Compile Include="HardwareInfo.cs" />
+    <Compile Include="ImageAndTypeMappingCodon.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="InstanceLazy.cs" />
+    <Compile Include="IO\PathHelper.cs" />
+    <Compile Include="Localisation\LocalisationHelper.cs" />
+    <Compile Include="Reflection\ReflectionAttributeHelper.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="ResourceMapping.cs" />
+    <Compile Include="StreamHelper.cs" />
+    <Compile Include="Type\KeyTypeMaps.cs" />
+    <Compile Include="Type\TypeValueMaps.cs" />
+    <Compile Include="Xml\IXmlable.cs" />
+    <Compile Include="ObjectCompare.cs" />
+    <Compile Include="ObjectSnapshot\ISnapshot.cs" />
+    <Compile Include="ObjectSnapshot\ObjectSnapshot.cs" />
+    <Compile Include="ObjectSnapshot\SnapshotMember.cs" />
+    <Compile Include="ObjectSnapshot\SnapshotMemberCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexHelper.cs" />
+    <Compile Include="RegisterFiletypes.cs" />
+    <Compile Include="SEDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnvironmentHelper.cs" />
+    <Compile Include="Xml\SEXElement.cs" />
+    <Compile Include="Type\TypeCollection.cs" />
+    <Compile Include="StringUnity.cs" />
+    <Compile Include="XDirectory.cs" />
+    <Compile Include="Xml\XmlableCollection.cs" />
+    <Compile Include="ZipArchive\EncryptionArchive.cs" />
+    <Compile Include="ZipArchive\FastZipArchive.cs" />
+    <Compile Include="ZipArchive\IArchive.cs" />
+    <Compile Include="ZipArchive\NormalArchive.cs" />
+    <Compile Include="ZipArchive\ZipArchiveEx.cs" />
+    <Compile Include="ZipArchive\FastZipArchiveDirectoryEventArgs.cs" />
+    <Compile Include="ZipArchive\FastZipArchiveProgressEventArgs.cs" />
+    <Compile Include="ZipArchive\FastZipArchiveScanEventArgs.cs" />
+    <Compile Include="ZipArchive\ZipArchiveStreamDataSource.cs" />
+    <Compile Include="ZipArchive\ZipArchive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Win32\Win32.csproj">
+      <Project>{946FFB43-4864-4967-8D69-8716CDA83F7A}</Project>
+      <Name>Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Encryption\!readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E383816-DC7E-46ED-A62F-D7C39665D00F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Controls.Extensions</RootNamespace>
+    <AssemblyName>Controls.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\DataGridViewController\ITypeBinderDataGridViewTypeCodon.cs" />
+    <Compile Include="Controller\DataGridViewController\TypeBinderDataGridViewComboTypeCodon.cs" />
+    <Compile Include="Controller\DataGridViewController\TypeBinderDataGridViewController.cs" />
+    <Compile Include="Controller\DataGridViewController\TypeBinderDataGridViewTypeCodon.cs" />
+    <Compile Include="Controller\ListBoxController.cs" />
+    <Compile Include="Controller\TabControlController\TabControlController.cs" />
+    <Compile Include="Controller\TabControlController\TypeBinderTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controller\TreeViewController\ITypeBinderTreeViewNode.cs" />
+    <Compile Include="Controller\TreeViewController\TypeBinderTreeViewController.cs" />
+    <Compile Include="Controller\TreeViewController\TypeBinderTreeViewNode.cs" />
+    <Compile Include="Controller\TreeViewController\TypeBinderTreeViewNodeCodon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolStrip\ContextMenuStripCodon.cs" />
+    <Compile Include="ToolStrip\ContextMenuStripView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\CustomLayoutEngine.cs" />
+    <Compile Include="ToolStrip\IToolStripDropDownItemCodon.cs" />
+    <Compile Include="ToolStrip\IToolStripItemCodon.cs" />
+    <Compile Include="ToolStrip\IToolStripItemView.cs" />
+    <Compile Include="ToolStrip\MenuStripAreoView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\MenuStripCodon.cs" />
+    <Compile Include="ToolStrip\MenuStripView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripButtonCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripButtonView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripCodonBase.cs" />
+    <Compile Include="ToolStrip\ToolStripComboBoxCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripComboBoxCodonSelectedItemChangedEventArgs.cs" />
+    <Compile Include="ToolStrip\ToolStripComboBoxView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripItemCodonEventArgs.cs" />
+    <Compile Include="ToolStrip\ToolStripView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripDropDownItemCodonAbstract.cs" />
+    <Compile Include="ToolStrip\ToolStripItemCodonAbstract.cs" />
+    <Compile Include="ToolStrip\ToolStripItemCodonCollection.cs" />
+    <Compile Include="ToolStrip\ToolStripItemViewHelper.cs" />
+    <Compile Include="ToolStrip\ToolStripLabelCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripLabelView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripMenuItemCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripMenuItemView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripPanelView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripPath.cs" />
+    <Compile Include="ToolStrip\ToolStripSeparatorCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripSeparatorView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripSplitButtonCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripSplitButtonView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrip\ToolStripWorkWindowSeparatorCodon.cs" />
+    <Compile Include="ToolStrip\ToolStripWorkWindowSeparatorView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controller\DataGridViewController\!无此命名空间.txt" />
+    <Content Include="Controller\TreeViewController\!无此命名空间.txt" />
+    <Content Include="ToolStrip\!Readme.txt" />
+    <Content Include="ToolStrip\!没有此命名空间.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

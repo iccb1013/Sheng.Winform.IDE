@@ -1,0 +1,1621 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ChooseMembersCommand">
+            <summary>
+            Represents a command for adding a member to a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ChooseMembersCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ChooseMembersCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ChooseMembersCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Adds either a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode"/>, <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode"/> or <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode"/> to the current <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/>,
+            based on the selected member.
+            </summary>
+            <param name="node">The parent node to newly added configuration node.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddRuleSetNodeCommand">
+            <summary>
+            Represents a command for adding <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/> to a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddRuleSetNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddRuleSetNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddRuleSetNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/>.</para>
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddTypeNodeCommand">
+            <summary>
+            Represents a command for adding <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/> to a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddTypeNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddTypeNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddTypeNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            <para>Creates an instance of the child node class and adds it as a child of the parent node. The node will be a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/>.</para>
+            </summary>
+            <param name="node">
+            <para>The parent node to add the newly created <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/>.</para>
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.AddTypeNodeCommand.SelectedType">
+            <summary>
+            Gets the type that should be used to create the new <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.PropertyComparisonValidatorData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValueValidatorNode">
+            <summary>
+            Represents the designtime configuration node for any value validator.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase">
+            <summary>
+            Represents the designtime configuration node for any noncomposite validator.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidatorNodeBase">
+            <summary>
+            Represents the designtime configuration node for any <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidatorNodeBase.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidatorNodeBase"/> based on a name for the configuration node.
+            </summary>
+            <param name="name">The name that should be used to display this configuration node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidatorNodeBase.CreateValidatorData">
+            <summary>
+            When overriden in a derived class, this method returns the runtime configuration data represented by this node.
+            </summary>
+            <returns>The runtime configuration data represented by this node, that can de persisted to a configuration file.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatorData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase"/> representing <paramref name="validatorData"/>.
+            </summary>
+            <param name="validatorData">The represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatorData"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.SetValidatorBaseProperties(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatorData)">
+            <summary>
+            Copies properties declared on this node to a runtime configuration data.
+            </summary>
+            <param name="validatorData">The runtime configuration data which should be updated with settings in this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.Validate(System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Performs validation for this node.
+            </summary>
+            <param name="errors">The list of errors to add any validation errors.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.MessageTemplate">
+            <summary>
+            Gets or sets the MessageTemplate for this validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.MessageTemplateResourceName">
+            <summary>
+            Gets or sets the MessageTemplateResourceName for this validator.
+            When using localized message templates, this specifies the name of the resource that should be used to retrieve a localized template.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.MessageTemplateResourceTypeName">
+            <summary>
+            Gets or sets the MessageTemplateResourceTypeName for this validator.
+            When using localized message templates, this specifies the type that contains the localized resources.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.SingleValidatorNodeBase.Tag">
+            <summary>
+            Gets or sets the tag for this validator.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValueValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValueValidatorData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValueValidatorNode"/> representing <paramref name="validatorData"/>.
+            </summary>
+            <param name="validatorData">The represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValueValidatorData"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValueValidatorNode.SetValueValidatorBaseProperties(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValueValidatorData)">
+            <summary>
+            Copies properties declared on this node to a runtime configuration data.
+            </summary>
+            <param name="validatorData">The runtime configuration data which should be updated with settings in this node.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValueValidatorNode.Negated">
+            <summary>
+            Gets or sets the flag indicating the represented validator is negated.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.PropertyComparisonValidatorData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode"/> class representing <paramref name="validatorData"/>.
+            </summary>
+            <param name="validatorData">The represented <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.PropertyComparisonValidatorData"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.CreateValidatorData">
+            <summary>
+            Creates the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.PropertyComparisonValidatorData"/> represented by the node.
+            </summary>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.PropertyComparisonValidatorData"/> instance.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.PropertyToCompare">
+            <summary>
+            Gets or sets the name of the property to compare.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.ComparisonOperator">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.PropertyComparisonValidatorNode.ComparisonOperator"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1">
+            <summary>
+            Respresents the designtime configuration node for any <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData`1"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData{`0})">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.SetRangeValidatorBaseProperties(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData{`0})">
+            <summary>
+            Copies properties declared on this node to a runtime configuration data.
+            </summary>
+            <param name="rangeValidatorData">The runtime configuration data which should be updated with settings in this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.Validate(System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Performs validation for this node.
+            </summary>
+            <param name="errors">The list of errors to add any validation errors.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.LowerBound">
+            <summary>
+            Gets or sets the LowerBound value for this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.LowerBoundType">
+            <summary>
+            Gets or sets the LowerBoundType value for this  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.UpperBound">
+            <summary>
+            Gets or sets the UpperBound value for this <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1.UpperBoundType">
+            <summary>
+            Gets or sets the UpperBoundType value for this  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNodeBase`1"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RangeValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RangeValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue">
+            <summary>
+            Represents a domain value that is editable in the design time.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValue.Value">
+            <summary>
+            Gets or sets the value for the domain entry.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedPropertyReference"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode"/> based on a property name.
+            </summary>
+            <param name="propertyName">The name of the property represented by this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedPropertyReference)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode"/> based on runtime configuration data.
+            </summary>
+            <param name="propertyData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.PropertyNode.SortChildren">
+            <summary>
+            Determines if the the child nodes are sorted by name.
+            </summary>
+            <value>
+            Returns <see langword="false"/>.
+            </value>
+            <remarks>
+            Child nodes must be in order that they are added because they are handled in a chain.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedMethodReference"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode"/> based on a method name.
+            </summary>
+            <param name="methodName">The name of the method represented by this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedMethodReference)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode"/> based on runtime configuration data.
+            </summary>
+            <param name="methodData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.MethodNode.SortChildren">
+            <summary>
+            Determines if the the child nodes are sorted by name.
+            </summary>
+            <value>
+            Returns <see langword="false"/>.
+            </value>
+            <remarks>
+            Child nodes must be in order that they are added because they are handled in a chain.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedFieldReference"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode"/> based on a field name.
+            </summary>
+            <param name="fieldName">The name of the field represented by this node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedFieldReference)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode"/> based on runtime configuration data.
+            </summary>
+            <param name="fieldData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.FieldNode.SortChildren">
+            <summary>
+            Determines if the the child nodes are sorted by name.
+            </summary>
+            <value>
+            Returns <see langword="false"/>.
+            </value>
+            <remarks>
+            Child nodes must be in order that they are added because they are handled in a chain.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode">
+            <summary>
+            Respresents the designtime configuration node for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidationRulesetData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidationRulesetData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/> based on runtime configuration data.
+            </summary>
+            <param name="ruleData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.SelfNode">
+            <summary>
+            Respresents the designtime configuration container for validators that directly apply to the type being validated.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.SelfNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.SelfNode"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.SelfNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.SelfNode.SortChildren">
+            <summary>
+            Determines if the the child nodes are sorted by name.
+            </summary>
+            <value>
+            Returns <see langword="false"/>.
+            </value>
+            <remarks>
+            Child nodes must be in order that they are added because they are handled in a chain.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooser">
+            <summary>
+            Allows for multiple member selection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooser.#ctor(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IUIService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooser"/> class.
+            </summary>
+            <param name="uiService">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IUIService"/> to perform UI operations.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooser.ChooseMembers(System.Type)">
+            <summary>
+            Launches a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI"/> to perform the selection of multiple members.
+            </summary>
+            <param name="type">The type for which the members are to be selected.</param>
+            <returns>A colleciton with the selected members.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI">
+            <summary>
+            User interface for selecting multiple members from a type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI.#ctor(System.Type,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IUIService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI"/> class.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> for which the members are to be chosen from.</param>
+            <param name="uiService">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.IUIService"/> to provide UI services.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI.GetSelectedMembers">
+            <summary>
+            Returns the selected members.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeMemberChooserUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationTypeNodeNameFormatter">
+            <summary>
+            Used to create a friendly name for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationTypeNodeNameFormatter.CreateName(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference)">
+            <summary>
+            Retruns a friendly name based on a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference"/> instance.
+            </summary>
+            <param name="typeConfiguration">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference"/> that should be used to create a name.</param>
+            <returns>A friendly name that can be used as a display name.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode">
+            <summary>
+            Represents the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode"/> configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationSettingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the Validation settings configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the security settings configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the validation settings configuration section.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidationConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Sets up the design time objects to represent the configuration for the validation block.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddAndCompositeValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add And Composite Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddAndCompositeValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to And Composite Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddContainsCharactersValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Contains Characters Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddContainsCharactersValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Contains Characters Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddCustomValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Custom Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddCustomValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddDateRangeValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Date Range Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddDateRangeValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Date Range Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddDomainValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Domain Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddDomainValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Domain Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddEnumConversionValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Enum Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddEnumConversionValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Enum Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddFieldReferenceCommand">
+            <summary>
+              Looks up a localized string similar to Add Field..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddFieldReferenceCommandName">
+            <summary>
+              Looks up a localized string similar to Field.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddMemberCommand">
+            <summary>
+              Looks up a localized string similar to Choose Members..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddMemberCommandName">
+            <summary>
+              Looks up a localized string similar to Choose Members.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddMethodReferenceCommand">
+            <summary>
+              Looks up a localized string similar to Add Method..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddMethodReferenceCommandName">
+            <summary>
+              Looks up a localized string similar to Method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddNotNullValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Not Null Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddNotNullValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Not Null Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddObjectCollectionValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Object Collection Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddObjectCollectionValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Object Collection Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddObjectValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Object Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddObjectValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Object Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddOrCompositeValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Or Composite Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddOrCompositeValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Or Composite Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddPropertyComparisonValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Property Comparison Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddPropertyComparisonValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Property Comparison Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddPropertyReferenceCommand">
+            <summary>
+              Looks up a localized string similar to Add Property..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddPropertyReferenceCommandName">
+            <summary>
+              Looks up a localized string similar to Property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRangeValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Range Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRangeValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Range Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRegexValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Regular Expression Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRegexValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Regular Expression Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRelativeDateTimeValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Relative Date Time Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRelativeDateTimeValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Relative Date Time Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRuleSetCommand">
+            <summary>
+              Looks up a localized string similar to Add Rule Set..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddRuleSetCommandName">
+            <summary>
+              Looks up a localized string similar to Rule Set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddStringLengthValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add String Length Validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddStringLengthValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to String Length Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddTypeConversionValidatorCommand">
+            <summary>
+              Looks up a localized string similar to Add Type Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddTypeConversionValidatorCommandName">
+            <summary>
+              Looks up a localized string similar to Type Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddValidationSettingsCommand">
+            <summary>
+              Looks up a localized string similar to Add the Validation Application Block..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddValidationSettingsCommandName">
+            <summary>
+              Looks up a localized string similar to Validation Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddValidationTypeCommand">
+            <summary>
+              Looks up a localized string similar to Add Type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AddValidationTypeCommandName">
+            <summary>
+              Looks up a localized string similar to Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.AndCompositeValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to And Composite Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.BothTemplateAndResourceNameAreSpecified">
+            <summary>
+              Looks up a localized string similar to Both MessageTemplate and MessageTemplateResourceName are specified. Please either specify a MessageTemplate or a MessageTemplateResourceName and MessageTemplateResourceType pair..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.CategoryValidatorMessage">
+            <summary>
+              Looks up a localized string similar to Message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ContainsCharactersValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Contains Characters Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.CustomValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.CustomValidatorProviderExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the custom configuration attributes for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeLowerBoundDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the LowerBound value. This is the quantity of units behind the relative datetime..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeLowerBoundTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the BoundType for the LowerBound value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeLowerUnitDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the datetime unit for the LowerBound value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeUpperBoundDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the UpperBound value. This is the quantity of units over the relative datetime..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeUpperBoundTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the BoundType for the UpperBound value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DataTimeUpperUnitDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the datetime unit for the UpperBound value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DateRangeValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Date Range Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DefaultRuleDescription">
+            <summary>
+              Looks up a localized string similar to Default Validation Rule for this Type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DomainValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Domain Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.DuplicateValidationTypeErrorMessage">
+            <summary>
+              Looks up a localized string similar to Type {0} is already added to the Validation Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.EnumConversionValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Enum Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.EnumTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the type of enum that will be used to validate..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.FieldNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of the referenced field..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.FieldNodeName">
+            <summary>
+              Looks up a localized string similar to Field.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.FieldsNode">
+            <summary>
+              Looks up a localized string similar to Fields.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.InvalidRegularExpressionErrorMessage">
+             <summary>
+               Looks up a localized string similar to The value for {0} is not a valid regular expression.
+            {1}.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.LowerBoundDescription">
+            <summary>
+              Looks up a localized string similar to The lowerbound value for this validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MessageTemplateDescription">
+            <summary>
+              Looks up a localized string similar to The template for an error message, raised by this validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MessageTemplateResourceNameDescription">
+            <summary>
+              Looks up a localized string similar to When using localized message templates, this specifies the name of the resource that should be used to retrieve a localized template..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MessageTemplateResourceTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to When using localized message templates, this specifies the type that contains the localized resources..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MethodNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of the referenced method..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MethodNodeName">
+            <summary>
+              Looks up a localized string similar to Method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.MethodsNode">
+            <summary>
+              Looks up a localized string similar to Methods.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.NegatedDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the negated validator value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.NotNullValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Not Null Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ObjectCollectionValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Object Collection Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ObjectValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Object Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.OrCompositeValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Or Composite Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertiesNode">
+            <summary>
+              Looks up a localized string similar to Properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertyComparisonComparisonOperatorDescription">
+            <summary>
+              Looks up a localized string similar to The operator to use when comparing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertyComparisonPropertyToCompareDescription">
+            <summary>
+              Looks up a localized string similar to The name of the property to compare with..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertyComparisonValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Property Comparison Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertyNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of the referenced property..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.PropertyNodeName">
+            <summary>
+              Looks up a localized string similar to Property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ProviderTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the type of Validator which implements Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RangeBoundaryTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets how the LowerBound property should be interpreted..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RangeValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Range Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RegexOptionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the options that should be used to interpreted the regular expression..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RegexPatternDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the regular expression that should be used for validation..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RegexPatternResourceNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the regular expression resource name that should be used for validation..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RegexPatternResourceTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the regular expression resource type that should be used for validation..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RegexValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Regex Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RelativeDateTimeValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Relative Date Time Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ResolveTypeManuallyCaption">
+            <summary>
+              Looks up a localized string similar to Unable to resolve type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ResolveTypeManuallyMessage">
+            <summary>
+              Looks up a localized string similar to The configuration editor is unable to resolve the type {0}. Would you like to resolve the type manually?.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.RuleSetNodeName">
+            <summary>
+              Looks up a localized string similar to Rule Set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.SelfNodeName">
+            <summary>
+              Looks up a localized string similar to Self.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.StringLengthValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to String Length Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TagDescription">
+            <summary>
+              Looks up a localized string similar to The tag for this validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TargetRulesetDescription">
+            <summary>
+              Looks up a localized string similar to The target ruleset to use when creating the object validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TargetTypeConversion">
+            <summary>
+              Looks up a localized string similar to Gets or sets the Target Type to be used in the validation..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TargetTypeDescription">
+            <summary>
+              Looks up a localized string similar to The Type for the elements to validate..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TypeConversionValidatorNodeName">
+            <summary>
+              Looks up a localized string similar to Type Conversion Validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.TypeNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the name of the Type that should be validated..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.UpperBoundDescription">
+            <summary>
+              Looks up a localized string similar to The upperbound value for this validator..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.UpperBoundShouldBeGeaterThanLowerBound">
+            <summary>
+              Looks up a localized string similar to The value for UpperBound should be greater than the value for LowerBound..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.UpperBoundTypeDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets how the UpperBound property should be interpreted..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ValidationSettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Validation Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.Properties.Resources.ValidatorCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Validators.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode"/> class for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference"/>.
+            </summary>
+            <param name="typeReferenceData">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ValidatedTypeReference"/> to be represented.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode.TypeName">
+            <summary>
+            Gets the name of the represented type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.TypeNode.DefaultRule">
+            <summary>
+            Gets or sets the related <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.RuleSetNode"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CompositeValidatorNodeBase">
+            <summary>
+            Represents the designtime configuration node for any composite validator.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CompositeValidatorNodeBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CompositeValidatorNodeBase"/> class.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CompositeValidatorNodeBase.SortChildren">
+            <summary>
+            Returns false, since the contents of this configuration node is ordered.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ContainsCharactersValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ContainsCharactersValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ContainsCharactersValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.CharacterSet">
+            <summary>
+            Gets or sets the character set for the represented validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.ContainsCharacters">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ContainsCharactersValidatorNode.ContainsCharacters"/> set for the represented validator.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DomainValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DomainValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DomainValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DomainValidatorNode.Domain">
+            <summary>
+            Gets or sets the custom attributes for the provider.
+            </summary>
+            <value>
+            The custom attributes for the provider.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.EnumConversionValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.EnumConversionValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.EnumConversionValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.EnumConversionValidatorNode.EnumType">
+            <summary>
+            Gets or sets the fully qualified assembly name of the target element type.
+            </summary>
+            <value>
+            The fully qualified assembly name of the target element type.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RelativeDateTimeValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RelativeDateTimeValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RelativeDateTimeValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode.LowerUnit">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Validators.DateTimeUnit"/> for the lower unit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RelativeDateTimeValidatorNode.UpperUnit">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Validators.DateTimeUnit"/> for the upper unit.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.TypeConversionValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.TypeConversionValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.TypeConversionValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.TypeConversionValidatorNode.TargetType">
+            <summary>
+            Gets or sets the fully qualified assembly name of the target element type.
+            </summary>
+            <value>
+            The fully qualified assembly name of the target element type.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.CustomValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.CustomValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.CustomValidatorData"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.CustomValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.Attributes">
+            <summary>
+            Gets or sets the custom attributes for the provider.
+            </summary>
+            <value>
+            The custom attributes for the provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.Type"/> of the custom provider.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.CustomValidatorNode.Type"/> of the custom provider.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectCollectionValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectCollectionValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectCollectionValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode.TargetType">
+            <summary>
+            Gets or sets the fully qualified assembly name of the target element type.
+            </summary>
+            <value>
+            The fully qualified assembly name of the target element type.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectCollectionValidatorNode.TargetRuleset">
+            <summary>
+            Gets or sets the target ruleset for the node.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.ObjectValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ObjectValidatorNode.TargetRuleset">
+            <summary>
+            Gets or sets the target ruleset for the node.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.OrCompositeValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.OrCompositeValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.OrCompositeValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.MessageTemplate">
+            <summary>
+            Gets or sets the MessageTemplate for this validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.MessageTemplateResourceName">
+            <summary>
+            Gets or sets the MessageTemplateResourceName for this validator.
+            When using localized message templates, this specifies the name of the resource that should be used to retrieve a localized template.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.MessageTemplateResourceTypeName">
+            <summary>
+            Gets or sets the MessageTemplateResourceTypeName for this validator.
+            When using localized message templates, this specifies the type that contains the localized resources.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.OrCompositeValidatorNode.Tag">
+            <summary>
+            Gets or sets the tag for this validator.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.AndCompositeValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.AndCompositeValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.AndCompositeValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.AndCompositeValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RegexValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RegexValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.RegexValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.Pattern">
+            <summary>
+            Gets or sets the regular expression used for validation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.Options">
+            <summary>
+            Gets or sets the options used to interpreted the regular expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.PatternResourceName">
+            <summary>
+            Gets or sets the name of the resource holding the regex pattern.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.RegexValidatorNode.PatternResourceTypeName">
+            <summary>
+            Gets or sets the name of the resource type holding the regex pattern.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.StringLengthValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.StringLengthValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.StringLengthValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.LowerBound">
+            <summary>
+            Gets or sets the LowerBound value for this validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.LowerBoundType">
+            <summary>
+            Gets or sets the LowerBoundType value for this validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.UpperBound">
+            <summary>
+            Gets or sets the UpperBound value for this validator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.StringLengthValidatorNode.UpperBoundType">
+            <summary>
+            Gets or sets the UpperBoundType value for this validator.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DateTimeRangeValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DateTimeRangeValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.DateRangeValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.DateTimeRangeValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode">
+            <summary>
+            Respresents the designtime configuration node for a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.NotNullValidatorData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode"/> based on default values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.NotNullValidatorData)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode"/> based on runtime configuration data.
+            </summary>
+            <param name="validatorData">The corresponding runtime configuration data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.NotNullValidatorNode.CreateValidatorData">
+            <summary>
+            Returns the runtime configuration data that is represented by this node.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.NotNullValidatorData"/> that can be persisted to a configuration file.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidRegexAttribute">
+            <summary>
+            Specifies a property or event will be validated on whether it is a valid regular expression.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Validation.Configuration.Design.ValidatorNodes.ValidRegexAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/> on whether it contains a valid regular expression.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>		
+        </member>
+    </members>
+</doc>

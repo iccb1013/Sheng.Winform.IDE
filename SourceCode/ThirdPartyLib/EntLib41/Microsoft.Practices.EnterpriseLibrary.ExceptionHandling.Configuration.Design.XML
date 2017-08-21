@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.AddExceptionTypeNodeCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.AddExceptionTypeNodeCommand.#ctor(System.IServiceProvider,System.Type)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+            <param name="childType">
+            The <see cref="T:System.Type"/> object for the configuration node to create and add to the node.        
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.AddExceptionTypeNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Creates an instance of the child node class and adds it as a child of the parent node.
+            </summary>
+            <param name="node">
+            The parent node to add the newly created <see cref="P:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.AddChildNodeCommand.ChildNode"/>.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.AddExceptionTypeNodeCommand.SelectedType">
+            <summary>
+            Gets the selected type for the node.
+            </summary>
+            <value>
+            The selected type for the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNodeNameFormatter">
+            <summary>
+            Used to create a friendly name for ExcpetionType nodes loaded from configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNodeNameFormatter.CreateName(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData)">
+            <summary>
+            Creates a friendly name based on a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> instance, which can be used as a displayname within a graphical tool.
+            </summary>
+            <param name="exceptionTypeConfiguration">The configuration this name is based on.</param>
+            <returns>A friendly name that can be used for the ExceptionTypeNode.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode">
+            <summary>
+            Represents a design time representation of a <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode.ExceptionHandlerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode"/> class.
+            </summary>        
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode.ExceptionHandlerData">
+            <summary>
+            When overriden by a class, gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode.ExceptionHandlerData"/> object this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlerNode.ExceptionHandlerData"/> object this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> instance.
+            </summary>
+            <param name="customHandlerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode.Attributes">
+            <summary>
+            Gets the attributes for the custom handler.
+            </summary>
+            <value>
+            The attributes for the custom handler.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode.Type">
+            <summary>
+            Gets the fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/>.
+            </summary>
+            <value>
+            The fully qualified assembly name of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.IExceptionHandler"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.CustomHandlerNode.ExceptionHandlerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.CustomHandlerData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the exception handling settings configuration section.
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the exception handling settings configuration section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the exception handling settings configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the exception handling settings configuration section.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingSettingsNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings"/> configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingSettingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingSettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionHandlingSettingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionPolicyNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionPolicyNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionPolicyNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionPolicyNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionPolicyNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> instance.
+            </summary>
+            <param name="exceptionPolicyData">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionPolicyData"/> instance.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> instance.
+            </summary>
+            <param name="exceptionTypeData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionTypeData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.Type"/> of the <see cref="T:System.Exception"/> for the policy.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.Type"/> of the <see cref="T:System.Exception"/> for the policy.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.PostHandlingAction">
+            <summary>
+            <para>Determines how a rethrow is handled.</para>
+            <list type="table">
+            	<listheader>
+            		<item>Enumeration</item>
+            		<description>Description</description>
+            	</listheader>
+            	<item>
+            		<term>None</term>
+            		<description>
+            		Indicates that no rethrow should occur.
+            		</description>
+            	</item>
+            	<item>
+            		<term>Notify</term>
+            		<description>
+            		Notify the caller that a Rethrow is recommended.
+            		</description>
+            	</item>
+            	<item>
+            		<term>Throw</term>
+            		<description>
+            		Throws the exception after the exception has been handled by all handlers in the chain.
+            		</description>
+            	</item>
+            </list>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ExceptionTypeNode.SortChildren">
+            <summary>
+            Determines if the the child nodes are sorted by name.
+            </summary>
+            <value>
+            Returns <see langword="false"/>.
+            </value>
+            <remarks>
+            Child nodes must be in order that they are added because they are handled in a chain.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.CategoryLocalization">
+            <summary>
+              Looks up a localized string similar to Localization.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultCustomHandlerNodeName">
+            <summary>
+              Looks up a localized string similar to Custom Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultExceptionHandlingSettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Exception Handling Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultExceptionPolicyNodeName">
+            <summary>
+              Looks up a localized string similar to Exception Policy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultExceptionTypeNodeName">
+            <summary>
+              Looks up a localized string similar to Exception Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultReplaceHandlerNodeName">
+            <summary>
+              Looks up a localized string similar to Replace Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DefaultWrapHandlerNodeName">
+            <summary>
+              Looks up a localized string similar to Wrap Handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.DuplicateExceptionTypeErrorMessage">
+            <summary>
+              Looks up a localized string similar to An exception of type {0} is already configured for this policy..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ErrorNoExceptionHandlers">
+            <summary>
+              Looks up a localized string similar to There must be at least 1 or more Exception Handler(s) for the type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlerAdditionalPropertiesDescription">
+            <summary>
+              Looks up a localized string similar to Defines any number of custom properties that can be passed to a handler..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlerNameDescription">
+            <summary>
+              Looks up a localized string similar to The friendly name of the exception handler..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlerTypeDescription">
+            <summary>
+              Looks up a localized string similar to The fully qualified name of the type of exception handler..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlingSettingsNodeMenuText">
+            <summary>
+              Looks up a localized string similar to Exception Handling Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlingSettingsNodeStatusText">
+            <summary>
+              Looks up a localized string similar to Add the Exception Handling Application Block to the configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlingUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Exception Handling Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionHandlingUICommandText">
+            <summary>
+              Looks up a localized string similar to Exception Handling Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionPolicyNodeMenuText">
+            <summary>
+              Looks up a localized string similar to Exception Policy.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionPolicyNodeStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new Exception Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionReplaceMessageDescription">
+            <summary>
+              Looks up a localized string similar to The optional message for the replace exception..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionReplaceTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The fully qualified name of the type of exception to use for replacing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionTypeNodeMenuText">
+            <summary>
+              Looks up a localized string similar to Exception Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionTypeNodeNameDescription">
+            <summary>
+              Looks up a localized string similar to The fully qualified name of the type of Exception to get handled.  Must inherit from System.Exception..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionTypeNodeStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new Exception Type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionTypePostHandlingActionDescription">
+             <summary>
+               Looks up a localized string similar to Determines what action should occur after an exception is handled by the configured exception handling chain.
+            None: Indicates that no post handling action should occur.
+            NotifyRethrow: Notifies the caller that a Rethrow of the original exception is recommended.
+            ThrowNewException: Throws the resulting exception from the completed exception handling chain..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.ExceptionWrapTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The fully qualified name of the type of exception to use for wrapping..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.SelectTypeDialogCaption">
+            <summary>
+              Looks up a localized string similar to Select Exception Type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.Properties.Resources.WrapHandlerNodeMessageDescription">
+            <summary>
+              Looks up a localized string similar to The optional message for the wrap exception..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> instance.
+            </summary>
+            <param name="replaceHandlerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.ExceptionMessage">
+            <summary>
+            Gets or sets the exception message to use.
+            </summary>
+            <value>
+            The exception message to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.ExceptionMessageResourceName">
+            <summary>
+            !~!
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.ExceptionMessageResourceType">
+            <summary>
+            !~!
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.ReplaceExceptionType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> of <see cref="T:System.Exception"/> to use for replacement.
+            </summary>
+            <value>
+            The <see cref="T:System.Type"/> of <see cref="T:System.Exception"/> to use for replacement.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.ReplaceHandlerNode.ExceptionHandlerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ReplaceHandlerData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> instance.
+            </summary>
+            <param name="wrapHandlerData">A	<see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.ExceptionMessage">
+            <summary>
+            Gets or sets the exception message to use.
+            </summary>
+            <value>
+            The exception message to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.ExceptionMessageResourceName">
+            <summary>
+            !~!
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.ExceptionMessageResourceType">
+            <summary>
+            !~!
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.WrapExceptionType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> of <see cref="T:System.Exception"/> to use for wrapping.
+            </summary>
+            <value>
+            The <see cref="T:System.Type"/> of <see cref="T:System.Exception"/> to use for wrapping.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.WrapHandlerNode.ExceptionHandlerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.WrapHandlerData"/> this node represents.
+            </value>
+        </member>
+    </members>
+</doc>

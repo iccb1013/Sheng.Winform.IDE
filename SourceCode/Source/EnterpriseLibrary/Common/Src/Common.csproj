@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A09297C8-2C40-470B-8856-D856676DDFFA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Common</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Common</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;WMINET10;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <RunFxCop>false</RunFxCop>
+    <FxCopRules>-Microsoft.Design#CA2210</FxCopRules>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>Migrated rules for Common.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;WMINET10;USEWMI;USEEVENTLOG;USEPERFORMANCECOUNTER</DefineConstants>
+    <DocumentationFile>bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <RunFxCop>true</RunFxCop>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Instrumentation\AppDomainNameFormatter.cs" />
+    <Compile Include="Instrumentation\EnterpriseLibraryPerformanceCounter.cs" />
+    <Compile Include="Instrumentation\EventBinder.cs" />
+    <Compile Include="Instrumentation\InstrumentationBaseAttribute.cs" />
+    <Compile Include="Instrumentation\InstrumentationConsumerAttribute.cs" />
+    <Compile Include="Instrumentation\InstrumentationListenerAttribute.cs" />
+    <Compile Include="Instrumentation\InstrumentationProviderAttribute.cs" />
+    <Compile Include="Instrumentation\HasInstallableResourcesAttribute.cs" />
+    <Compile Include="Instrumentation\IPerformanceCounterNameFormatter.cs" />
+    <Compile Include="Instrumentation\PerformanceCounterAttribute.cs" />
+    <Compile Include="Instrumentation\ReflectionInstrumentationBinder.cs" />
+    <Compile Include="Instrumentation\NoPrefixNameFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Configuration\Manageability\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AssemblyQualifiedTypeNameConverter.cs" />
+    <Compile Include="Configuration\BaseFileConfigurationSourceImplementation.cs" />
+    <Compile Include="Configuration\ByteArrayTypeConverter.cs" />
+    <Compile Include="Configuration\ConfigurationFileSourceWatcher.cs" />
+    <Compile Include="Configuration\ConfigurationSourceElement.cs" />
+    <Compile Include="Configuration\ConfigurationSourceFactory.cs" />
+    <Compile Include="Configuration\ConfigurationSourceSection.cs" />
+    <Compile Include="Configuration\ConfigurationSourceWatcher.cs" />
+    <Compile Include="Configuration\ConfigurationChangedEventArgs.cs" />
+    <Compile Include="Configuration\ConfigurationChangingEventArgs.cs" />
+    <Compile Include="Configuration\ConfigurationElementTypeAttribute.cs" />
+    <Compile Include="Configuration\ConfigurationFileChangedEventArgs.cs" />
+    <Compile Include="Configuration\ConfigurationFileChangingEventArgs.cs" />
+    <Compile Include="Configuration\CustomProviderDataHelper.cs" />
+    <Compile Include="Configuration\DictionaryConfigurationSource.cs" />
+    <Compile Include="Configuration\FileConfigurationSaveParameter.cs" />
+    <Compile Include="Configuration\FileConfigurationSource.cs" />
+    <Compile Include="Configuration\FileConfigurationSourceElement.cs" />
+    <Compile Include="Configuration\FileConfigurationSourceImplementation.cs" />
+    <Compile Include="Configuration\GenericEnumeratorWrapper.cs" />
+    <Compile Include="Configuration\IConfigurationSource.cs" />
+    <Compile Include="Configuration\ICustomProviderData.cs" />
+    <Compile Include="Configuration\IHelperAssistedCustomConfigurationData.cs" />
+    <Compile Include="Configuration\IObjectWithName.cs" />
+    <Compile Include="Configuration\IObjectWithNameAndType.cs" />
+    <Compile Include="Configuration\IProtectedConfigurationSource.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmCategory.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmCheckboxPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmComboBoxPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmContent.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmContentBuilder.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmDropDownListItem.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmDropDownListPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmEditTextPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdministrativeTemplateGenerator.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmNumericPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmPart.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmPolicy.cs" />
+    <Compile Include="Configuration\Manageability\Adm\AdmTextPart.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationChangeNotificationCoordinator.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationChangeWatcherCoordinator.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationElementManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationElementManageabilityProviderAttribute.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationElementManageabilityProviderBase.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationInstanceConfigurationAccessor.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationSectionManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationSectionManageabilityProviderAttribute.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationSectionManageabilityProviderBase.cs" />
+    <Compile Include="Configuration\Manageability\ConfigurationSettingChangedEventArgs.cs" />
+    <Compile Include="Configuration\Manageability\Configuration\ConfigurationElementManageabilityProviderData.cs" />
+    <Compile Include="Configuration\Manageability\Configuration\ConfigurationSectionManageabilityProviderData.cs" />
+    <Compile Include="Configuration\Manageability\Configuration\ManageableConfigurationSourceElement.cs" />
+    <Compile Include="Configuration\Manageability\CustomProviderDataManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\GroupPolicyNotificationRegistration.cs" />
+    <Compile Include="Configuration\Manageability\GroupPolicyNotificationRegistrationBuilder.cs" />
+    <Compile Include="Configuration\Manageability\GroupPolicyWatcher.cs" />
+    <Compile Include="Configuration\Manageability\IConfigurationAccessor.cs" />
+    <Compile Include="Configuration\Manageability\IGroupPolicyWatcher.cs" />
+    <Compile Include="Configuration\Manageability\IManageabilityHelper.cs" />
+    <Compile Include="Configuration\Manageability\ImplementationKey.cs" />
+    <Compile Include="Configuration\Manageability\ImplementationKeyComparer.cs" />
+    <Compile Include="Configuration\Manageability\Installer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Configuration\Manageability\InstrumentationConfigurationSectionManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\InstrumentationWmiPublisher.cs" />
+    <Compile Include="Configuration\Manageability\IRegistryAccessor.cs" />
+    <Compile Include="Configuration\Manageability\IRegistryKey.cs" />
+    <Compile Include="Configuration\Manageability\IWmiPublisher.cs" />
+    <Compile Include="Configuration\Manageability\KeyValuePairEncoder.cs" />
+    <Compile Include="Configuration\Manageability\KeyValuePairParser.cs" />
+    <Compile Include="Configuration\Manageability\ManageabilityExtensionsLogger.cs" />
+    <Compile Include="Configuration\Manageability\ManageabilityHelper.cs" />
+    <Compile Include="Configuration\Manageability\ManageableConfigurationSource.cs" />
+    <Compile Include="Configuration\Manageability\ManageableConfigurationSourceImplementation.cs" />
+    <Compile Include="Configuration\Manageability\ManageableConfigurationSourceSingletonHelper.cs" />
+    <Compile Include="Configuration\Manageability\NativeMethods.cs" />
+    <Compile Include="Configuration\Manageability\ParseHelper.cs" />
+    <Compile Include="Configuration\Manageability\Properties\AssemblyInfo.cs" />
+    <Compile Include="Configuration\Manageability\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Manageability\RegistryAccessException.cs" />
+    <Compile Include="Configuration\Manageability\RegistryAccessor.cs" />
+    <Compile Include="Configuration\Manageability\RegistryKeyBase.cs" />
+    <Compile Include="Configuration\Manageability\RegistryKeyWrapper.cs" />
+    <Compile Include="Configuration\Manageability\Configuration\ManageabilityProviderBuilder.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\ConfigurationSectionSetting.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\ConfigurationSetting.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\CustomDataWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\InstrumentationConfigurationSectionWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\InstrumentationSetting.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\ManagementEntityTypesRegistrar.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\NamedConfigurationSetting.cs" />
+    <Compile Include="Configuration\Manageability\Wmi\PublishedInstancesManager.cs" />
+    <Compile Include="Configuration\NamedConfigurationElement.cs" />
+    <Compile Include="Configuration\NamedElementCollection.cs" />
+    <Compile Include="Configuration\NameTypeConfigurationElement.cs" />
+    <Compile Include="Configuration\NameTypeConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\NullConfigurationSource.cs" />
+    <Compile Include="Configuration\ObjectBuilder\AssemblerAttribute.cs" />
+    <Compile Include="Configuration\ObjectBuilder\AssemblerBasedCustomFactory.cs" />
+    <Compile Include="Configuration\ObjectBuilder\ConfigurationReflectionCache.cs" />
+    <Compile Include="Configuration\ObjectBuilder\CustomProviderAssembler.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\CustomFactoryAttribute.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ExplicitInstrumentationAttacher.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\IReflectionCachePolicy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\LocatorLookupStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ReflectionCachePolicy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\IInstrumentationAttacher.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ReflectionInstrumentationAttacher.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\InstrumentationAttacherFactory.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\NoBindingInstrumentationAttacher.cs" />
+    <Compile Include="Configuration\ObjectBuilder\IAssembler.cs" />
+    <Compile Include="Configuration\ObjectBuilder\ICustomFactory.cs" />
+    <Compile Include="Configuration\ObjectBuilder\LocatorNameTypeFactoryBase.cs" />
+    <Compile Include="Configuration\ObjectBuilder\EnterpriseLibraryFactory.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ConfigurationNameMapperAttribute.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ConfigurationNameMappingStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ConfigurationNameProvider.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ConfigurationObjectPolicy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\ConfiguredObjectStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\EnterpriseLibraryBuilderStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\IConfigurationNameMapper.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\IConfigurationObjectPolicy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\InstrumentationAttachmentStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\Extensions\InstrumentationStrategy.cs" />
+    <Compile Include="Configuration\ObjectBuilder\NameTypeFactoryBase.cs" />
+    <Compile Include="Configuration\ObjectBuilder\AssemblerBasedObjectFactory.cs" />
+    <Compile Include="Configuration\ObjectBuilder\TypeInstantiationAssembler.cs" />
+    <Compile Include="Configuration\PolymorphicConfigurationElementCollection.cs" />
+    <Compile Include="Configuration\SerializableConfigurationSection.cs" />
+    <Compile Include="Configuration\Storage\ConfigurationChangeFileWatcher.cs" />
+    <Compile Include="Configuration\Storage\ConfigurationChangeWatcher.cs" />
+    <Compile Include="Configuration\Storage\ConfigurationChangeWatcherPauser.cs" />
+    <Compile Include="Configuration\Storage\IConfigurationChangeWatcher.cs" />
+    <Compile Include="Configuration\SystemConfigurationSource.cs" />
+    <Compile Include="Configuration\SystemConfigurationSourceElement.cs" />
+    <Compile Include="Configuration\SystemConfigurationSourceImplementation.cs" />
+    <Compile Include="Configuration\Unity\ConstantResolverPolicy.cs" />
+    <Compile Include="Configuration\Unity\ConstructorArgumentMatchingPolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\ContainerPolicyCreatorAttribute.cs" />
+    <Compile Include="Configuration\Unity\CustomProviderPolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\DelegateBuildPlanPolicy.cs" />
+    <Compile Include="Configuration\Unity\EnterpriseLibraryBlockExtension.cs" />
+    <Compile Include="Configuration\Unity\EnterpriseLibraryCoreExtension.cs" />
+    <Compile Include="Configuration\Unity\FixedConstructorSelectorPolicy.cs" />
+    <Compile Include="Configuration\Unity\FixedPropertySelectorPolicy.cs" />
+    <Compile Include="Configuration\Unity\Fluent\IFinishPoliciesBuilding.cs" />
+    <Compile Include="Configuration\Unity\Fluent\IPropertyAndFinishPolicyBuilding.cs" />
+    <Compile Include="Configuration\Unity\Fluent\IMapProperty.cs" />
+    <Compile Include="Configuration\Unity\Fluent\IPropertyPolicyBuilding.cs" />
+    <Compile Include="Configuration\Unity\IContainerPolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\PolicyBuilder.cs" />
+    <Compile Include="Configuration\Unity\ReferenceCollectionResolverPolicy.cs" />
+    <Compile Include="Configuration\Unity\ReferenceDictionaryResolverPolicy.cs" />
+    <Compile Include="Configuration\Unity\ReferenceResolverPolicy.cs" />
+    <Compile Include="Configuration\Unity\Resolve.cs" />
+    <Compile Include="Instrumentation\CommonWmiInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Instrumentation\CommonWmiInstaller.Designer.cs">
+      <DependentUpon>CommonWmiInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrumentation\AbstractInstallerBuilder.cs" />
+    <Compile Include="Instrumentation\Configuration\InstrumentationConfigurationSection.cs" />
+    <Compile Include="Instrumentation\DefaultEventLoggerCustomFactoryBase.cs" />
+    <Compile Include="Instrumentation\EnterpriseLibraryPerformanceCounterFactory.cs" />
+    <Compile Include="Instrumentation\EventLogDefinitionAttribute.cs" />
+    <Compile Include="Instrumentation\EventLogEntryFormatter.cs" />
+    <Compile Include="Instrumentation\EventLogInstallerBuilder.cs" />
+    <Compile Include="Instrumentation\IEventLogEntryFormatter.cs" />
+    <Compile Include="Instrumentation\IInstrumentationEventProvider.cs" />
+    <Compile Include="Instrumentation\IExplicitInstrumentationBinder.cs" />
+    <Compile Include="Instrumentation\InstrumentationListener.cs" />
+    <Compile Include="Instrumentation\PerformanceCounterInstallerBuilder.cs" />
+    <Compile Include="Instrumentation\PerformanceCounterInstanceName.cs" />
+    <Compile Include="Instrumentation\PerformanceCountersDefinitionAttribute.cs" />
+    <Compile Include="Instrumentation\ReflectionInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Instrumentation\BaseWmiEvent.cs" />
+    <Compile Include="ResourceStringLoader.cs" />
+    <Compile Include="Utility\ConstantStringResolver.cs" />
+    <Compile Include="Utility\DelegateStringResolver.cs" />
+    <Compile Include="Utility\IStringResolver.cs" />
+    <Compile Include="Utility\ResourceStringResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\Unity\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for Common.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

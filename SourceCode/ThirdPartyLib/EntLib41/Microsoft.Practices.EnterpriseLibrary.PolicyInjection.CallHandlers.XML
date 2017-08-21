@@ -1,0 +1,1695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException">
+            <summary>
+            Exception thrown by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler"/> if validation fails.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException.#ctor(Microsoft.Practices.EnterpriseLibrary.Validation.ValidationResults,System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException"/>, storing the validation
+            results and the name of the parameter that failed.
+            </summary>
+            <param name="validationResults"><see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException.ValidationResults"/> returned from the Validation block.</param>
+            <param name="paramName">Parameter that failed validation.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Supporting constructor for cross-appdomain exception handling.
+            </summary>
+            <param name="info">serialization info.</param>
+            <param name="context">serialization context.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Supporting method for serialization.
+            </summary>
+            <param name="info">serialization info.</param>
+            <param name="context">serialization context.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException.ValidationResults">
+            <summary>
+            The validation results for the failure.
+            </summary>
+            <value>ValidationResults for the failure.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute">
+            <summary>
+            Attribute that hooks up the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler"/> to the
+            target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute"/> that uses the given
+            operation name.
+            </summary>
+            <remarks>The operation name may include replacement tokens. See <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/>
+            for the list of tokens.</remarks>
+            <param name="operationName">Operation name to use for checking.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Derived classes implement this method. When called, it
+            creates a new call handler as specified in the attribute
+            configuration.
+            </summary>
+            <returns>A new call handler object.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute.OperationName">
+            <summary>
+            Operation name.
+            </summary>
+            <value>operation name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandlerAttribute.ProviderName">
+            <summary>
+            Security provider name.
+            </summary>
+            <value>Security Provider name. Defaults to the default security provider.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that checks the Security Block for authorization
+            before permitting the call to proceed to the target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.#ctor(System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Constructs a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler"/> that checks using the given
+            information.
+            </summary>
+            <param name="providerName">Name of authorization provider.</param>
+            <param name="operationName">Operation name to use to check authorization rules.</param>
+            <param name="configurationSource">Configuration source to read authorization configuration from.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.#ctor(System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.Int32)">
+            <summary>
+            Constructs a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler"/> that checks using the given
+            information.
+            </summary>
+            <param name="providerName">Name of authorization provider.</param>
+            <param name="operationName">Operation name to use to check authorization rules.</param>
+            <param name="configurationSource">Configuration source to read authorization configuration from.</param>
+            <param name="order">Order in which the handler will be executed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Performs the operation of the handler.
+            </summary>
+            <param name="input">Input to the method call.</param>
+            <param name="getNext">Delegate used to get the next delegate in the call handler pipeline.</param>
+            <returns>Returns value from the target method, or an <see cref="T:System.UnauthorizedAccessException"/>
+            if the call fails the authorization check.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.ProviderName">
+            <summary>
+            Gets or sets the security provider name.
+            </summary>
+            <value>security provider name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.AuthorizationCallHandler.OperationName">
+            <summary>
+            Gets or sets the security operation name to check with.
+            </summary>
+            <remarks>The operation name can include tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> for the list.
+            </remarks>
+            <value>operation name.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that implements caching of the return values of
+            methods. This handler stores the return value in the ASP.NET cache.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.DefaultExpirationTime">
+            <summary>
+            The default expiration time for the cached entries: 5 minutes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.#ctor">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/> that uses the default expiration time of 5 minutes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.#ctor(System.TimeSpan)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/> that uses the given expiration time.
+            </summary>
+            <param name="expirationTime">Length of time the cached data goes unused before it is eligible for
+            reclamation.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.#ctor(System.TimeSpan,System.Int32)">
+             <summary>
+             Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/> that uses the given expiration time.
+             </summary>
+             <param name="expirationTime">Length of time the cached data goes unused before it is eligible for
+            reclamation.</param>
+             <param name="order">Order in which handler will be executed.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Implements the caching behavior of this handler.
+            </summary>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> object describing the current call.</param>
+            <param name="getNext">delegate used to get the next handler in the current pipeline.</param>
+            <returns>Return value from target method, or cached result if previous inputs have been seen.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.ExpirationTime">
+            <summary>
+            Gets or sets the expiration time for cache data.
+            </summary>
+            <value>The expiration time.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ICacheKeyGenerator">
+            <summary>
+            This interface describes classes that can be used to generate cache key strings
+            for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ICacheKeyGenerator.CreateCacheKey(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            Creates a cache key for the given method and set of input arguments.
+            </summary>
+            <param name="method">Method being called.</param>
+            <param name="inputs">Input arguments.</param>
+            <returns>A (hopefully) unique string to be used as a cache key.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.DefaultCacheKeyGenerator">
+            <summary>
+            The default <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ICacheKeyGenerator"/> used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.DefaultCacheKeyGenerator.CreateCacheKey(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            Create a cache key for the given method and set of input arguments.
+            </summary>
+            <param name="method">Method being called.</param>
+            <param name="inputs">Input arguments.</param>
+            <returns>A (hopefully) unique string to be used as a cache key.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute">
+            <summary>
+            Attribute to apply the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/> directly to a class, property, or method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute.#ctor">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute"/> using the default expiration time of 5 minutes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute"/> using the given expiration time.
+            </summary>
+            <param name="hours">Hours until expiration.</param>
+            <param name="minutes">Minutes until expiration.</param>
+            <param name="seconds">Seconds until expiration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Derived classes implement this method. When called, it
+            creates a new call handler as specified in the attribute
+            configuration.
+            </summary>
+            <returns>A new call handler object.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData">
+            <summary>
+            Call handler data describing the information for the authorization call handler
+            in configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.#ctor">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.#ctor(System.String)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData"/>.
+            </summary>
+            <param name="handlerName">Name of the call handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData"/>.
+            </summary>
+            <param name="handlerName">Name of the call handler.</param>
+            <param name="handlerOrder">Order of the call handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.AuthorizationProvider">
+            <summary>
+            Authorization provider to use for this call handler.
+            </summary>
+            <value>The "authorizationProvider" attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.AuthorizationCallHandlerData.OperationName">
+            <summary>
+            Operation name to use for this call handler.
+            </summary>
+            <value>The "operationName" attribute.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData">
+            <summary>
+            Configuration element class that manages the config data for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.CachingCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData.#ctor">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData.#ctor(System.String)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData"/> instance with the given name.
+            </summary>
+            <param name="handlerName">Name of handler to store in config file.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData"/> instance with the given name.
+            </summary>
+            <param name="handlerName">Name of handler to store in config file.</param>
+            <param name="handlerOrder">Order of handler to store in config file.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.CachingCallHandlerData.ExpirationTime">
+            <summary>
+            Expiration time
+            </summary>
+            <value>The "expirationTime" attribute</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData">
+            <summary>
+            Configuration element storing configuration information for the
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.#ctor">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.#ctor(System.String)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData"/>.
+            </summary>
+            <param name="handlerName">Name of the handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.#ctor(System.String,System.String)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData"/>.
+            </summary>
+            <param name="handlerName">Name of the handler.</param>
+            <param name="exceptionPolicyName">Exception policy name to use in handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData"/>.
+            </summary>
+            <param name="handlerName">Name of the handler.</param>
+            <param name="handlerOrder">Order to use in handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ExceptionCallHandlerData.ExceptionPolicyName">
+            <summary>
+            The exception policy name as defined in configuration for the Exception Handling block.
+            </summary>
+            <value>The "exceptionPolicyName" attribute in configuration</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerCategoryEntry">
+            <summary>
+            A configuration element that handles the entries for the &lt;categories&gt; element
+            for the Log Call handler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerCategoryEntry.#ctor">
+            <summary>
+            Construct an empty <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerCategoryEntry"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerCategoryEntry.#ctor(System.String)">
+            <summary>
+            Construct a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerCategoryEntry"/> with the given
+            category string.
+            </summary>
+            <param name="name">Category string.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData">
+            <summary>
+            A configuration element for the data for the LogCallHandler.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.#ctor">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.#ctor(System.String)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData"/> instance.
+            </summary>
+            <param name="handlerName">Handler name</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData"/> instance.
+            </summary>
+            <param name="handlerName">Handler name</param>
+            <param name="handlerOrder">Handler order</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.LogBehavior">
+            <summary>
+            Should the handler log before the call, after the call, or both?
+            </summary>
+            <value>The "logBehavior" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.Categories">
+            <summary>
+            Collection of log categories to use in the log message.
+            </summary>
+            <value>The "categories" nested element.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.BeforeMessage">
+            <summary>
+            Message for the log entry in before-call logging.
+            </summary>
+            <value>The "beforeMessage" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.AfterMessage">
+            <summary>
+            Message for the log entry in after-call logging.
+            </summary>
+            <value>The "afterMessage" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.EventId">
+            <summary>
+            Event Id to put into log entries.
+            </summary>
+            <value>The "eventId" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.IncludeParameterValues">
+            <summary>
+            Include parameter values and return values in the log entry
+            </summary>
+            <value>The "includeParameterValues" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.IncludeCallStack">
+            <summary>
+            Include the call stack in the log entries.
+            </summary>
+            <remarks>Setting this to true requires UnmanagedCode permissions.</remarks>
+            <value>The "includeCallStack" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.IncludeCallTime">
+            <summary>
+            Include the time to execute the call in the log entries.
+            </summary>
+            <value>The "includeCallTime" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.Priority">
+            <summary>
+            The priority of the log entries.
+            </summary>
+            <value>the "priority" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.LogCallHandlerData.Severity">
+            <summary>
+            The severity of the log entry.
+            </summary>
+            <value>the "severity" config attribute.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.HandlerLogBehavior">
+            <summary>
+            This enum control when the logging call handler will add log entries.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.HandlerLogBehavior.BeforeAndAfter">
+            <summary>
+            Log both before and after the call.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.HandlerLogBehavior.Before">
+            <summary>
+            Log only before the call.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.HandlerLogBehavior.After">
+            <summary>
+            Log only after the call.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData">
+            <summary>
+            A configuration element that stores information for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.#ctor">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.#ctor(System.String)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData"/>.
+            </summary>
+            <param name="instanceName">Name of the handler section.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData"/>.
+            </summary>
+            <param name="instanceName">Name of the handler section.</param>
+            <param name="handlerOrder">Order of the handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.CategoryName">
+            <summary>
+            Performance counter category name.
+            </summary>
+            <value>The "categoryName" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.InstanceName">
+            <summary>
+            Performance counter instance name.
+            </summary>
+            <remarks>This string may include substitution tokens. See <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/>
+            for the list of tokens.</remarks>
+            <value>The "instanceName" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.UseTotalCounter">
+            <summary>
+            Increment "Total" counter instance.
+            </summary>
+            <value>The "useTotalCounter" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.IncrementNumberOfCalls">
+            <summary>
+            Increment the "total # of calls" counter?
+            </summary>
+            <value>The "incrementNumberOfCalls" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.IncrementCallsPerSecond">
+            <summary>
+            Increment the "calls / second" counter?
+            </summary>
+            <value>the "incrementCallsPerSecond" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.IncrementAverageCallDuration">
+            <summary>
+            Increment "average seconds / call" counter?
+            </summary>
+            <value>The "incrementAverageCallDuration" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.IncrementTotalExceptions">
+            <summary>
+            Increment "total # of exceptions" counter?
+            </summary>
+            <value>The "incrementTotalExceptions" config attribute.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.PerformanceCounterCallHandlerData.IncrementExceptionsPerSecond">
+            <summary>
+            Increment the "exceptions / second" counter?
+            </summary>
+            <value>The "incrementExceptionsPerSecond" config attribute.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData">
+            <summary>
+            A configuration element class that stores the config data for
+            the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.#ctor">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData"/> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.#ctor(System.String)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData"/> instance.
+            </summary>
+            <param name="handlerName">Name of handler in configuration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.#ctor(System.String,System.Int32)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData"/> instance.
+            </summary>
+            <param name="handlerName">Name of handler in configuration.</param>
+            <param name="handlerOrder">Order of handler in configuration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.ConfigurePolicy(Microsoft.Practices.Unity.InterceptionExtension.PolicyDefinition,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Adds the call handler represented by this configuration object to <paramref name="policy"/>.
+            </summary>
+            <param name="policy">The policy to which the rule must be added.</param>
+            <param name="configurationSource">The configuration source from which additional information
+            can be retrieved, if necessary.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.RuleSet">
+            <summary>
+            The ruleset name to use for all types. Empty string means default ruleset 
+            </summary>
+            <value>The "ruleSet" configuration property.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Configuration.ValidationCallHandlerData.SpecificationSource">
+            <summary>
+            SpecificationSource (Both | Attributes | Configuration) : Where to look for validation rules. Default is Both.
+            </summary>
+            <value>The "specificationSource" configuration attribute.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that runs any exceptions returned from the
+            target through the Exception Handling block.
+            </summary>
+            <remarks>If the exception policy is configured to swallow exceptions,
+            do not configure this call handler on a method with a non-void return value,
+            as the handler doesn't know what value to return if the exception is swallowed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler"/> that processes exceptions
+            using the given exception policy name and default configuration.
+            </summary>
+            <param name="exceptionPolicyName">Exception policy name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler"/> that processes exceptions
+            using the given exception policy name and default configuration.
+            </summary>
+            <param name="exceptionPolicyName">Exception policy name.</param>
+            <param name="handlerOrder">The Order for the handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler"/> that processses exceptions
+            using the given exception policy name, as defined in <paramref name="configurationSource"/>.
+            </summary>
+            <param name="exceptionPolicyName">Exception policy name.</param>
+            <param name="configurationSource">Configuration source defining the exception handling policy.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Processes the method call.
+            </summary>
+            <remarks>This handler does nothing before the call. If there is an exception
+            returned, it runs the exception through the Exception Handling Application Block.</remarks>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> with information about the call.</param>
+            <param name="getNext">delegate to call to get the next handler in the pipeline.</param>
+            <returns>Return value from the target, or the (possibly changed) exceptions.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.ExceptionPolicyName">
+            <summary>
+            Gets the exception policy name used by this handler.
+            </summary>
+            <value>Exception policy name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandlerAttribute">
+            <summary>
+            An attribute used to apply the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandler"/> to the target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandlerAttribute.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandlerAttribute"/> using the given
+            exception policy name.
+            </summary>
+            <remarks>When using this attribute, the exception policy is always read from
+            the default configuration.</remarks>
+            <param name="policyName">Exception policy name from configuration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Derived classes implement this method. When called, it
+            creates a new call handler as specified in the attribute
+            configuration.
+            </summary>
+            <returns>A new call handler object.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ExceptionCallHandlerAttribute.PolicyName">
+            <summary>
+            Get or sets the exception policy used by the handler.
+            </summary>
+            <value>exception policy name.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller">
+            <summary>
+            An <see cref="T:System.Configuration.Install.Installer"/> class that can be used by installutil.exe to install
+            the performance counter categories updated by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller.#ctor">
+            <summary>
+            Create the installer with an empty list of categories.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller.#ctor(System.String[])">
+            <summary>
+            Create the installer class with the given list of categories.
+            </summary>
+            <param name="categoryNames">The set of categories.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Create the installer class, reading the categories from a policy set
+            configured in the given <paramref name="configurationSource"/>.
+            </summary>
+            <param name="configurationSource">Configuration source containing the policy set.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller.OnBeforeInstall(System.Collections.IDictionary)">
+            <summary>
+            Raises the <see cref="E:System.Configuration.Install.Installer.BeforeInstall"></see> event.
+            </summary>
+            
+            <param name="savedState">An <see cref="T:System.Collections.IDictionary"></see> that contains the state of the computer before the installers in the <see cref="P:System.Configuration.Install.Installer.Installers"></see> property are installed. This <see cref="T:System.Collections.IDictionary"></see> object should be empty at this point. </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Installers.PerformanceCountersInstaller.OnBeforeUninstall(System.Collections.IDictionary)">
+            <summary>
+            Raises the <see cref="E:System.Configuration.Install.Installer.BeforeUninstall"></see> event.
+            </summary>
+            
+            <param name="savedState">An <see cref="T:System.Collections.IDictionary"></see> that contains the state of the computer before the installers in the <see cref="P:System.Configuration.Install.Installer.Installers"></see> property uninstall their installations. </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute">
+            <summary>
+            An attribute to apply the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> to the target type, property or method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Creates the log handler for the target using the configured values.
+            </summary>
+            <returns>the created <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/>.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.Categories">
+            <summary>
+            Gets or sets the collection of categories to place the log entries into.
+            </summary>
+            <remarks>The category strings can include replacement tokens. See
+            the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter"/> class for the list of tokens.</remarks>
+            <value>The list of category strings.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.EventId">
+            <summary>
+            Event ID to include in log entry.
+            </summary>
+            <value>event id</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.LogBeforeCall">
+            <summary>
+            Should there be a log entry before calling the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.LogAfterCall">
+            <summary>
+            Should there be a log entry after calling the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.BeforeMessage">
+            <summary>
+            Message to include in a pre-call log entry.
+            </summary>
+            <value>The message</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.AfterMessage">
+            <summary>
+            Message to include in a post-call log entry.
+            </summary>
+            <value>the message.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.IncludeParameters">
+            <summary>
+            Should the log entry include the parameters to the call?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.IncludeCallStack">
+            <summary>
+            Should the log entry include the call stack?
+            </summary>
+            <remarks>Logging the call stack requires full trust code access security permissions.</remarks>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.IncludeCallTime">
+            <summary>
+            Should the log entry include the time to execute the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.Priority">
+            <summary>
+            Priority for the log entry.
+            </summary>
+            <value>priority</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerAttribute.Severity">
+            <summary>
+            Severity to log at.
+            </summary>
+            <value><see cref="T:System.Diagnostics.TraceEventType"/> giving the severity.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that will log information using the
+            Logging Application Block before and/or after the
+            call to the target completes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.#ctor">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> with default settings that writes
+            to the default log writer.
+            </summary>
+            <remarks>See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults"/> class for the default values.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> with default settings that writes
+            to the given <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter"/>.
+            </summary>
+            <remarks>See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults"/> class for the default values.</remarks>
+            <param name="logWriter"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter"/> to write logs to.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> with default settings that writes
+            to the logging block as defined in <paramref name="configurationSource"/>.
+            </summary>
+            <remarks>See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults"/> class for the default values.</remarks>
+            <param name="configurationSource"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/> containing logging configuration.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter,System.Int32,System.Boolean,System.Boolean,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> that writes to the specified <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter"/>
+            using the given logging settings.
+            </summary>
+            <param name="logWriter"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter"/> to write log entries to.</param>
+            <param name="eventId">EventId to include in log entries.</param>
+            <param name="logBeforeCall">Should the handler log information before calling the target?</param>
+            <param name="logAfterCall">Should the handler log information after calling the target?</param>
+            <param name="beforeMessage">Message to include in a before-call log entry.</param>
+            <param name="afterMessage">Message to include in an after-call log entry.</param>
+            <param name="includeParameters">Should the parameter values be included in the log entry?</param>
+            <param name="includeCallStack">Should the current call stack be included in the log entry?</param>
+            <param name="includeCallTime">Should the time to execute the target be included in the log entry?</param>
+            <param name="priority">Priority of the log entry.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.#ctor(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,System.Int32,System.Boolean,System.Boolean,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> using the given logging settings.
+            The logging configuration is taken from <paramref name="configurationSource"/>.
+            </summary>
+            <param name="configurationSource"><see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/> containing the logging block
+            configuration information.</param>
+            <param name="eventId">EventId to include in log entries.</param>
+            <param name="logBeforeCall">Should the handler log information before calling the target?</param>
+            <param name="logAfterCall">Should the handler log information after calling the target?</param>
+            <param name="beforeMessage">Message to include in a before-call log entry.</param>
+            <param name="afterMessage">Message to include in an after-call log entry.</param>
+            <param name="includeParameters">Should the parameter values be included in the log entry?</param>
+            <param name="includeCallStack">Should the current call stack be included in the log entry?</param>
+            <param name="includeCallTime">Should the time to execute the target be included in the log entry?</param>
+            <param name="priority">Priority of the log entry.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Executes the call handler.
+            </summary>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> containing the information about the current call.</param>
+            <param name="getNext">delegate to get the next handler in the pipeline.</param>
+            <returns>Return value from the target method.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.EventId">
+            <summary>
+            Event ID to include in log entry
+            </summary>
+            <value>event id</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.LogBeforeCall">
+            <summary>
+            Should there be a log entry before calling the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.LogAfterCall">
+            <summary>
+            Should there be a log entry after calling the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.BeforeMessage">
+            <summary>
+            Message to include in a pre-call log entry.
+            </summary>
+            <value>The message</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.AfterMessage">
+            <summary>
+            Message to include in a post-call log entry.
+            </summary>
+            <value>the message.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.Categories">
+            <summary>
+            Gets the collection of categories to place the log entries into.
+            </summary>
+            <remarks>The category strings can include replacement tokens. See
+            the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter"/> class for the list of tokens.</remarks>
+            <value>The list of category strings.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.IncludeParameters">
+            <summary>
+            Should the log entry include the parameters to the call?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.IncludeCallStack">
+            <summary>
+            Should the log entry include the call stack?
+            </summary>
+            <remarks>Logging the call stack requires full trust code access security permissions.</remarks>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.IncludeCallTime">
+            <summary>
+            Should the log entry include the time to execute the target?
+            </summary>
+            <value>true = yes, false = no</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.Priority">
+            <summary>
+            Priority for the log entry.
+            </summary>
+            <value>priority</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.Severity">
+            <summary>
+            Severity to log at.
+            </summary>
+            <value><see cref="T:System.Diagnostics.TraceEventType"/> giving the severity.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults">
+            <summary>
+            A class containing the default values for the various <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/> settings.
+            </summary>
+            <remarks>The default values are:
+            <list type="table">
+            <item><term>EventId</term><description>0</description></item>
+            <item><term>LogBeforeCall</term><description>true</description></item>
+            <item><term>LogAfterCall</term><description>true</description></item>
+            <item><term>BeforeMessage</term><description></description></item>
+            <item><term>AfterMessage</term><description></description></item>
+            <item><term>Title</term><description>Call Logging</description></item>
+            <item><term>IncludeParameters</term><description>true</description></item>
+            <item><term>IncludeCallStack</term><description>false</description></item>
+            <item><term>IncludeCallTime</term><description>true</description></item>
+            <item><term>Priority</term><description>-1</description></item>
+            <item><term>Severity</term><description><see cref="T:System.Diagnostics.TraceEventType"/>.Information</description></item>
+            </list></remarks>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.Order">
+            <summary>
+            Default Order = 0
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.EventId">
+            <summary>
+            Default EventId = 0
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.LogBeforeCall">
+            <summary>
+            Default option to log before the call = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.LogAfterCall">
+            <summary>
+            Default option to log after the call = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.IncludeParameters">
+            <summary>
+            Default option to include parameter values = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.IncludeCallStack">
+            <summary>
+            Default option to include the call stack = false
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.IncludeCallTime">
+            <summary>
+            Default option to include total time to call target = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.Priority">
+            <summary>
+            Default priority = -1
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.Severity">
+            <summary>
+            Default severity = <see cref="T:System.Diagnostics.TraceEventType"/>.Information
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.BeforeMessage">
+            <summary>
+            Default message in before-call logs = nothing
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.AfterMessage">
+            <summary>
+            Default message in after-call logs = nothing
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandlerDefaults.Title">
+            <summary>
+            Default log entry title = "Call Logging" (localizable)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter">
+            <summary>
+            A formatter object that allows for replacement of tokens in
+            a log handler category string.
+            </summary>
+            <remarks>This class supports the following replacements:
+            <list>
+            <item><term>{method}</term><description>Target method name.</description></item>
+            <item><term>{type}</term><description>Target method's implementing type.</description></item>
+            <item><term>{namespace}</term><description>Namespace containing target's type.</description></item>
+            <item><term>{assembly}</term><description>Assembly containing target's type.</description></item>
+            </list></remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter">
+            <summary>
+            This class provides an engine to process a string that contains
+            replacement tokens of the form "{token}" and replace them with
+            calculated value later.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.#ctor">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.#ctor(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken[])">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter"/>.
+            </summary>
+            <param name="tokens">List of tokens to replace.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken})">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter"/>.
+            </summary>
+            <param name="tokens">List of tokens to replace.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.Add(Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken[])">
+            <summary>
+            Add a new set of replacement tokens.
+            </summary>
+            <param name="tokens">Tokens to add to the list.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.AddRange(System.Collections.Generic.IEnumerable{Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken})">
+            <summary>
+            Add new tokens to the set of replacements.
+            </summary>
+            <param name="tokens">Tokens to add to the list.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter.Format(System.String)">
+            <summary>
+            Format the given template, replacing any tokens present.
+            </summary>
+            <param name="template">The string to format, containing the replacement tokens.</param>
+            <returns>The formatted string, with tokens replaced.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter.#ctor(System.Reflection.MethodBase)">
+            <summary>
+            Construct a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter"/> using information from the
+            given method.
+            </summary>
+            <param name="method">Method used to generate the category replacements.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.CategoryFormatter.FormatCategory(System.String)">
+            <summary>
+            Perform the formatting operation, replaceing tokens in the template.
+            </summary>
+            <param name="template">Template string to do token replacement in.</param>
+            <returns>The template, with tokens replaced.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken">
+            <summary>
+            A single replacement token used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementFormatter"/>. A
+            token consists of two things:
+            <list type="bullet">
+            <item><description>The actual text of the token (including the {})</description></item>
+            <item><description>A delegate to retrieve the value to replace the token.</description></item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementTextDelegate)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken"/>.
+            </summary>
+            <param name="token">The string marking where the token should be replaced.</param>
+            <param name="getReplacementText">Delegate to return the value that replaces the token.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken.ReplaceToken(System.Text.StringBuilder)">
+            <summary>
+            Replace this token in the given stringbuilder.
+            </summary>
+            <param name="sb"><see cref="T:System.Text.StringBuilder"/> holding the template to perform the token replacement on.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken.Token">
+            <summary>
+            The token string.
+            </summary>
+            <value>The token string.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementToken.ReplacementText">
+            <summary>
+            The text to replace this token with.
+            </summary>
+            <value>Replacement text.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.ReplacementTextDelegate">
+            <summary>
+            Delegate type giving a function that returns the replacement text for a token.
+            </summary>
+            <returns>The replacement text.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry">
+            <summary>
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry"/> class that contains the extra information logged
+            by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.LogCallHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.#ctor">
+            <summary>
+            Create an empty <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.#ctor(System.Object,System.String,System.Int32,System.Int32,System.Diagnostics.TraceEventType,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry"/>.
+            </summary>
+            <param name="message">Log message.</param>
+            <param name="category">Log category.</param>
+            <param name="priority">Log priority.</param>
+            <param name="eventId">Log event id.</param>
+            <param name="severity">Log severity.</param>
+            <param name="title">Log title.</param>
+            <param name="properties">Extra properties. This contains the parameters to the call.</param>
+            <param name="typeName">Name of type implementing the method being called.</param>
+            <param name="methodName">Method name being called.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.#ctor(System.Object,System.Collections.Generic.ICollection{System.String},System.Int32,System.Int32,System.Diagnostics.TraceEventType,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            Create a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry"/>.
+            </summary>
+            <param name="message">Log message.</param>
+            <param name="categories">Categories of the log entry.</param>
+            <param name="priority">Log priority.</param>
+            <param name="eventId">Log event id.</param>
+            <param name="severity">Log severity.</param>
+            <param name="title">Log title.</param>
+            <param name="properties">Extra properties. This contains the parameters to the call.</param>
+            <param name="typeName">Name of type implementing the method being called.</param>
+            <param name="methodName">Method name being called.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.TypeName">
+            <summary>
+            Type name
+            </summary>
+            <value>type name</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.MethodName">
+            <summary>
+            Method name
+            </summary>
+            <value>method name</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.ReturnValue">
+            <summary>
+            Return value from the call.
+            </summary>
+            <value>return value</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.CallStack">
+            <summary>
+            The call stack from the current call.
+            </summary>
+            <value>call stack string.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.Exception">
+            <summary>
+            Exception thrown from the target.
+            </summary>
+            <value>If exception was thrown, this is the exception object. Null if no exception thrown.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Logging.TraceLogEntry.CallTime">
+            <summary>
+            Total time to call the target.
+            </summary>
+            <value>null if not logged, else the elapsed time.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter">
+            <summary>
+            A formatter object that allows replacement tokens in a string.
+            The supported tokens are:
+            <list type="bullet">
+            <item><term>{appdomain}</term><description>Includes the current appdomain's friendly name.</description></item>
+            <item><term>{assembly}</term><description>Includes the assembly name.</description></item>
+            <item><term>{namespace}</term><description>Includes the target class's namespace.</description></item>
+            <item><term>{type}</term><description>Includes the name of the type containing the target method.</description></item>
+            <item><term>{method}</term><description>Includes the name of the target method.</description></item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter.#ctor(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> that replaces tokens
+            using the information in the given method invocation.
+            </summary>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> object containing information
+            about the current method call.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that updates performance counters when calling the target.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.TotalInstanceName">
+            <summary>
+            Instance name for the "total" instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.NumberOfCallsCounterName">
+            <summary>
+            Number of calls counter name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.CallsPerSecondCounterName">
+            <summary>
+            Calls per second counter name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.AverageCallDurationCounterName">
+            <summary>
+            Average call duration counter name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.AverageCallDurationBaseCounterName">
+            <summary>
+            Average call duration base counter name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.TotalExceptionsCounterName">
+            <summary>
+            Total exceptions counter name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.ExceptionsPerSecondCounterName">
+            <summary>
+            Exceptions per second counter name
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.#ctor(System.String,System.String)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/> using the given category
+            and instance name.
+            </summary>
+            <remarks>See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults"/> for a list
+            of the default values for each property.</remarks>
+            <param name="category">Performance counter category to update. This counter category
+            must be installed separately or the handler will fail.</param>
+            <param name="counterInstanceName">Counter instance name. This may include replacement
+            tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> class for a list of the tokens.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/> using the given settings.
+            </summary>
+            <param name="category">Performance counter category to update. This counter category
+            must be installed separately or the handler will fail.</param>
+            <param name="instanceName">Counter instance name. This may include replacement
+            tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> class for a list of the tokens.</param>
+            <param name="useTotalCounter">Should a "Total" instance be updated?</param>
+            <param name="incrementNumberOfCalls">Should the number of calls counter be updated?</param>
+            <param name="incrementCallsPerSecond">Should the "calls / second" counter be updated?</param>
+            <param name="incrementAverageCallDuration">Should the "average seconds / call" counter be updated?</param>
+            <param name="incrementTotalExceptions">Should the "# of exceptions" counter be updated?</param>
+            <param name="incrementExceptionsPerSecond">Should the "# exceptions / second" counter be updated?</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/> using the given settings.
+            </summary>
+            <param name="category">Performance counter category to update. This counter category
+            must be installed separately or the handler will fail.</param>
+            <param name="instanceName">Counter instance name. This may include replacement
+            tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> class for a list of the tokens.</param>
+            <param name="useTotalCounter">Should a "Total" instance be updated?</param>
+            <param name="incrementNumberOfCalls">Should the number of calls counter be updated?</param>
+            <param name="incrementCallsPerSecond">Should the "calls / second" counter be updated?</param>
+            <param name="incrementAverageCallDuration">Should the "average seconds / call" counter be updated?</param>
+            <param name="incrementTotalExceptions">Should the "# of exceptions" counter be updated?</param>
+            <param name="incrementExceptionsPerSecond">Should the "# exceptions / second" counter be updated?</param>
+            <param name="handlerOrder">Order of the handler.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Executes the handler. Increments the various counter according to configuration.
+            </summary>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> describing the current call.</param>
+            <param name="getNext">delegate to call to get the next handler in the pipeline.</param>
+            <returns>Return value from target method.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.UseTotalCounter">
+            <summary>
+            Should a "Total" instance be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.IncrementNumberOfCalls">
+            <summary>
+            Should the number of calls counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.Category">
+            <summary>
+            Performance counter category to update.
+            </summary>
+            <value>category name</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.InstanceName">
+            <summary>
+            Counter instance name. This may include replacement
+            tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> class for a list of the tokens.
+            </summary>
+            <value>instance name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.IncrementCallsPerSecond">
+            <summary>
+            Should the "calls / second" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.IncrementAverageCallDuration">
+            <summary>
+            Should the "average seconds / call" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.IncrementTotalExceptions">
+            <summary>
+            Should the "# of exceptions" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.IncrementExceptionsPerSecond">
+            <summary>
+            Should the "# exceptions / second" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults">
+            <summary>
+            Defaults for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults"/> class.
+            </summary>
+            <remarks>The default values are:
+            <list>
+            <item><term>UseTotalCounter</term><description>true</description></item>
+            <item><term>IncrementNumberOfCalls</term><description>true</description>&gt;</item>
+            <item><term>IncrementCallsPerSecond</term><description>true</description></item>
+            <item><term>IncrementAverageCallDuration</term><description>true</description></item>
+            <item><term>IncrementTotalExceptions</term><description>false</description></item>
+            <item><term>IncrementExceptionsPerSecond</term><description>false</description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.UseTotalCounter">
+            <summary>
+            Use total counter = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.IncrementNumberOfCalls">
+            <summary>
+            Increment number of calls counter = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.IncrementCallsPerSecond">
+            <summary>
+            Increment calls per second counter = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.IncrementAverageCallDuration">
+            <summary>
+            Increment seconds / call counter = true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.IncrementTotalExceptions">
+            <summary>
+            Increment total number of exceptions counter = false
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults.IncrementExceptionsPerSecond">
+            <summary>
+            Increment exceptions per second counter = false
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute">
+            <summary>
+            An attribute that applies the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandler"/> to the target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute"/> with the given 
+            category and instance names. All other properties start at the default values.
+            </summary>
+            <remarks>See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerDefaults"/> class for
+            the default values.</remarks>
+            <param name="category">Performance counter category name.</param>
+            <param name="instanceName">Performance counter instance name. This may contain substitution
+            tokens; see <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> for the list of tokens.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Derived classes implement this method. When called, it
+            creates a new call handler as specified in the attribute
+            configuration.
+            </summary>
+            <returns>A new call handler object.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.CategoryName">
+            <summary>
+            Performance counter category to update.
+            </summary>
+            <value>category name</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.InstanceName">
+            <summary>
+            Counter instance name. This may include replacement
+            tokens. See the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.MethodInvocationFormatter"/> class for a list of the tokens.
+            </summary>
+            <value>instance name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.IncrementAverageCallDuration">
+            <summary>
+            Should the "average seconds / call" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.IncrementCallsPerSecond">
+            <summary>
+            Should the "calls / second" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.IncrementExceptionsPerSecond">
+            <summary>
+            Should the "# exceptions / second" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.IncrementNumberOfCalls">
+            <summary>
+            Should the number of calls counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.IncrementTotalExceptions">
+            <summary>
+            Should the "# of exceptions" counter be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.PerformanceCounterCallHandlerAttribute.UseTotalCounter">
+            <summary>
+            Should a "Total" instance be updated?
+            </summary>
+            <value>true or false</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.AuthorizationFailed">
+            <summary>
+              Looks up a localized string similar to Authorization failed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.AverageCallDurationBaseCounterHelp">
+            <summary>
+              Looks up a localized string similar to Base counter used to calculate average call time..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.AverageCallDurationCounterHelp">
+            <summary>
+              Looks up a localized string similar to Tracks the average length of time for a monitored method to complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.CallsPerSecondCounterHelp">
+            <summary>
+              Looks up a localized string similar to Tracks calls / second to the monitored methods..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.CantSwallowNonVoidReturnMessage">
+            <summary>
+              Looks up a localized string similar to Cannot swallow exceptions for methods with non-null return type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.DefaultLogEntryTitle">
+            <summary>
+              Looks up a localized string similar to Call Logging.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.EventIdDescription">
+            <summary>
+              Looks up a localized string similar to Event Id to use when logging the call..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.ExceptionsPerSecondCounterHelp">
+            <summary>
+              Looks up a localized string similar to Tracks the number of exceptions / second thrown by the monitored methods..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.NoCategoryErrorMessage">
+            <summary>
+              Looks up a localized string similar to You must specify the /category=&lt;name&gt;(;&lt;name&gt;) switch on the command line..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.NumberOfCallsCounterHelp">
+            <summary>
+              Looks up a localized string similar to Records the total number of calls to the monitored methods..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.NumberOfExceptionsCounterHelp">
+            <summary>
+              Looks up a localized string similar to Records the total number of exceptions thrown by the monitored methods..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.PerformanceCounterCategoryHelp">
+            <summary>
+              Looks up a localized string similar to Performance counters that are updated by the Policy Injection Application Block..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.Properties.Resources.ValidationFailedMessage">
+            <summary>
+              Looks up a localized string similar to Parameter validation failed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute">
+            <summary>
+            An attribute that applies the <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler"/> to its target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute.#ctor">
+            <summary>
+            Constructs a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute"/> that uses the
+            default ruleset.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute"/> that uses the
+            given ruleset.
+            </summary>
+            <param name="ruleSet">Ruleset name to use.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute.CreateHandler(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Derived classes implement this method. When called, it
+            creates a new call handler as specified in the attribute
+            configuration.
+            </summary>
+            <returns>A new call handler object.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute.SpecificationSource">
+            <summary>
+            <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandlerAttribute.SpecificationSource"/> determining where to get validation rules.
+            </summary>
+            <value>specification source.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler">
+            <summary>
+            An <see cref="T:Microsoft.Practices.Unity.InterceptionExtension.ICallHandler"/> that runs validation of a call's parameters
+            before calling the target.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler"/> that uses the given
+            ruleset and <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.SpecificationSource"/> to get the validation rules.
+            </summary>
+            <param name="ruleSet">Validation ruleset as specified in configuration.</param>
+            <param name="specificationSource">Should the validation come from config, attributes, or both?</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.#ctor(System.String,Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource,System.Int32)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler"/> that uses the given
+            ruleset and <see cref="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.SpecificationSource"/> to get the validation rules.
+            </summary>
+            <param name="ruleSet">Validation ruleset as specified in configuration.</param>
+            <param name="specificationSource">Should the validation come from config, attributes, or both?</param>
+            <param name="handlerOrder">Order of the handler</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.Invoke(Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation,Microsoft.Practices.Unity.InterceptionExtension.GetNextHandlerDelegate)">
+            <summary>
+            Runs the call handler. This does validation on the parameters, and if validation
+            passes it calls the handler. It throws <see cref="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ArgumentValidationException"/>
+            if validation fails.
+            </summary>
+            <param name="input"><see cref="T:Microsoft.Practices.Unity.InterceptionExtension.IMethodInvocation"/> containing details of the current call.</param>
+            <param name="getNext">delegate to call to get the next handler in the pipeline.</param>
+            <returns>Return value from the target.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.Order">
+            <summary>
+            Gets or sets the order in which the handler will be executed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.RuleSet">
+            <summary>
+            Gets the ruleset for this call handler.
+            </summary>
+            <value>Ruleset name.</value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.ValidationCallHandler.SpecificationSource">
+            <summary>
+            Source for validation information.
+            </summary>
+            <value>validation source.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource">
+            <summary>
+            Where should the information for validation come from?
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource.Both">
+            <summary>
+            Configuration and type attributes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource.Attributes">
+            <summary>
+            Type attributes only, ignoring configuration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource.Configuration">
+            <summary>
+            Configuration only, ignoring type attributes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.PolicyInjection.CallHandlers.SpecificationSource.ParameterAttributesOnly">
+            <summary>
+            Only use attributes on the parameters themselves, ignoring types and configuration
+            </summary>
+        </member>
+    </members>
+</doc>

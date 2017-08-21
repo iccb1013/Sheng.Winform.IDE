@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="14ff89d0-3878-49cd-86f8-5f99cd72e645" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="c5c14eae-6d96-4de7-81c7-25807d1b3a21" name="底层">
+      <childLayers>
+        <layer Id="a182d682-8aba-435b-a517-b966b83e5d24" name="Kernal" />
+        <layer Id="4cf73221-fe60-4647-9c32-04d94a03085c" name="Net" />
+        <layer Id="7cd8b4ca-71a7-437e-b189-290bf4069715" name="Win32" />
+        <layer Id="7026da7a-f96d-47cb-a153-1a738976af86" name="Drawing" />
+        <layer Id="0d6c6bfe-c7aa-44e1-9d13-c24341fac232" name="Controls" />
+        <layer Id="4802d0df-4289-418b-9250-e511801198dc" name="Controls.Extensions" />
+      </childLayers>
+    </layer>
+    <layer Id="e4014065-4f8a-467e-a717-9729693a9948" name="功能核心层">
+      <childLayers>
+        <layer Id="5bd616eb-8b70-4966-90ef-997356bbc641" name="Core" />
+        <layer Id="b8f07574-b311-4b27-83ee-64f6b4a94e23" name="ComponentModel" />
+      </childLayers>
+    </layer>
+    <layer Id="14663f46-93b8-4728-8cc0-e447046ef45d" name="应用程序库底层">
+      <childLayers>
+        <layer Id="72f8a338-08e6-4293-9e34-85f75726578e" name="CAL" />
+        <layer Id="cc6cf6b4-c7bb-46c3-951d-13e11038f43a" name="EnterpriseLibrary" />
+      </childLayers>
+    </layer>
+    <layer Id="cdf68359-f5f3-4b54-b7b9-8b4033e5843d" name="功能实现层">
+      <childLayers>
+        <layer Id="7edca31d-6e0c-4ffc-9803-86e3cee10249" name="Core.Development" />
+        <layer Id="94179c41-d8fa-471e-bf07-2ebf07e30d2e" name="DataBaseProvide" />
+        <layer Id="158ba721-82a9-4c1c-9d19-79b24cd3297e" name="ComponentModel.Design" />
+        <layer Id="58d1dd56-29c6-43d9-bd4b-660554c99f8f" name="Infrastructure" />
+      </childLayers>
+    </layer>
+    <layer Id="1609b164-2e38-4872-88be-5f0857173ca9" name="功能模块实现层">
+      <childLayers>
+        <layer Id="2e3a063d-e9e4-4c5a-8c6b-af0fbb284ccf" name="Components" />
+      </childLayers>
+    </layer>
+    <layer Id="7f023931-a174-4a32-b9ae-0ef3a14f1421" name="应用程序模块实现层" />
+    <layer Id="7abe0076-2fcd-4f5f-a845-fb17ae87cc73" name="应用程序" />
+  </layers>
+</layerModel>

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.AddCachingStoreProviderNodeCommand">
+            <summary>
+            Adds a security cache provider based on the Caching Application Block. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.AddCachingStoreProviderNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.AddCachingStoreProviderNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.AddCachingStoreProviderNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode"/> and the Caching Application Block if it is not already part of the application.
+            </summary>
+            <param name="node">The node to add the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode"/> to.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode">
+            <summary>
+            Represents a design time representation of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.CachingStoreProvider"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> instance.
+            </summary>
+            <param name="data">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.AbsoluteExpiration">
+            <summary>
+            Gets or sets the absolute expiration.
+            </summary>
+            <value>
+            The absolute expiration.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.CacheManager">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/> to use to cache the security credentials.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.CacheManagerNode"/> to use to cache the security credentials.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.SecurityCacheProviderData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.CachingStoreProviderData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode.SlidingExpiration">
+            <summary>
+            Gets or sets the sliding expiration.
+            </summary>
+            <value>
+            The sliding expiration.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.AbsoluteExpirationDescription">
+            <summary>
+              Looks up a localized string similar to The number of minutes in which the added object expires and is removed from the cache. .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.CacheInstanceDescription">
+            <summary>
+              Looks up a localized string similar to The Caching Block Cache instance name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.DefaultCacheManager">
+            <summary>
+              Looks up a localized string similar to Default Cache Manager.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.DefaultSecurityCacheDescription">
+            <summary>
+              Looks up a localized string similar to The default security cache..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.SecurityInstance">
+            <summary>
+              Looks up a localized string similar to Caching Store Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.Properties.Resources.SlidingExpirationDescription">
+            <summary>
+              Looks up a localized string similar to The number of minutes between the time the added object was last accessed and when that object expires. .
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the security cache caching store configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            <para>Registers the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.CachingStoreProviderNode"/> in the application.</para>
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Cache.Configuration.Design.SecurityCacheCachingStoreConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the security caching store and adds it to the exception settings.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+    </members>
+</doc>

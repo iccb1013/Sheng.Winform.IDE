@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7fecf4fb-8c53-4410-b299-b2c38fe00a7d" name="cxs@TRANSFAR-PUBLIC 2010-12-10 16:43:24" runUser="TRANSFAR-PUBLIC\cxs" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="6a88d567-65c1-4685-924d-daeb1a49facf">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="cxs_TRANSFAR-PUBLIC 2010-12-10 16_43_24">
+      <DeploymentItem filename="C:\Documents and Settings\cxs\My Documents\Visual Studio 2010\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-10T16:43:24.9531250+08:00" queuing="2010-12-10T16:43:24.9687500+08:00" start="2010-12-10T16:43:24.9843750+08:00" finish="2010-12-10T16:43:25.2500000+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="FuncationTest" storage="c:\documents and settings\cxs\my documents\visual studio 2010\projects\windowsformsapplication2\testproject1\bin\debug\testproject1.dll" id="6b002ec6-5ce7-6078-b02e-a4480d7945a6">
+      <Execution id="430b4fe4-1fb0-4689-b2bf-38832a510ec3" />
+      <TestMethod codeBase="C:/Documents and Settings/cxs/My Documents/Visual Studio 2010/Projects/WindowsFormsApplication2/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.Class1Test, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FuncationTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="6b002ec6-5ce7-6078-b02e-a4480d7945a6" executionId="430b4fe4-1fb0-4689-b2bf-38832a510ec3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="430b4fe4-1fb0-4689-b2bf-38832a510ec3" testId="6b002ec6-5ce7-6078-b02e-a4480d7945a6" testName="FuncationTest" computerName="TRANSFAR-PUBLIC" duration="00:00:00.0148160" startTime="2010-12-10T16:43:24.9843750+08:00" endTime="2010-12-10T16:43:25.2187500+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="430b4fe4-1fb0-4689-b2bf-38832a510ec3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

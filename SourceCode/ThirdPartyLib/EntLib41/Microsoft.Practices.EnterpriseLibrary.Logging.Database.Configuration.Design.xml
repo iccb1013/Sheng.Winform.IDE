@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.AddLoggingDatabaseCommand">
+            <summary>
+            Represents a command that adds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode"/> as a child of the  <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode"/> that this command is executing upon.    
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.AddLoggingDatabaseCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.AddLoggingDatabaseCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.AddLoggingDatabaseCommand.OnExecuted(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNodeCommand.Executed"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> containing the event data.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> configuraiton element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> instance.
+            </summary>
+            <param name="traceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.AddCategoryStoredProcedure">
+            <summary>
+            Gets or sets the stored procedure to add a category.
+            </summary>
+            <value>
+            The stored procedure to add a category.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.DatabaseInstance">
+            <summary>
+            Gets or sets the database instance to use.
+            </summary>
+            <value>
+            The database instance to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.Formatter">
+            <summary>
+            Gets or sets the formatter to use.
+            </summary>
+            <value>
+            The formatter to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.FormattedDatabaseTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseNode.WriteLogStoredProcedureName">
+            <summary>
+            Gets or sets the write stored procedure.
+            </summary>
+            <value>
+            The write stored procedure.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the database trace listener.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.LoggingDatabaseConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Initializes the database listener and adds it to the logging settings.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.AddCategoryStoredProcNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the stored procedure to add the category..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.DatabaseInstanceDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the database instance to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.DatabaseTraceListenerName">
+            <summary>
+              Looks up a localized string similar to Database Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.DatabaseTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Database Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.DatabaseTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Database Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.Properties.Resources.WriteStoredProcNameDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the stored procedure to write the log..
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ImageListView">
+</Property><Property Name="解决方案文件" Value="D:\Project\Security\workfolder\SIMBE2\Solution\Test\ImageListView\ImageListViewSource\ImageListView.sln">
+</Property><Property Name="Date" Value="2010年12月7日">
+</Property><Property Name="Time" Value="21:14">
+</Property></Properties><Event ErrorLevel="1" Project="ImageListView" Source="ImageListView\ImageListView.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="ImageListView" Source="ImageListView\ImageListView.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ImageListView" Source="ImageListView\ImageListView.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="ImageListViewDemo" Source="ImageListViewDemo\ImageListViewDemo.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="ImageListViewDemo" Source="ImageListViewDemo\ImageListViewDemo.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="ImageListViewDemo" Source="ImageListViewDemo\ImageListViewDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ImageListView.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="ImageListView.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ImageListView" Source="ImageListView\app.config" Description="文件已成功转换。所有的 &lt;supportedRuntime&gt; 和 &lt;requiredRuntime&gt; 标记都已移除，以使项目能够用 Visual Studio 2005 生成并运行。">
+</Event><Event ErrorLevel="3" Project="ImageListView" Source="ImageListView\app.config" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ImageListViewDemo" Source="ImageListViewDemo\app.config" Description="文件已成功转换。所有的 &lt;supportedRuntime&gt; 和 &lt;requiredRuntime&gt; 标记都已移除，以使项目能够用 Visual Studio 2005 生成并运行。">
+</Event><Event ErrorLevel="3" Project="ImageListViewDemo" Source="ImageListViewDemo\app.config" Description="Converted">
+</Event></UpgradeLog>

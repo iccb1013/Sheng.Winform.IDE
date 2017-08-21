@@ -1,0 +1,69 @@
+﻿以下代码是为了双倍缓冲
+直接在构造里开启就可以了，已经不需要自己实现
+
+  /// <summary>
+        /// 绘图缓冲区
+        /// </summary>
+        private BufferedGraphics bufferGraphics;
+        
+        /// <summary>
+        /// 是否正在创建绘图缓冲区
+        /// </summary>
+        private bool creatingGraphics = false;
+
+
+
+
+        /// <summary>
+        /// Initializes the System.Drawing.Graphics used to draw
+        /// control elements.
+        /// </summary>
+        /// <param name="g">The System.Drawing.Graphics to draw on.</param>
+        internal virtual void InitializeGraphics(Graphics g)
+        {
+            g.PixelOffsetMode = PixelOffsetMode.None;
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+        }
+
+
+ /// <summary>
+        /// Clears the graphics buffer objects.
+        /// </summary>
+        private void ClearBuffer()
+        {
+            if (bufferGraphics != null)
+                bufferGraphics.Dispose();
+            bufferGraphics = null;
+        }
+
+        /// <summary>
+        /// Destroys the current buffer and creates a new buffered graphics 
+        /// sized to the client area of the owner control.
+        /// </summary>
+        /// <param name="graphics">The Graphics to match the pixel format to.</param>
+        private bool RecreateBuffer(Graphics graphics, Rectangle bounds)
+        {
+            if (creatingGraphics) return false;
+
+            creatingGraphics = true;
+
+            BufferedGraphicsContext bufferContext = BufferedGraphicsManager.Current;
+
+            if (_disposed)
+                throw (new ObjectDisposedException("bufferContext"));
+
+            int width = System.Math.Max(bounds.Width, 1);
+            int height = System.Math.Max(bounds.Height, 1);
+
+            bufferContext.MaximumBuffer = new Size(width, height);
+
+            ClearBuffer();
+
+            bufferGraphics = bufferContext.Allocate(graphics, new Rectangle(0, 0, width, height));
+
+            creatingGraphics = false;
+
+            InitializeGraphics(bufferGraphics.Graphics);
+
+            return true;
+        }

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="4ce0fc07-bcfc-4148-a01b-c137a041cd4f"
+  name="Core" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <importedPackagesInternal>
+    <packageImport
+      Id="e3096a4b-1edd-4f1d-882d-e614f8653c09"
+      visibility="Public">
+      <packageMoniker
+        Id="fb562980-5329-41ea-b700-91a201d5fabc"
+        LastKnownName="Kernal"
+        LastKnownLocation="Package_1744.uml" />
+    </packageImport>
+    <packageImport
+      Id="532ab33f-a073-41c3-8fbd-45c868ec628e"
+      visibility="Public">
+      <packageMoniker
+        Id="05a66011-ddd7-41ad-b0d3-5504b25492d5"
+        LastKnownName="ComponentModel"
+        LastKnownLocation="Package_1800.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e2a60ba8-3e5a-4388-969c-b4b0db80e5dd"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="e4ced131-9992-4254-bf2f-743aa8a36f23"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d4a0c3bc-dc6a-4933-b14c-c2f0edc0d740"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b29f3fc1-56c4-42b5-b914-e567af5b5097"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

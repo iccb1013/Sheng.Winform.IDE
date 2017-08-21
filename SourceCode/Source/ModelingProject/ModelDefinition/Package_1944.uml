@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="fc4cd3ec-80a5-40db-ad22-1585919e71e4"
+  name="ComponentModel.Design" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <importedPackagesInternal>
+    <packageImport
+      Id="70851efd-0198-45ce-a26c-de6bd696b877"
+      visibility="Public">
+      <packageMoniker
+        Id="05a66011-ddd7-41ad-b0d3-5504b25492d5"
+        LastKnownName="ComponentModel"
+        LastKnownLocation="Package_1800.uml" />
+    </packageImport>
+    <packageImport
+      Id="9f984586-03c4-4d28-a304-f913f45051a1"
+      visibility="Public">
+      <packageMoniker
+        Id="12aa5776-b50d-4381-bf45-cbb1b266a455"
+        LastKnownName="Controls"
+        LastKnownLocation="Package_1806.uml" />
+    </packageImport>
+    <packageImport
+      Id="476c80f4-1401-4116-9d99-08404e37f3d4"
+      visibility="Public">
+      <packageMoniker
+        Id="3a5e1e1b-92e1-4de5-a100-9a6a1acf8810"
+        LastKnownName="Infrastructure"
+        LastKnownLocation="Package_1741.uml" />
+    </packageImport>
+    <packageImport
+      Id="ce6290f9-c208-45ce-9f80-80b4050c4fa7"
+      visibility="Public">
+      <packageMoniker
+        Id="fb562980-5329-41ea-b700-91a201d5fabc"
+        LastKnownName="Kernal"
+        LastKnownLocation="Package_1744.uml" />
+    </packageImport>
+  </importedPackagesInternal>
+</package>

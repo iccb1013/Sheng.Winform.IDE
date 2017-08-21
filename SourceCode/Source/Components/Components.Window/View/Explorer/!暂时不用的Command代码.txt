@@ -1,0 +1,62 @@
+﻿		EditFolderCommand _editFolderCommand;
+		DeleteFolderCommand _deleteFolderCommand;
+
+				EditWindowCommand _editWindowCommand;
+		DeleteWindowCommand _deleteWindowCommand;
+
+
+		 _editFolderCommand = new EditFolderCommand()
+            {
+                CanExcuteHandler = () =>
+                {
+                    return _controller.GetSelectedItem<FolderEntityIndex>() != null;
+                },
+                GetArgumentHandler = () =>
+                {
+                    FolderEntityIndex folderEntityIndex =
+                         _controller.GetSelectedItem<FolderEntityIndex>();
+                    return folderEntityIndex.Folder;
+                }
+            };
+            _deleteFolderCommand = new DeleteFolderCommand()
+            {
+                CanExcuteHandler = () =>
+                {
+                    return _controller.GetSelectedItem<FolderEntityIndex>() != null;
+                },
+                GetArgumentHandler = () =>
+                {
+                    FolderEntityIndex folderEntityIndex =
+                        _controller.GetSelectedItem<FolderEntityIndex>();
+                    return new List<FormFolderEntity>() { folderEntityIndex.Folder };
+                }
+            };
+
+
+
+			_editWindowCommand = new EditWindowCommand()
+            {
+                CanExcuteHandler = () =>
+                {
+                    return _controller.GetSelectedItem<WindowEntityIndex>() != null;
+                },
+                GetArgumentHandler = () =>
+                {
+                    WindowEntityIndex windowEntityIndex =
+                       _controller.GetSelectedItem<WindowEntityIndex>();
+                    return windowEntityIndex.Window;
+                }
+            };
+            _deleteWindowCommand = new DeleteWindowCommand()
+            {
+                CanExcuteHandler = () =>
+                {
+                    return _controller.GetSelectedItem<WindowEntityIndex>() != null;
+                },
+                GetArgumentHandler = () =>
+                {
+                    WindowEntityIndex windowEntityIndex =
+                       _controller.GetSelectedItem<WindowEntityIndex>();
+                    return new List<FormEntity>() { windowEntityIndex.Window };
+                }
+            };

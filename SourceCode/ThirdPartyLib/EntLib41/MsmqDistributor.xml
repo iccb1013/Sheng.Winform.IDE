@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MsmqDistributor</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings">
+            <summary>
+            Configuration section for the MsmqLogDistributor service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings.GetSettings(Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource)">
+            <summary>
+            Retrieves the instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings"/> from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.
+            </summary>
+            <param name="configurationSource">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/> to get the section from.</param>
+            <returns>The section, if exists in the configuration source.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings.MsmqPath">
+            <summary>
+            The path to the msmq to use.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings.QueueTimerInterval">
+            <summary>
+            The poll interval for getting messages from the queue.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings.ServiceName">
+            <summary>
+            The name to use in the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Configuration.MsmqDistributorSettings.SectionName">
+            <summary>
+            The name of the configuration section.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger">
+            <summary>
+            Event logger for distributor windows service.
+            This class writes event log entries 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.#ctor">
+            <summary>
+            The Event logger used to back up configured logging sinks in the event of problems.
+            Used to write diagnostic messages to the event log.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger"/>.
+            </summary>
+            <param name="logName">The name of the Event Log</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.AddMessage(System.String,System.String)">
+            <summary>
+            Add a message to the additional information name value collection.
+            </summary>
+            <param name="message">The message key</param>
+            <param name="value">The actual message (this value will be shown in the event log)</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.LogServiceStarted">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Performs instrumentation for the start event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.LogServiceResumed">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Performs instrumentation for the resume event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.LogServiceStopped">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Performs instrumentation for the stop event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.LogServicePaused">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Performs instrumentation for the pause event.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.LogServiceFailure(System.String,System.Exception,System.Diagnostics.TraceEventType)">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Performs instrumentation for a failure.
+            </summary>
+            <param name="message">The message that describes the failure.</param>
+            <param name="exception">The exception thrown during the failure, or null.</param>
+            <param name="eventType">The type of event to instrument.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.ApplicationName">
+            <summary>
+            Name of the windows service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger.EventLogName">
+            <summary>
+            The Event Log name (i.e. the name of the event log to write to; e.g. "Application").
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService">
+            <summary>
+            <para>This type supports the Data Access Instrumentation infrastructure and is not intended to be used directly from your code.</para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.Main">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.InitializeComponent">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Initialization of the service.  Start the queue listener and write status to event log.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.CreateListener(Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService,System.Int32,System.String)">
+            <summary>
+            Returns a new <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener"/>.
+            </summary>
+            <param name="distributorService">The distributor service for the listener.</param>
+            <param name="timerInterval">Interval to check for new messages.</param>
+            <param name="msmqPath">The name of the queue to get messages from.</param>
+            <returns>A new msmq listener.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnStart(System.String[])">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service start event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnStop">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service stop event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnPause">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service pause event.
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.OnContinue">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            The windows service resume event.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.Status">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets or sets the current status of the service.  Values are defined in <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus"/> enumeration.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.ApplicationName">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets or sets the name of the windows service.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.EventLogger">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets the logger used to log events for this service.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService.QueueListener">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Gets or sets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener"/> for the service.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceEvent">
+            <summary>
+            Base class for logging service WMI events.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent">
+            <summary>
+            Represents the WMI event fired when an failure occurs.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent"/> class.
+            </summary>
+            <param name="failureMessage">The message that describes the failure.</param>
+            <param name="failureException">The exception thrown during the failure, or null.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent.FailureMessage">
+            <summary>
+            Gets the message that describes the failure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent.FailureException">
+            <summary>
+            Gets the exception thrown during the failure, or null.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent">
+            <summary>
+            Represents the WMI event fired when an lifecycle event occurs.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceFailureEvent"/> class.
+            </summary>
+            <param name="message">The message that describes the lifecycle event.</param>
+            <param name="started"><code>true</code> if the event is start or resume, false otherwise.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.Message">
+            <summary>
+            Gets the message that describes the lifecycle event.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.Started">
+            <summary>
+            Gets the <code>bool</code> value that describes whether the event is start or resume.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.ApplicationBase">
+            <summary>
+            Application base.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.ApplicationName">
+            <summary>
+            Application or service name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorServiceLifecycleEvent.ConfigurationFile">
+            <summary>
+            Configuration file name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener">
+            <summary>
+            Represents the message queue polling timer.  Uses an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor"/> 
+            to check for new log messages each timer interval.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.QueueListenerRetries">
+            <summary>
+            <exclude/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.DistributorService,System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener"/>.
+            </summary>
+            <param name="distributorService">Distributor service inheriting from <see cref="T:System.ServiceProcess.ServiceBase"/>.</param>
+            <param name="timerInterval">Interval to check for new messages.</param>
+            <param name="msmqPath">The name of the queue to get messages from.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.StartListener">
+            <summary>
+            Start the queue listener and begin polling the message queue.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.StopListener">
+            <summary>
+            Attempt to stop the queue listener and discontinue polling the message queue.
+            </summary>
+            <returns>True if the listener stopped succesfully.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.SetMsmqLogDistributor(Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor)">
+            <summary>
+            <exclude />
+            </summary>
+            <devdoc>
+            support unit tests - allows for a mock object
+            </devdoc>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.OnQueueTimedEvent(System.Object,System.Timers.ElapsedEventArgs)">
+            <devdoc>
+            Event triggered by the queue timer event handler. 
+            This method runs regularly to check the queue for pending queue messages.
+            </devdoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqListener.QueueTimerInterval">
+            <summary>
+            Polling interval to check for new log messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor">
+            <summary>
+            Receive new log messages from MSMQ and distribute each log entry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter,System.String,Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Instrumentation.DistributorEventLogger)">
+            <summary>
+            Setup the queue and the formatter of the messages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.CheckForMessages">
+            <summary>
+            Start receiving the message(s) from the queue.
+            The messages will be taken from the queue until the queue is empty.
+            This method is triggered every x seconds. (x is defined in application configuration file)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.LogMessageQueueException(System.Messaging.MessageQueueErrorCode,System.Exception)">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            </summary>
+            <param name="code">The error code.</param>
+            <param name="e">The exception, or null.</param>
+            <returns>The logged message.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.IsCompleted">
+            <summary>
+            Read-only property to check if the synchronous receive is completed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.MsmqLogDistributor.StopReceiving">
+            <summary>
+            Instructs the listener to stop receiving messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller">
+            <summary>
+            <para>This type supports the Data Access Instrumentation infrastructure and is not intended to be used directly from your code.</para>
+            </summary>    
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller.#ctor">
+            <summary/>
+            <exclude/>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ProjectInstaller.InitializeComponent">
+            <summary/>
+            <exclude/>
+            <devdoc>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ApplicationLogName">
+            <summary>
+              Looks up a localized string similar to Application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.DistEventLoggerMessagePrefix">
+             <summary>
+               Looks up a localized string similar to Message: 
+            .
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.DistributorEventLoggerDefaultApplicationName">
+            <summary>
+              Looks up a localized string similar to Enterprise Library Distributor Service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.DistributorServiceNameTag">
+            <summary>
+              Looks up a localized string similar to name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ErrorInitializingService">
+            <summary>
+              Looks up a localized string similar to Error initializing the service. See EventLog for error details..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ErrorLoadingDistributorConfiguration">
+            <summary>
+              Looks up a localized string similar to Error loading Logging Distributor configuration file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.Exception">
+            <summary>
+              Looks up a localized string similar to exception.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ExceptionCouldNotDeserializeMessageFromQueue">
+            <summary>
+              Looks up a localized string similar to Unable to deserialize message with id {0} from queue {1}. Please make sure only LogEntries are traced and a BinaryFormatter is used to format the message. To resolve this error, please remove the message from the queue and start the Service again. The service will be stopped..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ExceptionCouldNotFindConfigurationSection">
+            <summary>
+              Looks up a localized string similar to The {0} section could not be found in the service&apos;s configuration file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeComponentCompleted">
+            <summary>
+              Looks up a localized string similar to The windows service initialization sequence is complete. No errors have occurred..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeComponentCompletedMessage">
+            <summary>
+              Looks up a localized string similar to InitializeComponent - end.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeComponentStarted">
+            <summary>
+              Looks up a localized string similar to The windows service initialization sequence has started..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeComponentStartedMessage">
+            <summary>
+              Looks up a localized string similar to InitializeComponent - begin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeStartupSequenceErrorMessage">
+            <summary>
+              Looks up a localized string similar to InitializeStartupSequence - error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeStartupSequenceFinishedMessage">
+            <summary>
+              Looks up a localized string similar to InitializeStartupSequence - end.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InitializeStartupSequenceStartedMessage">
+            <summary>
+              Looks up a localized string similar to InitializeStartupSequence - begin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.InstallerCannotReadServiceName">
+            <summary>
+              Looks up a localized string similar to Unable to locate serviceName in distributor configuration file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerCannotStop">
+            <summary>
+              Looks up a localized string similar to The queue listener could not be successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener. The queue listener might be busy, please retry..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStartComplete">
+            <summary>
+              Looks up a localized string similar to The queue listener has started successfully. Note: the listener timer is set to [{0}] milliseconds..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStartCompleteMessage">
+            <summary>
+              Looks up a localized string similar to StartListener - end.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStartError">
+            <summary>
+              Looks up a localized string similar to An error occurred while trying to start the queue listener. See &apos;Exception Information Detail&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStartErrorMessage">
+            <summary>
+              Looks up a localized string similar to StartListener - error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStarting">
+            <summary>
+              Looks up a localized string similar to Attempting to start the queue listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStartingMessage">
+            <summary>
+              Looks up a localized string similar to StartListener - begin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopCompleted">
+            <summary>
+              Looks up a localized string similar to The queue listener was successfully stopped. No errors occurred. Note: it took [{0}] tries to stop the queue listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopCompletedMessage">
+            <summary>
+              Looks up a localized string similar to StopListener - end.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopError">
+            <summary>
+              Looks up a localized string similar to An error occurred while trying to stop the queue listener. See &apos;Exception Information Detail&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopErrorMessage">
+            <summary>
+              Looks up a localized string similar to StopListener - error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopStarted">
+            <summary>
+              Looks up a localized string similar to Attempting to stop the queue listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ListenerStopStartedMessage">
+            <summary>
+              Looks up a localized string similar to StopListener - begin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqAccessDenied">
+            <summary>
+              Looks up a localized string similar to Access denied to the DistributorMSMQ queue &apos;{0}&apos;. Identity trying to access the queue : {1}.   See &apos;Exception Information Details&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqInvalidTransactionUsage">
+            <summary>
+              Looks up a localized string similar to The MSMQDistributor queue &apos;{0}&apos; returned an invalid transaction usage error.  See &apos;Exception Information Details&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqLogReceived">
+             <summary>
+               Looks up a localized string similar to Log received by MSMQ Log Distributor.  
+            
+            Message: {0}.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqReceiveError">
+            <summary>
+              Looks up a localized string similar to An error occurred while receiving a message from the queue &apos;{0}&apos;.  See &apos;Exception Information Details&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqReceiveGeneralError">
+            <summary>
+              Looks up a localized string similar to A general error occurred while receiving a message from the queue &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.MsmqReceiveTimeout">
+            <summary>
+              Looks up a localized string similar to The DistributorMSMQ queue  &apos;{0}&apos;  encountered a receive timeout error.  See &apos;Exception Information Details&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ProcessQMsgSeeDetails">
+            <summary>
+              Looks up a localized string similar to See &apos;Exception Information Details&apos; below for more information..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.QueueTimedEventError">
+            <summary>
+              Looks up a localized string similar to An error occurred while receiving message(s) from the queue. The service will be stopped..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceControllerStopError">
+            <summary>
+              Looks up a localized string similar to The Service Controller could not stop the service &apos;{0}&apos;. Make sure the service name listed in the Service Management Console is the same as {0}.
+            To solve this problem, stop the service manually and uninstall it. Try the installation procedure again and make sure the same application configuration file is available when the service is started..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceControllerStopException">
+            <summary>
+              Looks up a localized string similar to Cannot stop the service &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServicePausedSuccess">
+            <summary>
+              Looks up a localized string similar to The service &apos;{0}&apos; was paused correctly..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServicePauseError">
+             <summary>
+               Looks up a localized string similar to The service &apos;{0}&apos; did not pause correctly.
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information. The service will be stopped..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServicePauseWarning">
+             <summary>
+               Looks up a localized string similar to The service &apos;{0}&apos; did not pause gracefully. 
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceResumeComplete">
+            <summary>
+              Looks up a localized string similar to  The service &apos;{0}&apos; resumed correctly..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceResumeError">
+             <summary>
+               Looks up a localized string similar to  The service &apos;{0}&apos; was not resumed correctly.
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information. The service will be stopped..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceStartComplete">
+            <summary>
+              Looks up a localized string similar to The service &apos;{0}&apos; started correctly..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceStartError">
+             <summary>
+               Looks up a localized string similar to An error occurred while starting the service {0}.
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information. The service needs to be stopped..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceStopComplete">
+            <summary>
+              Looks up a localized string similar to The service &apos;{0}&apos; stopped correctly..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceStopError">
+             <summary>
+               Looks up a localized string similar to The service &apos;{0}&apos; did not stop correctly.
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information. The service will be stopped..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceStopWarning">
+             <summary>
+               Looks up a localized string similar to The service &apos;{0}&apos; did not stop gracefully. 
+            See &apos;Summary for {0}&apos; and additional &apos;Exception Information Details&apos; below for more information..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ServiceUnableToShutdown">
+            <summary>
+              Looks up a localized string similar to An error occurred while trying to shut down the service {0}. This error will disable the ability for this service to shut itself down..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.StopListenerWarningMessage">
+            <summary>
+              Looks up a localized string similar to StopListener - warning.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.UnknownError">
+            <summary>
+              Looks up a localized string similar to An unknown error has occurred..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ValidationComplete">
+            <summary>
+              Looks up a localized string similar to The validation sequence is complete. No errors have occurred..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ValidationError">
+            <summary>
+              Looks up a localized string similar to An error occurred in one of the validation sequences. See &apos;Exception Information Details&apos; below for more information. The service will be stopped..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.Properties.Resources.ValidationStarted">
+            <summary>
+              Looks up a localized string similar to The validation sequence has been started..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck">
+            <summary>
+            Verifies that the distributor service is running as expected and force the service
+            to shutdown if a shutdown is pending.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck.StopService">
+            <summary>
+            Stop the current service from running. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.SanityCheck.OnSanityTimedEvent(System.Object,System.Timers.ElapsedEventArgs)">
+            <devdoc>
+            Event triggered by sanity event handler. 
+            This method runs regularly to check sanity of the service.
+            </devdoc>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus">
+            <summary>
+            The Service status enum (as byte)
+            This status is used to flag the service it should be shut down or not.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.OK">
+            <summary>
+            The service is running fine and should not be shut down.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.Shutdown">
+            <summary>
+            The service has encountered a problem or has been directed to shut down.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.MsmqDistributor.ServiceStatus.PendingShutdown">
+            <summary>
+            The service has encountered a problem or has been directed to shut down and cannot shut down due to errors.
+            </summary>
+        </member>
+    </members>
+</doc>

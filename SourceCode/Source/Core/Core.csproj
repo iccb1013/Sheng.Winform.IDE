@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84A60294-EF59-43C1-B7E5-4C12C164801D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonOperater.cs" />
+    <Compile Include="CoreConstant.cs" />
+    <Compile Include="DataSource\DataSource2.cs" />
+    <Compile Include="DataSource\DataSourceCollection.cs" />
+    <Compile Include="DataSource\DataSourceProvideArgs.cs" />
+    <Compile Include="DataSource\DataSourceProvideCollection.cs" />
+    <Compile Include="DataSource\DataSourceProvideFactory.cs" />
+    <Compile Include="DataSource\DataSourceProvideTypes.cs" />
+    <Compile Include="DataSource\IDataSourceProvide.cs" />
+    <Compile Include="DataSource\SystemDataSourceProvide.cs" />
+    <Compile Include="DataSource\UIElementDataSourceProvide.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListEventTimes.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripButtonEventTimes.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripGroupEntity.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripGroupEntityCollection.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripPageEntity.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripPageEntityCollection.cs" />
+    <Compile Include="Entity\UIElement\UIElementColor.cs" />
+    <Compile Include="Entity\DataEntity.cs" />
+    <Compile Include="Entity\DataItemEntity.cs" />
+    <Compile Include="Entity\DataItemEntityCollection.cs" />
+    <Compile Include="Entity\DataItemEntityFactory.cs" />
+    <Compile Include="Entity\DataItemEntityFactoryAbstract.cs" />
+    <Compile Include="Entity\DesignerHostEntityAttribute.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\EntityCollection.cs" />
+    <Compile Include="Entity\EntityIndex.cs" />
+    <Compile Include="Entity\EnumEntity.cs" />
+    <Compile Include="Entity\EnumItemEntity.cs" />
+    <Compile Include="Entity\EnumItemEntityFactory.cs" />
+    <Compile Include="Entity\EnumItemEntityFactoryAbstract.cs" />
+    <Compile Include="Entity\MenuEventTimes.cs" />
+    <Compile Include="Entity\UIElementEntityProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\CoreFormElementEntityProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRuleAbstract.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRuleProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRules.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRuleTypeCollection.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRuleTypes.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnDataRuleTypesAbstract.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityAbstract.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityCollection.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityTypeCollection.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityTypes.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListColumnEntityTypesAbstract.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListEntity.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListRowCellEntity.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListRowCellEntityCollection.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListRowEntity.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListRowEntityCollection.cs" />
+    <Compile Include="Entity\UIElement\DataList\UIElementDataListTextBoxColumnEntity.cs" />
+    <Compile Include="Entity\UIElement\UIElementAnchor.cs" />
+    <Compile Include="Entity\UIElement\UIElementButtonEventTimes.cs" />
+    <Compile Include="Entity\UIElement\UIElementComboBoxEventTimes.cs" />
+    <Compile Include="Entity\UIElement\UIElementFont.cs" />
+    <Compile Include="Entity\UIElement\Enums.cs" />
+    <Compile Include="Entity\UIElement\UIElement.cs" />
+    <Compile Include="Entity\UIElement\UIElementButtonEntity.cs" />
+    <Compile Include="Entity\UIElement\UIElementCollection.cs" />
+    <Compile Include="Entity\UIElement\UIElementComboBoxEntity.cs" />
+    <Compile Include="Entity\UIElement\NormalUIElementEntityProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\UIElementEntityTypeCollection.cs" />
+    <Compile Include="Entity\UIElement\UIElementEntityTypes.cs" />
+    <Compile Include="Entity\UIElement\UIElementEntityTypesAbstract.cs" />
+    <Compile Include="Entity\UIElement\UIElementLabelEntity.cs" />
+    <Compile Include="Entity\UIElement\UIElementPictureBoxEntity.cs" />
+    <Compile Include="Entity\UIElement\UIElementTextBoxEntity.cs" />
+    <Compile Include="Entity\UIElement\IUIElementEditControl.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripButtonEntity.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripItemAbstract.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripItemCollection.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripItemEntityProvideAttribute.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripItemEntityTypeCollection.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripItemEntityTypesFactory.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripLabelEntity.cs" />
+    <Compile Include="Entity\UIElement\ToolStrip\ToolStripSeparatorEntity.cs" />
+    <Compile Include="Entity\UIElement\UIElementTextBoxEventTimes.cs" />
+    <Compile Include="Entity\WindowEntity.cs" />
+    <Compile Include="Entity\WindowEntityCollection.cs" />
+    <Compile Include="Entity\WindowFolderEntity.cs" />
+    <Compile Include="Entity\WindowFolderEntityCollection.cs" />
+    <Compile Include="Entity\MenuEntity.cs" />
+    <Compile Include="Entity\MenuEntityCollection.cs" />
+    <Compile Include="Entity\ProjectEntity.cs" />
+    <Compile Include="Event\DataSource.cs" />
+    <Compile Include="Event\EventBase.cs" />
+    <Compile Include="Event\EventCollection.cs" />
+    <Compile Include="Event\EventProvideAttribute.cs" />
+    <Compile Include="Event\Events\CallAddInEvent.cs" />
+    <Compile Include="Event\Events\CallUIElementMethodEvent.cs" />
+    <Compile Include="Event\Events\ClearFormDataEvent.cs" />
+    <Compile Include="Event\Events\CloseFormEvent.cs" />
+    <Compile Include="Event\Events\DataListAddRowEvent.cs" />
+    <Compile Include="Event\Events\DataListDeleteRowEvent.cs" />
+    <Compile Include="Event\Events\DataListRefreshEvent.cs" />
+    <Compile Include="Event\Events\DataListUpdateRowEvent.cs" />
+    <Compile Include="Event\Events\DeleteDataEvent.cs" />
+    <Compile Include="Event\Events\ExitEvent.cs" />
+    <Compile Include="Event\Events\LoadDataToFormEvent.cs" />
+    <Compile Include="Event\Events\LockProgramEvent.cs" />
+    <Compile Include="Event\Events\NewGuidEvent.cs" />
+    <Compile Include="Event\Events\OpenWindowEvent.cs" />
+    <Compile Include="Event\Events\OpenSystemFormEvent.cs" />
+    <Compile Include="Event\Events\ReceiveDataEvent.cs" />
+    <Compile Include="Event\Events\ReLoginEvent.cs" />
+    <Compile Include="Event\Events\ReturnDataToCallerFormEvent.cs" />
+    <Compile Include="Event\Events\SaveDataEvent.cs" />
+    <Compile Include="Event\Events\StartProcessEvent.cs" />
+    <Compile Include="Event\Events\UpdateFormDataEvent.cs" />
+    <Compile Include="Event\Events\ValidateFormDataEvent.cs" />
+    <Compile Include="Event\EventTimeAbstract.cs" />
+    <Compile Include="Event\EventTimesAbstract.cs" />
+    <Compile Include="Event\EventTypeCollection.cs" />
+    <Compile Include="Event\EventTypes.cs" />
+    <Compile Include="Event\EventTypesAbstract.cs" />
+    <Compile Include="Event\IEventSupport.cs" />
+    <Compile Include="PropertyGirdContract\CorePropertyRelatorAttribute.cs" />
+    <Compile Include="PropertyGirdContract\CorePropertyTextBoxEditorAttribute.cs" />
+    <Compile Include="DataBaseProvide.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="IDataItemDataSourceRelationship.cs" />
+    <Compile Include="LocalizedDescription.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceInfo\ImageResourceInfo.cs" />
+    <Compile Include="ResourceInfo\ResourceContentAttribute.cs" />
+    <Compile Include="ResourceInfo\ResourceInfo.cs" />
+    <Compile Include="ResourceInfo\ResourceInfoFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseProvide\Sheng.SailingEase.IDataBaseProvide\Sheng.SailingEase.IDataBaseProvide.csproj">
+      <Project>{960F2D9C-8DFB-4F9C-9501-B5F3E7C8E3F5}</Project>
+      <Name>Sheng.SailingEase.IDataBaseProvide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBaseProvide\Sheng.SailingEase.SQLServer2005Provide\Sheng.SailingEase.SQLServer2005Provide.csproj">
+      <Project>{3A0A4993-F075-4FB7-A62A-09F8D9BE6CBF}</Project>
+      <Name>Sheng.SailingEase.SQLServer2005Provide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drawing\Drawing.csproj">
+      <Project>{BCD80096-7B6F-4273-A031-186A610C84E5}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Sheng.SailingEase.Core.Localisation\Core.Localisation.csproj">
+      <Project>{FEC62042-4320-4884-B005-2C8C78BA60C2}</Project>
+      <Name>Core.Localisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComponentModel\ComponentModel.csproj">
+      <Project>{7CE78E82-D242-425C-BB96-6C27B193A9FF}</Project>
+      <Name>ComponentModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

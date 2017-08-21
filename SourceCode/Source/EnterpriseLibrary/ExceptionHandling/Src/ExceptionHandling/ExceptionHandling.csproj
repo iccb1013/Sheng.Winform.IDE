@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DB0AD6D-BF59-4EBB-9F99-49ABD8539FD2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.ExceptionHandling</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;WMINET10</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <RunFxCop>false</RunFxCop>
+    <FxCopRules>-Microsoft.Design#CA2210</FxCopRules>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for ExceptionHandling.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;WMINET10</DefineConstants>
+    <DocumentationFile>bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=0.0.31208.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\CustomHandlerData.cs" />
+    <Compile Include="Configuration\ExceptionHandlerData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\ExceptionHandlingSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\ExceptionPolicyData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\ExceptionTypeData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\Manageability\CustomExceptionHandlerDataManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\CustomExceptionHandlerDataWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\CustomHandlerSetting.cs" />
+    <Compile Include="Configuration\Manageability\ExceptionHandlerSetting.cs" />
+    <Compile Include="Configuration\Manageability\ExceptionHandlingSettingsManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\ExceptionHandlingSettingsWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\ExceptionPolicySetting.cs" />
+    <Compile Include="Configuration\Manageability\ExceptionTypeSetting.cs" />
+    <Compile Include="Configuration\Manageability\Properties\AssemblyInfo.cs" />
+    <Compile Include="Configuration\Manageability\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Manageability\ReplaceHandlerDataManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\ReplaceHandlerDataWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\ReplaceHandlerSetting.cs" />
+    <Compile Include="Configuration\Manageability\WrapHandlerDataManageabilityProvider.cs" />
+    <Compile Include="Configuration\Manageability\WrapHandlerDataWmiMapper.cs" />
+    <Compile Include="Configuration\Manageability\WrapHandlerSetting.cs" />
+    <Compile Include="Configuration\ReplaceHandlerData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\Unity\ExceptionHandlingBlockExtension.cs" />
+    <Compile Include="Configuration\Unity\ReplaceHandlerPolicyCreator.cs" />
+    <Compile Include="Configuration\Unity\WrapHandlerPolicyCreator.cs" />
+    <Compile Include="Configuration\WrapHandlerData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DefaultExceptionHandlingErrorEventArgs.cs" />
+    <Compile Include="ExceptionFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandingInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandingInstaller.Designer.cs">
+      <DependentUpon>ExceptionHandingInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionHandlerCustomFactory.cs" />
+    <Compile Include="ExceptionHandlingConfigurationView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandlingErrorEventArgs.cs" />
+    <Compile Include="ExceptionHandlingException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionManager.cs" />
+    <Compile Include="ExceptionManagerImpl.cs" />
+    <Compile Include="ExceptionPolicyCustomFactory.cs" />
+    <Compile Include="ExceptionPolicyEntryCustomFactory.cs" />
+    <Compile Include="ExceptionPolicyFactory.cs" />
+    <Compile Include="Instrumentation\DefaultExceptionHandlingEventLoggerCustomFactory.cs" />
+    <Compile Include="Instrumentation\DefaultExceptionHandlingEventLogger.cs" />
+    <Compile Include="Instrumentation\DefaultExceptionHandlingInstrumentationProvider.cs" />
+    <Compile Include="Instrumentation\ExceptionHandlingConfigurationFailureEvent.cs" />
+    <Compile Include="Instrumentation\ExceptionHandlingInstrumentationListener.cs" />
+    <Compile Include="Instrumentation\ExceptionHandlingInstrumentationProvider.cs" />
+    <Compile Include="ExceptionPolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionPolicyEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionPolicyImpl.cs" />
+    <Compile Include="ExceptionUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Instrumentation\ExceptionHandlingEvent.cs" />
+    <Compile Include="Instrumentation\ExceptionHandlingFailureEvent.cs" />
+    <Compile Include="PostHandlingAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ReplaceHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextExceptionFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WrapHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlExceptionFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Configuration\Manageability\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for ExceptionHandling.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

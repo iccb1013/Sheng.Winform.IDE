@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="4704887d-f960-4b82-903f-5fbefa482391" name="依赖关系" linkedPackageId="b9e2ba4f-5be4-475c-98e7-38fdaa22ae84" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="76d576b7-e6fd-4bbe-b3e8-987c17c99b33" name="Kernal">
+        <elementDefinition Id="fb562980-5329-41ea-b700-91a201d5fabc" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="affc3f3d-0b32-4a09-b901-6a0bf8a43987" name="ComponentModel">
+        <elementDefinition Id="05a66011-ddd7-41ad-b0d3-5504b25492d5" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="36c717de-cb79-4746-bfd5-99010e16ae35" name="Controls">
+        <elementDefinition Id="12aa5776-b50d-4381-bf45-cbb1b266a455" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="0fc71074-2323-472c-85e4-4db7c8f33a8d" name="Controls.Extensions">
+        <elementDefinition Id="c8f57bae-5333-41e5-bd02-741fc233fe48" />
+        <importedPackagesInternal>
+          <packageImport Id="8b2cc8a6-8c42-4377-89a2-997f5385cb42" visibility="Public">
+            <packageMoniker Id="36c717de-cb79-4746-bfd5-99010e16ae35" LastKnownName="Controls" />
+            <elementDefinition Id="666daee8-555e-433f-a569-4cd4a7e58a64" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9db89e9d-84a6-4370-baef-f4331e59c055" name="Core">
+        <elementDefinition Id="4ce0fc07-bcfc-4148-a01b-c137a041cd4f" />
+        <importedPackagesInternal>
+          <packageImport Id="ec4aa647-d0e0-4080-94e3-1f33a101eea5" visibility="Public">
+            <packageMoniker Id="76d576b7-e6fd-4bbe-b3e8-987c17c99b33" LastKnownName="Kernal" />
+            <elementDefinition Id="e3096a4b-1edd-4f1d-882d-e614f8653c09" />
+          </packageImport>
+          <packageImport Id="00517426-3993-46fe-ad0a-2adbde80397b" visibility="Public">
+            <packageMoniker Id="affc3f3d-0b32-4a09-b901-6a0bf8a43987" LastKnownName="ComponentModel" />
+            <elementDefinition Id="532ab33f-a073-41c3-8fbd-45c868ec628e" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="eb449a24-e746-4449-8f26-099dbc820d38" name="Infrastructure">
+        <elementDefinition Id="3a5e1e1b-92e1-4de5-a100-9a6a1acf8810" />
+        <suppliersInternal>
+          <dependency Id="c2e0bdfd-5f04-4a48-b414-3c69955a9d17">
+            <packageMoniker Id="affc3f3d-0b32-4a09-b901-6a0bf8a43987" LastKnownName="ComponentModel" />
+            <elementDefinition Id="d914cd95-0db8-49ca-a388-f6c63776a275" />
+          </dependency>
+          <dependency Id="3d686fa9-af1f-438f-9f5f-ffcce1e7b7fb">
+            <packageMoniker Id="36c717de-cb79-4746-bfd5-99010e16ae35" LastKnownName="Controls" />
+            <elementDefinition Id="e9652b8d-4aa7-407c-bd21-0616beb1e12a" />
+          </dependency>
+        </suppliersInternal>
+        <importedPackagesInternal>
+          <packageImport Id="ac14e5ec-7846-4a38-8cb2-3b6ee1aa6db5" visibility="Public">
+            <packageMoniker Id="9db89e9d-84a6-4370-baef-f4331e59c055" LastKnownName="Core" />
+            <elementDefinition Id="d45da3cf-92ac-423c-9e4c-a773af0d009c" />
+          </packageImport>
+          <packageImport Id="bef880a2-d400-433c-9ea1-3a8fef45f52c" visibility="Public">
+            <packageMoniker Id="0fc71074-2323-472c-85e4-4db7c8f33a8d" LastKnownName="Controls.Extensions" />
+            <elementDefinition Id="df7051f3-94b2-43aa-9797-dabc51f529b0" />
+          </packageImport>
+          <packageImport Id="bb67329a-d763-4d8d-86c5-b99ec41884a4" visibility="Public">
+            <packageMoniker Id="76d576b7-e6fd-4bbe-b3e8-987c17c99b33" LastKnownName="Kernal" />
+            <elementDefinition Id="913bbbd7-2b53-4f76-9c06-ec1c4918b53a" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="2812918f-c3b6-472e-9f68-07f993a1aa00" name="ComponentModel.Design">
+        <elementDefinition Id="fc4cd3ec-80a5-40db-ad22-1585919e71e4" />
+        <importedPackagesInternal>
+          <packageImport Id="c99eb0bf-2b56-40fd-a001-6bce44c078d8" visibility="Public">
+            <packageMoniker Id="affc3f3d-0b32-4a09-b901-6a0bf8a43987" LastKnownName="ComponentModel" />
+            <elementDefinition Id="70851efd-0198-45ce-a26c-de6bd696b877" />
+          </packageImport>
+          <packageImport Id="e8281a78-aecd-4def-b659-b8c70da8b714" visibility="Public">
+            <packageMoniker Id="36c717de-cb79-4746-bfd5-99010e16ae35" LastKnownName="Controls" />
+            <elementDefinition Id="9f984586-03c4-4d28-a304-f913f45051a1" />
+          </packageImport>
+          <packageImport Id="0c852837-6434-4018-874d-1d558dbe89c6" visibility="Public">
+            <packageMoniker Id="eb449a24-e746-4449-8f26-099dbc820d38" LastKnownName="Infrastructure" />
+            <elementDefinition Id="476c80f4-1401-4116-9d99-08404e37f3d4" />
+          </packageImport>
+          <packageImport Id="1a41cbe5-d293-4184-8dd6-e53fb02fc41d" visibility="Public">
+            <packageMoniker Id="76d576b7-e6fd-4bbe-b3e8-987c17c99b33" LastKnownName="Kernal" />
+            <elementDefinition Id="ce6290f9-c208-45ce-9f80-80b4050c4fa7" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="bd05c469-be0a-425b-8be3-ab68f09bc44e" name="Core.Development">
+        <elementDefinition Id="77f62b5b-e11c-440e-9eb5-d65514a88e92" />
+        <importedPackagesInternal>
+          <packageImport Id="1efdf433-f3d2-4ffc-ab87-3673a84039f7" visibility="Public">
+            <packageMoniker Id="9db89e9d-84a6-4370-baef-f4331e59c055" LastKnownName="Core" />
+            <elementDefinition Id="ce3b6757-0f55-4d87-bf33-c9dabdc2cdf1" />
+          </packageImport>
+          <packageImport Id="3dd28c33-84d7-414a-b7b0-d8af5050c3ae" visibility="Public">
+            <packageMoniker Id="2812918f-c3b6-472e-9f68-07f993a1aa00" LastKnownName="ComponentModel.Design" />
+            <elementDefinition Id="df6544d9-837a-44e4-aac1-e31318803f58" />
+          </packageImport>
+          <packageImport Id="cf2476a3-b2c0-418d-af80-d81d3dc96d39" visibility="Public">
+            <packageMoniker Id="affc3f3d-0b32-4a09-b901-6a0bf8a43987" LastKnownName="ComponentModel" />
+            <elementDefinition Id="4edc6f25-ec65-47a7-885c-1948675daa20" />
+          </packageImport>
+          <packageImport Id="9676ce6d-977b-4f9d-aa61-25a2f4f7f65d" visibility="Public">
+            <packageMoniker Id="36c717de-cb79-4746-bfd5-99010e16ae35" LastKnownName="Controls" />
+            <elementDefinition Id="ac70685a-ae34-49d2-8b46-2172d9e0700c" />
+          </packageImport>
+          <packageImport Id="457d1797-7871-4cb4-a2b0-9f3bddb55536" visibility="Public">
+            <packageMoniker Id="eb449a24-e746-4449-8f26-099dbc820d38" LastKnownName="Infrastructure" />
+            <elementDefinition Id="23b10429-bc07-4ac6-82be-f1340fca4af2" />
+          </packageImport>
+          <packageImport Id="705951e0-d9f0-4f2b-b68e-2bcf50acef13" visibility="Public">
+            <packageMoniker Id="76d576b7-e6fd-4bbe-b3e8-987c17c99b33" LastKnownName="Kernal" />
+            <elementDefinition Id="5171fa85-3608-48cd-84ce-28383ee9a769" />
+          </packageImport>
+        </importedPackagesInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="b9e2ba4f-5be4-475c-98e7-38fdaa22ae84" name="ModelingProject">
+    <elementDefinition Id="f523bc73-622e-46eb-a56d-f0fd6a70179c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1fe1784a-1d60-44a0-ae41-db5b53c8e73c">
+        <profileInstance Id="c6fa1941-3d88-49b4-9ce7-9dce80d455ed" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="31f4d00f-a61f-4844-8e22-4ffb6b0f6548">
+        <profileInstance Id="0e80fad8-0bf6-428a-99de-2bc8af82bac5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,971 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AddSecuritySettingsNodeCommand">
+            <summary>
+            Add the Security Application Block to the current application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AddSecuritySettingsNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AddSecuritySettingsNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">
+            <para>The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</para>
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AddSecuritySettingsNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            After the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode"/> is added, adds the default nodes.
+            </summary>
+            <param name="node">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode"/>.S</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.#ctor">
+            <summary>
+            Initailzie a new instance of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderNode.AuthorizationProviderData"/> this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData"/> instance.
+            </summary>
+            <param name="customAuthorizationProviderData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.Type"/> of the custom provider.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.Type"/> of the custom provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.Attributes">
+            <summary>
+            Gets or sets the custom attributes for the provider.
+            </summary>
+            <value>
+            The custom attributes for the provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomAuthorizationProviderNode.AuthorizationProviderData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomAuthorizationProviderData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationProviderData"/> cofiguration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderCollectionNode.#ctor">
+            <summary>
+            Intialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationProviderCollectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationRuleData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode"/> class with an <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData"/> instance.
+            </summary>
+            <param name="authorizationRuleData">An <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.Expression">
+            <summary>
+            Gets or sets the expression for the current rule.
+            </summary>
+            <value>
+            The expression for the current rule
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData"/> object the node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleNode.AuthorizationRuleData"/> object the node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode.AuthorizationProviderData"/> configuraiton element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationRuleProviderData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode"/> class with an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationRuleProviderData"/> instance.
+            </summary>
+            <param name="data">An <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationRuleProviderData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.AuthorizationRuleProviderNode.AuthorizationProviderData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationRuleProviderData"/> this ndoe represents.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode">
+            <summary>
+            Representa a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode.SecurityCacheProviderData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode.SecurityCacheProviderData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode.SecurityCacheProviderData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderNode.SecurityCacheProviderData"/> this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData"/> instance.
+            </summary>
+            <param name="customSecurityCacheProviderData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.Attributes">
+            <summary>
+            Gets or sets the custom attributes for the provider.
+            </summary>
+            <value>
+            The custom attributes for the provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.Type"/> of the custom provider.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.Type"/> of the custom provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.CustomSecurityCacheProviderNode.SecurityCacheProviderData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.CustomSecurityCacheProviderData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI">
+            <summary>
+            Provides a dialog box for editing identity
+            role rule expressions.
+            </summary>
+            <summary>
+            Provides a dialog box for editing identity
+            role rule expressions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true to release both 
+            managed and unmanaged resources; 
+            false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionEditorFormUI.Expression">
+            <summary>
+            Gets or sets the expression that 
+            is currently being edited.
+            </summary>
+            <value>An expression</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox">
+            <summary>
+            Represents a customized <see cref="T:System.Windows.Forms.RichTextBox"/> 
+            control that adds syntax highlighting for
+            identity role rule expressions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            Adds syntax highlighting to the current text.
+            </summary>
+            <param name="e">The arguments for the event.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.InitParser">
+            <devDoc>
+            Initialzes Parser to improve first time text input performance.
+            </devDoc>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.ParseStatus">
+            <summary>
+            Gets the current parse status message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.ExpressionIsValid">
+            <summary>
+            Gets whether or not the expression is valid.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.SelectionUnderlineStyle">
+            <summary> 
+            Gets or sets the underline style to apply to the current selection or insertion point. 
+            </summary> 
+            <value>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle"/> that represents the underline style to 
+            apply to the current text selection or to text entered after the insertion point.</value> 
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ExpressionTextBox.SelectionUnderlineColor">
+            <summary> 
+            Gets or sets the underline color to apply to the current selection or insertion point. 
+            </summary> 
+            <value>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor"/> that represents the underline color to 
+            apply to the current text selection or to text entered after the insertion point.</value> 
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.NativeMethods.CHARFORMAT2">
+            <summary> 
+            Contains information about character formatting in a rich edit control. 
+            </summary> 
+            <remarks><see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.NativeMethods.CHARFORMAT2"/> requires Rich Edit 2.0.</remarks> 
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.NativeMethods.PARAFORMAT2">
+            <summary> 
+            Contains information about paragraph formatting in a rich edit control. 
+            </summary> 
+            <remarks><see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.NativeMethods.PARAFORMAT2"/> requires Rich Edit 2.0.</remarks> 
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AccessDenied">
+            <summary>
+              Looks up a localized string similar to Not Authorized.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AccessGranted">
+            <summary>
+              Looks up a localized string similar to Authorized.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AddConfigurationSectionCommandName">
+            <summary>
+              Looks up a localized string similar to Security Application Block .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AndOperatorNodeCommandName">
+            <summary>
+              Looks up a localized string similar to And Operator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AndOperatorNodeName">
+            <summary>
+              Looks up a localized string similar to And.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AnonymousIdentityExpressionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Anonymous Identity (?).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AnonymousIdentityExpressionNodeName">
+            <summary>
+              Looks up a localized string similar to ?.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AnyIdentityExpressionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Any Identity (*).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AnyIdentityExpressionNodeName">
+            <summary>
+              Looks up a localized string similar to *.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthenticationProviderCollectionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Authentication Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthenticationProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Authentication.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthenticationProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Authentication Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationProviderCollectionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Authorization Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Authorization.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Authorization Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationRuleCommandName">
+            <summary>
+              Looks up a localized string similar to Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationRuleNodeName">
+            <summary>
+              Looks up a localized string similar to Rule.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationRuleProviderCommandName">
+            <summary>
+              Looks up a localized string similar to Authorization Rule Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.AuthorizationRuleProviderName">
+            <summary>
+              Looks up a localized string similar to RuleProvider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.BooleanExpressionNodeName">
+            <summary>
+              Looks up a localized string similar to Expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomAuthenticationProviderCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Authentication Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomAuthorizationProviderCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Authorization Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomAuthorizationProviderExtensionsDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the custom configuration attributes for this type..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomProfileProviderCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Profile Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomRolesProviderCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Roles Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomSecurityCacheNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Custom Cache Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.CustomSecurityCacheNodeDefaultName">
+            <summary>
+              Looks up a localized string similar to Custom Cache Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.DefaultProviderDescription">
+            <summary>
+              Looks up a localized string similar to The default authentication provider..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ErrorNoAuthorizationRules">
+            <summary>
+              Looks up a localized string similar to There must be at least 1 Authorization Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.EvaluateMessageBox">
+            <summary>
+              Looks up a localized string similar to Evaluation returned {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.EvaluateMessageBoxCaption">
+            <summary>
+              Looks up a localized string similar to Evaluate Expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ExpressionDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the expression for the Authorization Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.IdentityExpressionCommandName">
+            <summary>
+              Looks up a localized string similar to Identity Expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.IdentityExpressionNodeName">
+            <summary>
+              Looks up a localized string similar to Identity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.NotOperatorNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Not Operator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.NotOperatorNodeName">
+            <summary>
+              Looks up a localized string similar to Not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.OrOperatorNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Or Operator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.OrOperatorNodeName">
+            <summary>
+              Looks up a localized string similar to Or.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ParseFailedCaption">
+            <summary>
+              Looks up a localized string similar to Expression is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ParseFailedMessage">
+            <summary>
+              Looks up a localized string similar to Expression is invalid. {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ParseSucceededMessageBox">
+            <summary>
+              Looks up a localized string similar to Expression is valid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ParseSucceededMessageBoxCaption">
+            <summary>
+              Looks up a localized string similar to Expression is valid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ProfileProviderCollectionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Profile Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ProfileProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Profile.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ProfileProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Profile Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.ProviderTypeNameDescription">
+            <summary>
+              Looks up a localized string similar to The name of a class that implements the IAuthenticationProvider interface..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RoleExpressionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Role Expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RoleExpressionNodeNam">
+            <summary>
+              Looks up a localized string similar to Role.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RolesProviderCollectionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Roles Settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RolesProviderCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Roles.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RolesProviderNodeName">
+            <summary>
+              Looks up a localized string similar to Roles Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.RuleNameRequired">
+            <summary>
+              Looks up a localized string similar to You must specify a name for this Rule..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecurityCacheCollectionNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Security Cache.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecurityCacheCollectionNodeDefaultName">
+            <summary>
+              Looks up a localized string similar to Security Cache.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecurityCacheNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Security Cache Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecurityCacheNodeDefaultName">
+            <summary>
+              Looks up a localized string similar to Security Cache Provider.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecuritySettingsNodeCommandName">
+            <summary>
+              Looks up a localized string similar to Security Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.SecuritySettingsNodeName">
+            <summary>
+              Looks up a localized string similar to Security Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.UnableToParseDialogCaption">
+            <summary>
+              Looks up a localized string similar to Unable to parse expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.Properties.Resources.UnableToParseDialogMessage">
+            <summary>
+              Looks up a localized string similar to Unable to parse expression.  Are you sure you want to exit?.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecurityCacheProviderData"/> configuration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityCacheProviderCollectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the security settings configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the security settings configuration section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the security settings configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the security settings configuration section.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityNodeMapRegistrar.#ctor(System.IServiceProvider)">
+            <summary>
+            
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecurityNodeMapRegistrar.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsBuilder.#ctor(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode)">
+            <summary>
+            
+            </summary>
+            <param name="serviceProvider"></param>
+            <param name="securitySettingsNode"></param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsBuilder.Build">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode">
+            <summary>
+            Represents the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.SecuritySettings"/> configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode.DefaultAuthorizationInstance">
+            <summary>
+            Gets or sets the default authorization provider.
+            </summary>
+            <value>
+            The default authorization provider.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.SecuritySettingsNode.DefaultSecurityCacheInstance">
+            <summary>
+            Gets or sets the default security cache provider.
+            </summary>
+            <value>
+            The default security cache provider.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor">
+            <summary> 
+            Specifies the color of underline for a segment of rich text. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.None">
+            <summary> 
+            No specific underline color specified. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Black">
+            <summary> 
+            Black. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Blue">
+            <summary> 
+            Blue. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Cyan">
+            <summary> 
+            Cyan. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.LimeGreen">
+            <summary> 
+            LimeGreen. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Magenta">
+            <summary> 
+            Magenta. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Red">
+            <summary> 
+            Red. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Yellow">
+            <summary> 
+            Yellow. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.White">
+            <summary> 
+            White. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.DarkBlue">
+            <summary> 
+            DarkBlue. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.DarkCyan">
+            <summary> 
+            DarkCyan. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Green">
+            <summary> 
+            Green. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.DarkMagenta">
+            <summary> 
+            DarkMagenta. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Brown">
+            <summary> 
+            Brown. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.OliveGreen">
+            <summary> 
+            OliveGreen. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.DarkGray">
+            <summary> 
+            DarkGray. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineColor.Gray">
+            <summary> 
+            Gray. 
+            </summary> 
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle">
+            <summary> 
+            Specifies the underline styles for a segment of rich text. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.None">
+            <summary> 
+            No underlining. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Normal">
+            <summary> 
+            Single-line solid underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Word">
+            <summary> 
+            Single-line underline broken between words. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Double">
+            <summary> 
+            Double-line underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Dotted">
+            <summary> 
+            'Dotted' pattern underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Dash">
+            <summary> 
+            'Dash' pattern underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.DashDot">
+            <summary> 
+            'Dash-dot' pattern underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.DashDotDot">
+            <summary> 
+            'Dash-dot-dot' pattern underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Wave">
+            <summary> 
+            Single-line wave style underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Thick">
+            <summary> 
+            Single-line solid underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.Hairline">
+            <summary> 
+            Single-line solid underline with less thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.DoubleWave">
+            <summary> 
+            Double-line wave style underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.HeavyWave">
+            <summary> 
+            Single-line wave style underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.LongDash">
+            <summary> 
+            'Long Dash' pattern underline. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.ThickDash">
+            <summary> 
+            'Dash' pattern underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.ThickDashDot">
+            <summary> 
+            'Dash-dot' pattern underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.ThickDashDotDot">
+            <summary> 
+            'Dash-dot-dot' pattern underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.ThickDotted">
+            <summary> 
+            'Dotted' pattern underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.UnderlineStyle.ThickLongDash">
+            <summary> 
+            'Long Dash' pattern underline with extra thickness. 
+            </summary> 
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ValidExpressionAttribute">
+            <summary>
+            Represents an attribute that will validate a property or field using an exrpression.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.ValidExpressionAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/>.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>		
+        </member>
+    </members>
+</doc>

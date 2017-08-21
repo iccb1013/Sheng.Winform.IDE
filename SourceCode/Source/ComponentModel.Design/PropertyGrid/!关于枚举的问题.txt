@@ -1,0 +1,13 @@
+﻿ComboBoxCell.cs 与 ComboBoxCellEditingControl.cs
+
+理论上来讲，在处理枚举值时，应该直接使用枚举的枚举值，会好一些，而不是Int或String
+但是在 DataGridView  的单元格中，如果 ComboBoxCellEditingControl 的 EditingControlFormattedValue 属性直接返回枚举值
+DataGridView 会走到 DataError 事件报类型错误，即使 ComboBoxCell 的 ValueType 设置为对应的枚举类型或 System.Enum 类型、Int32、object 类型都不可以
+我自己试了一下 typeof(EnumXXX.Value1).Equals(typeof(EnumXXX)) 是为 true 的
+
+怀疑是 DataGridView 在做类型转换时出了问题，没有判断 Type.IsEnum， 就直接进行了转换或比对判断操作，因为枚举和普通Class的转换操作有所不同
+如果是枚举需要 Enum.Parse 类来转换
+
+目前解决办法：ComboBoxCellEditingControl 中的 ComboBox ，还是以枚举的 int 值做为 Value
+ComboBoxCellEditingControl 的 EditingControlFormattedValue 也是返回这个 Int 值 （不过是 string 类型）
+ComboBoxCell 中拿到枚举的 Int 值后再做处理

@@ -1,0 +1,2128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.AddLoggingSettingsNodeCommand">
+            <summary>
+            Adds the Logging Application Block to the current application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.AddLoggingSettingsNodeCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.AddLoggingSettingsNodeCommand"/> class with an <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.AddLoggingSettingsNodeCommand.ExecuteCore(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Adds the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/> and adds the default nodes.
+            </summary>
+            <param name="node">The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/> added.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterMaximumPriorityValidationAttribute">
+            <summary>
+            Represents a validation for the maximum priority of a filter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterMaximumPriorityValidationAttribute.ValidateCore(System.Object,System.Reflection.PropertyInfo,System.Collections.Generic.IList{Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Validation.ValidationError})">
+            <summary>
+            Validate the given <paramref name="instance"/> and the <paramref name="propertyInfo"/>.
+            </summary>
+            <param name="instance">
+            The instance to validate.
+            </param>
+            <param name="propertyInfo">
+            The property containing the value to validate.
+            </param>
+            <param name="errors">
+            The collection to add any errors that occur during the validation.
+            </param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsBuilder">
+            <summary>
+            Represents a build for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsBuilder.#ctor(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsBuilder"/> class with an <see cref="T:System.IServiceProvider"/> and a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/>.
+            </summary>
+            <param name="serviceProvider">The <see cref="T:System.IServiceProvider"/> to use.</param>
+            <param name="loggingSettingsNode">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/> object.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsBuilder.Build">
+            <summary>
+             Builds a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> object.
+            </summary>
+            <returns>
+             A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> object.
+             </returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditor">
+            <summary>
+            A rich editor for category filters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI">
+            <summary>
+            UI for Category Filter Editor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.#ctor">
+            <summary>
+            Initializes the component.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.UpdateAvailableCategoryNames(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Updates the available category names.
+            </summary>
+            <param name="categoryNames">The new category names</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.SetSelectedCategoryNames(System.Collections.ArrayList)">
+            <summary>
+            Sets the selected category names.
+            </summary>
+            <param name="names">The category names.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">True if method should dispose of unmanaged resources.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.AvailableCategoryNames">
+            <summary>
+            List of available category names.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.SelectedCategoryNames">
+            <summary>
+            Returns the currently selected category names.
+            </summary>
+            <returns>See summary.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterEditorUI.FilterMode">
+            <summary>
+            Determines the filter mode.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode.LogFilterData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode"/> class with a name.
+            </summary>
+            <param name="name">
+            The name of the node.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode.LogFilterData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode.LogFilterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterNode.LogFilterData"/> this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> instance.
+            </summary>
+            <param name="categoryLogFilterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode.CategoryFilterExpression">
+            <summary>
+            Gets the category filter expression.
+            </summary>
+            <value>
+            The category filter expression.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterNode.LogFilterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterSettings">
+            <summary>
+            Contains category filter section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterSettings.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.CategoryFilterMode,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.NamedElementCollection{Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CategoryFilterEntry})">
+            <summary>
+            Creates a new <c>CategoryFilterSettings</c> object with initial section.
+            </summary>
+            <param name="categoryFilterMode">The mode in which to filter.</param>
+            <param name="categoryFilters">The collection of categories to filter.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterSettings.ToString">
+            <summary>
+            Returns a user friendly formatted string which illustrates the filter section.
+            </summary>
+            <returns>See summary.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterSettings.CategoryFilterMode">
+            <summary>
+            Gets and sets the mode in which to filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CategoryFilterSettings.CategoryFilters">
+            <summary>
+            Gets and sets the collection of categories to filter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.#ctor">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData)">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData"/> instance.
+            </summary>
+            <param name="customLogFilterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.Attributes">
+            <summary>
+            Gets the custom attributes for the filter.
+            </summary>
+            <value>
+            The custom attributes for the filter.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.Type"/> of the custom filter.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.Type"/> of the custom filter.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.CustomLogFilterNode.LogFilterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomLogFilterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogFilterData"/> configuration objects.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterCollectionNode.Name">
+            <summary>
+            Gets or sets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogFilterCollectionNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted. The children under this node are not sorted.
+            </summary>
+            <value>
+            <see langword="true"/> if nodes add are sorted; otherwise <see langword="false"/>. The default is <see langword="true"/>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode.#ctor">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData)">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData"/> instance.
+            </summary>
+            <param name="logEnabledFilterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode.Enabled">
+            <summary>
+            Gets or sets if the filters are enabled.
+            </summary>
+            <value>
+            <see langword="true"/> if the filters are enabled; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.LogEnabledFilterNode.LogFilterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LogEnabledFilterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData"/> instance.
+            </summary>
+            <param name="priorityFilterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData"/> instance</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode.MaximumPriority">
+            <summary>
+            Gets the maximum priority.
+            </summary>
+            <value>
+            The maximum priority.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode.MinimumPriority">
+            <summary>
+            Gets the minimum priority.
+            </summary>
+            <value>
+            The minimum priority.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Filters.PriorityFilterNode.LogFilterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.PriorityFilterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode.FormatterData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> class.
+            </summary>        
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode.FormatterData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode.FormatterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode.FormatterData"/> this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData"/> instance.
+            </summary>
+            <param name="binaryLogFormatter">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.BinaryFormatterNode.FormatterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.BinaryLogFormatterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData"/> instance.
+            </summary>
+            <param name="customFormatterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.Attributes">
+            <summary>
+            Gets the custom attributes for the formatter.
+            </summary>
+            <value>
+            The custom attributes for the formatter.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.Type">
+            <summary>
+            Gets or sets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.Type"/> of the custom formatter.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.Type"/> of the custom formatter.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.CustomFormatterNode.FormatterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomFormatterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode">
+            <summary>
+            Represents a trace source that uses categories.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.TraceSourceData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode"/> class with a name.
+            </summary>
+            <param name="name">The name of the node.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.#ctor(System.String,System.Diagnostics.SourceLevels)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode"/> class with a name and a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels"/>.
+            </summary>
+            <param name="name">The name of the node.</param>
+            <param name="switchLevel">One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels"/> values.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.#ctor(System.String,System.Diagnostics.SourceLevels,System.Boolean)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode"/> class with a name, a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels"/> and the auto flush.
+            </summary>
+            <param name="name">The name of the node.</param>
+            <param name="switchLevel">One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels"/> values.</param>
+            <param name="autoFlush">Whether Flush is call after every write or not</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels">
+            <summary>
+            Gets or sets the source level.
+            </summary>
+            <value>
+            One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.SourceLevels"/> values.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.AutoFlush">
+            <summary>
+            Gets or sets the auto flush.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.TraceSourceData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.TraceSourceData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceSourceNode.TraceSourceData"/> this node represents.
+            </value>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode"/>  
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData)">
+            <summary>
+            Initialize a new instance of a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.
+            </summary>
+            <param name="traceSourceData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceNode.Name">
+            <summary>
+            Get the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.SpecialTraceSourcesNode">
+            <summary>
+            Represents is the group for error, not processed, and all events.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.SpecialTraceSourcesNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.SpecialTraceSourcesNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.SpecialTraceSourcesNode.SortChildren">
+            <summary>
+            Determines if the child nodes are sorted.  These nodes are not sorted.
+            </summary>
+            <value>
+            <see langword="true"/> if the children is sorted; otherwise <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.SpecialTraceSourcesNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceListenerReferenceData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode"/> class with a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData"/> instance.
+            </summary>
+            <param name="traceListenerReferenceData">A <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.ReferencedTraceListener">
+            <summary>
+            Gets the referenced trace listener.
+            </summary>
+            <value>
+            The referenced trace listener.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData"/> that this node represents.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.TraceListenerReferenceNode.TraceListenerReferenceData"/> that this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode">
+            <summary>
+            Represents a <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.TraceListenerData"/> configuration element. This class is abstract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode"/> class.
+            </summary>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.#ctor(System.Diagnostics.TraceOptions,System.Diagnostics.SourceLevels)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode"/> class with a TraceOptions and Filter
+            </summary>
+            <param name="traceOptions">Trace data options to be written to the trace output.</param>
+            <param name="filter">The trace filter for the trace listener.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.SetFormatter(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Enumerates the formatters and allows a node to set it's formatter reference.
+            </summary>
+            <param name="formatters">A collection of formatter nodes.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.TraceOutputOptions">
+            <summary>
+            Gets or sets the trace options.
+            </summary>
+            <value>
+            One of the <see cref="T:System.Diagnostics.TraceOptions"/> value.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.Filter">
+            <summary>
+            Gets or sets the filter.
+            </summary>
+            <value>
+            One of the <see cref="T:System.Diagnostics.SourceLevels"/> value.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.TraceListenerData"/> this node represents.
+            </summary>
+            <returns>The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerNode.TraceListenerData"/> this node represents..</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData"/> instance.
+            </summary>
+            <param name="traceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData"/> instance.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.Log">
+            <summary>
+            Gets or sets the event log to use.
+            </summary>
+            <value>
+            The event log to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.Source">
+            <summary>
+            Gets or sets the event source to use.
+            </summary>
+            <value>
+            The event source to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.MachineName">
+            <summary>
+            Gets or sets the machine name to use.
+            </summary>
+            <value>
+            The machine name to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.Formatter">
+            <summary>
+            Gets or sets the formatter to use.
+            </summary>
+            <value>
+            The formatter to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FormattedEventLogTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData"/> configuration element. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData"/> instance.
+            </summary>
+            <param name="data">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData"/> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.FileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.Header">
+            <summary>
+            Gets or sets the header for the file.
+            </summary>
+            <value>
+            The header for the file.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.Footer">
+            <summary>
+            Gets or sets the footer for the file.
+            </summary>
+            <value>
+            The footer for the file.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.RollSizeKB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.TimeStampPattern">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.RollFileExistsBehavior">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.RollInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.RollingTraceListenerNode.Formatter">
+            <summary>
+            Gets or sets the formatter for the file.
+            </summary>
+            <value>
+            The formatter for the file.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceListenerData"/> configuration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.TraceListenerCollectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData"/> instance.
+            </summary>
+            <param name="msmqTraceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData"/> instance.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.QueuePath">
+            <summary>
+            Gets or sets the queue path.
+            </summary>
+            <value>
+            The queue path.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.Recoverable">
+            <summary>
+            Gets or sets if the queue is recoverable.
+            </summary>
+            <value>
+            <see langword="true"/> if the queue is recoverable; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.TimeToBeReceived">
+            <summary>
+            Gets or sets the time to be received.
+            </summary>
+            <value>
+            The time to be received.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.TimeToReachQueue">
+            <summary>
+            Gets or sets the time to reach the queue.
+            </summary>
+            <value>
+            The time to reach the queue.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.MessagePriority">
+            <summary>
+            Gets or sets the message priority.
+            </summary>
+            <value>
+            One of the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.MessagePriority"/> values.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.TransactionType">
+            <summary>
+            Gets or sets the message queue transaction type.
+            </summary>
+            <value>
+            One of the <see cref="T:System.Messaging.MessageQueueTransactionType"/> value.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.UseAuthentication">
+            <summary>
+            Gets or sets if authentication should be used.
+            </summary>
+            <value>
+            <see langword="true"/> if authentication should be used; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.UseDeadLetterQueue">
+            <summary>
+            Gets or sets if the queue uses the dead letter queue.
+            </summary>
+            <value>
+            <see langword="true"/> if the queue uses the dead letter queue; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.UseEncryption">
+            <summary>
+            Gets or sets if encryption should be used.
+            </summary>
+            <value>
+            <see langword="true"/> if encryption should be used; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.Formatter">
+            <summary>
+            Gets or sets the formatter to use.
+            </summary>
+            <value>
+            The formatter to use.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.MsmqTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.MsmqTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData"/> listener.
+            </summary>
+            <param name="systemDiagnosticsTraceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData"/> listener.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode.InitData">
+            <summary>
+            Gets or sets the initialization data.
+            </summary>
+            <value>
+            The initialization data.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode.Type">
+            <summary>
+            Gets or sets the type of the listener type.
+            </summary>
+            <value>
+            The type of the listener type.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.SystemDiagnosticsTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData"/> that this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.SystemDiagnosticsTraceListenerData"/> that this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CustomTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomTraceListenerData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CustomTraceListenerNode"/> class.
+            </summary>
+            <param name="customTraceListenerData">The custom trace listener data.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter node reference.
+            </summary>
+            <param name="formatterNodeReference"></param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.Formatter">
+            <summary>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> used to describe the formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.Attributes">
+            <summary>
+             The custom attributes for this node.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.Type">
+            <summary>
+            The type of object to instantiate for this node.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.CustomTraceListenerNode.TraceListenerData">
+            <summary>
+            The trace listener data for this node.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData"/> class.
+            </summary>
+            <param name="emailTraceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData"/> class.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.ToAddress">
+            <summary>
+            Gets or sets the to address for the email.
+            </summary>
+            <value>
+            The to address for the email.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.FromAddress">
+            <summary>
+            Gets or sets the from address for the email.
+            </summary>
+            <value>
+            The from address for the email.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.SubjectLineStarter">
+            <summary>
+            Gets or sets the subject line starter for the email.
+            </summary>
+            <value>
+            The subject line starter for the email.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.SubjectLineEnder">
+            <summary>
+            Gets or sets the subject line ender for the email.
+            </summary>
+            <value>
+            The subject line ender for the email.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.SmtpServer">
+            <summary>
+            Gets or sets the SMTP server to send messages through.
+            </summary>
+            <value>
+            The SMTP server to send messages through.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.SmtpPort">
+            <summary>
+            Gets or sets the SMTP port to send messages through.
+            </summary>
+            <value>
+            The SMTP port to send messages through.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.Formatter">
+            <summary>
+            Gets or sets the formatter for the email.
+            </summary>
+            <value>
+            The formatter for the email.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.EmailTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData"/> that this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData"/> that this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData"/> instance.
+            </summary>
+            <param name="traceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData"/> instance.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.SetFormatterReference(Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationNode)">
+            <summary>
+            Sets the formatter to use for this listener.
+            </summary>
+            <param name="formatterNodeReference">
+            A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterNode"/> reference or <see langword="null"/> if no formatter is defined.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.Filename">
+            <summary>
+            Gets or sets the file name.
+            </summary>
+            <value>
+            The file name.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.Header">
+            <summary>
+            Gets or sets the header for the file.
+            </summary>
+            <value>
+            The header for the file.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.Footer">
+            <summary>
+            Gets or sets the footer for the file.
+            </summary>
+            <value>
+            The footer for the file.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.Formatter">
+            <summary>
+            Gets or sets the formatter for the file.
+            </summary>
+            <value>
+            The formatter for the file.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.FlatFileTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData"/> configuration element.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData"/> instance.
+            </summary>
+            <param name="wmiTraceListenerData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.WmiTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData"/> this node represents.
+            </summary>
+            <value>The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.WmiTraceListenerData"/> this node represents.</value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.NotProcessedTraceSourceNode">
+            <summary>
+            Represents a special source receives log entries for that are assigned to categories that are not processed by a category source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.NotProcessedTraceSourceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.NotProcessedTraceSourceNode"/> with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.
+            </summary>
+            <param name="traceSourceData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.AllTraceSourceNode">
+            <summary>
+            Represents all event special event source. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.AllTraceSourceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.AllTraceSourceNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.
+            </summary>
+            <param name="traceSourceData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.ErrorsTraceSourceNode">
+            <summary>
+            Represents the trace source that receives log entries for errors and warnings that occur during the logging process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.ErrorsTraceSourceNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.ErrorsTraceSourceNode"/> with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.
+            </summary>
+            <param name="traceSourceData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TraceSourceData"/> instance.</param>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceCollectionNode">
+            <summary>
+            A collection of trace source nodes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceCollectionNode"/> class.
+            </summary>        
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Sources.CategoryTraceSourceCollectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterCollectionNode">
+            <summary>
+            Represents a collection of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormatterData"/> configuration elements.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterCollectionNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterCollectionNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.FormatterCollectionNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template">
+            <summary>
+            Contains data for a Template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template.#ctor">
+            <summary>
+            default constructor used when serializing for envrionmental overrides.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template"/> struct with initial text for the template.
+            </summary>
+            <param name="text">The text of the template.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template.ToString">
+            <summary>
+            Gets the template formatted for a single line.
+            </summary>
+            <returns>The template formatted for a single line.</returns>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.Template.Text">
+            <summary>
+            Gets or sets the text of the template.
+            </summary>
+            <value>
+            The text of the template.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditor">
+            <summary>
+            Editor for formatter templates.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.
+            </summary>
+            <param name="context">See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</param>
+            <returns>See <see cref="M:System.Drawing.Design.UITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI">
+            <summary>
+            Represents an editor for a template.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI.#ctor">
+            <summary>
+            Initializes the components.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TemplateEditorUI.UserText">
+            <summary>
+            The text of the template as defined by the user at designtime.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData"/> configuration object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData"/> instance.
+            </summary>
+            <param name="textFormatterData">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData"/> instance.</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.Template">
+            <summary>
+            Gets the <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.Template"/> for the formatter.
+            </summary>
+            <value>
+            The <see cref="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.Template"/> for the formatter.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Formatters.TextFormatterNode.FormatterData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.TextFormatterData"/> this node represents.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager">
+            <summary>
+            Represents the design manager for the exception handling settings configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.Register(System.IServiceProvider)">
+            <summary>
+            Register the commands and node maps needed for the design manager into the design time.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.OpenCore(System.IServiceProvider,Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationApplicationNode,System.Configuration.ConfigurationSection)">
+            <summary>
+            Opens the logging settings configuration section, builds the design time nodes and adds them to the application node.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <param name="rootNode">The root node of the application.</param>
+            <param name="section">The <see cref="T:System.Configuration.ConfigurationSection"/> that was opened from the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource"/>.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingConfigurationDesignManager.GetConfigurationSectionInfo(System.IServiceProvider)">
+            <summary>
+            Gets the a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the logging settings configuration section.
+            </summary>
+            <param name="serviceProvider">The a mechanism for retrieving a service object; that is, an object that provides custom support to other objects.</param>
+            <returns>A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ConfigurationSectionInfo"/> for the logging settings configuration section.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode">
+            <summary>
+            Represents the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings"/> configuration section.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.SortChildren">
+            <summary>
+            Gets if children added to the node are sorted. Nodes are not sorted added to this node.
+            </summary>
+            <value>
+            <see langword="true"/> if nodes add are sorted; otherwise <see langword="false"/>. The default is <see langword="true"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.Name">
+            <summary>
+            Gets the name of the node.
+            </summary>
+            <value>
+            The name of the node.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.TracingEnabled">
+            <summary>
+            Determines if tracing is enabled.
+            </summary>
+            <value>
+            <see langword="true"/> if tracing is enabled; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.DefaultCategory">
+            <summary>
+            Gets or sets the default category.
+            </summary>
+            <value>
+            The default category.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.LogWarningWhenNoCategoriesMatch">
+            <summary>
+            Gets or sets if a warning is logged if no categories match.
+            </summary>
+            <value>
+            <see langword="true"/> if a warning is logged if no categories match; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.LoggingSettingsNode.RevertImpersonation">
+            <summary>
+            Gets or sets the indication of whether impersonation should be reverted while logging.
+            </summary>
+            <value>
+            <see langword="true"/> if impersonation should be reverted while logging; otherwise, <see langword="false"/>.
+            The default is <see langword="true"/>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.AllTraceSourceNode">
+            <summary>
+              Looks up a localized string similar to All Events.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.BinaryFormatterNode">
+            <summary>
+              Looks up a localized string similar to Binary Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.BinaryFormatterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new binary formatter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.BinaryFormatterUICommandText">
+            <summary>
+              Looks up a localized string similar to Binary Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterExpressionDescription">
+            <summary>
+              Looks up a localized string similar to Gets or sets the cateogory filter expression..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterNode">
+            <summary>
+              Looks up a localized string similar to Category Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterSummaryAllow">
+            <summary>
+              Looks up a localized string similar to Allow all except.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterSummaryDeny">
+            <summary>
+              Looks up a localized string similar to Deny all except.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Category Filter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryFilterUICommandText">
+            <summary>
+              Looks up a localized string similar to Category Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryLogFilterNode">
+            <summary>
+              Looks up a localized string similar to Category Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategorySources">
+            <summary>
+              Looks up a localized string similar to Category Sources.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryTraceSourceNode">
+            <summary>
+              Looks up a localized string similar to Category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryTraceSourceUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new category..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CategoryTraceSourceUICommandText">
+            <summary>
+              Looks up a localized string similar to Category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomFilterNode">
+            <summary>
+              Looks up a localized string similar to Custom Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomFormatter">
+            <summary>
+              Looks up a localized string similar to Custom Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomFormatterAttributesDescription">
+            <summary>
+              Looks up a localized string similar to Custom configuration properties for this Formatter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomFormatterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new custom formatter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomFormatterUICommandText">
+            <summary>
+              Looks up a localized string similar to Custom Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomLogFilterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Custom Filter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomLogFilterUICommandText">
+            <summary>
+              Looks up a localized string similar to Custom Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to Custom Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomTraceListenerNodeTypeDescription">
+            <summary>
+              Looks up a localized string similar to The type of CustomTraceListener. Required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Custom Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.CustomTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Custom Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.DefaultCategory">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.DefaultCategoryDescription">
+            <summary>
+              Looks up a localized string similar to Category to use if a category is not defined or is misspelled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.DefaultFormatter">
+            <summary>
+              Looks up a localized string similar to Text Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.DefaultLevelDescription">
+            <summary>
+              Looks up a localized string similar to The default SourceLevels for this TraceSource.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.DefaultTextFormat">
+             <summary>
+               Looks up a localized string similar to Timestamp: {timestamp}
+            Message: {message}
+            Category: {category}
+            Priority: {priority}
+            EventId: {eventid}
+            Severity: {severity}
+            Title:{title}
+            Machine: {machine}
+            Application Domain: {appDomain}
+            Process Id: {processId}
+            Process Name: {processName}
+            Win32 Thread Id: {win32ThreadId}
+            Thread Name: {threadName}
+            Extended Properties: {dictionary({key} - {value}
+            )}.
+             </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerFromAddressDescription">
+            <summary>
+              Looks up a localized string similar to From email address.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to Email TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerSmtpServerDescription">
+            <summary>
+              Looks up a localized string similar to SMTP server to send emails.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerSubjectLineEnderDescription">
+            <summary>
+              Looks up a localized string similar to Standard text to be added to the message subject after log message severity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerSubjectLineStarterDescription">
+            <summary>
+              Looks up a localized string similar to Standard text to be added to the message subject before log message severity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerToAddressDescription">
+            <summary>
+              Looks up a localized string similar to One or more email addresses separated by semicolons.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Email Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EmailTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Email Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EnabledDescription">
+            <summary>
+              Looks up a localized string similar to Setting this value to true lets all LogEntries to pass, false will not let any LogEntries pass..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.ErrorsTraceSourceNode">
+            <summary>
+              Looks up a localized string similar to Logging Errors &amp; Warnings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EventLogTraceListenerEventLogNameDescription">
+            <summary>
+              Looks up a localized string similar to Event log name.  Optional - defaults to Application log..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.EventLogTraceListenerSourceNameDescription">
+            <summary>
+              Looks up a localized string similar to Event source name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FileNameDescription">
+            <summary>
+              Looks up a localized string similar to FileName.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FilterCollectionNodeName">
+            <summary>
+              Looks up a localized string similar to Filters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerFileDialogFilter">
+            <summary>
+              Looks up a localized string similar to All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerFileName">
+            <summary>
+              Looks up a localized string similar to File name and directory..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerFooter">
+            <summary>
+              Looks up a localized string similar to Footer to append after each log entry.  Optional..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerHeader">
+            <summary>
+              Looks up a localized string similar to Header to append before each log entry.  Optional..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to FlatFile TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Flat File Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FlatFileTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Flat File Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FormatDescription">
+            <summary>
+              Looks up a localized string similar to Destination format.  Optional..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FormattedEventLogTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to Formatted EventLog TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FormattedEventLogTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Formatted Event Log Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.FormattedEventLogTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Formatted Event Log Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.Formatters">
+            <summary>
+              Looks up a localized string similar to Formatters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.GenericCreateStatusText">
+            <summary>
+              Looks up a localized string similar to Create a new {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.InitDataDescription">
+            <summary>
+              Looks up a localized string similar to The initData for this System.Diagnostics TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LockBehaviorDescription">
+            <summary>
+              Looks up a localized string similar to Lock Behavior.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogEnabledFilterNode">
+            <summary>
+              Looks up a localized string similar to LogEnabled Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogEnabledFilterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Log Enabled Filter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogEnabledFilterUICommandText">
+            <summary>
+              Looks up a localized string similar to Log Enabled Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogSettingsCommandLongText">
+            <summary>
+              Looks up a localized string similar to Add the Logging Application Block..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogSettingsCommandText">
+            <summary>
+              Looks up a localized string similar to Logging Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.LogSettingsNode">
+            <summary>
+              Looks up a localized string similar to Logging Application Block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MaximumPriorityDescription">
+            <summary>
+              Looks up a localized string similar to LogEntries that have a priority greater than this value do not pass the filter .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MaxPrioShouldBeGreaterThanMinPrioError">
+            <summary>
+              Looks up a localized string similar to The value for MaximumPriority should be greater than the value for MinimumPriority.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MessagePriorityDescription">
+            <summary>
+              Looks up a localized string similar to The priority of messages written to MSMQ.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MinimumPriority">
+            <summary>
+              Looks up a localized string similar to Minimum message priority to be delivered.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MinimumPriorityDescription">
+            <summary>
+              Looks up a localized string similar to LogEntries that have a priority lower than this value do not pass the filter .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqPathDescription">
+            <summary>
+              Looks up a localized string similar to Private or public message queue path.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqSinkMessagePriorityDescription">
+            <summary>
+              Looks up a localized string similar to A priority for the message when sent to the queue..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqSinkQueuePathDescription">
+            <summary>
+              Looks up a localized string similar to Private or public message queue.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqTraceListener">
+            <summary>
+              Looks up a localized string similar to MSMQ Sink.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to Msmq TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Msmq Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.MsmqTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to Msmq Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.PriorityFilterNode">
+            <summary>
+              Looks up a localized string similar to Priority Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.PriorityFilterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new priority filter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.PriorityFilterUICommandText">
+            <summary>
+              Looks up a localized string similar to Priority Filter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.QueuePathDescription">
+            <summary>
+              Looks up a localized string similar to The MSMQ path that is used to write LogEntries.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.QueueTimerIntervalDescription">
+            <summary>
+              Looks up a localized string similar to Timer interval for the distributor service to check MSMQ for new messages.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RecoverableDescription">
+            <summary>
+              Looks up a localized string similar to A boolean that indicates whether MSMQ messages written by this TraceListener are recoverable.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.ReferenceAlreadyExists">
+            <summary>
+              Looks up a localized string similar to A reference to TraceListener {0} already exists for this source..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RevertImpersonationDescription">
+            <summary>
+              Looks up a localized string similar to Revert impersonation temporarily while logging..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RollFileExistsBehaviorDescription">
+            <summary>
+              Looks up a localized string similar to Exists Behavior.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RollingTraceListenerNodeUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Rolling Flat File Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RollingTraceListenerNodeUICommandText">
+            <summary>
+              Looks up a localized string similar to Rolling Flat File Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RollIntervalDescription">
+            <summary>
+              Looks up a localized string similar to Roll Interval.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.RollSizeKBDescription">
+            <summary>
+              Looks up a localized string similar to Roll Size KB.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.SpecialTraceSourcesNodeName">
+            <summary>
+              Looks up a localized string similar to Special Sources.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.SystemDiagnosticsTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to System.Diagnostics TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.SystemDiagnosticsTraceListenerTypeDescription">
+            <summary>
+              Looks up a localized string similar to The type of TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.SystemDiagnosticsTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new System Diagnostics Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.SystemDiagnosticsTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to System Diagnostics Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TemplatePlaceHolder">
+            <summary>
+              Looks up a localized string similar to &lt;template&gt;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TextFormatterNode">
+            <summary>
+              Looks up a localized string similar to Text Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TextFormatterUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new text formatter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TextFormatterUICommandText">
+            <summary>
+              Looks up a localized string similar to Text Formatter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TimeStampPatternDescription">
+            <summary>
+              Looks up a localized string similar to TimeStampt.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TimeToBeReceivedDescription">
+            <summary>
+              Looks up a localized string similar to The maximum time for a message to have been received by the message queue.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceListenerCollectionNode">
+            <summary>
+              Looks up a localized string similar to Trace Listeners.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceListenerReferenceNode">
+            <summary>
+              Looks up a localized string similar to TraceListener Reference.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceListenerReferenceUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new Trace Listener Reference..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceListenerReferenceUICommandText">
+            <summary>
+              Looks up a localized string similar to Trace Listener Reference.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceOutputOptionsDescription">
+            <summary>
+              Looks up a localized string similar to Trace output options.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TraceSourceCategoryGeneral">
+            <summary>
+              Looks up a localized string similar to General.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.TransactionTypeDescription">
+            <summary>
+              Looks up a localized string similar to The type of transaction used for writing messages to MSMQ.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.UnprocessedTraceSourceNode">
+            <summary>
+              Looks up a localized string similar to Unprocessed Category.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.UseAuthenticationDescription">
+            <summary>
+              Looks up a localized string similar to A boolean that indicates whether the TraceListener should authenticate against MSMQ.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.UseDeadLetterQueueDescription">
+            <summary>
+              Looks up a localized string similar to A boolean that indicates whether the deadletter queue should be used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.UseEncryptionDescription">
+            <summary>
+              Looks up a localized string similar to A boolean that indicates whether messages written to the MSMQ should be encrypted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.WmiTraceListenerNode">
+            <summary>
+              Looks up a localized string similar to WMI TraceListener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.WmiTraceListenerUICommandLongText">
+            <summary>
+              Looks up a localized string similar to Add a new WMI Trace Listener..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.WmiTraceListenerUICommandText">
+            <summary>
+              Looks up a localized string similar to WMI Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.XmlTraceListenerFileDialogFilter">
+            <summary>
+              Looks up a localized string similar to All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.XmlTraceListenerNodeUICommandLongText">
+            <summary>
+              Looks up a localized string similar to XML Trace Listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.Properties.Resources.XmlTraceListenerNodeUICommandText">
+            <summary>
+              Looks up a localized string similar to XML Trace Listener.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode">
+            <summary>
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData"/> configuration element. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode.#ctor(Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode"/> class with a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData"/> instance.
+            </summary>
+            <param name="data">A <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData"/> instance</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">
+            <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode.TraceListenerData">
+            <summary>
+            Gets the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData"/> this node represents.
+            </summary>
+            <value>
+            The <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData"/> this node represents.
+            </value>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.TraceListeners.XmlTraceListenerNode.FileName">
+            <summary>
+            File name.
+            </summary>
+        </member>
+    </members>
+</doc>

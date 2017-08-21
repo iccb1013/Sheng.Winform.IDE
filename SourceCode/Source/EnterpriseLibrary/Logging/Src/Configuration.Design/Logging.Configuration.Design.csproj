@@ -1,0 +1,301 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F80ABB9A-56C5-4FC8-82F2-0DFEAAAC97A3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation><SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Design#CA2210</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>system.management</Name>
+    </Reference>
+    <Reference Include="System.Messaging">
+      <Name>system.messaging</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\..\Common\Src\Common.csproj">
+      <Name>Common</Name>
+      <Project>{A09297C8-2C40-470B-8856-D856676DDFFA}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Configuration\Src\Design\Configuration.Design.csproj">
+      <Project>{D6AAB55A-8C43-46B7-9EE4-EB8D1E1BFC17}</Project>
+      <Name>Configuration.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Name>Logging</Name>
+      <Project>{6AC97717-899D-4F72-BC5B-2C37959CD4FF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AddLoggingSettingsNodeCommand.cs" />
+    <Compile Include="Filters\PriorityFilterMaximumValidationAttribute.cs" />
+    <Compile Include="LoggingSettingsBuilder.cs" />
+    <Compile Include="CategoryTraceSourceCollectionNodeBuilder.cs" />
+    <Compile Include="FormatterCollectionNodeBuilder.cs" />
+    <Compile Include="LogFilterCollectionNodeBuilder.cs" />
+    <Compile Include="LoggingSettingsNodeBuilder.cs" />
+    <Compile Include="LoggingCommandRegistrar.cs" />
+    <Compile Include="LoggingNodeMapRegistrar.cs" />
+    <Compile Include="Filters\CategoryFilterEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\CategoryFilterEditorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filters\CategoryFilterNode.cs" />
+    <Compile Include="Filters\CategoryFilterSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\CustomLogFilterNode.cs" />
+    <Compile Include="Filters\LogFilterCollectionNode.cs" />
+    <Compile Include="Filters\LogEnabledFilterNode.cs" />
+    <Compile Include="Filters\LogFilterNode.cs" />
+    <Compile Include="Filters\PriorityFilterNode.cs" />
+    <Compile Include="Formatters\BinaryFormatterNode.cs" />
+    <Compile Include="Formatters\CustomFormatterNode.cs" />
+    <Compile Include="Sources\CategoryTraceSourceNode.cs" />
+    <Compile Include="Sources\SpecialTraceSourcesNode.cs" />
+    <Compile Include="Sources\TraceListenerReferenceNode.cs" />
+    <Compile Include="SpecialTraceSourcesNodeBuilder.cs" />
+    <Compile Include="TraceListenerCollectionNodeBuilder.cs" />
+    <Compile Include="TraceListeners\FormattedEventLogTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\RollingTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\TraceListenerCollectionNode.cs" />
+    <Compile Include="TraceListeners\MsmqTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\SystemDiagnosticsListenerNode.cs" />
+    <Compile Include="TraceListeners\CustomTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\EmailTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\FlatFileTraceListenerNode.cs" />
+    <Compile Include="TraceListeners\WmiTraceListenerNode.cs" />
+    <Compile Include="Sources\NotProcessedTraceSourceNode.cs" />
+    <Compile Include="Sources\AllTraceSourceNode.cs" />
+    <Compile Include="Sources\ErrorsTraceSourceNode.cs" />
+    <Compile Include="Sources\TraceSourceNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DefaultValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sources\CategoryTraceSourceCollectionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TraceListeners\TraceListenerNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatters\FormatterCollectionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatters\FormatterNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatters\Template.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatters\TemplateEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatters\TemplateEditorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formatters\TextFormatterNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoggingConfigurationDesignManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoggingSettingsNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TraceListeners\XmlTraceListenerNode.cs" />
+    <EmbeddedResource Include="Sources\CategoryTraceSourceCollectionNode.bmp" />
+    <EmbeddedResource Include="Formatters\FormatterCollectionNode.bmp" />
+    <EmbeddedResource Include="Formatters\FormatterNode.bmp" />
+    <EmbeddedResource Include="Formatters\TemplateEditorUI.resx">
+      <DependentUpon>TemplateEditorUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoggingSettingsNode.bmp" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sources\TraceSourceNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sources\AllTraceSourceNode.bmp" />
+    <EmbeddedResource Include="Sources\ErrorsTraceSourceNode.bmp" />
+    <EmbeddedResource Include="Sources\NotProcessedTraceSourceNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TraceListeners\TraceListenerCollectionNode.bmp" />
+    <EmbeddedResource Include="TraceListeners\TraceListenerNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sources\CategoryTraceSourceNode.bmp" />
+    <EmbeddedResource Include="Sources\SpecialTraceSourcesNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Filters\LogFilterNode.bmp" />
+    <EmbeddedResource Include="Filters\LogFilterCollectionNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Filters\CategoryFilterEditorUI.resx">
+      <DependentUpon>CategoryFilterEditorUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sources\TraceListenerReferenceNode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

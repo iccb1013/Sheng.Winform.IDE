@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DistributionStrategyFactoryName" xml:space="preserve">
+    <value>Distribution Strategies</value>
+  </data>
+  <data name="EmailSinkMissingParameters" xml:space="preserve">
+    <value>E-Mail Sink is missing one of these keys in the Distributor's XML file: ToAddress, FromAddress, and/or SmtpServer.</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>The category '{0}' in the message is not found in configuration. The default category '{1}' is used instead to process the message.</value>
+    <comment>.
+ Parameters: 0 - missingCategory (string), 1 - defaultCategory (string) </comment>
+  </data>
+  <data name="InvalidSink" xml:space="preserve">
+    <value>Error logging with '{0}' sink from configuration. The default log sink will be used instead to process the message.</value>
+    <comment>.
+ Parameters: 0 - invalidSink (string) </comment>
+  </data>
+  <data name="InvalidSinkMessage" xml:space="preserve">
+    <value>
+Message: 
+{0}</value>
+    <comment>.
+ Parameters: 0 - body (string) </comment>
+  </data>
+  <data name="ProcessMessageFailed" xml:space="preserve">
+    <value>Processing of the message failed. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.</value>
+  </data>
+  <data name="ProcessMessageFailed2" xml:space="preserve">
+    <value>ProcessQueueMessage - additional information</value>
+  </data>
+  <data name="ProcessMessageFailed3" xml:space="preserve">
+    <value>
+Message: 
+{0}SinkFactoryName = Log Sink</value>
+    <comment>.
+ Parameters: 0 - contents (string) </comment>
+  </data>
+  <data name="SinkFailure" xml:space="preserve">
+    <value>Sink failed because: {0}.</value>
+    <comment>.
+ Parameters: 0 - exceptionString (string) </comment>
+  </data>
+  <data name="DefaultLogDestinationMessage" xml:space="preserve">
+    <value>An error occurred while the Distributor was processing the message.  Please check your configuration files for errors or typos.  Verify that your sinks are reachable (queues exist, permissions are set, database exists, etc...)</value>
+  </data>
+  <data name="DefaultLogDestinationFailed" xml:space="preserve">
+    <value>Failed to log message to the default log destination.</value>
+  </data>
+  <data name="EventLogSinkMissingEventSource" xml:space="preserve">
+    <value>Event Log Sink is missing the key -EventSourceName- in the Distributor's configuration file.</value>
+  </data>
+  <data name="FileSinkMissingConfiguration" xml:space="preserve">
+    <value>Flat File Sink is missing one of these keys in the Distributor's configuration file: FilePath and/or FileName</value>
+  </data>
+  <data name="DistEventLoggerMessagePrefix" xml:space="preserve">
+    <value>Message: 
+</value>
+  </data>
+  <data name="DistEventLoggerSummary" xml:space="preserve">
+    <value>Summary for</value>
+  </data>
+  <data name="EventLogAccessDenied" xml:space="preserve">
+    <value>Access denied to the event log '{0}'.</value>
+    <comment>.
+ Parameters: 0 - log (string) </comment>
+  </data>
+  <data name="ActivatorCacheCannotCreateType" xml:space="preserve">
+    <value>Unable to create type '{0}'.</value>
+    <comment>.
+ Parameters: 0 - type (string) </comment>
+  </data>
+  <data name="FormatterFactoryName" xml:space="preserve">
+    <value>Log Formatter Factory</value>
+  </data>
+  <data name="SinkFactoryName" xml:space="preserve">
+    <value>Log Sink Factory</value>
+  </data>
+  <data name="MissingDefaultFormatter" xml:space="preserve">
+    <value>The default formatter is missing from the configuration file.  The entry will be written using a TextFormatter and an embedded template.</value>
+  </data>
+  <data name="IntrinsicPropertyError" xml:space="preserve">
+    <value>Unable to read intrinsic property.  Error message: {0}</value>
+    <comment>.
+ Parameters: 0 - msg (string) </comment>
+  </data>
+  <data name="DefaultTextFormat" xml:space="preserve">
+    <value>Timestamp: {timestamp}{newline}Message: {message}{newline}Category: {category}{newline}Priority: {priority}{newline}EventId: {eventid}{newline}Severity: {severity}{newline}Title:{title}{newline}Machine: {machine}{newline}App Domain: {appDomain}{newline}ProcessId: {processId}{newline}Process Name: {processName}{newline}Thread Name: {threadName}{newline}Win32 ThreadId:{win32ThreadId}{newline}Extended Properties: {dictionary({key} - {value}{newline})}</value>
+  </data>
+  <data name="DefaultLogDestinationSinkName" xml:space="preserve">
+    <value>Enterprise Library Backup Sink</value>
+  </data>
+  <data name="ApplicationLogName" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="DistributorEventLoggerDefaultApplicationName" xml:space="preserve">
+    <value>Enterprise Library Distributor Service</value>
+  </data>
+  <data name="InstrumentationEventSource" xml:space="preserve">
+    <value>Enterprise Library Logging Service</value>
+  </data>
+  <data name="InstrumentationCounterCategory" xml:space="preserve">
+    <value>Enterprise Library Logging Service</value>
+  </data>
+  <data name="InstrumentationCounterCategoryHelp" xml:space="preserve">
+    <value>Enterprise Library Logging Service application performance counters.</value>
+  </data>
+  <data name="NumLogsWrittenSec" xml:space="preserve">
+    <value>Client: # of Logs Written/Sec</value>
+  </data>
+  <data name="NumLogsWrittenSecMsg" xml:space="preserve">
+    <value>Number of logs per second written by client using the Enterprise Library Logging Block.</value>
+  </data>
+  <data name="NumLogsDistributedSec" xml:space="preserve">
+    <value>Distributor: # of Logs Distributed/Sec</value>
+  </data>
+  <data name="NumLogsDistributedSecMsg" xml:space="preserve">
+    <value>Number of logs distributed per second by the Log Distributor.</value>
+  </data>
+  <data name="NumLogsDefaultSinkSec" xml:space="preserve">
+    <value>Distributor: # of Logs to Default Sink/Sec</value>
+  </data>
+  <data name="NumLogsDefaultSinkSecMsg" xml:space="preserve">
+    <value>Number of logs per second distributed by the Log Distributor to the Default Log Sink (EventLog).</value>
+  </data>
+  <data name="ExceptionCategoryFilterDataName" xml:space="preserve">
+    <value>The name for the CategoryFilterData can not be null.</value>
+  </data>
+  <data name="ExceptionDestinationDataName" xml:space="preserve">
+    <value>The sink for the DestinationData can not be null.</value>
+  </data>
+  <data name="ComPlusInfo_ActivityId" xml:space="preserve">
+    <value>ActivityId</value>
+  </data>
+  <data name="ComPlusInfo_ApplicationId" xml:space="preserve">
+    <value>ApplicationId</value>
+  </data>
+  <data name="ComPlusInfo_DirectCallerAccountName" xml:space="preserve">
+    <value>DirectCallerAccountName</value>
+  </data>
+  <data name="ComPlusInfo_OriginalCallerAccountName" xml:space="preserve">
+    <value>OriginalCallerAccountName</value>
+  </data>
+  <data name="ComPlusInfo_TransactionID" xml:space="preserve">
+    <value>TransactionID</value>
+  </data>
+  <data name="ExtendedPropertyError" xml:space="preserve">
+    <value>Unable to read system property. Error message: {0}</value>
+    <comment>.
+ Parameters: 0 - msg (string) </comment>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error has occurred.</value>
+  </data>
+  <data name="DebugInfo_SchemaHelperAtString" xml:space="preserve">
+    <value>	at </value>
+  </data>
+  <data name="DebugInfo_SchemaHelperUnknownType" xml:space="preserve">
+    <value>&lt;UnknownType&gt;</value>
+  </data>
+  <data name="DebugInfo_SchemaHelperLine" xml:space="preserve">
+    <value>	in {0}: line {1}</value>
+    <comment>.
+ Parameters: 0 - file (string), 1 - line (int) </comment>
+  </data>
+  <data name="DebugInfo_StackTraceSecurityException" xml:space="preserve">
+    <value>Insufficient privilege to generate stack trace.</value>
+  </data>
+  <data name="DebugInfo_StackTraceException" xml:space="preserve">
+    <value>Unable to process stack trace.</value>
+  </data>
+  <data name="DebugInfo_StackTrace" xml:space="preserve">
+    <value>StackTrace</value>
+  </data>
+  <data name="ManagedSecurity_AuthenticationType" xml:space="preserve">
+    <value>AuthenticationType</value>
+  </data>
+  <data name="ManagedSecurity_IdentityName" xml:space="preserve">
+    <value>IdentityName</value>
+  </data>
+  <data name="ManagedSecurity_IsAuthenticated" xml:space="preserve">
+    <value>IsAuthenticated</value>
+  </data>
+  <data name="UnmanagedSecurity_CurrentUser" xml:space="preserve">
+    <value>CurrentUser</value>
+  </data>
+  <data name="UnmanagedSecurity_ProcessAccountName" xml:space="preserve">
+    <value>ProcessAccountName</value>
+  </data>
+  <data name="Tracer_StartMessageFormat" xml:space="preserve">
+    <value>Start Trace: Activity '{0}' in method '{1}' at {2} ticks</value>
+    <comment>.
+ Parameters: 0 - activity (string), 1 - method (string), 2 - ticks (long) </comment>
+  </data>
+  <data name="Tracer_EndMessageFormat" xml:space="preserve">
+    <value>End Trace: Activity '{0}' in method '{1}' at {2} ticks (elapsed time: {3} seconds)</value>
+    <comment>.
+ Parameters: 0 - activity (string), 1 - method (string), 2 - ticks (long), 3 - elapsedTime (decimal) </comment>
+  </data>
+  <data name="ExceptionSeverityNotDefined" xml:space="preserve">
+    <value>The value provided is not defined for Severity</value>
+  </data>
+  <data name="ExceptionEnumNotDefined" xml:space="preserve">
+    <value>The value {0} is not defined for {1}. </value>
+    <comment>.
+ Parameters: 0 - value (string), 1 - type (string) </comment>
+  </data>
+  <data name="ExceptionNoStrategiesDefined" xml:space="preserve">
+    <value>The Logging Settings does not have any distribution strategies defined in configuration.</value>
+  </data>
+  <data name="ExceptionNoDistributionStragegy" xml:space="preserve">
+    <value>The requested distribution strategy '{0}' is not defined in the current configuration.</value>
+    <comment>.
+ Parameters: 0 - distributionName (string) </comment>
+  </data>
+  <data name="ExceptionNoSinksDefined" xml:space="preserve">
+    <value>The Distributor Settings does not have any log sinks defined in configuration.</value>
+  </data>
+  <data name="ExceptionNoSinkDefined" xml:space="preserve">
+    <value>The requested log sink '{0}' is not defined in the current configuration.</value>
+    <comment>.
+ Parameters: 0 - sinkName (string) </comment>
+  </data>
+  <data name="ExceptionMsmqSinkMissingConfiguration" xml:space="preserve">
+    <value>MSMQ Sink is missing this key in the Distributor's configuration file: QueuePath</value>
+  </data>
+  <data name="ExceptionMsmqStrategyMissingConfiguration" xml:space="preserve">
+    <value>MSMQ Strategy is missing this key in the Distributor's configuration file: QueuePath</value>
+  </data>
+  <data name="ExceptionCategoryNotDefined" xml:space="preserve">
+    <value>The category '{0}' is not defined in the Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - categoryName (string) </comment>
+  </data>
+  <data name="ExceptionFormatterNotDefined" xml:space="preserve">
+    <value>The formatter '{0}' is not defined in the Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - formatterName (string) </comment>
+  </data>
+  <data name="ExceptionCannotLoadDefaultCategory" xml:space="preserve">
+    <value>The default category '{0}' is not defined in Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - defaultCategory (string) </comment>
+  </data>
+  <data name="ExceptionCannotLoadDefaultFormatter" xml:space="preserve">
+    <value>The default formatter '{0}' is not defined in Logging Distributor configuration.</value>
+    <comment>.
+ Parameters: 0 - defaultFormatter (string) </comment>
+  </data>
+  <data name="FilterEvaluationFailed" xml:space="preserve">
+    <value>Evaluation of filter '{0}' failed and the filter will be ignored. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.</value>
+    <comment>.
+ Parameters: 0 - filter name (string) </comment>
+  </data>
+  <data name="MissingCategories" xml:space="preserve">
+    <value>There is no explicit mapping for the categories '{0}'.</value>
+    <comment>Replicated in test project</comment>
+  </data>
+  <data name="TraceSourceFailed" xml:space="preserve">
+    <value>Tracing to LogSource '{0}' failed. Processing for other sources will continue. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.</value>
+    <comment>.
+ Parameters: 0 - filter name (string) </comment>
+  </data>
+  <data name="ExceptionFailedToAcquireLockToUpdate" xml:space="preserve">
+    <value>Log writer failed to acquire lock while updating configuration.</value>
+  </data>
+  <data name="ExceptionFailedToAcquireLockToWriteLog" xml:space="preserve">
+    <value>Log writer failed to acquire lock while writing log entry.</value>
+  </data>
+</root>

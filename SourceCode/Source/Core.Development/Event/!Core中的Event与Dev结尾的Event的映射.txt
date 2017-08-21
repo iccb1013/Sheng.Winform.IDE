@@ -1,0 +1,6 @@
+﻿事件编辑器 （FormEventEditor） 在创建事件对象实例之后，需要通过 IEventEditorSupport 接口来启动事件的编辑功能
+那么就需要创建以 DEV 结尾的事件实例，而不是 Core 中的事件实例
+支持事件的对象在实现 IEventSupport 时，使用的是 Core 中的事件类型
+事件编辑器在通过 IEventSupport 得到可用事件类型时，只能得到不带 Dev 结尾的，在 Core 中定义的事件类型
+所以不能用 IEventSupport 定义的 EventTypeCollection EventProvide 属性来创建事件实例
+目前使用 EventDevTypes 来创建

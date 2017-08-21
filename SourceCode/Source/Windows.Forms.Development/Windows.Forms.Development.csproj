@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D884BB2B-C9BB-4A7B-AAD0-6715D611E2CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sheng.SailingEase.Windows.Forms.Development</RootNamespace>
+    <AssemblyName>Windows.Forms.Development</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantLanguage.cs" />
+    <Compile Include="ControlsDesigner\FormSEComboBoxExDevDataRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\FormSEComboBoxExDevDataRule.designer.cs">
+      <DependentUpon>FormSEComboBoxExDevDataRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\FormSEPaginationDataGridViewDevColumnAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\FormSEPaginationDataGridViewDevColumnAdd.designer.cs">
+      <DependentUpon>FormSEPaginationDataGridViewDevColumnAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\FormSETextBoxExDevDataRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\FormSETextBoxExDevDataRule.designer.cs">
+      <DependentUpon>FormSETextBoxExDevDataRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_Normal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_Normal.designer.cs">
+      <DependentUpon>UserControlDataColumnDevDataRule_Normal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationDataEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationDataEntity.designer.cs">
+      <DependentUpon>UserControlDataColumnDevDataRule_RelationDataEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationEnum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationEnum.designer.cs">
+      <DependentUpon>UserControlDataColumnDevDataRule_RelationEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule.designer.cs">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_DataEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_DataEntity.designer.cs">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule_DataEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_Enum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_Enum.designer.cs">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule_Enum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSETextBoxExDevDataRuleRegex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsDesigner\UserControlSETextBoxExDevDataRuleRegex.designer.cs">
+      <DependentUpon>UserControlSETextBoxExDevDataRuleRegex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridViewTextBoxColumnDev.cs" />
+    <Compile Include="Controls\Helper.cs" />
+    <Compile Include="Controls\SEButtonExDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEComboBoxExDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEDataGridViewDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEFormExDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\SELabelExDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEPictureBoxExDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SETextBoxExDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEToolStripButtonDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEToolStripLabelDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SEToolStripSeparatorDev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ShellControlHelper.cs" />
+    <Compile Include="Entity\DataList\DataGridViewColumnFactory.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListColumnDataRuleDevTypes.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListColumnDataRulesDev.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListColumnEntityDevTypes.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListEntityDev.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListEntityDevChecker.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListTextBoxColumnEntityDev.cs" />
+    <Compile Include="Entity\DataList\FormElementDataListTextBoxColumnEntityDevChecker.cs" />
+    <Compile Include="Entity\DataList\IFormElementDataListColumnDataRule.cs" />
+    <Compile Include="Entity\DataList\IFormElementDataListColumnDataRuleParameterSetControl.cs" />
+    <Compile Include="Entity\FormElementButtonEntityDev.cs" />
+    <Compile Include="Entity\FormElementButtonEntityDevChecker.cs" />
+    <Compile Include="Entity\FormElementComboBoxEntityDev.cs" />
+    <Compile Include="Entity\FormElementComboBoxEntityDevChecker.cs" />
+    <Compile Include="Entity\FormElementLabelEntityDev.cs" />
+    <Compile Include="Entity\FormElementLabelEntityDevChecker.cs" />
+    <Compile Include="Entity\FormElementPictureBoxEntityDev.cs" />
+    <Compile Include="Entity\FormElementPictureBoxEntityDevChecker.cs" />
+    <Compile Include="Entity\FormElementTextBoxEntityDev.cs" />
+    <Compile Include="Entity\FormElementTextBoxEntityDevChecker.cs" />
+    <Compile Include="Entity\FormEntityDev.cs" />
+    <Compile Include="Entity\FormEntityDevChecker.cs" />
+    <Compile Include="Entity\ToolStrip\ToolStripButtonEntityDevChecker.cs" />
+    <Compile Include="Entity\ToolStrip\ToolStripLabelEntityDev.cs" />
+    <Compile Include="Entity\ToolStrip\ToolStripSeparatorEntityDev.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\ToolStrip\ToolStripButtonEntityDev.cs" />
+    <Compile Include="Unity.cs" />
+    <Compile Include="WindowsFormsDevelopment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentModel.Design\ComponentModel.Design.csproj">
+      <Project>{13E156EC-1138-40A4-8A94-1533B4E78FE4}</Project>
+      <Name>ComponentModel.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComponentModel\ComponentModel.csproj">
+      <Project>{7CE78E82-D242-425C-BB96-6C27B193A9FF}</Project>
+      <Name>ComponentModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{8947FDAE-9F4B-4D77-91AA-0704ACD83DBD}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Development\Core.Development.csproj">
+      <Project>{A21A3B19-5EC9-4D2C-9EB3-61EA48CFBD27}</Project>
+      <Name>Core.Development</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{84A60294-EF59-43C1-B7E5-4C12C164801D}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drawing\Drawing.csproj">
+      <Project>{BCD80096-7B6F-4273-A031-186A610C84E5}</Project>
+      <Name>Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{405E51B5-BEAC-4538-B176-30490B26873D}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernal\Kernal.csproj">
+      <Project>{125FB802-2C83-47DC-BA57-910064355CCD}</Project>
+      <Name>Kernal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Sheng.SailingEase.Localisation\Localisation.csproj">
+      <Project>{97F69338-465B-480F-87FB-A369EECA8D6E}</Project>
+      <Name>Localisation %28Localisation\Localisation%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localisation\Windows.Forms.Development.Localisation\Windows.Forms.Development.Localisation.csproj">
+      <Project>{46A7B1B2-E706-4F02-B374-B3A4140BFCD4}</Project>
+      <Name>Windows.Forms.Development.Localisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RegexTool\RegexTool.csproj">
+      <Project>{770F92AD-6027-4F42-B8E7-3F51C9AAE01E}</Project>
+      <Name>RegexTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Win32\Win32.csproj">
+      <Project>{946FFB43-4864-4967-8D69-8716CDA83F7A}</Project>
+      <Name>Win32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlsDesigner\FormSEComboBoxExDevDataRule.resx">
+      <DependentUpon>FormSEComboBoxExDevDataRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\FormSEPaginationDataGridViewDevColumnAdd.resx">
+      <DependentUpon>FormSEPaginationDataGridViewDevColumnAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\FormSETextBoxExDevDataRule.resx">
+      <DependentUpon>FormSETextBoxExDevDataRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationDataEntity.resx">
+      <DependentUpon>UserControlDataColumnDevDataRule_RelationDataEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlDataColumnDevDataRule_RelationEnum.resx">
+      <DependentUpon>UserControlDataColumnDevDataRule_RelationEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule.resx">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_DataEntity.resx">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule_DataEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlSEComboBoxExDevDataRule_Enum.resx">
+      <DependentUpon>UserControlSEComboBoxExDevDataRule_Enum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlsDesigner\UserControlSETextBoxExDevDataRuleRegex.resx">
+      <DependentUpon>UserControlSETextBoxExDevDataRuleRegex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

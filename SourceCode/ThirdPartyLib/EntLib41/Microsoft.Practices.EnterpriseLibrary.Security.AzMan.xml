@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.EnterpriseLibrary.Security.AzMan</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider">
+            <summary>
+            Represents the AzMan authorization provider.  
+            Authorize method checks to see if the specified identity has access to a task.
+            </summary>
+            <remarks>
+            Supports Windows authentication only.
+            Requires AzMan on Windows Server 2003, or Windows XP users will need to install the 
+            Windows Server 2003 Administration Pack.
+            Implements the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.IAuthorizationProvider"/> interface.</remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/> class.
+            </summary>
+            <param name="storeLocation">The AzMan store location.</param>
+            <param name="applicationName">The AzMan application name.</param>
+            <param name="auditIdentifierPrefix">The AzMan identifier prefix.</param>
+            <param name="scopeName">The AzMan scope name.</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.Authorize(System.Security.Principal.IPrincipal,System.String)">
+            <summary>
+            Evaluates the specified authority against the specified context that is either a task or operation in Authorization Manager. If the context is an operation it should be prefixed by "O".
+            </summary>
+            <param name="principal">Principal object containing a windows identity.</param>
+            <param name="context">Name of the task or operation to evaluate.</param>
+            <returns><strong>True</strong> if AzMan evaluates to true,
+            otherwise <strong>false</strong>.</returns>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.CheckAccessTasks(System.String,System.Security.Principal.WindowsIdentity,System.String[])">
+            <devdoc>
+            Checks access to specified a set of tasks in a specified application in a specified scope.
+            </devdoc>      
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.CheckAccessOperations(System.String,System.Security.Principal.WindowsIdentity,System.String[])">
+            <devdoc>
+            Checks access to specified a set of operations in a specified application in a specified scope.
+            </devdoc>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.GetClientContext(System.Security.Principal.WindowsIdentity,System.String,Microsoft.Interop.Security.AzRoles.IAzApplication@)">
+            <devdoc>
+            Gets the client context for the call based on the identity, system and parameters.
+            </devdoc>        
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.GetStoreLocationPath(System.String)">
+            <summary>
+            Calculates and returns the effective store location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.StoreLocation">
+            <summary>
+            Gets the AzMan store location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.ApplicationName">
+            <summary>
+            Gets the application name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.AuditIdentifierPrefix">
+            <summary>
+            Gets the audit identifier prefix.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider.ScopeName">
+            <summary>
+            Gets the scope name.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData">
+            <summary>
+            Represents the configuration settings for the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.#ctor">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/> class.
+            </summary>
+            <param name="storeLocation">Location of the authorization store, Active Directory or xml file</param>
+            <param name="applicationName">Name of the AzMan application.</param>
+            <param name="auditIdentifierPrefix">Audit identifier prefix to prepend to the generated audit identifer</param>
+            <param name="scopeName">Optional name of the application scope</param>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize an instance of the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/> class.
+            </summary>
+            <param name="name">Name of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"></see> found in configuration</param>
+            <param name="storeLocation">Location of the authorization store, Active Directory or xml file</param>
+            <param name="applicationName">Name of the AzMan application.</param>
+            <param name="auditIdentifierPrefix">Audit identifier prefix to prepend to the generated audit identifer</param>
+            <param name="scopeName">Optional name of the application scope</param>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.StoreLocation">
+            <summary>
+            Location of the authorization store, Active Directory or xml file.
+            </summary>
+            <remarks>Absolute file paths are required for xml storage.  
+            View this link for more information about the expected format http://msdn.microsoft.com/library/default.asp?url=/library/en-us/security/security/azauthorizationstore_initialize.asp.</remarks>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.Application">
+            <summary>
+            Name of the AzMan application.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.Scope">
+            <summary>
+            Optional name of the application scope.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData.AuditIdentifierPrefix">
+            <summary>
+            Audit identifier prefix to append to the generated audit identifer.
+            </summary>
+            <remarks>
+            The audit identifier is generated to be "prefix username:operation"
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderAssembler">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to build for an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/> described by a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/> configuration object.
+            </summary>
+            <remarks>This type is linked to the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/> type and it is used by the <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AuthorizationProviderCustomFactory"/> 
+            to build the specific <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.IAuthorizationProvider"/> object represented by the configuration object.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderAssembler.Assemble(Microsoft.Practices.ObjectBuilder2.IBuilderContext,Microsoft.Practices.EnterpriseLibrary.Security.Configuration.AuthorizationProviderData,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.IConfigurationSource,Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ObjectBuilder.ConfigurationReflectionCache)">
+            <summary>
+            This method supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Builds an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/> based on an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/>.
+            </summary>
+            <seealso cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AuthorizationProviderCustomFactory"/>
+            <param name="context">The <see cref="T:Microsoft.Practices.ObjectBuilder2.IBuilderContext"/> that represents the current building process.</param>
+            <param name="objectConfiguration">The configuration object that describes the object to build. Must be an instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.AzManAuthorizationProviderData"/>.</param>
+            <param name="configurationSource">The source for configuration objects.</param>
+            <param name="reflectionCache">The cache to use retrieving reflection information.</param>
+            <returns>A fully initialized instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Configuration.Unity.AzManAuthorizationProviderPolicyCreator">
+            <summary>
+            This type supports the Enterprise Library infrastructure and is not intended to be used directly from your code.
+            Represents the process to create the container policies required to create a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.AzManAuthorizationProvider"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Properties.Resources.NoOperations">
+            <summary>
+              Looks up a localized string similar to No operations are defined for the given task..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Practices.EnterpriseLibrary.Security.AzMan.Properties.Resources.WindowsIdentityOnly">
+            <summary>
+              Looks up a localized string similar to The identity must be of type WindowsIdentity to perform the authorization..
+            </summary>
+        </member>
+    </members>
+</doc>
