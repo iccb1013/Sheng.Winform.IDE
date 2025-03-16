@@ -1,47 +1,50 @@
 # Sheng.Winform.IDE
 
-请访问原版代码库，以获得最新更新: https://github.com/iccb1013/Sheng.Winform.IDE
+Please visit the original code repository for the latest updates: [https://github.com/iccb1013/Sheng.Winform.IDE](https://github.com/iccb1013/Sheng.Winform.IDE).
 
-MIT 协议开源，可以随意使用，但是需在源代码和产品关于画面保留版权声明和我的网站链接，谢谢。
+This project is open source under the MIT license. You are free to use it as you wish, but please retain the copyright notice and my website link in the source code and the "About" screen of your product. Thank you.
 
-这是我09年到11年左右业余时间编写的项目，最初的想法很简单，做一个能拖拖拽拽就直接生成应用程序的工具，不用写代码，把能想到的业务操作全部封装起来，通过配置的方式把这些业务操作组织起来运行。  
-项目的核心功能已经基本实现，但12年之后我基本停止了这方面的开发，现在分享在这里和大家交流，希望对你有用。
+This project was developed during my spare time between 2009 and 2011. The initial idea was simple: create a tool that could generate applications directly by dragging and dropping, without writing code. All the business operations that I could think of were encapsulated, and these operations were organized and executed through configuration.  
+The core functionality of the project has been mostly implemented, but after 2012, I stopped developing in this area. I’m now sharing it here for communication and hope it will be useful to you.
 
-【1.基本介绍】
-http://blog.shengxunwei.com/Home/Post/30bcf36f-5ff7-412b-bb47-763ce9218bce
+Let me briefly explain the design concept of the IDE, with the main design goals as follows:
 
-【2.源代码简要说明】
-http://blog.shengxunwei.com/Home/Post/6a8f5c78-b492-4d49-9230-2a20147aae6f
+- **Like Visual Studio**:  
+  There is a visual environment, where interfaces can be created by simply dragging and dropping.
+  
+- **Modular Design**:  
+  All functional modules are independent, decoupled, and exist as plugins within the main application (host).
 
-简单说说 IDE 的设计思路，几个主要的设计目标如下：
+- **No Coding Required, Business Configured via Interface or Wizard**:  
+  To add a button and make it perform a specific action on click, just drag the button onto the form, then configure the event sequence and the corresponding actions.
+
+- **Abstract and Encapsulate the Concept of Events**:  
+  For example, the "Save Data" event. You configure the source of the data, such as form data or system data, then specify the target for saving, like a data entity. The event is then added to an event sequence (e.g., the button's click event). When the project is executed, this logic is processed when the button is clicked.
+
+- **Flexible Data Operations**:  
+  In addition to basic wizard-based configurations, special needs must also be met, such as supporting custom SQL statements. How does a custom SQL statement interact with the data source or target? I designed a simple expression format, like `UPDATE FROM [User] SET [Name] = {FormElement.txtName} WHERE [Id] = {System.UserId}`.
+
+- **Interaction with Database Tables**:  
+  Data operations are abstracted as "data entities," which the user defines within the IDE, similar to how SQL Server operates. Once the data entities are defined, they can be used in the IDE to abstract database and table operations. When packaging the project, the IDE can generate multiple databases, such as SQL Server or MySQL, based on the defined data entities.
+
+- **Resource File Management**:  
+  External resources are often referenced in a project. The IDE includes a dedicated resource manager to manage and bundle these resources. Resources are referenced via the resource manager during UI design and are packaged into a zip file during the build process.
+
+- **Static Compilation Checks Before Packaging**:  
+  Similar to how Visual Studio warns about errors during compilation, this IDE provides real-time checks and warnings. If referenced data entities are deleted, data items are missing, resource files are absent, or there are issues in event configurations, the IDE will point out these specific errors during project packaging.
+
+- **Support for Embedded Scripts**:  
+  Custom scripts can be added to event sequences. The IDE supports dynamic parsing or execution of specific script languages at runtime. This feature was designed but not fully developed.
+
+- **Support for Plugins**:  
+  The IDE supports plugins at the IDE level, similar to the plugin mechanisms in Visual Studio or Eclipse. I used .NET pipeline technology (which was quite niche) to implement a related demo, but it was never integrated into the IDE.
+
+- **Multi-Language Support in the IDE Interface**:  
+  The IDE fully supports multiple languages. All text is stored in resources, but instead of directly using resource files, I strongly typed them for better management.
 
 
-
-+ 像 Visual Studio 一样  
-  有可视化的环境，拖拖拽拽界面就出来了。  
-+ 模块化设计  
-  功能模块全部独立，解耦，以插件的形式存在于主程序（宿主）中。  
-+ 不要写代码，业务通过界面，向导进行配置  
-  拖一个按钮上去，想要单击时做一件事情，就先把按钮拖上去，然后设置这个按钮的事件序列，配置对应的事件。  
-+ 把事件这个概念抽象并封装起来  
-  如“保存数据”这个事件，配置好数据的来源，如窗体上的数据，或系统数据，再配置好要保存的目标，某种数据实体，即可，这个事件被添加到某个事件序列，如按钮的单击事件序列中，项目被运行时解析时，就会按钮这个逻辑执行。 
-+ 对数据操作要有一定的自由度  
-  除了基本的向导式配置以外，要能满足特殊需求，比如支持自定义 sql 语句。但是自定义 sql 语句怎样与数据源，目标交互呢？我设计了一种简单的表达方法，如 UPDATE FROM [User] SET [Name] = {FormElement.txtName} WHERE [Id]={System.UserId}  
-+ 对数据库数据表的操作怎样交互  
-  就是将其抽象为“数据实体”，数据实体也在 IDE 中由用户自己定义，定义的过程类似于 SqlServer，定义好数据实体以后，在 IDE 中进行设计时，通过数据实体来抽象对数据库、表的操作，在打包项目时，可以根据定义的数据实体，生成多种数据库，如 SqlServer，Mysql 等。  
-+ 资源文件的管理  
-  在项目中必然要引用到外部资源，这部分外部资源，怎样引入，管理，打包呢？我在 IDE 中设计了独立的资源管理器，在 IDE 中设计 UI 时，通过资源管理器引用资源，打包时，将资源打包到 zip 文件中。  
-+ 打包前的静态编译检查  
-  类似于我们在 Visual Studio 中写程序，编译时如果有错误就会出现警告或错误提示。在这个 IDE 中，也必须有同样的功能。当引用的数据实体被删除，数据项不存在，引用的资源文件不存在，以及事件配置中一些问题出现时，能够实时，并在打包项目时指出这些错误的具体位置。 
-+ 支持嵌入脚本  
-  能够在事件序列中添加自定义脚本，支持在运行时动态解析或者调用某种脚本语言。此功能有所设计，但并未开发。  
-+ 支持插件  
-  此处插件支持指的是 IDE 层面能够支持插件，类似 Visaul Studio 或者 Eclipse 的插件机制，我当时使用的是 .NET 管线技术（很冷门），实现了相关DEMO，但是没有集成到IDE中。  
-+ IDE界面支持多国语言  
-  目前IDE完整支持多国语言，所有文本均使用了资源，但是我没有直接使用资源文件，而是将其强类型化了，具体实现方式下文详述。  
-
-详细说明请浏览：
 https://shengxunwei.com
+cao.silhouette@msn.com
 
 曹旭升  
 QQ:279060597  
