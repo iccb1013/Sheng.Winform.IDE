@@ -1,5 +1,8 @@
 # Sheng.Winform.IDE
 
+[[https://shengxunwei.com]()](https://me.shenlivechat.com/)
+cao.silhouette@msn.com
+
 Please visit the original code repository for the latest updates: [https://github.com/iccb1013/Sheng.Winform.IDE](https://github.com/iccb1013/Sheng.Winform.IDE).
 
 This project is open source under the MIT license. You are free to use it as you wish, but please retain the copyright notice and my website link in the source code and the "About" screen of your product. Thank you.
@@ -41,7 +44,3 @@ Let me briefly explain the design concept of the IDE, with the main design goals
 
 - **Multi-Language Support in the IDE Interface**:  
   The IDE fully supports multiple languages. All text is stored in resources, but instead of directly using resource files, I strongly typed them for better management.
-
-
-https://shengxunwei.com
-cao.silhouette@msn.com
