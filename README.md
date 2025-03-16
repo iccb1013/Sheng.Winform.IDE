@@ -45,9 +45,3 @@ Let me briefly explain the design concept of the IDE, with the main design goals
 
 https://shengxunwei.com
 cao.silhouette@msn.com
-
-曹旭升  
-QQ:279060597  
-Email：cao.silhouette@msn.com  
-@南京 
-
