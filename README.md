@@ -1,6 +1,6 @@
 # Sheng.Winform.IDE
 
-[[https://shengxunwei.com]()](https://me.shenlivechat.com/)
+https://me.shenlivechat.com
 cao.silhouette@msn.com
 
 Please visit the original code repository for the latest updates: [https://github.com/iccb1013/Sheng.Winform.IDE](https://github.com/iccb1013/Sheng.Winform.IDE).
