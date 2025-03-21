@@ -1,7 +1,7 @@
 # Sheng.Winform.IDE
 
 🙋‍♂️ https://me.shenlivechat.com
-📨 cao.silhouette@msn.com
+📨 cao.silhouette@gmail.com
 
 Please visit the original code repository for the latest updates: [https://github.com/iccb1013/Sheng.Winform.IDE](https://github.com/iccb1013/Sheng.Winform.IDE).
 
@@ -9,6 +9,15 @@ This project is open source under the MIT license. You are free to use it as you
 
 This project was developed during my spare time between 2009 and 2011. The initial idea was simple: create a tool that could generate applications directly by dragging and dropping, without writing code. All the business operations that I could think of were encapsulated, and these operations were organized and executed through configuration.  
 The core functionality of the project has been mostly implemented, but after 2012, I stopped developing in this area. I’m now sharing it here for communication and hope it will be useful to you.
+
+> I'm sorry that I didn't prepare a multilingual version at the time. If you have any questions about the code, please feel free to contact me, and I will be happy to assist you.
+
+![b60aad02-98d5-4219-b70d-df1fb95863aa](https://github.com/user-attachments/assets/e8d1fa17-72a1-4b99-83b0-ea963dd08f86)
+
+![8d156e63-2a67-498f-a6c2-5b6de3da846c](https://github.com/user-attachments/assets/67946729-65ff-4bd5-8494-17e2debfb6b4)
+
+![28b49aa4-2c29-4fb1-9419-b29214a831de](https://github.com/user-attachments/assets/07076c64-d572-482f-8459-456c1612bc7d)
+
 
 Let me briefly explain the design concept of the IDE, with the main design goals as follows:
 
